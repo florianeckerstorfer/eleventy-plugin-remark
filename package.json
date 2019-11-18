@@ -1,0 +1,25 @@
+{
+  "name": "@fec/eleventy-plugin-remark",
+  "version": "1.0.0",
+  "description": "Use remark to compile Markdown in Eleventy",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eleventy-plugin",
+    "eleventy",
+    "remark",
+    "markdown"
+  ],
+  "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "remark": "^11.0.2",
+    "remark-html": "^10.0.0"
+  },
+  "peerDependencies": {
+    "remark": "^11.0.2",
+    "remark-html": "^10.0.0"
+  }
+}
