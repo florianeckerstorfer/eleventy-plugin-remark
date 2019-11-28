@@ -1,8 +1,11 @@
 const remark = require('remark');
 const html = require('remark-html');
 
-function eleventyRemark() {
+function eleventyRemark(options) {
   const processor = remark().use(html);
+  for (let i = 0; i < options.plugins.length; i++) {
+    processor.use(options.plugins[i]);
+  }
 
   return {
     set: () => {},
@@ -19,4 +22,4 @@ function eleventyRemark() {
   };
 }
 
-module.exports = eleventyRemark();
+module.exports = eleventyRemark;
