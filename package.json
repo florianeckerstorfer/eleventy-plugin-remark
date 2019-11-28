@@ -4,7 +4,7 @@
   "description": "Use remark to compile Markdown in Eleventy",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "eleventy-plugin",
@@ -15,6 +15,7 @@
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "license": "MIT",
   "devDependencies": {
+    "jest": "^24.9.0",
     "remark": "^11.0.2",
     "remark-html": "^10.0.0"
   },
