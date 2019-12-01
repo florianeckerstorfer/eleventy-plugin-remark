@@ -1,5 +1,5 @@
-const remark = require('remark');
-const html = require('remark-html');
+import remark from 'remark';
+import html from 'remark-html';
 
 function eleventyRemark(options) {
   const processor = remark().use(html);
@@ -10,10 +10,10 @@ function eleventyRemark(options) {
   return {
     set: () => {},
     render: str =>
-      new Promise(resolve => {
+      new Promise((resolve, reject) => {
         processor.process(str, (err, file) => {
           if (err) {
-            console.log(err);
+            reject(err);
             return;
           }
           resolve(String(file));
@@ -22,4 +22,4 @@ function eleventyRemark(options) {
   };
 }
 
-module.exports = eleventyRemark;
+export default eleventyRemark;
