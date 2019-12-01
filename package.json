@@ -1,9 +1,10 @@
 {
   "name": "@fec/eleventy-plugin-remark",
   "version": "1.0.0",
-  "description": "Use remark to compile Markdown in Eleventy",
-  "main": ".eleventy.js",
+  "description": "Plugin for Eleventy to process Markdown files with Remark",
+  "main": "dist/eleventy.cjs.js",
   "scripts": {
+    "build": "rollup -c",
     "test": "jest"
   },
   "keywords": [
@@ -19,14 +20,18 @@
     "@types/node": "^12.12.14",
     "jest": "^24.9.0",
     "remark": "^11.0.2",
-    "remark-html": "^10.0.0"
+    "remark-html": "^10.0.0",
+    "rollup": "^1.27.7"
   },
   "peerDependencies": {
     "remark": "^11.0.2",
     "remark-html": "^10.0.0"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,ts}", ".eleventy.js"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}",
+      ".eleventy.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,
