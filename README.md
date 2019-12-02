@@ -1,5 +1,7 @@
 # @fec/eleventy-plugin-remark
 
+![Badge for Tests (Linux)](https://github.com/florianeckerstorfer/eleventy-plugin-remark/workflows/Tests%20%28Linux%29/badge.svg)
+
 > Plugin for [Eleventy](https://www.11ty.io) to process Markdown files with [Remark](https://remark.js.org)
 
 `@fec/eleventy-plugin-remark` is very easy to configure and allows you to use Remark plugins with Eleventy.
