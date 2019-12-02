@@ -4,7 +4,7 @@
 
 > Plugin for [Eleventy](https://www.11ty.io) to process Markdown files with [Remark](https://remark.js.org)
 
-`@fec/eleventy-plugin-remark` is very easy to configure and allows you to use Remark plugins with Eleventy.
+With `@fec/eleventy-plugin-remark` you can transpile the Markdown of your Eleventy site with Remark. You can also use Remark plugins.
 
 Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 Vienna, Europe.
 
