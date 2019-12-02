@@ -2,18 +2,16 @@
 
 > Plugin for [Eleventy](https://www.11ty.io) to process Markdown files with [Remark](https://remark.js.org)
 
+`@fec/eleventy-plugin-remark` is very easy to configure and allows you to use Remark plugins with Eleventy.
+
 Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 Vienna, Europe.
 
-1. [Prerequisites](#prerequisites)
-2. [Installation](#installation)
-3. [Configuration](#configuration)
-4. [Contributing](#contributing)
-5. [License](#license)
+## Table of Contents
 
-## Prerequisites
-
-- Eleventy
-- `remark` and `remark-html`
+1. [Installation](#installation)
+2. [Configuration](#configuration)
+3. [Contributing](#contributing)
+4. [License](#license)
 
 ## Installation
 
@@ -26,7 +24,7 @@ yarn add --dev @fec/eleventy-plugin-remark remark remark-html
 
 ## Configuration
 
-You need to add `eleventy-plugin-remark` to your Eleventy configuration:
+To activate `@fec/eleventy-plugin-remark` you call `addPlugin()` on `eleventyConfig`, like this:
 
 ```js
 // .eleventy.js
@@ -36,6 +34,14 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(eleventyRemark);
   return {};
 };
+```
+
+If you want to add custom Remark plugins, use the `plugins` option.
+
+```js
+eleventyConfig.addPlugin(eleventyRemark, {
+  plugins: [require('remark-abbr')],
+});
 ```
 
 # Contributing
