@@ -59,7 +59,7 @@ To contribute to `eleventy-plugin-remark`, follow these steps:
 7. Push to the original branch: `git push origin <project_name>/<location>`
 8. Create the pull request.
 
-Alternatively see the GitHub documentation on creating a pull request.
+Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## License
 
