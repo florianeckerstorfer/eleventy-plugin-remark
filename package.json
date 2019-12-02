@@ -5,7 +5,8 @@
   "main": "dist/eleventy.cjs.js",
   "scripts": {
     "build": "rollup -c",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "cross-env NODE_ENV=production npm run build"
   },
   "keywords": [
     "eleventy-plugin",
