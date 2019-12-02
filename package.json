@@ -26,6 +26,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.7.4",
     "@types/node": "^12.12.14",
+    "cross-env": "^6.0.3",
     "jest": "^24.9.0",
     "remark": "^11.0.2",
     "remark-html": "^10.0.0",
