@@ -15,6 +15,13 @@
   ],
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/florianeckerstorfer/eleventy-plugin-remark"
+  },
+  "bugs": {
+    "url": "https://github.com/florianeckerstorfer/eleventy-plugin-remark/issues"
+  },
+  "homepage": "https://github.com/florianeckerstorfer/eleventy-plugin-remark#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.7.4",
     "@types/node": "^12.12.14",
