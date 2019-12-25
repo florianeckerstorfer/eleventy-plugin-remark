@@ -25,7 +25,7 @@
   "homepage": "https://github.com/florianeckerstorfer/eleventy-plugin-remark#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.7.4",
-    "@types/node": "^12.12.14",
+    "@types/node": "^13.1.0",
     "cross-env": "^6.0.3",
     "jest": "^24.9.0",
     "remark": "^11.0.2",
