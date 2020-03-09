@@ -30,7 +30,7 @@
     "jest": "^25.1.0",
     "remark": "^11.0.2",
     "remark-html": "^10.0.0",
-    "rollup": "^1.27.7"
+    "rollup": "^2.0.2"
   },
   "peerDependencies": {
     "remark": "^11.0.2",
