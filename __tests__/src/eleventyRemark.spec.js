@@ -163,7 +163,7 @@ describe('eleventyRemark()', () => {
         await plugin.render('foo');
       } catch (error) {
         expect(error.message).toBe(
-          'plugin has to be an instance of a remark plugin or the name of one'
+          'plugin has to be a function or a string, object type passed'
         );
       }
     });

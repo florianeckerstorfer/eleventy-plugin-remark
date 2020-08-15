@@ -14,9 +14,7 @@ function requirePlugins(plugins) {
       return require(item);
     }
 
-    throw new Error(
-      'plugin has to be an instance of a remark plugin or the name of one'
-    );
+    throw new Error(`plugin has to be a function or a string, ${typeof item} type passed`);
   };
 
   const list = plugins.map((item) => {
