@@ -40,9 +40,30 @@ module.exports = eleventyConfig => {
 
 If you want to add custom Remark plugins, use the `plugins` option.
 
+Signatures
+
+- `plugins: [<plugin-function|plugin-name>, ...<plugin-n>]`
+- `plugins: [[{ plugin: <plugin> }], ...[{ plugin: <plugin-n>, options: <plugin-options> }]]`
+
 ```js
+const emoji = require('remark-emoji');
+
 eleventyConfig.addPlugin(eleventyRemark, {
-  plugins: [require('remark-abbr')],
+  plugins: [
+    emoji,
+    require('remark-emoji'),
+    'remark-emoji',
+    {
+      plugin: emoji
+    },
+    {
+      plugin: 'remark-emoji',
+      options: {
+        padSpaceAfter: true,
+        emoticon: true
+      }
+    }
+  ],
 });
 ```
 
