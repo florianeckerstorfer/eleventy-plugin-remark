@@ -1,0 +1,2848 @@
+{
+	"name": "vfile",
+	"versions": {
+		"1.0.0": {
+			"name": "vfile",
+			"version": "1.0.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"mdast",
+				"retext"
+			],
+			"dependencies": {},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"clone": "^1.0.1",
+				"diff": "^1.0.0",
+				"eslint": "^0.24.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^1.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^0.27.1",
+				"mdast-comment-config": "^0.1.2",
+				"mdast-github": "^0.3.0",
+				"mdast-lint": "^0.4.0",
+				"mdast-man": "^0.4.0",
+				"mdast-toc": "^0.5.0",
+				"mdast-validate-links": "^0.2.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-api-extensive": "TEST_EXTENDED=true npm run test-api",
+				"test-coveralls": "istanbul cover _mocha --report lcovonly -- --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- -- test.js",
+				"test-travis": "npm run test-coveralls",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"build-md": "mdast . --quiet",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"postbuild-bundle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle"
+			},
+			"gitHead": "eeaa688d8e69dbf208b91dfc1101d5d21664f9b4",
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"homepage": "https://github.com/wooorm/vfile#readme",
+			"_id": "vfile@1.0.0",
+			"_shasum": "7ce778c92d939c85f6854b99070fb205396c87c7",
+			"_from": ".",
+			"_npmVersion": "2.11.3",
+			"_nodeVersion": "2.3.3",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "7ce778c92d939c85f6854b99070fb205396c87c7",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "vfile",
+			"version": "1.0.1",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"mdast",
+				"retext"
+			],
+			"dependencies": {},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^1.0.0",
+				"mdast-comment-config": "^1.0.0",
+				"mdast-github": "^0.3.0",
+				"mdast-lint": "^1.0.0",
+				"mdast-man": "^0.5.0",
+				"mdast-toc": "^0.5.0",
+				"mdast-validate-links": "^0.3.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"build-md": "mdast . --quiet",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"postbuild-bundle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle"
+			},
+			"gitHead": "ca5c7341b6bd8313dc3495132c85c489aaf6204c",
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"homepage": "https://github.com/wooorm/vfile#readme",
+			"_id": "vfile@1.0.1",
+			"_shasum": "8ea4ed9144dd71af0942e745a02011dadae759d9",
+			"_from": ".",
+			"_npmVersion": "2.13.2",
+			"_nodeVersion": "2.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "8ea4ed9144dd71af0942e745a02011dadae759d9",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-1.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "vfile",
+			"version": "1.1.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"mdast",
+				"retext"
+			],
+			"dependencies": {},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^1.0.0",
+				"mdast-comment-config": "^1.0.0",
+				"mdast-github": "^1.0.0",
+				"mdast-lint": "^1.0.0",
+				"mdast-man": "^1.0.0",
+				"mdast-toc": "^1.0.0",
+				"mdast-validate-links": "^1.0.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"build-md": "mdast . --quiet",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"postbuild-bundle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle"
+			},
+			"gitHead": "5349cc4088d7f078f272a85ce767c3e3bb180af4",
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"homepage": "https://github.com/wooorm/vfile#readme",
+			"_id": "vfile@1.1.0",
+			"_shasum": "7afa41d8ede0ea937347e844c8de67a8cff19f04",
+			"_from": ".",
+			"_npmVersion": "2.13.2",
+			"_nodeVersion": "2.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "7afa41d8ede0ea937347e844c8de67a8cff19f04",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-1.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "vfile",
+			"version": "1.1.1",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"mdast",
+				"retext"
+			],
+			"dependencies": {},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^1.0.0",
+				"mdast-comment-config": "^1.0.0",
+				"mdast-github": "^1.0.0",
+				"mdast-lint": "^1.0.0",
+				"mdast-man": "^1.0.0",
+				"mdast-toc": "^1.0.0",
+				"mdast-validate-links": "^1.0.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"build-md": "mdast . --quiet",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"postbuild-bundle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle"
+			},
+			"gitHead": "fc0fece9c3d5686e360efc5be38a638f5d327157",
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"homepage": "https://github.com/wooorm/vfile#readme",
+			"_id": "vfile@1.1.1",
+			"_shasum": "c41c28c44339a777cc88d8eb03e28d65dfad046b",
+			"_from": ".",
+			"_npmVersion": "3.3.5",
+			"_nodeVersion": "4.1.1",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "c41c28c44339a777cc88d8eb03e28d65dfad046b",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-1.1.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.1.2": {
+			"name": "vfile",
+			"version": "1.1.2",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"mdast",
+				"retext"
+			],
+			"dependencies": {},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^1.0.0",
+				"mdast-comment-config": "^1.0.0",
+				"mdast-github": "^1.0.0",
+				"mdast-lint": "^1.0.0",
+				"mdast-man": "^1.0.0",
+				"mdast-toc": "^1.0.0",
+				"mdast-validate-links": "^1.0.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"build-md": "mdast . --quiet",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"postbuild-bundle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle"
+			},
+			"gitHead": "500c69c2faa29cc837d6859009ff6b0788690aa9",
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"homepage": "https://github.com/wooorm/vfile#readme",
+			"_id": "vfile@1.1.2",
+			"_shasum": "0966fadfe85f320378e8a8e2402acd39cda25aa7",
+			"_from": ".",
+			"_npmVersion": "3.3.5",
+			"_nodeVersion": "4.1.1",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "0966fadfe85f320378e8a8e2402acd39cda25aa7",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-1.1.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "vfile",
+			"version": "1.2.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"dependencies": {},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^12.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^3.0.0",
+				"remark-comment-config": "^2.0.0",
+				"remark-github": "^2.0.0",
+				"remark-lint": "^2.0.0",
+				"remark-man": "^2.0.0",
+				"remark-toc": "^2.0.0",
+				"remark-validate-links": "^2.0.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "mocha --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "211f63709c10c27912e740a8668b486080624df1",
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"homepage": "https://github.com/wooorm/vfile#readme",
+			"_id": "vfile@1.2.0",
+			"_shasum": "1fc9b21c485f6644e52e2e9eff8e8d8c6a2ab123",
+			"_from": ".",
+			"_npmVersion": "3.5.0",
+			"_nodeVersion": "5.1.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "1fc9b21c485f6644e52e2e9eff8e8d8c6a2ab123",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-1.2.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.3.1": {
+			"name": "vfile",
+			"version": "1.3.1",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"dependencies": {},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^3.0.0",
+				"remark-comment-config": "^2.0.0",
+				"remark-github": "^3.0.0",
+				"remark-lint": "^2.0.0",
+				"remark-man": "^2.0.0",
+				"remark-toc": "^2.0.0",
+				"remark-validate-links": "^2.0.0",
+				"tape": "^4.4.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "afbbeb77b69b7b54e062f1efed42433dd766a3d0",
+			"homepage": "https://github.com/wooorm/vfile#readme",
+			"_id": "vfile@1.3.1",
+			"_shasum": "7d3fff69a8416292fb021cf2089fff5a71ce3c9a",
+			"_from": ".",
+			"_npmVersion": "3.5.0",
+			"_nodeVersion": "5.1.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "7d3fff69a8416292fb021cf2089fff5a71ce3c9a",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-1.3.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.4.0": {
+			"name": "vfile",
+			"version": "1.4.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"dependencies": {},
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^3.0.0",
+				"jscs-jsdoc": "^2.0.0",
+				"remark": "^4.0.0",
+				"remark-comment-config": "^3.0.0",
+				"remark-github": "^4.0.1",
+				"remark-lint": "^3.0.0",
+				"remark-man": "^3.0.0",
+				"remark-toc": "^3.0.0",
+				"remark-validate-links": "^3.0.0",
+				"tape": "^4.4.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "f3d1305fe934090b557cd6756704d9c8adb7891d",
+			"homepage": "https://github.com/wooorm/vfile",
+			"_id": "vfile@1.4.0",
+			"_shasum": "c0fd6fa484f8debdb771f68c31ed75d88da97fe7",
+			"_from": ".",
+			"_npmVersion": "2.3.0",
+			"_nodeVersion": "0.11.16",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "c0fd6fa484f8debdb771f68c31ed75d88da97fe7",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-1.4.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/vfile-1.4.0.tgz_1460997022817_0.025531638180837035"
+			},
+			"directories": {}
+		},
+		"2.0.0": {
+			"name": "vfile",
+			"version": "2.0.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"has": "^1.0.1",
+				"is-buffer": "^1.1.4",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^1.0.0",
+				"x-is-string": "^0.1.0"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^8.1.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-toc": "^3.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"rules": {
+					"guard-for-in": "off",
+					"max-lines": "off"
+				},
+				"ignores": [
+					"vfile.js",
+					"vfile.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": {
+					"comment-config": null,
+					"github": null,
+					"lint": {
+						"heading-increment": false,
+						"list-item-spacing": false,
+						"no-missing-blank-lines": false,
+						"no-duplicate-headings": false
+					},
+					"toc": {
+						"tight": true,
+						"maxDepth": 3
+					},
+					"validate-links": null
+				},
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "c661fa55b4a3c272e37eb5278bae4f805b8680f4",
+			"homepage": "https://github.com/wooorm/vfile#readme",
+			"_id": "vfile@2.0.0",
+			"_shasum": "88620500e36bad025a0b01cc25106dbcb3090548",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "88620500e36bad025a0b01cc25106dbcb3090548",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-2.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/vfile-2.0.0.tgz_1471786165800_0.7581158040557057"
+			},
+			"directories": {}
+		},
+		"2.0.1": {
+			"name": "vfile",
+			"version": "2.0.1",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"dependencies": {
+				"has": "^1.0.1",
+				"is-buffer": "^1.1.4",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^1.0.0",
+				"x-is-string": "^0.1.0"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^10.0.0",
+				"remark-cli": "^2.0.0",
+				"remark-preset-wooorm": "^1.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.17.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"vfile.js"
+				]
+			},
+			"remarkConfig": {
+				"presets": "wooorm"
+			},
+			"gitHead": "a66a358b1365939a2c7ef35687f24d2e821fc19d",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@2.0.1",
+			"_shasum": "bd48e68e8a2322dff0d162a37f45e70d9bb30466",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "bd48e68e8a2322dff0d162a37f45e70d9bb30466",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-2.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/vfile-2.0.1.tgz_1486489789619_0.2632928746752441"
+			},
+			"directories": {}
+		},
+		"2.1.0": {
+			"name": "vfile",
+			"version": "2.1.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"dependencies": {
+				"is-buffer": "^1.1.4",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^1.0.0"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^10.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/no-new-buffer": "off"
+				},
+				"ignores": [
+					"vfile.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "fed717c6f07dcb806cae3b71ce8f879e11134f3c",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@2.1.0",
+			"_shasum": "d3ce8b825e7b8d53b896164341273381936f02bd",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "d3ce8b825e7b8d53b896164341273381936f02bd",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-2.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-2.1.0.tgz_1496180611086_0.39104234194383025"
+			},
+			"directories": {}
+		},
+		"2.2.0": {
+			"name": "vfile",
+			"version": "2.2.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"dependencies": {
+				"is-buffer": "^1.1.4",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^1.0.0"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/no-new-buffer": "off"
+				},
+				"ignores": [
+					"vfile.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "b1e3c4b263ce2762765d63e64d7ee7f3a393276d",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@2.2.0",
+			"_shasum": "ce47a4fb335922b233e535db0f7d8121d8fced4e",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "ce47a4fb335922b233e535db0f7d8121d8fced4e",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-2.2.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-2.2.0.tgz_1500301074276_0.9756653504446149"
+			},
+			"directories": {}
+		},
+		"2.3.0": {
+			"name": "vfile",
+			"version": "2.3.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"files": [
+				"core.js",
+				"index.js"
+			],
+			"dependencies": {
+				"is-buffer": "^1.1.4",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^1.0.0",
+				"vfile-message": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"remark-cli": "^4.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/no-new-buffer": "off"
+				},
+				"ignores": [
+					"vfile.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "542a7fd62abf83224e59c5364903915867e0902f",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@2.3.0",
+			"_npmVersion": "5.5.1",
+			"_nodeVersion": "9.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-ASt4mBUHcTpMKD/l5Q+WJXNtshlWxOogYyGYYrg4lt/vuRjC1EFQtlAofL5VmtVNIZJzWYFJjzGWZ0Gw8pzW1w==",
+				"shasum": "e62d8e72b20e83c324bc6c67278ee272488bf84a",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-2.3.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-2.3.0.tgz_1510871055448_0.34933894989080727"
+			},
+			"directories": {}
+		},
+		"3.0.0": {
+			"name": "vfile",
+			"version": "3.0.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"files": [
+				"core.js",
+				"index.js"
+			],
+			"dependencies": {
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^1.0.0",
+				"vfile-message": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.21.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js -s VFile > vfile.js",
+				"build-mangle": "esmangle vfile.js > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off",
+					"object-shorthand": "off"
+				},
+				"ignores": [
+					"vfile.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "dc5cd9354f93a7ca35d2de2139c0ed372f1d4c32",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@3.0.0",
+			"_npmVersion": "6.0.0",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-X2DiPHL9Nxgfyu5DNVgtTkZtD4d4Zzf7rVBVI+uXP2pWWIQG8Ri+xAP9KdH/sB6SS0a1niWp5bRF88n4ciwhoA==",
+				"shasum": "e0995335fdafbefe0c3d59a42868d413c0409031",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-3.0.0.tgz",
+				"fileCount": 5,
+				"unpackedSize": 18660,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa7LOgCRA9TVsSAnZWagAAkI0P/28xMfHRb8q1GXOymxaQ\ntt2G0U4wCn1vWpUOe7PksvPsx7w41BEX3bvzU6Q+wuWIAZOrXV1+9AUjg28H\nZ4UW0/QAal3DkdLDQJQ0C0St1kzEKp7UqT4Toq0pP1IAAKblbZZ67ITIsOwb\nKopXtuOUZLc3yUzKWUJgUbPwlYtwsGodlbZ9hXglyGT9hc/72VDrfM+cgIII\nvscAe17tTE0x+pfOykLXlOEr/SH1WJPZxNsTK1oF62hNgmou6SDT1APrnRF5\nmfTrdVU8R1VCRhLcW3qHKoDpOlCh8ECu9mNUiy4pd0PfP+iA67d4tlsWKv+t\n7J/3QUVGcgG4UeExBJ4LFkBoK7uO7qUBXMPB0nt8XtcLeQ7i48BHP/7fMgl6\nn9cAvWdMm7i+6D+2bE3vrEx386cBlwLA5LuatAL1vQMLtEyUsENowagsutFC\nGAht3BsxsVaQE5gqW5Dpa9Yxr5TMtMPXeN/dh9GR1PRgJyqPeus7IHsMWWem\nEfnkRKBaq8mEdJnEf8sryO1/b3R7jq48T4Vt6g0jld1UNqUFfaUeckkyX1f/\n+tt9axn3bN+0q42nwu1i8Eryy+lOnb4pf66bzdYuzqTm7B3AIykLfUuD5y+D\ngTiOUPPY+nkxSz99jkzX1mJxKWh7RgoObKE4FnLnZyHXnWwfyiRkD5gYwbfd\nyJzR\r\n=XHBi\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_3.0.0_1525461918769_0.8533472038015599"
+			},
+			"_hasShrinkwrap": false
+		},
+		"3.0.1": {
+			"name": "vfile",
+			"version": "3.0.1",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"dependencies": {
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^1.0.0",
+				"vfile-message": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^13.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.4.0",
+				"tinyify": "^2.4.3",
+				"xo": "^0.23.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s VFile > vfile.js",
+				"build-mangle": "browserify . -s VFile -p tinyify > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off",
+					"object-shorthand": "off"
+				},
+				"ignores": [
+					"vfile.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "b07cbb0b21d99ec73671fec56a7fa6c65990f96f",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@3.0.1",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-y7Y3gH9BsUSdD4KzHsuMaCzRjglXN0W2EcMf0gpvu6+SbsGhMje7xDc8AEoeXy6mIwCKMI6BkjMsRjzQbhMEjQ==",
+				"shasum": "47331d2abe3282424f4a4bb6acd20a44c4121803",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-3.0.1.tgz",
+				"fileCount": 6,
+				"unpackedSize": 19111,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb1bsdCRA9TVsSAnZWagAApcwP/RrONz4hZtlxWnepS0Jn\nqiVbhC/6T1SJCRcQdXqWJXghK++pWDaSgfpfaEjY0LkvyHDnHlXijoYzv9j5\nhgl9H6kIp+4EVhAdRqtzafBQCB3NvvEavyeqN7bxGm9bYWjxOgYJzgfnuoGJ\naLwuUecDvT3yzY+RKwfzPeXt5UmHoX7NqPbHjEXvJAmCYyOBO/JUVAmTVI43\n0ALjmObLNr5sWDu9sbS5ezo1g+CbOF9xJR7vNkyMcR5qEA8oHsw/zsjVkNNj\n04K/MiU6wVpdS0ufS2WKKrmiAgfrFXRLmpKakHzUzktM5PLDm50zg133OoCE\nscRUIyl7rz4vulrrYs7Xeo74s9w7AP4p9hXeJfJG/Nf9o9PVAQrQLO+8sEyM\nwEnqhNGWy9vnGnonUnbB7byNQY0y5+2+aeeFiSZG8Hg381AOFOBr0WTmxURQ\nnEy55QkxRADTh1oR16ipzIuRFK1DmEOf67ysIjPfIXORGSLnPMMjUV1KAVet\nOrr7xI+WUnIWbTTmB5a1SBm1DVDtDWP2O6FCvccsWvN/dRome7LbigG6R5G7\nIfZxJfYWgVUd0DoxkYKFneRe5fr18tRdN3han8QZLCdpfGhH1eay9csb+j5y\nXq8WGZRTOhjXRHgmq4zFheI/MaQXJfXQkcipylmLfg7ATvzNbpgqw2qWObBT\n65C8\r\n=ZQKB\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_3.0.1_1540733725015_0.1676188233120417"
+			},
+			"_hasShrinkwrap": false
+		},
+		"4.0.0": {
+			"name": "vfile",
+			"version": "4.0.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"@types/unist": "^2.0.2",
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^2.0.0",
+				"vfile-message": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^0.4.1",
+				"nyc": "^13.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.4.0",
+				"tinyify": "^2.4.3",
+				"typescript": "^3.2.2",
+				"xo": "^0.23.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s VFile > vfile.js",
+				"build-mangle": "browserify . -s VFile -p tinyify > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off",
+					"object-shorthand": "off"
+				},
+				"ignores": [
+					"vfile.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "74943e1e86f633bcd5874b44d21be9949efaa5db",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@4.0.0",
+			"_npmVersion": "6.5.0",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-WMNeHy5djSl895BqE86D7WqA0Ie5fAIeGCa7V1EqiXyJg5LaGch2SUaZueok5abYQGH6mXEAsZ45jkoILIOlyA==",
+				"shasum": "ebf3b48af9fcde524d5e08d5f75812058a5f78ad",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-4.0.0.tgz",
+				"fileCount": 7,
+				"unpackedSize": 25714,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcMe56CRA9TVsSAnZWagAAohsQAJiLCYFOSp2LQ7/7KeXF\n42iqZzwHhsUx/x8I+2p6Lmn5YZcJqKIrNjf3i6hvagJ66kGd6LnbbCk0ueAj\noNlB3eHcirRpVYElYNJsxoDQjPJIc8FBaGi4DTvr/QlnHX/T9QO6gxdLvmZ/\nRKadRXFQwsnurfzgt11aF5VLZ5H4wsf8GXSedhuXLXV095vdcZWRO8yRuHiR\n7jmBkJP6Pn+U23HBqgFbBoZSOBovwftqcK7KE8NuMkEAGNCJNbUp0BdK3NZE\nW6KpnI8Y18vq0BgMxBqrBHibkM7TMfoqKF3Fg7GHEOfOrcz5H/76fZKmvADH\nSHkS1yH6PAcTDiqfrU/ztfwgTUV8R48XP0LsgedIHQhLWhgLdITgc/ywgWqO\n1EJ0lAzR3xks1yuhatxbuo6riIw6iJFQ48RbgZYAH55KsgUv1jjxxI9W34gN\n+dgyTtprgx9VYWsWPD3szynAZGCqBM++F57k04tuBMXuYu+OoY/3U8ed/igM\nWU1AIrd0F6Wa6XqkuwSEAn5MYZquw7KOXv7v2cgNjYQrvpxzRKNtXJ7sAqAe\nsYbmmxp6WG5iunhfF3n91qKzuNuIqxPiDosZh444B0xkJqaZ699kIjd0F6F/\nKgLF4yTkCaB+AIcp+bQwmwKzHpru7ermXm4wxFkYCPS6GC4xxFSu/ybi2aDN\nnVUc\r\n=jONQ\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_4.0.0_1546776185184_0.1292336778122567"
+			},
+			"_hasShrinkwrap": false
+		},
+		"4.0.1": {
+			"name": "vfile",
+			"version": "4.0.1",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"@types/unist": "^2.0.0",
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^2.0.0",
+				"vfile-message": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^0.7.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"typescript": "^3.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s VFile > vfile.js",
+				"build-mangle": "browserify . -s VFile -p tinyify > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"vfile.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "8f474a27c6347558dc62a67af0de90eaa58ab6fa",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@4.0.1",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-lRHFCuC4SQBFr7Uq91oJDJxlnftoTLQ7eKIpMdubhYcVMho4781a8MWXLy3qZrZ0/STD1kRiKc0cQOHm4OkPeA==",
+				"shasum": "fc3d43a1c71916034216bf65926d5ee3c64ed60c",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-4.0.1.tgz",
+				"fileCount": 7,
+				"unpackedSize": 25900,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc8AE3CRA9TVsSAnZWagAA6L8P/RIaoRnTf7Wqgwv7wplJ\ncxJ6UaoIEkj04w4x3w8w7HG1Srpatv6n7rzoqZBhDM8W9o2o6sEzF5FqhjX5\nkqRtbjl5Rn/kMd1sAuINXrBygN9sE/miEayWp6PbaUSvOVHMt/PAwb8gZ1tS\nblWVo5uFr5pvg5KXJvKShxXYDtMhis6h250O0mzjh8DqWqns7H7hZj+iF7Hw\nn8cbGHksUIhuXOnxf479B3bRrX3G1yIcrSJ8HpglCWBIyK4seHbBoahqegbk\n5V/MOeeUjc8LUsRFeWUt8/jrFYu21dMgmxHHbH9apscK+28VvvZInF8yaLvb\nUVIjFX834LxHIc1mMiIQp/eQibv5Y8b0Y+c+D6SFQ1C17FbBUL1eIKuX2c4+\nRREQ8tU1Xc6LhdpVrmuHaLttdHStkG5F4RphAW0n8IK4QBUOqWDcjm7Lc/Bz\nT1lrxU5QFj9hPNUb+YOvB/pjNL3SX3BFO6gpBZmcpq8PuSVvq+Vh5FqS/MEG\nhFshKznwpOHnJvLZlQMaGv2TNBG6Z9zegww0DkYeJpCSEcWW86tQUVvj7xnV\n6d92CeIPBJcbSRobk6wR3HDxYSVgtdDNroPX3sN9R7VAwI7JMfx3Loawsdki\nBVdaELNxlmiNOSVmNj9UGLoPafbzHPWHf/6GPHYd/5ES2ddzRGL/cxjxdlhP\n5y3x\r\n=f8tr\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_4.0.1_1559232822122_0.4742999488616695"
+			},
+			"_hasShrinkwrap": false
+		},
+		"4.0.2": {
+			"name": "vfile",
+			"version": "4.0.2",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"@types/unist": "^2.0.0",
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^2.0.0",
+				"vfile-message": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^2.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"typescript": "^3.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s VFile > vfile.js",
+				"build-mangle": "browserify . -s VFile -p tinyify > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"vfile.js"
+				],
+				"rules": {
+					"unicorn/prefer-includes": "off",
+					"unicorn/prefer-reflect-apply": "off"
+				}
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "9f4180893db6fb4d16fa070fd2ec437118276e21",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@4.0.2",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-yhoTU5cDMSsaeaMfJ5g0bUKYkYmZhAh9fn9TZicxqn+Cw4Z439il2v3oT9S0yjlpqlI74aFOQCt3nOV+pxzlkw==",
+				"shasum": "71af004d4a710b0e6be99c894655bc56126d5d56",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-4.0.2.tgz",
+				"fileCount": 7,
+				"unpackedSize": 26115,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdx8R6CRA9TVsSAnZWagAAr+sP+QCTvKCnXvfiOwcPhvSR\n1F7/hvEEVxWzij1U4x6wHYFvGEcF0Ep2QVuM82ImnWjQSfnFntTDrllPcX43\nyrCPdkbAa5dT2IBaySPkqcuQLln0Pvg3iE0b3mFDwvMURzR+GISQd1SnEYjc\nJusiouAjfU3qSS0aUQxsxyRpeUthQucP14DA3YoL7aAQBLcHB+MRmmKz5jZ0\n2S0R0xa0L6O1E0SZqoSxvIsdvCTaMxmbI+iiso9dE4qF085DfnJU6uwHiWLZ\nh/b9PY/gW1BVVXsgu3VRDZtnR1akuzFwERsUK4w0+/1izf46eAPvg0VRFZOC\nIoaKxT3pkqeUhir7euxjv2tcOs9A2B4M2HXitODSpKskWOoM3SnuNmuMKFUV\n5aulYNyY3gzkKrXWnD8U0zBaQyElwEk1pAAL/KV+vIBz4Nxk0IcsPt+ZJEx1\np0cFIbiI9Jiic0WZT4IXbgY1Z/IQbwo3M637dr5YW/Z3SfHbrsASny94vot8\nwJmmnO2hjve2tPYAccRINNSXSdzgDBpQdY8RvlPf4+BweV9aHjti6bRLZY16\nLS/bCBM6qSaSBQKgw0LGaGKbOsGQsRHYpsLuYTtYafUlbnkDoADK8OFBeVh1\nAHimVdVqh50P6NPSGdYoyglEnVQd8DKc0W0uwwkMVtbU1O7Ba23YKeBGKoSx\nP6OZ\r\n=usvV\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_4.0.2_1573373050107_0.30839145028489257"
+			},
+			"_hasShrinkwrap": false
+		},
+		"4.0.3": {
+			"name": "vfile",
+			"version": "4.0.3",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"vfile",
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext",
+				"rehype"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"@types/unist": "^2.0.0",
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^2.0.0",
+				"vfile-message": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.27.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s VFile > vfile.js",
+				"build-mangle": "browserify . -s VFile -p tinyify > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"vfile.js"
+				],
+				"rules": {
+					"@typescript-eslint/explicit-function-return-type": "off",
+					"@typescript-eslint/member-ordering": "off",
+					"@typescript-eslint/no-empty-function": "off",
+					"@typescript-eslint/no-unused-vars": "off",
+					"unicorn/prefer-includes": "off",
+					"unicorn/prefer-reflect-apply": "off"
+				}
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"toc",
+						{
+							"heading": "contents"
+						}
+					]
+				]
+			},
+			"gitHead": "395a6727fd1918bca57e8de33899a9e518a2304c",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@4.0.3",
+			"_nodeVersion": "13.9.0",
+			"_npmVersion": "6.13.7",
+			"dist": {
+				"integrity": "sha512-lREgT5sF05TQk68LO6APy0In+TkFGnFEgKChK2+PHIaTrFQ9oHCKXznZ7VILwgYVBcl0gv4lGATFZBLhi2kVQg==",
+				"shasum": "1e50b824fb5e5affd718e225c7bb1af6d97d4408",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-4.0.3.tgz",
+				"fileCount": 7,
+				"unpackedSize": 26869,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeXh+xCRA9TVsSAnZWagAA64QQAJoYoISAPC4X4nuC290+\nFSP33lfOuXXxJl85l4+lX/k3p0ZIFu/pVVnFCpPNtuJRvM9vo/sazAhzCAs2\nSs8gwRVzOfS2wKY1vp84Kug9zhU4PXS8mOldrn6Y/D9pWMsRDSkVTCikZX2A\nJnAD7xoTnU2dXjSrTwu8sLjoiK9y1rZDw/V9/4wPd8yzACOI0vrgAbiRLkcI\nu15YnMcZlXdvdb9hS+ch9s8hkt+KJ0vu66KSCB6JC58utRdy0bAKU4j35FVg\nnhtpGo3B/F/LV95cV0+L9p2Oh7hvSWHyMn52LGtJu0hzrsRpwC5nxcl/1c3K\nu/FuEI100vGX0w4fXFAVR2COwDa7yxTAon6z9vrFfTP8xaozTGsTEcngXn+W\nObkRKffe2xajnM8zEWYP5NchbNxUrZGL+7YUsSDg6y0sbt1sx6LDIPIcPMKk\nrjTx5Vq2kyoOyuceAuqNPYDLMErLtfWnhEE+zlVgUiEVRsKXIBCiumg8CG5z\n7TsVvjSqFFFo9G8nq649lzQcRJ/NRuynwRWFWyvdL8h8rX/u8LFH7Rg4nZmf\nhWJ5sbBb60XERXOkJ41DWNbRE8ybbJlkIrs9itGijmopWsjW1HwVoL0pUScx\nK6wjK2ts9J7aEe54Apq/1QNtFXEVAUnb0T1wNfQBW05rs5AKzoECI9cTExN1\ngb2C\r\n=I+Xh\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_4.0.3_1583226800451_0.24202766225874384"
+			},
+			"_hasShrinkwrap": false
+		},
+		"4.1.0": {
+			"name": "vfile",
+			"version": "4.1.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"vfile",
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext",
+				"rehype"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"@types/unist": "^2.0.0",
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^2.0.0",
+				"vfile-message": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.27.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s VFile > vfile.js",
+				"build-mangle": "browserify . -s VFile -p tinyify > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"vfile.js"
+				],
+				"rules": {
+					"@typescript-eslint/explicit-function-return-type": "off",
+					"@typescript-eslint/member-ordering": "off",
+					"@typescript-eslint/no-empty-function": "off",
+					"@typescript-eslint/no-unused-vars": "off",
+					"unicorn/prefer-includes": "off",
+					"unicorn/prefer-reflect-apply": "off"
+				}
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"toc",
+						{
+							"heading": "contents"
+						}
+					]
+				]
+			},
+			"gitHead": "c395183cadb42b474b48f0484b5aab5f31584f31",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@4.1.0",
+			"_nodeVersion": "13.10.1",
+			"_npmVersion": "6.14.3",
+			"dist": {
+				"integrity": "sha512-BaTPalregj++64xbGK6uIlsurN3BCRNM/P2Pg8HezlGzKd1O9PrwIac6bd9Pdx2uTb0QHoioZ+rXKolbVXEgJg==",
+				"shasum": "d79248957f43225d57ff67a56effc67bef08946e",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-4.1.0.tgz",
+				"fileCount": 7,
+				"unpackedSize": 27128,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJegO/zCRA9TVsSAnZWagAAdfcQAJ/59Td2S2OIqvxXEv1i\nV7T+BEGh4c/12LDl5nXSbSD/5w0sxLLByODkGJHB3/VOH1lCMOoc/5EEomvl\nv0huQmUMjU5tdaMYwxaE62I+mDgAyyfr6gihHMe3CoQ93SHvfseK4DzFpO0j\njevkN8OOYrPhMgMtjZWW+ihGlMksna5Ynqwdfn174tSg5kMpNL062Tu1axMx\n7FdnGE15VNTICc6ySa/O0k/Fherum0ZT68gdUpcd9aewzV7GhYyzoi/r8TT3\nc9fYrdeGiwSqZgA6KZAYaQ0lHhYAFDqo8JJXexPo+RXlT1D7NlBoN6TT44zQ\ntb8T6AxbGT2JmfSyI5Ss/oX9zHJ81xsdtleW26VvtTjoVJlvBru4Z/PrINyN\nh9WUrrYLsYR9j+YA/3IxUY7EY/P4b51vgK9KLckCNleMZSkRWGPyKIBtBY2a\nmwKiGhH12siaGZnm2wzdGxQsVJpv2Qadj7GCZVS549M3WgFsdrdSJCfTgjUy\ny3yr/45VPAkuhLjKln+4VEq5pZN8DIW+YnR7PazOBDTQ2G5PEuckXPkqdo7Z\nNv1JrjmFhZW+/cL2XqX/apJ+t5xOSMfRG87cpH7JxNVFXL6PoEjL8hqHwgNZ\nRCMFSZY2MX/qan18zYj3NamQ6M5z/OM65paFdbSGjtvOJrv59cWzxiqtS/zg\nYlTV\r\n=t6PK\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_4.1.0_1585508338630_0.9290476564043946"
+			},
+			"_hasShrinkwrap": false
+		},
+		"4.1.1": {
+			"name": "vfile",
+			"version": "4.1.1",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"vfile",
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext",
+				"rehype"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"@types/unist": "^2.0.0",
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^2.0.0",
+				"vfile-message": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^8.0.0",
+				"remark-preset-wooorm": "^7.0.0",
+				"tape": "^5.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.30.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s VFile > vfile.js",
+				"build-mangle": "browserify . -s VFile -p tinyify > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"types",
+					"vfile.js"
+				],
+				"rules": {
+					"unicorn/prefer-includes": "off",
+					"unicorn/prefer-reflect-apply": "off"
+				}
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"toc",
+						{
+							"heading": "contents"
+						}
+					]
+				]
+			},
+			"gitHead": "f177101c6ffe80c27e8e67af05f581e683099e23",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@4.1.1",
+			"_nodeVersion": "14.0.0",
+			"_npmVersion": "6.14.5",
+			"dist": {
+				"integrity": "sha512-lRjkpyDGjVlBA7cDQhQ+gNcvB1BGaTHYuSOcY3S7OhDmBtnzX95FhtZZDecSTDm6aajFymyve6S5DN4ZHGezdQ==",
+				"shasum": "282d28cebb609183ac51703001bc18b3e3f17de9",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-4.1.1.tgz",
+				"fileCount": 7,
+				"unpackedSize": 27717,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJev7IWCRA9TVsSAnZWagAA2v0P/iTpw7o+5qt0f+KOFPXI\nLsxdjC0Ppn9P9wxJiEc0FbBQAIhm5JK2pJq0uP/6kkzriexAAPWYqyJwhp/g\nm24JS0yVLKmc/2qFIJussXX+VoyxPBvxqD39LqeqZzM+66tU2a4ORMT4n8oF\nJgNVyaVH7zUyTYxRGnuNeXO7VygSx3HI+LScCPyaCek1hjL5/zkn9AR2C6fC\nWq123b9v+ZGZzJLEo0OVjJost7QvhwIh1TQd3j8NYaaD7BfsRfOU8aYb40Mi\n7b4DcdLMa/nsOC0p4JgGi139c5Mx62Td1iG71B3hxDP1qx0lkXu+0/UbIh8f\nrn99fY5OBWJkGN06t24UexsHQOa6fKb6GR669mV/nKF1JXq474hKWsppQskO\nGlDmD2mSCVBmRwjK2/deb1xZ1Ti6bFhDpfmQJ6qb8tQw6nMhYeZ8cxV6qEVE\nPzB9DsywTnYvenqEhEmevKf9axqypZdYkMLxzZAZ+hJxy9RqqgWmNOO7wr2/\neNDEaqzlzNDVp1H06vJXVeDOdCPoUH1JyoR0iA67SeTwceruCHUvZO2/3VEF\nbORWhRHYBhb+aNwP1Nyt0CFWMKv++amGmIuL7sWakjBHefDllDCMiJLHTEVi\nO4wqMOInsrEQEw4yyNZMuNXt5vlxow5//Koik0i2CrHpe4muMUYO6SkAg0I6\nNRWv\r\n=MtRr\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_4.1.1_1589621269546_0.5720407624541206"
+			},
+			"_hasShrinkwrap": false
+		},
+		"4.2.0": {
+			"name": "vfile",
+			"version": "4.2.0",
+			"description": "Virtual file format for text processing",
+			"license": "MIT",
+			"keywords": [
+				"vfile",
+				"virtual",
+				"file",
+				"text",
+				"processing",
+				"message",
+				"warning",
+				"error",
+				"remark",
+				"retext",
+				"rehype"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Brendan Abbott",
+					"email": "brendan.abbott@temando.com"
+				},
+				{
+					"name": "Denys Dovhan",
+					"email": "email@denysdovhan.com"
+				},
+				{
+					"name": "Kyle Mathews",
+					"email": "mathews.kyle@gmail.com"
+				},
+				{
+					"name": "Shinnosuke Watanabe",
+					"email": "snnskwtnb@gmail.com"
+				},
+				{
+					"name": "Sindre Sorhus",
+					"email": "sindresorhus@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"@types/unist": "^2.0.0",
+				"is-buffer": "^2.0.0",
+				"replace-ext": "1.0.0",
+				"unist-util-stringify-position": "^2.0.0",
+				"vfile-message": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^8.0.0",
+				"remark-preset-wooorm": "^7.0.0",
+				"tape": "^5.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.32.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier . --write && xo --fix",
+				"build-bundle": "browserify . -s VFile > vfile.js",
+				"build-mangle": "browserify . -s VFile -p tinyify > vfile.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"types",
+					"vfile.js"
+				],
+				"rules": {
+					"unicorn/prefer-includes": "off",
+					"unicorn/prefer-reflect-apply": "off"
+				}
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm",
+					[
+						"toc",
+						{
+							"heading": "contents"
+						}
+					]
+				]
+			},
+			"gitHead": "55ce5676e01e488cdd382c570079580f4a6a7e0a",
+			"homepage": "https://github.com/vfile/vfile#readme",
+			"_id": "vfile@4.2.0",
+			"_nodeVersion": "14.7.0",
+			"_npmVersion": "6.14.7",
+			"dist": {
+				"integrity": "sha512-a/alcwCvtuc8OX92rqqo7PflxiCgXRFjdyoGVuYV+qbgCb0GgZJRvIgCD4+U/Kl1yhaRsaTwksF88xbPyGsgpw==",
+				"shasum": "26c78ac92eb70816b01d4565e003b7e65a2a0e01",
+				"tarball": "https://registry.npmjs.org/vfile/-/vfile-4.2.0.tgz",
+				"fileCount": 7,
+				"unpackedSize": 28335,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfIrl+CRA9TVsSAnZWagAAGJoP+gJ1YELvdsCISZdy8nt/\nYE5ynEVC6fWmJuHGou1z4rdtMxBw5tsCHNPPY8mT5+jZi5ByeI3Zb5iNeV4N\noA8WKEZycRdrzYCvD3WYqNSW6+viZVwCUO5D6EpBuDP8e9295v4DHdRzwUjy\ncCnT7ZH7Z/8V1B4HuD7SLTkvMUCFlgQP9cGvQbbjFPkWGZzjDiwaaSrjhWsR\nJ43ZAm1UzpMCDKe2E0Wbvk9hC27QzCxeupayYh/VgWBIcx3WC7avyGt2MrDJ\nw6ZIBdo3724cnsrCZcJDuUkHq4Nfoh/2EM3qb++sWLcMAjQO+TKx4eybUnz3\nlrmQHGwENNZ+oQHnQFWdRQ4fo71pCcR8KBqwbu6762yNONJtqwgdso38nLts\nmpZIKIfpjaXCztyK4UdmPOY9X1il+8W5mSnoGG0v745v5tKy0imE9UT4ueLq\nJt9KE8x9cciJk5XHILigR42o+EA1XuKWnlUfniXqhx13tFnkwE6weqmcpBNn\n5LwrP/EqAljpPDUIUW2Mat1xGWLsdRvqGEF2MvsI23UaERxWyDS0T8ke/zcD\n+JrGndd0aZLzS7qBudPIzhpkBBSwQo/kRNaX71zsYGcsEy9KN/R7+157gO8a\ndpEMITKJmLWzSMBC0BUvRpk1ks44BEW26uoNd0l8AoxpzcaMVHv/T2CIjfrx\n7mWd\r\n=dJtp\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile_4.2.0_1596111229935_0.49789097403010896"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-07-30T12:13:52.803Z",
+		"created": "2015-07-26T11:08:30.707Z",
+		"1.0.0": "2015-07-26T11:08:30.707Z",
+		"1.0.1": "2015-08-17T14:28:39.120Z",
+		"1.1.0": "2015-08-21T19:44:41.789Z",
+		"1.1.1": "2015-10-14T20:45:54.911Z",
+		"1.1.2": "2015-10-16T10:06:04.226Z",
+		"1.2.0": "2015-12-26T23:41:42.118Z",
+		"1.3.0": "2016-01-21T17:47:38.620Z",
+		"1.3.1": "2016-01-21T19:56:36.622Z",
+		"1.4.0": "2016-04-18T16:30:24.051Z",
+		"2.0.0": "2016-08-21T13:29:27.741Z",
+		"2.0.1": "2017-02-07T17:49:51.513Z",
+		"2.1.0": "2017-05-30T21:43:32.033Z",
+		"2.2.0": "2017-07-17T14:17:55.266Z",
+		"2.3.0": "2017-11-16T22:24:15.559Z",
+		"3.0.0": "2018-05-04T19:25:18.832Z",
+		"3.0.1": "2018-10-28T13:35:25.142Z",
+		"4.0.0": "2019-01-06T12:03:05.592Z",
+		"4.0.1": "2019-05-30T16:13:42.283Z",
+		"4.0.2": "2019-11-10T08:04:10.251Z",
+		"4.0.3": "2020-03-03T09:13:20.577Z",
+		"4.1.0": "2020-03-29T18:58:58.744Z",
+		"4.1.1": "2020-05-16T09:27:49.688Z",
+		"4.2.0": "2020-07-30T12:13:50.057Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "4.2.0"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"92c986b43f91971c00f9f276b99c9e6b\"",
+			"fetched": 1601147220444
+		}
+	},
+	"_distfiles": {
+		"vfile-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-1.0.0.tgz",
+			"sha": "7ce778c92d939c85f6854b99070fb205396c87c7",
+			"registry": "npmjs"
+		},
+		"vfile-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-1.0.1.tgz",
+			"sha": "8ea4ed9144dd71af0942e745a02011dadae759d9",
+			"registry": "npmjs"
+		},
+		"vfile-1.1.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-1.1.0.tgz",
+			"sha": "7afa41d8ede0ea937347e844c8de67a8cff19f04",
+			"registry": "npmjs"
+		},
+		"vfile-1.1.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-1.1.1.tgz",
+			"sha": "c41c28c44339a777cc88d8eb03e28d65dfad046b",
+			"registry": "npmjs"
+		},
+		"vfile-1.1.2.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-1.1.2.tgz",
+			"sha": "0966fadfe85f320378e8a8e2402acd39cda25aa7",
+			"registry": "npmjs"
+		},
+		"vfile-1.2.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-1.2.0.tgz",
+			"sha": "1fc9b21c485f6644e52e2e9eff8e8d8c6a2ab123",
+			"registry": "npmjs"
+		},
+		"vfile-1.3.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-1.3.1.tgz",
+			"sha": "7d3fff69a8416292fb021cf2089fff5a71ce3c9a",
+			"registry": "npmjs"
+		},
+		"vfile-1.4.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-1.4.0.tgz",
+			"sha": "c0fd6fa484f8debdb771f68c31ed75d88da97fe7",
+			"registry": "npmjs"
+		},
+		"vfile-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-2.0.0.tgz",
+			"sha": "88620500e36bad025a0b01cc25106dbcb3090548",
+			"registry": "npmjs"
+		},
+		"vfile-2.0.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-2.0.1.tgz",
+			"sha": "bd48e68e8a2322dff0d162a37f45e70d9bb30466",
+			"registry": "npmjs"
+		},
+		"vfile-2.1.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-2.1.0.tgz",
+			"sha": "d3ce8b825e7b8d53b896164341273381936f02bd",
+			"registry": "npmjs"
+		},
+		"vfile-2.2.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-2.2.0.tgz",
+			"sha": "ce47a4fb335922b233e535db0f7d8121d8fced4e",
+			"registry": "npmjs"
+		},
+		"vfile-2.3.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-2.3.0.tgz",
+			"sha": "e62d8e72b20e83c324bc6c67278ee272488bf84a",
+			"registry": "npmjs"
+		},
+		"vfile-3.0.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-3.0.0.tgz",
+			"sha": "e0995335fdafbefe0c3d59a42868d413c0409031",
+			"registry": "npmjs"
+		},
+		"vfile-3.0.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-3.0.1.tgz",
+			"sha": "47331d2abe3282424f4a4bb6acd20a44c4121803",
+			"registry": "npmjs"
+		},
+		"vfile-4.0.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-4.0.0.tgz",
+			"sha": "ebf3b48af9fcde524d5e08d5f75812058a5f78ad",
+			"registry": "npmjs"
+		},
+		"vfile-4.0.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-4.0.1.tgz",
+			"sha": "fc3d43a1c71916034216bf65926d5ee3c64ed60c",
+			"registry": "npmjs"
+		},
+		"vfile-4.0.2.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-4.0.2.tgz",
+			"sha": "71af004d4a710b0e6be99c894655bc56126d5d56",
+			"registry": "npmjs"
+		},
+		"vfile-4.0.3.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-4.0.3.tgz",
+			"sha": "1e50b824fb5e5affd718e225c7bb1af6d97d4408",
+			"registry": "npmjs"
+		},
+		"vfile-4.1.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-4.1.0.tgz",
+			"sha": "d79248957f43225d57ff67a56effc67bef08946e",
+			"registry": "npmjs"
+		},
+		"vfile-4.1.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-4.1.1.tgz",
+			"sha": "282d28cebb609183ac51703001bc18b3e3f17de9",
+			"registry": "npmjs"
+		},
+		"vfile-4.2.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile/-/vfile-4.2.0.tgz",
+			"sha": "26c78ac92eb70816b01d4565e003b7e65a2a0e01",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-44c7605dbd4fbf44",
+	"_id": "vfile",
+	"readme": "# [![vfile][]][unified]\n\n[![GitHub CI][github-ci-badge]][github-ci]\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n[![Chat][chat-badge]][chat]\n\n**vfile** is a virtual file format part of the [unified][] [collective][].\n\n## Intro\n\n**vfile** is a virtual file format used by [**unified**][unified], a text\nprocessing umbrella (it powers [**retext**][retext] for natural language,\n[**remark**][remark] for markdown, and [**rehype**][rehype] for HTML).\nEach processors that parse, transform, and compile text, and need a virtual\nrepresentation of files and a place to store [messages][] about them.\nPlus, they work in the browser.\n**vfile** provides these requirements at a small size.\n\n*   Visit [`unifiedjs.com`][website] and see its [learn][] section for an\n    overview\n*   Read [unified][]’s readme for a technical intro\n*   Follow us on [Medium][] and [Twitter][] to see what we’re up to\n*   Check out [Contribute][] below to find out how to help out\n\n> **vfile** is different from the excellent [`vinyl`][vinyl] in that it has\n> a smaller API, a smaller size, and focuses on [messages][].\n\nvfile can be used anywhere where files need a lightweight representation.\nFor example, it’s used in:\n\n*   [`documentation`](https://github.com/documentationjs/documentation)\n    — The documentation system for modern JavaScript\n*   [`awoo`](https://github.com/awoojs/awoo)\n    — Declarative small site generator\n*   [`geojsonhint`](https://github.com/mapbox/geojsonhint)\n    — Complete, fast, standards-based validation for geojson\n\n## Sponsors\n\n<!--lint ignore no-html-->\n\n<table>\n  <tr valign=\"top\">\n    <td width=\"33.33%\" align=\"center\" colspan=\"2\">\n      <a href=\"https://www.gatsbyjs.org\">Gatsby</a><br>🥇<br><br>\n      <a href=\"https://www.gatsbyjs.org\"><img src=\"https://avatars1.githubusercontent.com/u/12551863?s=900&v=4\"></a>\n    </td>\n    <td width=\"33.33%\" align=\"center\" colspan=\"2\">\n      <a href=\"https://vercel.com\">Vercel</a><br>🥇<br><br>\n      <!--OC has a sharper image-->\n      <a href=\"https://vercel.com\"><img src=\"https://images.opencollective.com/vercel/d8a5bee/logo/512.png\"></a>\n    </td>\n    <td width=\"33.33%\" align=\"center\" colspan=\"2\">\n      <a href=\"https://www.netlify.com\">Netlify</a><br><br><br>\n      <!--OC has a sharper image-->\n      <a href=\"https://www.netlify.com\"><img src=\"https://images.opencollective.com/netlify/4087de2/logo/512.png\"></a>\n    </td>\n  </tr>\n  <tr valign=\"top\">\n    <td width=\"16.67%\" align=\"center\">\n      <a href=\"https://www.holloway.com\">Holloway</a><br><br><br>\n      <a href=\"https://www.holloway.com\"><img src=\"https://avatars1.githubusercontent.com/u/35904294?s=300&v=4\"></a>\n    </td>\n    <td width=\"16.67%\" align=\"center\">\n      <a href=\"https://themeisle.com\">ThemeIsle</a><br>🥉<br><br>\n      <a href=\"https://themeisle.com\"><img src=\"https://twitter-avatar.now.sh/themeisle\"></a>\n    </td>\n    <td width=\"16.67%\" align=\"center\">\n      <a href=\"https://boostio.co\">BoostIO</a><br>🥉<br><br>\n      <a href=\"https://boostio.co\"><img src=\"https://avatars1.githubusercontent.com/u/13612118?s=300&v=4\"></a>\n    </td>\n    <td width=\"16.67%\" align=\"center\">\n      <a href=\"https://expo.io\">Expo</a><br>🥉<br><br>\n      <a href=\"https://expo.io\"><img src=\"https://avatars1.githubusercontent.com/u/12504344?s=300&v=4\"></a>\n    </td>\n    <td width=\"50%\" align=\"center\" colspan=\"2\">\n      <br><br><br><br>\n      <a href=\"https://opencollective.com/unified\"><strong>You?</strong></a>\n    </td>\n  </tr>\n</table>\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install vfile\n```\n\n## Contents\n\n*   [Use](#use)\n*   [API](#api)\n    *   [`VFile([options])`](#vfileoptions)\n    *   [`vfile.contents`](#vfilecontents)\n    *   [`vfile.cwd`](#vfilecwd)\n    *   [`vfile.path`](#vfilepath)\n    *   [`vfile.basename`](#vfilebasename)\n    *   [`vfile.stem`](#vfilestem)\n    *   [`vfile.extname`](#vfileextname)\n    *   [`vfile.dirname`](#vfiledirname)\n    *   [`vfile.history`](#vfilehistory)\n    *   [`vfile.messages`](#vfilemessages)\n    *   [`vfile.data`](#vfiledata)\n    *   [`VFile#toString([encoding])`](#vfiletostringencoding)\n    *   [`VFile#message(reason[, position][, origin])`](#vfilemessagereason-position-origin)\n    *   [`VFile#info(reason[, position][, origin])`](#vfileinforeason-position-origin)\n    *   [`VFile#fail(reason[, position][, origin])`](#vfilefailreason-position-origin)\n*   [Utilities](#utilities)\n*   [Reporters](#reporters)\n*   [Contribute](#contribute)\n*   [Acknowledgments](#acknowledgments)\n*   [License](#license)\n\n## Use\n\n```js\nvar vfile = require('vfile')\n\nvar file = vfile({path: '~/example.txt', contents: 'Alpha *braavo* charlie.'})\n\nfile.path // => '~/example.txt'\nfile.dirname // => '~'\n\nfile.extname = '.md'\n\nfile.basename // => 'example.md'\n\nfile.basename = 'index.text'\n\nfile.history // => ['~/example.txt', '~/example.md', '~/index.text']\n\nfile.message('`braavo` is misspelt; did you mean `bravo`?', {\n  line: 1,\n  column: 8\n})\n\nconsole.log(file.messages)\n```\n\nYields:\n\n```js\n[ { [~/index.text:1:8: `braavo` is misspelt; did you mean `bravo`?]\n    message: '`braavo` is misspelt; did you mean `bravo`?',\n    name: '~/index.text:1:8',\n    file: '~/index.text',\n    reason: '`braavo` is misspelt; did you mean `bravo`?',\n    line: 1,\n    column: 8,\n    location: { start: [Object], end: [Object] },\n    ruleId: null,\n    source: null,\n    fatal: false } ]\n```\n\n## API\n\n### `VFile([options])`\n\nCreate a new virtual file.\nIf `options` is `string` or `Buffer`, treats it as `{contents: options}`.\nIf `options` is a `VFile`, returns it.\nAll other options are set on the newly created `vfile`.\n\nPath related properties are set in the following order (least specific to most\nspecific): `history`, `path`, `basename`, `stem`, `extname`, `dirname`.\n\nIt’s not possible to set either `dirname` or `extname` without setting either\n`history`, `path`, `basename`, or `stem` as well.\n\n###### Example\n\n```js\nvfile()\nvfile('console.log(\"alpha\");')\nvfile(Buffer.from('exit 1'))\nvfile({path: path.join(__dirname, 'readme.md')})\nvfile({stem: 'readme', extname: '.md', dirname: __dirname})\nvfile({other: 'properties', are: 'copied', ov: {e: 'r'}})\n```\n\n### `vfile.contents`\n\n`Buffer`, `string`, `null` — Raw value.\n\n### `vfile.cwd`\n\n`string` — Base of `path`.\nDefaults to `process.cwd()`.\n\n### `vfile.path`\n\n`string?` — Path of `vfile`.\nCannot be nullified.\n\n### `vfile.basename`\n\n`string?` — Current name (including extension) of `vfile`.\nCannot contain path separators.\nCannot be nullified either (use `file.path = file.dirname` instead).\n\n### `vfile.stem`\n\n`string?` — Name (without extension) of `vfile`.\nCannot be nullified, and cannot contain path separators.\n\n### `vfile.extname`\n\n`string?` — Extension (with dot) of `vfile`.\nCannot be set if there’s no `path` yet and cannot contain path separators.\n\n### `vfile.dirname`\n\n`string?` — Path to parent directory of `vfile`.\nCannot be set if there’s no `path` yet.\n\n### `vfile.history`\n\n`Array.<string>` — List of file-paths the file moved between.\n\n### `vfile.messages`\n\n[`Array.<VMessage>`][message] — List of messages associated with the file.\n\n### `vfile.data`\n\n`Object` — Place to store custom information.\nIt’s OK to store custom data directly on the `vfile`, moving it to `data` gives\na *little* more privacy.\n\n### `VFile#toString([encoding])`\n\nConvert contents of `vfile` to string.\nIf `contents` is a buffer, `encoding` is used to stringify buffers (default:\n`'utf8'`).\n\n### `VFile#message(reason[, position][, origin])`\n\nAssociates a message with the file, where `fatal` is set to `false`.\nConstructs a new [`VMessage`][vmessage] and adds it to\n[`vfile.messages`][messages].\n\n##### Returns\n\n[`VMessage`][vmessage].\n\n### `VFile#info(reason[, position][, origin])`\n\nAssociates an informational message with the file, where `fatal` is set to\n`null`.\nCalls [`#message()`][message] internally.\n\n##### Returns\n\n[`VMessage`][vmessage].\n\n### `VFile#fail(reason[, position][, origin])`\n\nAssociates a fatal message with the file, then immediately throws it.\nNote: fatal errors mean a file is no longer processable.\nCalls [`#message()`][message] internally.\n\n##### Throws\n\n[`VMessage`][vmessage].\n\n## Utilities\n\nThe following list of projects includes tools for working with virtual files.\nSee **[unist][]** for projects working with nodes.\n\n*   [`convert-vinyl-to-vfile`](https://github.com/dustinspecker/convert-vinyl-to-vfile)\n    — transform from [Vinyl][] to vfile\n*   [`to-vfile`](https://github.com/vfile/to-vfile)\n    — create a vfile from a filepath\n*   [`vfile-find-down`](https://github.com/vfile/vfile-find-down)\n    — find files by searching the file system downwards\n*   [`vfile-find-up`](https://github.com/vfile/vfile-find-up)\n    — find files by searching the file system upwards\n*   [`vfile-glob`](https://github.com/shinnn/vfile-glob)\n    — find files by glob patterns\n*   [`vfile-is`](https://github.com/vfile/vfile-is)\n    — check if a vfile passes a test\n*   [`vfile-location`](https://github.com/vfile/vfile-location)\n    — convert between positional and offset locations\n*   [`vfile-matter`](https://github.com/vfile/vfile-matter)\n    — parse the YAML front matter\n*   [`vfile-message`](https://github.com/vfile/vfile-message)\n    — create a vfile message\n*   [`vfile-messages-to-vscode-diagnostics`](https://github.com/shinnn/vfile-messages-to-vscode-diagnostics)\n    — transform vfile messages to VS Code diagnostics\n*   [`vfile-mkdirp`](https://github.com/vfile/vfile-mkdirp)\n    — make sure the directory of a vfile exists on the file system\n*   [`vfile-rename`](https://github.com/vfile/vfile-rename)\n    — rename the path parts of a vfile\n*   [`vfile-sort`](https://github.com/vfile/vfile-sort)\n    — sort messages by line/column\n*   [`vfile-statistics`](https://github.com/vfile/vfile-statistics)\n    — count messages per category: failures, warnings, etc\n*   [`vfile-to-eslint`](https://github.com/vfile/vfile-to-eslint)\n    — convert to ESLint formatter compatible output\n\n## Reporters\n\nThe following list of projects show linting results for given virtual files.\nReporters *must* accept `Array.<VFile>` as their first argument, and return\n`string`.\nReporters *may* accept other values too, in which case it’s suggested to stick\nto `vfile-reporter`s interface.\n\n*   [`vfile-reporter`][reporter]\n    — create a report\n*   [`vfile-reporter-json`](https://github.com/vfile/vfile-reporter-json)\n    — create a JSON report\n*   [`vfile-reporter-folder-json`](https://github.com/vfile/vfile-reporter-folder-json)\n    — create a JSON representation of vfiles\n*   [`vfile-reporter-pretty`](https://github.com/vfile/vfile-reporter-pretty)\n    — create a pretty report\n*   [`vfile-reporter-junit`](https://github.com/kellyselden/vfile-reporter-junit)\n    — create a jUnit report\n*   [`vfile-reporter-position`](https://github.com/Hocdoc/vfile-reporter-position)\n    — create a report with content excerpts\n\n## Contribute\n\nSee [`contributing.md`][contributing] in [`vfile/.github`][health] for ways to\nget started.\nSee [`support.md`][support] for ways to get help.\nIdeas for new utilities and tools can be posted in [`vfile/ideas`][ideas].\n\nThis project has a [code of conduct][coc].\nBy interacting with this repository, organization, or community you agree to\nabide by its terms.\n\n## Acknowledgments\n\nThe initial release of this project was authored by\n[**@wooorm**](https://github.com/wooorm).\n\nThanks to [**@contra**](https://github.com/contra),\n[**@phated**](https://github.com/phated), and others for their work on\n[Vinyl][], which was a huge inspiration.\n\nThanks to\n[**@brendo**](https://github.com/brendo),\n[**@shinnn**](https://github.com/shinnn),\n[**@KyleAMathews**](https://github.com/KyleAMathews),\n[**@sindresorhus**](https://github.com/sindresorhus), and\n[**@denysdovhan**](https://github.com/denysdovhan)\nfor contributing commits since!\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[github-ci-badge]: https://github.com/vfile/vfile/workflows/CI/badge.svg\n\n[github-ci]: https://github.com/vfile/vfile/actions\n\n[build-badge]: https://img.shields.io/travis/vfile/vfile.svg\n\n[build]: https://travis-ci.org/vfile/vfile\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/vfile/vfile.svg\n\n[coverage]: https://codecov.io/github/vfile/vfile\n\n[downloads-badge]: https://img.shields.io/npm/dm/vfile.svg\n\n[downloads]: https://www.npmjs.com/package/vfile\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/vfile.svg\n\n[size]: https://bundlephobia.com/result?p=vfile\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg\n\n[chat]: https://spectrum.chat/unified/vfile\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[contributing]: https://github.com/vfile/.github/blob/HEAD/contributing.md\n\n[support]: https://github.com/vfile/.github/blob/HEAD/support.md\n\n[health]: https://github.com/vfile/.github\n\n[coc]: https://github.com/vfile/.github/blob/HEAD/code-of-conduct.md\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[vfile]: https://raw.githubusercontent.com/vfile/vfile/7e1e6a6/logo.svg?sanitize=true\n\n[unified]: https://github.com/unifiedjs/unified\n\n[retext]: https://github.com/retextjs/retext\n\n[remark]: https://github.com/remarkjs/remark\n\n[rehype]: https://github.com/rehypejs/rehype\n\n[vinyl]: https://github.com/gulpjs/vinyl\n\n[unist]: https://github.com/syntax-tree/unist#list-of-utilities\n\n[reporter]: https://github.com/vfile/vfile-reporter\n\n[vmessage]: https://github.com/vfile/vfile-message\n\n[messages]: #vfilemessages\n\n[message]: #vfilemessagereason-position-origin\n\n[website]: https://unifiedjs.com\n\n[learn]: https://unifiedjs.com/learn/\n\n[contribute]: #contribute\n\n[ideas]: https://github.com/vfile/ideas\n\n[medium]: https://medium.com/unifiedjs\n\n[twitter]: https://twitter.com/unifiedjs"
+}

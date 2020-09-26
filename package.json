@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "prepublish": "cross-env NODE_ENV=production npm run build"
+    "test:integration": "./tests/integration.spec.sh",
+    "prepare": "cross-env NODE_ENV=production npm run build"
   },
   "keywords": [
     "eleventy-plugin",

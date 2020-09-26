@@ -1,0 +1,384 @@
+{
+	"name": "replace-ext",
+	"versions": {
+		"0.0.1": {
+			"name": "replace-ext",
+			"description": "Replaces a file extension with another one",
+			"version": "0.0.1",
+			"homepage": "http://github.com/wearefractal/replace-ext",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/wearefractal/replace-ext.git"
+			},
+			"author": {
+				"name": "Fractal",
+				"email": "contact@wearefractal.com",
+				"url": "http://wearefractal.com/"
+			},
+			"main": "./index.js",
+			"dependencies": {},
+			"devDependencies": {
+				"mocha": "~1.17.0",
+				"should": "~3.1.0",
+				"mocha-lcov-reporter": "~0.0.1",
+				"coveralls": "~2.6.1",
+				"istanbul": "~0.2.3",
+				"rimraf": "~2.2.5",
+				"jshint": "~2.4.1"
+			},
+			"scripts": {
+				"test": "mocha --reporter spec && jshint",
+				"coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+			},
+			"engines": {
+				"node": ">= 0.4"
+			},
+			"licenses": [
+				{
+					"type": "MIT",
+					"url": "http://github.com/wearefractal/replace-ext/raw/master/LICENSE"
+				}
+			],
+			"bugs": {
+				"url": "https://github.com/wearefractal/replace-ext/issues"
+			},
+			"_id": "replace-ext@0.0.1",
+			"dist": {
+				"shasum": "29bbd92078a739f0bcce2b4ee41e837953522924",
+				"tarball": "https://registry.npmjs.org/replace-ext/-/replace-ext-0.0.1.tgz"
+			},
+			"_from": ".",
+			"_npmVersion": "1.4.4",
+			"_npmUser": {
+				"name": "fractal",
+				"email": "contact@wearefractal.com"
+			},
+			"maintainers": [
+				{
+					"name": "fractal",
+					"email": "contact@wearefractal.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "replace-ext",
+			"version": "1.0.0",
+			"description": "Replaces a file extension with another one",
+			"author": {
+				"name": "Gulp Team",
+				"email": "team@gulpjs.com",
+				"url": "http://gulpjs.com/"
+			},
+			"contributors": [
+				{
+					"name": "Eric Schoffstall",
+					"email": "yo@contra.io"
+				},
+				{
+					"name": "Blaine Bublitz",
+					"email": "blaine.bublitz@gmail.com"
+				}
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/gulpjs/replace-ext.git"
+			},
+			"license": "MIT",
+			"engines": {
+				"node": ">= 0.10"
+			},
+			"main": "index.js",
+			"files": [
+				"LICENSE",
+				"index.js"
+			],
+			"scripts": {
+				"lint": "eslint . && jscs index.js test/",
+				"pretest": "npm run lint",
+				"test": "mocha --async-only",
+				"cover": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly",
+				"coveralls": "npm run cover && istanbul-coveralls"
+			},
+			"dependencies": {},
+			"devDependencies": {
+				"eslint": "^1.10.3",
+				"eslint-config-gulp": "^2.0.0",
+				"expect": "^1.16.0",
+				"istanbul": "^0.4.3",
+				"istanbul-coveralls": "^1.0.3",
+				"jscs": "^2.3.5",
+				"jscs-preset-gulp": "^1.0.0",
+				"mocha": "^2.4.5"
+			},
+			"keywords": [
+				"gulp",
+				"extensions",
+				"filepath",
+				"basename"
+			],
+			"gitHead": "adaec75e316f1c375dc7a2cb51c7b762b135cc0e",
+			"bugs": {
+				"url": "https://github.com/gulpjs/replace-ext/issues"
+			},
+			"homepage": "https://github.com/gulpjs/replace-ext#readme",
+			"_id": "replace-ext@1.0.0",
+			"_shasum": "de63128373fcbf7c3ccfa4de5a480c45a67958eb",
+			"_from": ".",
+			"_npmVersion": "2.15.2",
+			"_nodeVersion": "0.10.41",
+			"_npmUser": {
+				"name": "phated",
+				"email": "blaine.bublitz@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "contra",
+					"email": "contra@wearefractal.com"
+				},
+				{
+					"name": "fractal",
+					"email": "contact@wearefractal.com"
+				},
+				{
+					"name": "phated",
+					"email": "blaine.bublitz@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "de63128373fcbf7c3ccfa4de5a480c45a67958eb",
+				"tarball": "https://registry.npmjs.org/replace-ext/-/replace-ext-1.0.0.tgz"
+			},
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/replace-ext-1.0.0.tgz_1471316327349_0.09214890468865633"
+			},
+			"directories": {}
+		},
+		"1.0.1": {
+			"name": "replace-ext",
+			"version": "1.0.1",
+			"description": "Replaces a file extension with another one",
+			"author": {
+				"name": "Gulp Team",
+				"email": "team@gulpjs.com",
+				"url": "http://gulpjs.com/"
+			},
+			"contributors": [
+				{
+					"name": "Eric Schoffstall",
+					"email": "yo@contra.io"
+				},
+				{
+					"name": "Blaine Bublitz",
+					"email": "blaine.bublitz@gmail.com"
+				}
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/gulpjs/replace-ext.git"
+			},
+			"license": "MIT",
+			"engines": {
+				"node": ">= 0.10"
+			},
+			"main": "index.js",
+			"scripts": {
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"test": "nyc mocha --async-only",
+				"cover": "nyc --reporter=lcov --reporter=text-summary npm test",
+				"azure-pipelines": "nyc mocha --async-only --reporter xunit -O output=test.xunit",
+				"coveralls": "nyc report --reporter=text-lcov | coveralls"
+			},
+			"dependencies": {},
+			"devDependencies": {
+				"coveralls": "github:phated/node-coveralls#2.x",
+				"eslint": "^2.13.1",
+				"eslint-config-gulp": "^3.0.1",
+				"expect": "^1.20.2",
+				"mocha": "^3.0.0",
+				"nyc": "^10.3.2"
+			},
+			"keywords": [
+				"gulp",
+				"extensions",
+				"filepath",
+				"basename"
+			],
+			"gitHead": "2c67dddcc4d96416ad3916e542a43615c441a91c",
+			"bugs": {
+				"url": "https://github.com/gulpjs/replace-ext/issues"
+			},
+			"homepage": "https://github.com/gulpjs/replace-ext#readme",
+			"_id": "replace-ext@1.0.1",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "10.15.1",
+			"_npmUser": {
+				"name": "phated",
+				"email": "blaine.bublitz@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-yD5BHCe7quCgBph4rMQ+0KkIRKwWCrHDOX1p1Gp6HwjPM5kVoCdKGNhN7ydqqsX6lJEnQDKZ/tFMiEdQ1dvPEw==",
+				"shasum": "2d6d996d04a15855d967443631dd5f77825b016a",
+				"tarball": "https://registry.npmjs.org/replace-ext/-/replace-ext-1.0.1.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5520,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJer08VCRA9TVsSAnZWagAA7XsQAJtgompSL83Qi7T8eyBk\nycDGas/8eYbieBFoDvTzuGvZ4yFc2hkbQmOFQS83m0MYx739ZqLczr+bJ8oR\nuTdVFgcSsjjLWw/tNvSJSAdpCl7W/XTGOMadhpEOlDlrqSKG6Tt4RJVPdSwk\n3nhEc1axDye8l0ER1iu1jI96HEY8AxcYJCjnTOOlnytg93maDz6EZYwIcO32\nxs80j5R2SbHpAQ4r5fIKD2rTi+LA4shhj1SKX9QWtukiiRf2qbjuNWh/Xbks\n27cmt+qPi2xkxoHs51A6qIgLCl0T8fEf77aY9M32ZZ3a+zRwwsb05CLDieEd\n4y1x1gx2I63O9mvkYtbdid0jsbGLnrMQXBRVyk4SVz45sDbygfNKNPtDYuUU\nCAcxe7V0cu7LfOD4znIfzJx3w7uNAZThN64C4dy1pe6JZTMJ/l2A2rp+k55A\nKllMireab5kVt9A8o28yp8nP9Dd7sfqrSDVjdhU5zA8vb2QU+afajaX8YVyn\n4kc79sqKZCdoEbN5GdcmHUapeTYos8H07ssfhuK6wA/a162ybHtiqs9dajU9\nYMud9Y18qL7hC4BFahPDIiBwmclNZlFz+C1csReEYCP9+QZM5Pw12DnBoKVO\nozNX3v0xC9GqsC7BlGK7r1IchLcNYc8FaEmPVkDwGTOlecfIGLYkE2McGzcI\nju3a\r\n=lqOi\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "contra",
+					"email": "yo@contra.io"
+				},
+				{
+					"name": "phated",
+					"email": "blaine.bublitz@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/replace-ext_1.0.1_1588547348673_0.06158409831757061"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.0": {
+			"name": "replace-ext",
+			"version": "2.0.0",
+			"description": "Replaces a file extension with another one.",
+			"author": {
+				"name": "Gulp Team",
+				"email": "team@gulpjs.com",
+				"url": "http://gulpjs.com/"
+			},
+			"contributors": [
+				{
+					"name": "Eric Schoffstall",
+					"email": "yo@contra.io"
+				},
+				{
+					"name": "Blaine Bublitz",
+					"email": "blaine.bublitz@gmail.com"
+				}
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/gulpjs/replace-ext.git"
+			},
+			"license": "MIT",
+			"engines": {
+				"node": ">= 10"
+			},
+			"main": "index.js",
+			"scripts": {
+				"lint": "eslint .",
+				"pretest": "npm run lint",
+				"test": "nyc mocha --async-only"
+			},
+			"devDependencies": {
+				"eslint": "^6.8.0",
+				"eslint-config-gulp": "^4.0.0",
+				"expect": "^25.4.0",
+				"mocha": "^7.1.2",
+				"nyc": "^15.0.1"
+			},
+			"nyc": {
+				"reporter": [
+					"lcov",
+					"text-summary"
+				]
+			},
+			"prettier": {
+				"singleQuote": true
+			},
+			"keywords": [
+				"gulp",
+				"extensions",
+				"filepath",
+				"basename"
+			],
+			"gitHead": "1638b870b68ee6fe781be03bd29fbf5487b83236",
+			"bugs": {
+				"url": "https://github.com/gulpjs/replace-ext/issues"
+			},
+			"homepage": "https://github.com/gulpjs/replace-ext#readme",
+			"_id": "replace-ext@2.0.0",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "10.15.1",
+			"_npmUser": {
+				"name": "phated",
+				"email": "blaine.bublitz@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-UszKE5KVK6JvyD92nzMn9cDapSk6w/CaFZ96CnmDMUqH9oowfxF/ZjRITD25H4DnOQClLA4/j7jLGXXLVKxAug==",
+				"shasum": "9471c213d22e1bcc26717cd6e50881d88f812b06",
+				"tarball": "https://registry.npmjs.org/replace-ext/-/replace-ext-2.0.0.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4853,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJer2reCRA9TVsSAnZWagAAd7UP+QDpwtiTWtY4lwLTW6Iq\nfbfl5dZhjhe+hLtKCF9bUmCqWQWMiWDYbZNVRGcGm2xQjBo19X9K60yg7Mpu\nFTTWM6l3tZvB0nv/5cpmS3Bj/Bf6cFU7Eq9P7q5VTjFmhMr6FpSzVzHsBeJA\nozluYyd6+CJUkzp6Xn39+jibWfx4jRMkNFmj8w60oWIQk0cyUCWaKuPUSjTj\nNjEJgzi+CB72eW27qOU3DO0n/pC73Kwv/2JI3fCYDPGX3nqG4yIIz81CQrQC\n01B9rnA9SJp8XD/j1/UH60iSYjCKCWd2JNywXRsPZdN+L4vx0u3WG0J+VV8j\nPavTvALY7cK8aIGjhya/4v726q/Ydo64WAuwWwbENWIQDTv7NMLoEfSI12FO\ndy3fv0E9/yRfpZIXqBFo370ZHzt6t3LCTJMQws8CRGmFxwxMnZSUUfvoBdXL\n1RTWXKGFNeFDWJw6RaoliDOwfxnCznOnzeiZonHncdoY5rrlvpYsNXja/wSS\nV+SEUZR8+gAArsH0SjP6d0YA+WrAe7fXk8pcxKf/ym9kTgb5dhPpIy1pY4D9\naNz7/E09qOIbVRnO1B+IGn+MIu3OTnyYTgEO1TAL+xXTjbJ1e6Vb+Oo6otP8\nOylmXZ/sm8CZS4GvDIoBtF08UJQe1wRWhMDrS0x/e1NsXUyfOQXu/D9Kjcbq\nrxl8\r\n=sfUP\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "contra",
+					"email": "yo@contra.io"
+				},
+				{
+					"name": "phated",
+					"email": "blaine.bublitz@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/replace-ext_2.0.0_1588554462482_0.8822483411419739"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-05-04T01:07:46.542Z",
+		"created": "2014-02-25T21:34:14.210Z",
+		"0.0.1": "2014-02-25T21:34:14.210Z",
+		"1.0.0": "2016-08-16T02:58:47.596Z",
+		"1.0.1": "2020-05-03T23:09:08.825Z",
+		"2.0.0": "2020-05-04T01:07:42.619Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "2.0.0"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"4eef27a73f038748e292678d098211af\"",
+			"fetched": 1601147220531
+		}
+	},
+	"_distfiles": {
+		"replace-ext-0.0.1.tgz": {
+			"url": "https://registry.npmjs.org/replace-ext/-/replace-ext-0.0.1.tgz",
+			"sha": "29bbd92078a739f0bcce2b4ee41e837953522924",
+			"registry": "npmjs"
+		},
+		"replace-ext-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/replace-ext/-/replace-ext-1.0.0.tgz",
+			"sha": "de63128373fcbf7c3ccfa4de5a480c45a67958eb",
+			"registry": "npmjs"
+		},
+		"replace-ext-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/replace-ext/-/replace-ext-1.0.1.tgz",
+			"sha": "2d6d996d04a15855d967443631dd5f77825b016a",
+			"registry": "npmjs"
+		},
+		"replace-ext-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/replace-ext/-/replace-ext-2.0.0.tgz",
+			"sha": "9471c213d22e1bcc26717cd6e50881d88f812b06",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-cb98a96c4ddfe68f",
+	"_id": "replace-ext",
+	"readme": "<p align=\"center\">\n  <a href=\"http://gulpjs.com\">\n    <img height=\"257\" width=\"114\" src=\"https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png\">\n  </a>\n</p>\n\n# replace-ext\n\n[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][ci-image]][ci-url] [![Coveralls Status][coveralls-image]][coveralls-url]\n\nReplaces a file extension with another one.\n\n## Usage\n\n```js\nvar replaceExt = require('replace-ext');\n\nvar path = '/some/dir/file.js';\nvar newPath = replaceExt(path, '.coffee');\n\nconsole.log(newPath); // /some/dir/file.coffee\n```\n\n## API\n\n### `replaceExt(path, extension)`\n\nReplaces the extension from `path` with `extension` and returns the updated path string.\n\nDoes not replace the extension if `path` is not a string or is empty.\n\n## `replace-ext` for enterprise\n\nAvailable as part of the Tidelift Subscription.\n\nThe maintainers of `replace-ext` and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.][tidelift-url]\n\n## License\n\nMIT\n\n<!-- prettier-ignore-start -->\n[downloads-image]: https://img.shields.io/npm/dm/replace-ext.svg?style=flat-square\n[npm-url]: https://www.npmjs.com/package/replace-ext\n[npm-image]: https://img.shields.io/npm/v/replace-ext.svg?style=flat-square\n\n[ci-url]: https://github.com/gulpjs/replace-ext/actions?query=workflow:dev\n[ci-image]: https://img.shields.io/github/workflow/status/gulpjs/replace-ext/dev?style=flat-square\n\n[coveralls-url]: https://coveralls.io/r/gulpjs/replace-ext\n[coveralls-image]: https://img.shields.io/coveralls/gulpjs/replace-ext/master.svg?style=flat-square\n\n[tidelift-url]: https://tidelift.com/subscription/pkg/npm-replace-ext?utm_source=npm-replace-ext&utm_medium=referral&utm_campaign=enterprise&utm_term=repo\n<!-- prettier-ignore-end -->"
+}

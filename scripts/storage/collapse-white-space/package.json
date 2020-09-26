@@ -1,0 +1,767 @@
+{
+	"name": "collapse-white-space",
+	"versions": {
+		"1.0.0": {
+			"name": "collapse-white-space",
+			"version": "1.0.0",
+			"description": "Replace multiple white-space characters with a single space",
+			"license": "MIT",
+			"keywords": [
+				"collapse",
+				"white",
+				"space"
+			],
+			"files": [
+				"index.js",
+				"LICENSE"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/collapse-white-space.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"devDependencies": {
+				"browserify": "^10.0.0",
+				"eslint": "^0.24.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^1.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^0.26.0",
+				"mdast-github": "^0.3.1",
+				"mdast-lint": "^0.4.1",
+				"mdast-usage": "^0.3.0",
+				"mdast-yaml-config": "^0.2.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coveralls": "istanbul cover _mocha --report lcovonly -- --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- --check-leaks test.js",
+				"test-travis": "npm run test-coveralls",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"build-md": "mdast . LICENSE --output --quiet",
+				"build-bundle": "browserify index.js --bare -s collapseWhiteSpace > collapse-white-space.js",
+				"postbuild-bundle": "esmangle collapse-white-space.js > collapse-white-space.min.js",
+				"build": "npm run build-md && npm run build-bundle"
+			},
+			"gitHead": "c24540f3690cf840cc7b3549876851aaace3754d",
+			"bugs": {
+				"url": "https://github.com/wooorm/collapse-white-space/issues"
+			},
+			"homepage": "https://github.com/wooorm/collapse-white-space#readme",
+			"_id": "collapse-white-space@1.0.0",
+			"_shasum": "94c809660c5661874fbb52bc74dc3519afca9023",
+			"_from": ".",
+			"_npmVersion": "2.11.3",
+			"_nodeVersion": "2.3.3",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "94c809660c5661874fbb52bc74dc3519afca9023",
+				"tarball": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "collapse-white-space",
+			"version": "1.0.1",
+			"description": "Replace multiple white-space characters with a single space",
+			"license": "MIT",
+			"keywords": [
+				"collapse",
+				"white",
+				"space"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/collapse-white-space.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/collapse-white-space/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"esmangle": "^1.0.1",
+				"nyc": "^7.0.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s collapseWhiteSpace > collapse-white-space.js",
+				"build-mangle": "esmangle collapse-white-space.js > collapse-white-space.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"collapse-white-space.js",
+					"collapse-white-space.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"github",
+					"lint",
+					"validate-links"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "ac2e058a446815497f988540b740f0c98cc9f1e8",
+			"homepage": "https://github.com/wooorm/collapse-white-space#readme",
+			"_id": "collapse-white-space@1.0.1",
+			"_shasum": "8dd6887f7be813599be56d39f5cfcf438e3d20a9",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "8dd6887f7be813599be56d39f5cfcf438e3d20a9",
+				"tarball": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/collapse-white-space-1.0.1.tgz_1469309594595_0.7253956815693527"
+			},
+			"directories": {}
+		},
+		"1.0.2": {
+			"name": "collapse-white-space",
+			"version": "1.0.2",
+			"description": "Replace multiple white-space characters with a single space",
+			"license": "MIT",
+			"keywords": [
+				"collapse",
+				"white",
+				"space"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/collapse-white-space.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/collapse-white-space/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"esmangle": "^1.0.1",
+				"nyc": "^7.0.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s collapseWhiteSpace > collapse-white-space.js",
+				"build-mangle": "esmangle collapse-white-space.js > collapse-white-space.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"collapse-white-space.js",
+					"collapse-white-space.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"github",
+					"lint",
+					"validate-links"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "cd218a06e569cf9cbd4657436557299d3bb504cf",
+			"homepage": "https://github.com/wooorm/collapse-white-space#readme",
+			"_id": "collapse-white-space@1.0.2",
+			"_shasum": "9c463fb9c6d190d2dcae21a356a01bcae9eeef6d",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "9c463fb9c6d190d2dcae21a356a01bcae9eeef6d",
+				"tarball": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/collapse-white-space-1.0.2.tgz_1469310043598_0.74730454524979"
+			},
+			"directories": {}
+		},
+		"1.0.3": {
+			"name": "collapse-white-space",
+			"version": "1.0.3",
+			"description": "Replace multiple white-space characters with a single space",
+			"license": "MIT",
+			"keywords": [
+				"collapse",
+				"white",
+				"space"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/collapse-white-space.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/collapse-white-space/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js --bare -s collapseWhiteSpace > collapse-white-space.js",
+				"build-mangle": "esmangle collapse-white-space.js > collapse-white-space.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"rules": {
+					"capitalized-comments": "off"
+				},
+				"ignores": [
+					"collapse-white-space.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "20e87ab5f5612e1bb93a6b205cf2b6c87f755301",
+			"homepage": "https://github.com/wooorm/collapse-white-space#readme",
+			"_id": "collapse-white-space@1.0.3",
+			"_shasum": "4b906f670e5a963a87b76b0e1689643341b6023c",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "4b906f670e5a963a87b76b0e1689643341b6023c",
+				"tarball": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.3.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/collapse-white-space-1.0.3.tgz_1498404304736_0.5027659088373184"
+			},
+			"directories": {}
+		},
+		"1.0.4": {
+			"name": "collapse-white-space",
+			"version": "1.0.4",
+			"description": "Replace multiple white-space characters with a single space",
+			"license": "MIT",
+			"keywords": [
+				"collapse",
+				"white",
+				"space"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/collapse-white-space.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/collapse-white-space/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s collapseWhiteSpace > collapse-white-space.js",
+				"build-mangle": "esmangle collapse-white-space.js > collapse-white-space.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"capitalized-comments": "off",
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignores": [
+					"collapse-white-space.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"gitHead": "1cdc030ff13a2d9024d60627b68b803dc2be184b",
+			"homepage": "https://github.com/wooorm/collapse-white-space#readme",
+			"_id": "collapse-white-space@1.0.4",
+			"_npmVersion": "5.6.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-YfQ1tAUZm561vpYD+5eyWN8+UsceQbSrqqlc/6zDY2gtAE+uZLSdkkovhnGpmCThsvKBFakq4EdY/FF93E8XIw==",
+				"shasum": "ce05cf49e54c3277ae573036a26851ba430a0091",
+				"tarball": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4053,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa0eMjCRA9TVsSAnZWagAA4j4P/Rpko1b1Wa0Zkjd6sZkM\naVnKUM+m0OppgwX3NG97td8Dvh6zLHDZcGIp1RctguyZrq/0hgGN/lPyEQBw\nEPT7A9vxb/OgOA5GoKQfCuT2qPwPDQhGjLQoA+9jx9stWm8yrKOpkCuMMvqr\noiQmdua21/MaG9dD1sGHTKNQFmtmhHYeJPbxtfjJLxZ8t8jv17HB8qKIJamo\nKMoPgyLsmhiYXmKsQidKfoUPgORjvd+xEOywsEprrjzyWzt+2YcUi/vby4BO\nZWeuERZtvR/75moAb/prjK7/q/5ZpzGwmu1HhgeFqhmNN2A/Y1wEVZ9CPHiR\nDNI4n4AZNWP9W4StrGnu5O9lIOi+l10Ypi9dNzU2cLqm2qbKtYvYeJ8XRPH1\nJ+fSJpgAUiPY3k+AdmXWdF/3WGljvQLKgHmsotET38HovTGROOMju0usacYw\na1P1GmiBXdzzU4+pPXJg2NYzkiVUkwW1QMpbWJYXAEEnP1t/n1j4bA8w0q2q\n95Le3EnzIQfow5KIISuric7I+C02ercLL9xth4XbIUm4wfs5FqWMyk7hk6/V\n4XEcKfi0QCS8dO6zGtH8NvLUFYGF39o/d60tDeAvCQDkO2J+McXFTDidQB0q\nLxtnFm2rUQUhSGJTPSvgvKvmdGdCk50rtMGDSHFYGUU6DFDy8c9BSyX1gbnd\nmmvr\r\n=/7qj\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/collapse-white-space_1.0.4_1523704610505_0.9931695976334085"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.5": {
+			"name": "collapse-white-space",
+			"version": "1.0.5",
+			"description": "Replace multiple white-space characters with a single space",
+			"license": "MIT",
+			"keywords": [
+				"collapse",
+				"white",
+				"space"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/collapse-white-space.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/collapse-white-space/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.5.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s collapseWhiteSpace -o collapse-white-space.js",
+				"build-mangle": "browserify . -s collapseWhiteSpace -p tinyify -o collapse-white-space.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"collapse-white-space.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"gitHead": "ab772b2aba29b6b821f4834329abc674930d04ab",
+			"homepage": "https://github.com/wooorm/collapse-white-space#readme",
+			"_id": "collapse-white-space@1.0.5",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-703bOOmytCYAX9cXYqoikYIx6twmFCXsnzRQheBcTG3nzKYBR4P/+wkYeH+Mvj7qUz8zZDtdyzbxfnEi/kYzRQ==",
+				"shasum": "c2495b699ab1ed380d29a1091e01063e75dbbe3a",
+				"tarball": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.5.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4309,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc0BP/CRA9TVsSAnZWagAA2WcP/2w0vX982zx5zFrwDi1f\nc6wxYQhyu8/jFCAk3xFJu0CvOycyQahG5IWWwnVQi3GB0UzLlFeK1P27VKH8\nAM6Iouv60NdC4lCVjyPvz4uxeIbu0SVo/095deLlWLCWwZ3q9JT97XGELu0l\n5WYgRkoKOS2zhEejwrDxqHosexUvq4S/67xL9qi4+idja5X5rX7xvqiuC1ud\nMIoaezU/wtHuSfcT9U4COMqMVzZDGSnuQZv+J/49QSYO42VPmgFKHwy4voW+\nMWdv6iDgcPAZ9tLf+PrtoV2PKuH8g+BIxHyqMZFk2VRgUMtRE0/5ZGNg01/r\nuMgI7yzJahWd5qSJM/4ACwRHWgueGOywU+x0NMP7aHUmWrsFuJdgKoTL3mce\ni+6EQPvjqokYvErSVj0xxWqxRlkg94jOYHGDkxdifrPV7XnQ830QC910vy1/\nI2Bbvre5V6ml2EOep/9h6fz9e1JfHFe2+rSVcPI75wkeHYEJxdQMOanwdRNg\nUrGx2MyXbx0RoEKHm0EAY7KHeYPnShCDN0Ne9U9psL+bupZjnOtDWRSLH1IK\nIHwqqsgsLjH5dn8M3z7E97E8MhCMSl5eu/rOQ3/5HqeTBkEvofImZ1nejrL5\nGPkq+5qDrELXllsl8dRhwzewNZ7AD4nlADyD3ShXZpsOFJfeFV0IgiYg30VN\nkOdF\r\n=U6sH\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/collapse-white-space_1.0.5_1557140479433_0.048032635695633985"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.6": {
+			"name": "collapse-white-space",
+			"version": "1.0.6",
+			"description": "Replace multiple white-space characters with a single space",
+			"license": "MIT",
+			"keywords": [
+				"collapse",
+				"white",
+				"space"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/collapse-white-space.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/collapse-white-space/issues"
+			},
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/wooorm"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s collapseWhiteSpace -o collapse-white-space.js",
+				"build-mangle": "browserify . -s collapseWhiteSpace -p tinyify -o collapse-white-space.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"collapse-white-space.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"gitHead": "27d6d182f649b2a27f958fffa7d974ed30ebce97",
+			"homepage": "https://github.com/wooorm/collapse-white-space#readme",
+			"_id": "collapse-white-space@1.0.6",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-jEovNnrhMuqyCcjfEJA56v0Xq8SkIoPKDyaHahwo3POf4qcSXqMYuwNcOTzp74vTsR9Tn08z4MxWqAhcekogkQ==",
+				"shasum": "e63629c0016665792060dbbeb79c42239d2c5287",
+				"tarball": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.6.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4360,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeKiU6CRA9TVsSAnZWagAAc7gP/Ry4/fpM0eVirMvT7aMp\nyelmX7ZrPJQk4W0z+I58krmIbgqpfBACscuc+WYLYzsJNmxNiEJFRl88iQJE\nbafUrYhanWxuco04GyobSOIJgJ0v8dJCfFiSiAsH9wjuWwL7x/xO1OJ9b5x3\nb2FpASDizyN6eQ18yTWOpQXzq7IPYqOkhjc6aon+FBFX2UpScksxG86Uaq4l\nHTMQNAWPxbYq8ktfeLR+BSHsPUotVaVbfFuLhFdxTNI3S0nzI2i6EJZtXlrV\n/aYv/anhETS7UaZbH5Y970KrF9KcaZe0/0Uu7dUZgmorq5k2zGxZu3zHt4cV\n/aCExv2ZZN7sznvqzReOXFsxWvSGCoJOmVnojwglFZg3Hexs/wcksxBZ2ZH5\nJ3G3JHRzDtFyIvlxFIHZMAp+Mk5v1NB3fgKvD87W4r3RGRclJJsPfKD0N4XW\nIbcvj8UWFKAa4/7nEHwT1ym/Ed191uWw14VISlsET8MD9cKP0EzJC6LFiz0R\nRH9lv+p0tx9AQN8QcIfu7YYc64uqADGS6cYeybigyrVadij6P03JHp18Jkd0\n+7EHIRuhSEpwPJ8S0dddkCp5ehrJDDABltoIKE0Uf7XLi13/Haio8FJI0RzP\nTHB5sGx4Br8Js05ytUyFZlqLSJD6JHwYu1JLRuhH0XwhjClJClzKaeGXSHNY\nKf9X\r\n=0cwg\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/collapse-white-space_1.0.6_1579820346305_0.7525999632050377"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-01-23T22:59:08.771Z",
+		"created": "2015-07-12T16:25:41.464Z",
+		"1.0.0": "2015-07-12T16:25:41.464Z",
+		"1.0.1": "2016-07-23T21:33:16.343Z",
+		"1.0.2": "2016-07-23T21:40:45.478Z",
+		"1.0.3": "2017-06-25T15:25:05.725Z",
+		"1.0.4": "2018-04-14T11:16:50.594Z",
+		"1.0.5": "2019-05-06T11:01:19.566Z",
+		"1.0.6": "2020-01-23T22:59:06.423Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.6"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"9c1dec61abddeed924c99550ab569eea\"",
+			"fetched": 1601147219641
+		}
+	},
+	"_distfiles": {
+		"collapse-white-space-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.0.tgz",
+			"sha": "94c809660c5661874fbb52bc74dc3519afca9023",
+			"registry": "npmjs"
+		},
+		"collapse-white-space-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.1.tgz",
+			"sha": "8dd6887f7be813599be56d39f5cfcf438e3d20a9",
+			"registry": "npmjs"
+		},
+		"collapse-white-space-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.2.tgz",
+			"sha": "9c463fb9c6d190d2dcae21a356a01bcae9eeef6d",
+			"registry": "npmjs"
+		},
+		"collapse-white-space-1.0.3.tgz": {
+			"url": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.3.tgz",
+			"sha": "4b906f670e5a963a87b76b0e1689643341b6023c",
+			"registry": "npmjs"
+		},
+		"collapse-white-space-1.0.4.tgz": {
+			"url": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.4.tgz",
+			"sha": "ce05cf49e54c3277ae573036a26851ba430a0091",
+			"registry": "npmjs"
+		},
+		"collapse-white-space-1.0.5.tgz": {
+			"url": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.5.tgz",
+			"sha": "c2495b699ab1ed380d29a1091e01063e75dbbe3a",
+			"registry": "npmjs"
+		},
+		"collapse-white-space-1.0.6.tgz": {
+			"url": "https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-1.0.6.tgz",
+			"sha": "e63629c0016665792060dbbeb79c42239d2c5287",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-2137299369ca2545",
+	"_id": "collapse-white-space",
+	"readme": "# collapse-white-space\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n\nReplace multiple whitespace characters with a single space.\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install collapse-white-space\n```\n\n## Use\n\n```js\nvar collapse = require('collapse-white-space')\n\ncollapse('\\tfoo \\n\\tbar  \\t\\r\\nbaz') //=> ' foo bar baz'\n```\n\n## API\n\n### `collapse(value)`\n\nReplace multiple whitespace characters in value with a single space.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/wooorm/collapse-white-space.svg\n\n[build]: https://travis-ci.org/wooorm/collapse-white-space\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/collapse-white-space.svg\n\n[coverage]: https://codecov.io/github/wooorm/collapse-white-space\n\n[downloads-badge]: https://img.shields.io/npm/dm/collapse-white-space.svg\n\n[downloads]: https://www.npmjs.com/package/collapse-white-space\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/collapse-white-space.svg\n\n[size]: https://bundlephobia.com/result?p=collapse-white-space\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com"
+}

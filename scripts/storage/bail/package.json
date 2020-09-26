@@ -1,0 +1,673 @@
+{
+	"name": "bail",
+	"versions": {
+		"1.0.0": {
+			"name": "bail",
+			"version": "1.0.0",
+			"description": "Throw a given error",
+			"license": "MIT",
+			"keywords": [
+				"fail",
+				"bail",
+				"throw",
+				"callback",
+				"error"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/bail.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"eslint": "^0.24.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^0.27.0",
+				"mdast-github": "^0.3.1",
+				"mdast-lint": "^0.4.1",
+				"mdast-yaml-config": "^0.2.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coveralls": "istanbul cover _mocha --report lcovonly -- --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- --check-leaks test.js",
+				"test-travis": "npm run test-coveralls",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"build-md": "mdast . LICENSE --output --quiet",
+				"build-bundle": "browserify index.js --bare -s bail > bail.js",
+				"postbuild-bundle": "esmangle bail.js > bail.min.js",
+				"build": "npm run build-md && npm run build-bundle"
+			},
+			"gitHead": "fb1817119d5daa77b3c045cc8713e20848ab7791",
+			"bugs": {
+				"url": "https://github.com/wooorm/bail/issues"
+			},
+			"homepage": "https://github.com/wooorm/bail#readme",
+			"_id": "bail@1.0.0",
+			"_shasum": "86aa0f9ec2ce307f07a1a4d4983f0bc760e18aab",
+			"_from": ".",
+			"_npmVersion": "2.11.3",
+			"_nodeVersion": "2.3.3",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "86aa0f9ec2ce307f07a1a4d4983f0bc760e18aab",
+				"tarball": "https://registry.npmjs.org/bail/-/bail-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "bail",
+			"version": "1.0.1",
+			"description": "Throw a given error",
+			"license": "MIT",
+			"keywords": [
+				"fail",
+				"bail",
+				"throw",
+				"callback",
+				"error"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/bail.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/bail/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"esmangle": "^1.0.1",
+				"nyc": "^7.0.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s bail > bail.js",
+				"build-mangle": "esmangle bail.js > bail.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"bail.js",
+					"bail.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"github",
+					"lint",
+					"validate-links"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "5f9cf008fe599445037e88974801dfd66f9c1911",
+			"homepage": "https://github.com/wooorm/bail#readme",
+			"_id": "bail@1.0.1",
+			"_shasum": "912579de8b391aadf3c5fdf4cd2a0fc225df3bc2",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "912579de8b391aadf3c5fdf4cd2a0fc225df3bc2",
+				"tarball": "https://registry.npmjs.org/bail/-/bail-1.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/bail-1.0.1.tgz_1469301368484_0.1634318893775344"
+			},
+			"directories": {}
+		},
+		"1.0.2": {
+			"name": "bail",
+			"version": "1.0.2",
+			"description": "Throw a given error",
+			"license": "MIT",
+			"keywords": [
+				"fail",
+				"bail",
+				"throw",
+				"callback",
+				"error"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/bail.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/bail/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js --bare -s bail > bail.js",
+				"build-mangle": "esmangle bail.js > bail.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignores": [
+					"bail.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "ee3ca49d6e9be066302667cfd39b9681516cd551",
+			"homepage": "https://github.com/wooorm/bail#readme",
+			"_id": "bail@1.0.2",
+			"_shasum": "f7d6c1731630a9f9f0d4d35ed1f962e2074a1764",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "f7d6c1731630a9f9f0d4d35ed1f962e2074a1764",
+				"tarball": "https://registry.npmjs.org/bail/-/bail-1.0.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/bail-1.0.2.tgz_1499596988656_0.6589261905755848"
+			},
+			"directories": {}
+		},
+		"1.0.3": {
+			"name": "bail",
+			"version": "1.0.3",
+			"description": "Throw a given error",
+			"license": "MIT",
+			"keywords": [
+				"fail",
+				"bail",
+				"throw",
+				"callback",
+				"error"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/bail.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/bail/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s bail > bail.js",
+				"build-mangle": "esmangle bail.js > bail.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignores": [
+					"bail.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"gitHead": "dbccf158bd687c3d4fe2f5ae6fdd425bdbdc8b72",
+			"homepage": "https://github.com/wooorm/bail#readme",
+			"_id": "bail@1.0.3",
+			"_npmVersion": "5.6.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-1X8CnjFVQ+a+KW36uBNMTU5s8+v5FzeqrP7hTG5aTb4aPreSbZJlhwPon9VKMuEVgV++JM+SQrALY3kr7eswdg==",
+				"shasum": "63cfb9ddbac829b02a3128cd53224be78e6c21a3",
+				"tarball": "https://registry.npmjs.org/bail/-/bail-1.0.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4020,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa1PWQCRA9TVsSAnZWagAAaV0P/3T36HhIc2dpr4lC6XfI\nAvwWG5AiOttmkGNqg5g5C/a2cskY12Z67xnhvoXIprsGcx1L+x3GvVl6wGXX\nd3ubOLbL/hNgLcap0QdUihSgVVOBEiDqstTnhdJwaCjSM+/uedogVIL6x16D\nQmTv/y/HrENTWUhNspvSWpA/huwF9ZUkPh59h+TIwud7e/3lD2UlYKVAUovR\nLykhxKkp/BEVkoy4twZOlwzXXaaECD3jdab1txnCES3XOKiXFYY5MMZLGZU8\nYN7RcAFEWntgDAKI9nwLBwuNtKhFv40n4mk+0rGGiIoyMfOuFiaiS6QTPbrQ\nij7FiLbJXA8sUEQmrtDzgbkZhGgTJSBfF5AVRrLQOxW/N4DzGT+Ham808H++\nIL7ES0aUvV3IPXjHfNqF8hnufNlJONGJWwLQiw7/MyLkqQeIdxIw1EHSwq9j\nvQiAkgPevH4W76vsP03sbyKzcasPIlAPrlHsJDtKjf1pmTnFhxqwas05IcCp\nRCfdjUzQJ4qR+yaRIv1767W6sfCRyDOlCmHwa1c0ShSOMWOyhWYaZ9+foUvX\n4wVDn6c23O41CapqAXOXcYxVx2kiQ+szlCLK5kV4s5YWz8WwyjQJuabLEo+v\nu1EeTlFagYlrK3KCYvFuhbTqOpUcpSM+sGOrbYXlMuJy7kMZBwaS+vqnSpzt\nJ3yt\r\n=Ezqd\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/bail_1.0.3_1523905934727_0.522148058063743"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.4": {
+			"name": "bail",
+			"version": "1.0.4",
+			"description": "Throw a given error",
+			"license": "MIT",
+			"keywords": [
+				"fail",
+				"bail",
+				"throw",
+				"callback",
+				"error"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/bail.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/bail/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.5.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify index.js -s bail -o bail.js",
+				"build-mangle": "browserify index.js -s bail -p tinyify -o bail.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"bail.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"gitHead": "ba14fe30510b1addf0fc85ec055f8557688f0a20",
+			"homepage": "https://github.com/wooorm/bail#readme",
+			"_id": "bail@1.0.4",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-S8vuDB4w6YpRhICUDET3guPlQpaJl7od94tpZ0Fvnyp+MKW/HyDTcRDck+29C9g+d/qQHnddRH3+94kZdrW0Ww==",
+				"shasum": "7181b66d508aa3055d3f6c13f0a0c720641dde9b",
+				"tarball": "https://registry.npmjs.org/bail/-/bail-1.0.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4240,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc0XRvCRA9TVsSAnZWagAAtlcP/1GoTyOFqLC6o7893tUz\ncC+YveDvRinx1KNzjsfMegOrkhsuNrkb0N3W4VUlk+UWp/i3hfr3WaaCT3/B\nGsLgNj3gjRrLnf+UXs/XtC48tIOL77uDD2UP96owFUeQ/7lgDtQbGPK0f/B8\nqU10S1mSQ2uEY4fbHsWfDiBHOqGOpTK1cau/f1LHG2AjUjUCS8yz4aZv7aBU\nFX346Z8wjU6Grg0usSha7rmOV/CcEzJg0t3JM0+e+oZyMqGV0uhtR0GcFttI\nF/evIlPRUsArirLBDVue07UN1D4SyXuU5VF89hVD0ZTogjxihl8KxISgf0mi\ntlGPo+d6Lfh9MEw43+3i7k9HouK0Cs5rdW3cuCiy/Rjw7U91w22JUZuDlQIk\n56wjlgxZ165hc3aRSqab5UBWetwbYVfgktulTa320gnaDZAUTeUZjxnkDtjp\nnHXIZdPIgg6C4Mko8YbqwG3NgygMWiRaOP5WDfej35Ivcd4TUWczq8P6xfGv\nVSDLThMANtyEronJoEYV0BsYU5S231BYaweu3ZK2dHr6DAOAvrNeNFKWU0AK\nuc6ZUpNABEmWfMvwIDQZJb8GL4UjBd0r9c3LWXAmEAdwCc/rV27ZxKOKarf5\n9puXtCkPOADgnbKEhcI4/VGM92yrZ4DPWHqcXd9b335ENBEXUA+fGSuoxV83\n4dxj\r\n=cWGK\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/bail_1.0.4_1557230702677_0.1830860609772138"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.5": {
+			"name": "bail",
+			"version": "1.0.5",
+			"description": "Throw a given error",
+			"license": "MIT",
+			"keywords": [
+				"fail",
+				"bail",
+				"throw",
+				"callback",
+				"error"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/bail.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/bail/issues"
+			},
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/wooorm"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify index.js -s bail -o bail.js",
+				"build-mangle": "browserify index.js -s bail -p tinyify -o bail.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"bail.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"gitHead": "2628e331be0feef42b66cf546f468f3e92670dd4",
+			"homepage": "https://github.com/wooorm/bail#readme",
+			"_id": "bail@1.0.5",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-xFbRxM1tahm08yHBP16MMjVUAvDaBMD38zsM9EMAUN61omwLmKlOpB/Zku5QkjZ8TZ4vn53pj+t518cH0S03RQ==",
+				"shasum": "b6fa133404a392cbc1f8c4bf63f5953351e7a776",
+				"tarball": "https://registry.npmjs.org/bail/-/bail-1.0.5.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4301,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeLBXyCRA9TVsSAnZWagAABcgP/RrJE+O2iPir+CWWt/R2\nHoUCy12OEce3cxv267MfJlzaQWeCdLWXd3cnmvxqukL/yN/8Kw9Mkp7HL5ly\nut5PSuQYfCV6XErNY/ALJtXyLu4tfBI6eDlhX4BNUARxV6rZDco6Oo8pFe/h\niCjMJIHMEhDh0/+T7lTQra5WP83Izvv205NMA06z26DxVYiPsL/xtCi7/aJE\n+Bf/ra2yJX17+PFl7HlyKD+QpyL8DAPJ45SGtbFa4ctnwTVmh2NHxjITCrZ6\nyQBkx+JDIvQkjf0TIJibIHg765izwIn7403BoDaAt70Pvl0fZKzY6pZ9k7fJ\nz994NR4u46Q4jtcwsFyuXQkiSYZX3d5ONd/T8dWdRtfbO1LUi+GKySC9ll5r\neJo5L8IkpgUA6mWYfumER7zTjBy1bDf9jK0D/4tnKvfWqPwlWo+tcJ+thP6G\ncH/dHMDbb9lSGDY/ZMEWSE/zzN9JWDujWvJCHDTcXCSisrcYQTzVMqVOBo7P\n6anf9kaUHhQok2X/pgcXZjEbi2l59No1a+RcmxmXhPjcTrpyEAMb6n8Af1PV\n/veiz5sEnMPbJboaa53Orunwk27qinROr0QJwfvQAdxfrwtYE5fFbpGcjosP\nmhiMcudO3wtus8o1iVDC8m4diMIPOSfe/KdIBA3E7BFEHH97GhPJwWdVgsbe\noP36\r\n=kAgS\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/bail_1.0.5_1579947505639_0.4611247030259449"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-01-25T10:18:28.259Z",
+		"created": "2015-07-28T19:33:20.693Z",
+		"1.0.0": "2015-07-28T19:33:20.693Z",
+		"1.0.1": "2016-07-23T19:16:10.457Z",
+		"1.0.2": "2017-07-09T10:43:09.498Z",
+		"1.0.3": "2018-04-16T19:12:14.797Z",
+		"1.0.4": "2019-05-07T12:05:02.812Z",
+		"1.0.5": "2020-01-25T10:18:25.795Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.5"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"e681829f4cc24846773c8cb9443e50f2\"",
+			"fetched": 1601147220437
+		}
+	},
+	"_distfiles": {
+		"bail-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/bail/-/bail-1.0.0.tgz",
+			"sha": "86aa0f9ec2ce307f07a1a4d4983f0bc760e18aab",
+			"registry": "npmjs"
+		},
+		"bail-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/bail/-/bail-1.0.1.tgz",
+			"sha": "912579de8b391aadf3c5fdf4cd2a0fc225df3bc2",
+			"registry": "npmjs"
+		},
+		"bail-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/bail/-/bail-1.0.2.tgz",
+			"sha": "f7d6c1731630a9f9f0d4d35ed1f962e2074a1764",
+			"registry": "npmjs"
+		},
+		"bail-1.0.3.tgz": {
+			"url": "https://registry.npmjs.org/bail/-/bail-1.0.3.tgz",
+			"sha": "63cfb9ddbac829b02a3128cd53224be78e6c21a3",
+			"registry": "npmjs"
+		},
+		"bail-1.0.4.tgz": {
+			"url": "https://registry.npmjs.org/bail/-/bail-1.0.4.tgz",
+			"sha": "7181b66d508aa3055d3f6c13f0a0c720641dde9b",
+			"registry": "npmjs"
+		},
+		"bail-1.0.5.tgz": {
+			"url": "https://registry.npmjs.org/bail/-/bail-1.0.5.tgz",
+			"sha": "b6fa133404a392cbc1f8c4bf63f5953351e7a776",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-f95559f551e35c4d",
+	"_id": "bail",
+	"readme": "# bail\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n\n:warning: Throw a given error.\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install bail\n```\n\n## Use\n\n```js\nvar bail = require('bail')\n\nbail()\n\nbail(new Error('failure'))\n// Error: failure\n//     at repl:1:6\n//     at REPLServer.defaultEval (repl.js:154:27)\n//     …\n```\n\n## API\n\n### `bail([err])`\n\nThrow a given error.\n\n###### Parameters\n\n*   `err` (`Error?`) — Optional error.\n\n###### Throws\n\n*   `Error` — Given error, if any.\n\n## Related\n\n*   [`noop`][noop]\n*   [`noop2`][noop2]\n*   [`noop3`][noop3]\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/wooorm/bail.svg\n\n[build]: https://travis-ci.org/wooorm/bail\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/bail.svg\n\n[coverage]: https://codecov.io/github/wooorm/bail\n\n[downloads-badge]: https://img.shields.io/npm/dm/bail.svg\n\n[downloads]: https://www.npmjs.com/package/bail\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/bail.svg\n\n[size]: https://bundlephobia.com/result?p=bail\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[noop]: https://www.npmjs.com/package/noop\n\n[noop2]: https://www.npmjs.com/package/noop2\n\n[noop3]: https://www.npmjs.com/package/noop3"
+}

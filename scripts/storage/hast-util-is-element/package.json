@@ -1,0 +1,726 @@
+{
+	"name": "hast-util-is-element",
+	"versions": {
+		"1.0.0": {
+			"name": "hast-util-is-element",
+			"version": "1.0.0",
+			"description": "Check if a node is a (certain) element",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"html",
+				"is",
+				"element",
+				"util",
+				"utility"
+			],
+			"dependencies": {},
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/hast-util-is-element.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/hast-util-is-element/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.1",
+				"istanbul": "^0.4.0",
+				"jscs": "^3.0.0",
+				"jscs-jsdoc": "^2.0.0",
+				"remark": "^4.0.0",
+				"remark-comment-config": "^3.0.0",
+				"remark-github": "^4.0.1",
+				"remark-lint": "^3.0.0",
+				"remark-usage": "^3.0.0",
+				"remark-validate-links": "^3.0.0",
+				"tape": "^4.4.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s hastUtilIsElement > hast-util-is-element.js",
+				"build-mangle": "esmangle hast-util-is-element.js > hast-util-is-element.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "7f554f055942a7ac0d46fe4b7b34c3240745771d",
+			"homepage": "https://github.com/wooorm/hast-util-is-element#readme",
+			"_id": "hast-util-is-element@1.0.0",
+			"_shasum": "3f7216978b2ae14d98749878782675f33be3ce00",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "3f7216978b2ae14d98749878782675f33be3ce00",
+				"tarball": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/hast-util-is-element-1.0.0.tgz_1460904202585_0.36159496335312724"
+			},
+			"directories": {}
+		},
+		"1.0.1": {
+			"name": "hast-util-is-element",
+			"version": "1.0.1",
+			"description": "Check if a node is a (certain) element",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"html",
+				"is",
+				"element",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-is-element.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-is-element/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^12.0.0",
+				"prettier": "^1.13.5",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.21.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s hastUtilIsElement > hast-util-is-element.js",
+				"build-mangle": "esmangle hast-util-is-element.js > hast-util-is-element.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"hast-util-is-element.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "10d6f08b5ef8b6158b8cb283a54e4fb7ad0a1229",
+			"homepage": "https://github.com/syntax-tree/hast-util-is-element#readme",
+			"_id": "hast-util-is-element@1.0.1",
+			"_npmVersion": "6.1.0",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-s/ggaNehYVqmLgTXEv12Lbb72bsOD2r5DhAqPgtDdaI/YFNXVzz0zHFVJnhjIjn7Nak8GbL4nzT2q0RA5div+A==",
+				"shasum": "c76e8aafbdb6e5c83265bf50324e2f2e024eb12a",
+				"tarball": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.1.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5921,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbKqfpCRA9TVsSAnZWagAA2YMP/0NEsjAebSUHhtirQiy1\nFvLbrqmw9tcMNMrMCv6qaLJrfLoxrrnhLR/2E8dyR90Hjk6eEYNkensGS9CZ\n811MzW0zClZp+SzSGAtA63kHa3zAWDcjDNZNFk5bvf+insEOgkQdbIEl/7Pp\nUfvIo8+oivY6g0zqK+D6kwL+wyPaEJiW+ZtaErtmS+YF3bNB6pvsi2KLCXlq\n2lPewcWGxbyBCyZSgrFH0jRfXQ+iBREVhboGE64PCCL38hOd77VMNpuzS/lm\n15NCM0pJJXjpqOzEgXRjzbstdzDb6EszUUzLaGAlcPokmwnm8OC6iOi5y5gv\nAYsU4h8nfmAzXjMv9/5eQbq8QF4U6YNGxcgiXUtFx/7Z0wPtPvoHAjUz3Qpj\n41ju3NLjzr/W4cKgDVjnJISr3rJe89E43pssIOi5G4XYfmC10R5Zj8lS1mAt\nOBq7F4jJzQFZ0vMOCFzBjimjbpi8bql9+HFcVBgfHXgbzWc1xIILW70MgwkK\nPjpOb8hVVmeoQCHopuG5fLrgUst6Ah6mxtXBuNIMHiyw8oeQBozyv6VWsx3v\nZSnTZNWgwN87q6XqbA/NRqjufyr9igaju73Ab5RI2Xsm0gH2Us0dF7M+LyIh\nid0gqum0lxH+GEolsg3VxjLHU6iikmcVC4g8NMjOTChtpnWz+ppew7VnvMzO\n29v1\r\n=ddd8\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-is-element_1.0.1_1529522152294_0.9348489569264657"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.2": {
+			"name": "hast-util-is-element",
+			"version": "1.0.2",
+			"description": "Check if a node is a (certain) element",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"html",
+				"is",
+				"element",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-is-element.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-is-element/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^13.0.0",
+				"prettier": "^1.13.5",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.4.0",
+				"tinyify": "^2.4.3",
+				"xo": "^0.23.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s hastUtilIsElement > hast-util-is-element.js",
+				"build-mangle": "browserify . -s hastUtilIsElement -p tinyify > hast-util-is-element.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"hast-util-is-element.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "ff94135cc668dc76e816979b1b50e09605262b97",
+			"homepage": "https://github.com/syntax-tree/hast-util-is-element#readme",
+			"_id": "hast-util-is-element@1.0.2",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-4MEtyofNi3ZunPFrp9NpTQdNPN24xvLX3M+Lr/RGgPX6TLi+wR4/DqeoyQ7lwWcfUp4aevdt4RR0r7ZQPFbHxw==",
+				"shasum": "c23c9428b6a5a4e323bf9e16f87417476314981b",
+				"tarball": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.2.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6222,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb40VyCRA9TVsSAnZWagAA9s4P/jWsH7+PlbPymiky0/wF\nUyBDTLQaNgYsrybF/DaZGlvMW7S6S5+DTWXuWTQSk3UvxpJC9DIZUAsSFyDW\nO1/fFlz1wvCxLveeLJg9LbMDUWFt6Q+wb2HNnfefBz7Z5i4Kg9OzR8GMqu2h\n2nhpBJmM3eJgPlaw3gAy5VfToITTttTl19ja4Rpd6p2eWF1bL8+gQRcxIinb\n3cjAML1AeN4fQGPM7+UP/S1Yg1GkhqsFuOn12cV1QJLSXEWc6t9xW51q78Rz\njwr1TPmj+XRwnObno29dsCEY0SOqp0hWmoM5ySMagl3lufj4KVM8v7hTD/r3\n1bs5psKLy8UR3vVaKOSA3o1xBPsva3MzuZsZjmRIEAbBq1x1o4j5yQGOtgTH\nhM62aMlG+ZWeY/HZmqmw6ZwsdfO0ICrsmYYX/LAu2DiRvHJg+nxjeO/Ucvdc\ny62xyOoDy0IauveESGftfarlfP7FNO+DsIiveR5dx0LwVYAytDH2ntvv0OxH\nKnuv4rJiE4q2g6dNKrS6b4o/f80cCOBll7qb/u/X5EPuPJOz9w7hpGUViboI\n2LU4nw4bn6yEpOhg5nZNZLBrjqeb9CebDM7UNE/cpZCLTAc3et7q5XxrAdZX\nw9nqaruD8VYHl14JGjXCHO3DFCBZq8WbFL/bhybGtIDJvsHcyTjqaQZn/8zf\nwSke\r\n=OfpY\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-is-element_1.0.2_1541621105694_0.37165940674792997"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.3": {
+			"name": "hast-util-is-element",
+			"version": "1.0.3",
+			"description": "Check if a node is a (certain) element",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"html",
+				"is",
+				"element",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-is-element.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-is-element/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilIsElement > hast-util-is-element.js",
+				"build-mangle": "browserify . -s hastUtilIsElement -p tinyify > hast-util-is-element.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"hast-util-is-element.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "c0d72f3688afb6110bb3453d266c066d231cf37f",
+			"homepage": "https://github.com/syntax-tree/hast-util-is-element#readme",
+			"_id": "hast-util-is-element@1.0.3",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-C62CVn7jbjp89yOhhy7vrkSaB7Vk906Gtcw/Ihd+Iufnq+2pwOZjdPmpzpKLWJXPJBMDX3wXg4FqmdOayPcewA==",
+				"shasum": "423b4b26fe8bf1f25950fe052e9ce8f83fd5f6a4",
+				"tarball": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6941,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc6kQxCRA9TVsSAnZWagAA9kwP/1vvcoMfiNrpo5+4xWlt\nLY5aOmycw+dxuIX3XaZChM4iKkJp3110dnaGz0Bl9DUiriFDfrzwXbWZ4p0o\ntnlDdkUX5mmIRf6imtbH0NfVIqh1XofhAO3wnABbGOo/4I/YwwV4IVLgYzoz\nM3jXygX0up41D2VCabEJVFQO0veuWUEgJyvXOFMWfYAIf0GhDE7Y0Pr5NPER\nR1dr7YTzIViCniP2fcXDbfp+bbgDqdbkeuVlVqyR/kQdbUeyZkoCg1IdAV4T\nM+rcMIv45lN7a/17ZGEwyxIJAVQbafZXezQG0CI2a62EFQm8ntPpdFYwfqp5\nsnUo8oSLGCk+yU0dJgc9Avtni54nyHvPHAHrmVvnV9fpq/w/0vZycosK8xFq\nGhSNF1ThOwK8JO8/sYvl3FGasOzDh15hmVnPsLv1j8cbdN8bQ5meP/d5UQcB\ntuGd9MHDcygR+UOTWMNkWfaQfuaJd1brDEKv75ywGlWBDQNMc5CTwS8qDR45\n/z19t/HJkMDW7F/j7BOA29br+hSPTlXaXDniHiyYUn8mhE8DMaroTTW4YSd1\nXSyLduEuUdBVA7IWYWjavcPc+v5yQWdEUiIrNgH/J0QDLNE/p7fLCIRPW8U+\njFFrgp+7NP9qdXWYUhN6NnuM8ssG6fPA3UDinokKtzfmlN5X9c8m6IPDN+xE\nDGX7\r\n=lmfI\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-is-element_1.0.3_1558856752437_0.36285472162048515"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.4": {
+			"name": "hast-util-is-element",
+			"version": "1.0.4",
+			"description": "hast utility to check if a node is a (certain) element",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"hast",
+				"hast-util",
+				"util",
+				"utility",
+				"html",
+				"is",
+				"element"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-is-element.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-is-element/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.27.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilIsElement > hast-util-is-element.js",
+				"build-mangle": "browserify . -s hastUtilIsElement -p tinyify > hast-util-is-element.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/prefer-includes": "off"
+				},
+				"ignores": [
+					"hast-util-is-element.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "6bb2cdc4ee52c2df2454cdd6e63e2ec91f87d8d5",
+			"homepage": "https://github.com/syntax-tree/hast-util-is-element#readme",
+			"_id": "hast-util-is-element@1.0.4",
+			"_nodeVersion": "13.9.0",
+			"_npmVersion": "6.13.7",
+			"dist": {
+				"integrity": "sha512-NFR6ljJRvDcyPP5SbV7MyPBgF47X3BsskLnmw1U34yL+X6YC0MoBx9EyMg8Jtx4FzGH95jw8+c1VPLHaRA0wDQ==",
+				"shasum": "059090a05cc02e275df1ad02caf8cb422fcd2e02",
+				"tarball": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7321,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeWByrCRA9TVsSAnZWagAAi4IP/1dD2kPzTgg1EEWUkMS+\nR0CRIaDmITzhYIxFhNd23LGUskdLSLI+TzJs69YcB+nXkc/WJVsd20dSSeNm\nAqudCytVOeDCBv57EaFhpQxhwTDm9+Xy6jDezxOF9sgEmjkzxIJNpiw42CTn\ncMxiT1XSrSXa9lMPHgyDj1pOpi6X32myHhjVZh0oY1oGlK3IRd9ThFpZ45SP\nJVlmjN8+o9cFlbq0CMFLmC4Aa/4BIbCfcT7zwNUk46fjxZyYpaAAcDoHYEyu\ne32lX7hGU8yFIfOLqd6Lso193klcNU5kHBm/Cgj/OzGEgHeuFkIEJ+JLa3dE\nEqTgW0p4K59ggJOZUimHDL9MGt4sbT+nZeWlqSIU9fPtIJLk0DHVW743XL3E\n2g+NfgH5dDjzHuBze9r20lPhATdhApy95dmznVPglgot9ri+sI7MXr21Uc53\npr+lorfJ2zRNSL5wLgVumrZ1goVKO9ocvSNc+4G+rB90+S2gclT4bzBRp3YU\nxYlMMUI76lZu853YL0l9VAwOWjrReHL7kbW/vKAhvQpgaishOhdW1QfPid+U\nXbItwVxV94yTIao3ISJb5A8uQrY56n3UV/J+jbX06N8+LdMCvetcxGx5e9xR\n8E073p5EukiPste4PJQAxmJMHRzdteViL+ZLmqzZ72Nf4WsPBM7x0V17FCgq\n5vuS\r\n=4YO8\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-is-element_1.0.4_1582832810921_0.9319216868951221"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.1.0": {
+			"name": "hast-util-is-element",
+			"version": "1.1.0",
+			"description": "hast utility to check if a node is a (certain) element",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"hast",
+				"hast-util",
+				"util",
+				"utility",
+				"html",
+				"is",
+				"element"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-is-element.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-is-element/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^8.0.0",
+				"remark-preset-wooorm": "^7.0.0",
+				"tape": "^5.0.0",
+				"tinyify": "^3.0.0",
+				"xo": "^0.33.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier . --write && xo --fix",
+				"build-bundle": "browserify . -s hastUtilIsElement > hast-util-is-element.js",
+				"build-mangle": "browserify . -s hastUtilIsElement -p tinyify > hast-util-is-element.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"max-params": "off",
+					"unicorn/prefer-includes": "off",
+					"unicorn/prefer-reflect-apply": "off"
+				},
+				"ignores": [
+					"hast-util-is-element.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "759b7f9c56c288e50d97a29f436ff35b023637b6",
+			"homepage": "https://github.com/syntax-tree/hast-util-is-element#readme",
+			"_id": "hast-util-is-element@1.1.0",
+			"_nodeVersion": "14.7.0",
+			"_npmVersion": "6.14.8",
+			"dist": {
+				"integrity": "sha512-oUmNua0bFbdrD/ELDSSEadRVtWZOf3iF6Lbv81naqsIV99RnSCieTbWuWCY8BAeEfKJTKl0gRdokv+dELutHGQ==",
+				"shasum": "3b3ed5159a2707c6137b48637fbfe068e175a425",
+				"tarball": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.1.0.tgz",
+				"fileCount": 5,
+				"unpackedSize": 12095,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfP6XwCRA9TVsSAnZWagAAAuMQAKA6oJ3Q8/17Q+hTKsFq\nEbJR2c5oM3IX/Lm6CpiZNTdQ6bgBRXYeyRBcXeGsL0ecw/d7JCFXfYPI6RwD\nybsUO+p0k1cDpov9Le3M7OAujS3jXkIcZW2WVUCX8NSHna+PwWHkkh31HNZD\nkfdlK5+1RAZsmZ1A4SPBp6MFmv1G9LIly/NmVcktquXjASXOy8p9fKaOTfxo\nPMGYGrUA4r2UyVRWVfSA/7/1CzA4YwIpBxZw8AozoLQ6edHI6fCn/84LyP3H\n8ep8PqyZu2vxywtqDnwoF/KfrDpZ+tARRn2cztZoFDhpXhhiZlaiudUcz/cA\nyqSt9NiBBVE+ckApF58n0qZjZCoiOf3z7FZB652qvWKEbLAHLWuU30BquVXV\nLwVHbZq0PgyLidOr46bste9EcykollOoJrInSZ8unhhbVDypNP/1k3V3iomW\nIbcD+dw1hWAlphdHoBmpSxwSO3a5hhbEzQDBYTOT4T+5OIGZwITJs/Iv0/l3\nsVTMbm0hd/nKnHlUxOMrOWiJI80nyVU5jLbi3p5Ahq9XhkKZIXF26KUKb6U9\nE8gn6t1nwHZvO3ueVL2JvSctZGFdqxQqP0fyADWmRDRGjm0D3FINqbG8YYvd\nXLpySocU2SIw//dHmIV6rBcH0yHbwy0F6F2nYc2Z/pVZsgSUyuARM+/LJkE0\n0ld5\r\n=jm1F\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "merlijn@soverin.net",
+					"name": "murderlon"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-is-element_1.1.0_1598006767426_0.6590719724834488"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-08-25T11:31:02.511Z",
+		"created": "2016-04-17T14:43:23.709Z",
+		"1.0.0": "2016-04-17T14:43:23.709Z",
+		"1.0.1": "2018-06-20T19:15:52.430Z",
+		"1.0.2": "2018-11-07T20:05:05.823Z",
+		"1.0.3": "2019-05-26T07:45:52.599Z",
+		"1.0.4": "2020-02-27T19:46:51.014Z",
+		"1.1.0": "2020-08-21T10:46:07.769Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.1.0"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"9fce7296e8b4fc1bea711ee20bbb2c8a\"",
+			"fetched": 1601147220917
+		}
+	},
+	"_distfiles": {
+		"hast-util-is-element-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.0.tgz",
+			"sha": "3f7216978b2ae14d98749878782675f33be3ce00",
+			"registry": "npmjs"
+		},
+		"hast-util-is-element-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.1.tgz",
+			"sha": "c76e8aafbdb6e5c83265bf50324e2f2e024eb12a",
+			"registry": "npmjs"
+		},
+		"hast-util-is-element-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.2.tgz",
+			"sha": "c23c9428b6a5a4e323bf9e16f87417476314981b",
+			"registry": "npmjs"
+		},
+		"hast-util-is-element-1.0.3.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.3.tgz",
+			"sha": "423b4b26fe8bf1f25950fe052e9ce8f83fd5f6a4",
+			"registry": "npmjs"
+		},
+		"hast-util-is-element-1.0.4.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.0.4.tgz",
+			"sha": "059090a05cc02e275df1ad02caf8cb422fcd2e02",
+			"registry": "npmjs"
+		},
+		"hast-util-is-element-1.1.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.1.0.tgz",
+			"sha": "3b3ed5159a2707c6137b48637fbfe068e175a425",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-25b3dfa967f2d0db",
+	"_id": "hast-util-is-element",
+	"readme": "# hast-util-is-element\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n[![Chat][chat-badge]][chat]\n\n[**hast**][hast] utility to check if a [*node*][node] is a (certain)\n[*element*][element].\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install hast-util-is-element\n```\n\n## Use\n\n```js\nvar is = require('hast-util-is-element')\n\nis({type: 'text', value: 'foo'}) // => false\n\nis({type: 'element', tagName: 'a'}, 'a') // => true\n\nis({type: 'element', tagName: 'a'}, ['a', 'area']) // => true\n```\n\n## API\n\n### `isElement(node[, test[, index, parent[, context]]])`\n\nCheck if the given value is a (certain) [*element*][element].\n\n*   `node` ([`Node`][node]) — Node to check.\n*   `test` ([`Function`][test], `string`, or `Array.<Test>`, optional)\n    — When `array`, checks if any one of the subtests pass.\n    When `string`, checks that the element has that tag name.\n    When `function`, see [`test`][test]\n*   `index` (`number`, optional) — [Index][] of `node` in `parent`\n*   `parent` ([`Node`][node], optional) — [Parent][] of `node`\n*   `context` (`*`, optional) — Context object to invoke `test` with\n\n###### Returns\n\n`boolean` — Whether `test` passed *and* `node` is an [`Element`][element].\n\n###### Throws\n\n`Error` — When an incorrect `test`, `index`, or `parent` is given.\nA `node` that is not a node, or not an element, does not throw.\n\n#### `function test(element[, index, parent])`\n\n###### Parameters\n\n*   `element` ([`Element`][element]) — Element to check\n*   `index` (`number?`) — [Index][] of `node` in `parent`\n*   `parent` ([`Node?`][node]) — [Parent][] of `node`\n\n###### Context\n\n`*` — The to `is` given `context`.\n\n###### Returns\n\n`boolean?` — Whether `element` matches.\n\n### `isElement.convert(test)`\n\nCreate a test function from `test`, that can later be called with a `node`,\n`index`, and `parent`.\nUseful if you’re going to test many nodes, for example when creating a utility\nwhere something else passes a compatible test.\n\nThe created function is slightly faster because it expects valid input only.\nTherefore, passing invalid input, yields unexpected results.\n\nCan also be accessed with `require('hast-util-is-element/convert')`.\n\n## Security\n\n`hast-util-is-element` does not change the syntax tree so there are no openings\nfor [cross-site scripting (XSS)][xss] attacks.\n\n## Related\n\n*   [`hast-util-has-property`](https://github.com/syntax-tree/hast-util-has-property)\n    — check if a node has a property\n*   [`hast-util-is-body-ok-link`](https://github.com/rehypejs/rehype-minify/tree/HEAD/packages/hast-util-is-body-ok-link)\n    — check if a node is “Body OK” link element\n*   [`hast-util-is-conditional-comment`](https://github.com/rehypejs/rehype-minify/tree/HEAD/packages/hast-util-is-conditional-comment)\n    — check if a node is a conditional comment\n*   [`hast-util-is-css-link`](https://github.com/rehypejs/rehype-minify/tree/HEAD/packages/hast-util-is-css-link)\n    — check if a node is a CSS link element\n*   [`hast-util-is-css-style`](https://github.com/rehypejs/rehype-minify/tree/HEAD/packages/hast-util-is-css-style)\n    — check if a node is a CSS style element\n*   [`hast-util-embedded`](https://github.com/syntax-tree/hast-util-embedded)\n    — check if a node is an embedded element\n*   [`hast-util-heading`](https://github.com/syntax-tree/hast-util-heading)\n    — check if a node is a heading element\n*   [`hast-util-interactive`](https://github.com/syntax-tree/hast-util-interactive)\n    — check if a node is interactive\n*   [`hast-util-is-javascript`](https://github.com/rehypejs/rehype-minify/tree/HEAD/packages/hast-util-is-javascript)\n    — check if a node is a JavaScript script element\n*   [`hast-util-labelable`](https://github.com/syntax-tree/hast-util-labelable)\n    — check whether a node is labelable\n*   [`hast-util-phrasing`](https://github.com/syntax-tree/hast-util-phrasing)\n    — check if a node is phrasing content\n*   [`hast-util-script-supporting`](https://github.com/syntax-tree/hast-util-script-supporting)\n    — check if a node is a script-supporting element\n*   [`hast-util-sectioning`](https://github.com/syntax-tree/hast-util-sectioning)\n    — check if a node is a sectioning element\n*   [`hast-util-transparent`](https://github.com/syntax-tree/hast-util-transparent)\n    — check if a node is a transparent element\n*   [`hast-util-whitespace`](https://github.com/syntax-tree/hast-util-whitespace)\n    — check if a node is inter-element whitespace\n\n## Contribute\n\nSee [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get\nstarted.\nSee [`support.md`][support] for ways to get help.\n\nThis project has a [code of conduct][coc].\nBy interacting with this repository, organization, or community you agree to\nabide by its terms.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definition -->\n\n[build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-is-element.svg\n\n[build]: https://travis-ci.org/syntax-tree/hast-util-is-element\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-is-element.svg\n\n[coverage]: https://codecov.io/github/syntax-tree/hast-util-is-element\n\n[downloads-badge]: https://img.shields.io/npm/dm/hast-util-is-element.svg\n\n[downloads]: https://www.npmjs.com/package/hast-util-is-element\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-is-element.svg\n\n[size]: https://bundlephobia.com/result?p=hast-util-is-element\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/chat-discussions-success.svg\n\n[chat]: https://github.com/syntax-tree/unist/discussions\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[contributing]: https://github.com/syntax-tree/.github/blob/HEAD/contributing.md\n\n[support]: https://github.com/syntax-tree/.github/blob/HEAD/support.md\n\n[coc]: https://github.com/syntax-tree/.github/blob/HEAD/code-of-conduct.md\n\n[hast]: https://github.com/syntax-tree/hast\n\n[node]: https://github.com/syntax-tree/unist#node\n\n[element]: https://github.com/syntax-tree/hast#element\n\n[parent]: https://github.com/syntax-tree/unist#parent-1\n\n[index]: https://github.com/syntax-tree/unist#index\n\n[test]: #function-testelement-index-parent\n\n[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting"
+}

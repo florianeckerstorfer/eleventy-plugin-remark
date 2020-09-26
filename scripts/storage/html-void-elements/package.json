@@ -1,0 +1,726 @@
+{
+	"name": "html-void-elements",
+	"versions": {
+		"1.0.0": {
+			"name": "html-void-elements",
+			"version": "1.0.0",
+			"description": "List of known void HTML elements",
+			"license": "MIT",
+			"keywords": [
+				"html",
+				"void",
+				"tag",
+				"name",
+				"element",
+				"tagname",
+				"w3c",
+				"whatwg"
+			],
+			"dependencies": {},
+			"files": [
+				"index.js",
+				"index.json"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/html-void-elements.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/html-void-elements/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"bail": "^1.0.0",
+				"browserify": "^13.0.0",
+				"cheerio": "^0.20.0",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.1",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^4.0.0",
+				"remark-comment-config": "^3.0.0",
+				"remark-github": "^4.0.1",
+				"remark-lint": "^3.0.0",
+				"remark-usage": "^3.0.0",
+				"remark-validate-links": "^3.0.0",
+				"tape": "^4.4.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-crawl": "node script/build.js",
+				"build-bundle": "browserify index.js --bare -s htmlVoidElements > html-void-elements.js",
+				"build-mangle": "esmangle html-void-elements.js > html-void-elements.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "2912061a9a0fbc77ddd21717fee58bfeef597d05",
+			"homepage": "https://github.com/wooorm/html-void-elements#readme",
+			"_id": "html-void-elements@1.0.0",
+			"_shasum": "8a524ef21ae8259ea3da69baa506b4a6436640a7",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "8a524ef21ae8259ea3da69baa506b4a6436640a7",
+				"tarball": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/html-void-elements-1.0.0.tgz_1458319265701_0.33561553130857646"
+			},
+			"directories": {}
+		},
+		"1.0.1": {
+			"name": "html-void-elements",
+			"version": "1.0.1",
+			"description": "List of known void HTML elements",
+			"license": "MIT",
+			"keywords": [
+				"html",
+				"void",
+				"tag",
+				"name",
+				"element",
+				"tagname",
+				"w3c",
+				"whatwg"
+			],
+			"dependencies": {},
+			"files": [
+				"index.js",
+				"index.json"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/html-void-elements.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/html-void-elements/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"bail": "^1.0.0",
+				"browserify": "^13.0.0",
+				"cheerio": "^0.20.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-usage": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-crawl": "node script/build.js",
+				"build-bundle": "browserify index.js --bare -s htmlVoidElements > html-void-elements.js",
+				"build-mangle": "esmangle html-void-elements.js > html-void-elements.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"rules": {
+					"guard-for-in": [
+						0
+					],
+					"eqeqeq": [
+						0,
+						"allow-null"
+					],
+					"no-eq-null": [
+						0
+					]
+				},
+				"ignores": [
+					"html-void-elements.js",
+					"html-void-elements.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"lint",
+					"github",
+					"validate-links",
+					"usage"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "780bed6b11d77839fbe1c03dccc572ed622903c0",
+			"homepage": "https://github.com/wooorm/html-void-elements#readme",
+			"_id": "html-void-elements@1.0.1",
+			"_shasum": "f929bea267a19e3535950502ca12c159f1b559af",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "f929bea267a19e3535950502ca12c159f1b559af",
+				"tarball": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/html-void-elements-1.0.1.tgz_1467484376438_0.12725202646106482"
+			},
+			"directories": {}
+		},
+		"1.0.2": {
+			"name": "html-void-elements",
+			"version": "1.0.2",
+			"description": "List of known void HTML elements",
+			"license": "MIT",
+			"keywords": [
+				"html",
+				"void",
+				"tag",
+				"name",
+				"element",
+				"tagname",
+				"w3c",
+				"whatwg"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/html-void-elements.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/html-void-elements/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"files": [
+				"index.json"
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"bail": "^1.0.0",
+				"browserify": "^14.1.0",
+				"concat-stream": "^1.6.0",
+				"esmangle": "^1.0.0",
+				"hast-util-select": "^1.0.1",
+				"hast-util-to-string": "^1.0.0",
+				"rehype-parse": "^4.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"unified": "^6.1.5",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-crawl": "node build",
+				"build-bundle": "browserify index.json --bare -s htmlVoidElements > html-void-elements.js",
+				"build-mangle": "esmangle html-void-elements.js > html-void-elements.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test": "npm run build && npm run lint && npm run test-api"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignores": [
+					"html-void-elements.min.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "d6a786bfee8ba05fabd75ca7e99451a56e017374",
+			"homepage": "https://github.com/wooorm/html-void-elements#readme",
+			"_id": "html-void-elements@1.0.2",
+			"_shasum": "9d22e0ca32acc95b3f45b8d5b4f6fbdc05affd55",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "9d22e0ca32acc95b3f45b8d5b4f6fbdc05affd55",
+				"tarball": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/html-void-elements-1.0.2.tgz_1498410138284_0.3396326503716409"
+			},
+			"directories": {}
+		},
+		"1.0.3": {
+			"name": "html-void-elements",
+			"version": "1.0.3",
+			"description": "List of known void HTML elements",
+			"license": "MIT",
+			"keywords": [
+				"html",
+				"void",
+				"tag",
+				"name",
+				"element",
+				"tagname",
+				"w3c",
+				"whatwg"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/html-void-elements.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/html-void-elements/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"files": [
+				"index.json"
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"bail": "^1.0.0",
+				"browserify": "^16.0.0",
+				"concat-stream": "^1.6.0",
+				"esmangle": "^1.0.0",
+				"hast-util-select": "^1.0.1",
+				"hast-util-to-string": "^1.0.0",
+				"prettier": "^1.12.0",
+				"rehype-parse": "^4.0.0",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"unified": "^6.1.5",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"generate": "node build",
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.json --bare -s htmlVoidElements > html-void-elements.js",
+				"build-mangle": "esmangle html-void-elements.js > html-void-elements.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test": "npm run generate && npm run format && npm run build && npm run test-api"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignores": [
+					"html-void-elements.min.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "940b3ca2e3b39f07589469336943e1f1cb9b2927",
+			"homepage": "https://github.com/wooorm/html-void-elements#readme",
+			"_id": "html-void-elements@1.0.3",
+			"_npmVersion": "5.6.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-SaGhCDPXJVNrQyKMtKy24q6IMdXg5FCPN3z+xizxw9l+oXQw5fOoaj/ERU5KqWhSYhXtW5bWthlDbTDLBhJQrA==",
+				"shasum": "956707dbecd10cf658c92c5d27fee763aa6aa982",
+				"tarball": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4499,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa0fopCRA9TVsSAnZWagAAESEP/2zCFns/sJsh8emkUpqz\n+fiqiujw1ghnV49feM+ePJCBcIYentsDpEtFzOqhKQ2txiu2lyEguwIPQR/v\nHb547ud4j4gJXCsDd3IHTxHbjwF49+9EYmFXihUFcT2PP367L16DoKwYa7Tj\nRgtTlvG6pzoYQAcBjLt/RBbqILBBkr9OR3bPMoHjq9R4maCpGTVa/jAXqlzJ\n/xMzWHzX3/iiKRCs5x3bh4kk0hO4hj7k7iYKMYykYlKxkBxoERamZ+UT0Kp6\nK1HMMMZtYYbs5tMKA+HgZ2qkpzc9SlgpFMLrmtwuM9i72nvz0ASqwnXTMrIU\nmu1jI0M75Yuuft7H7DRemLcVB8sJv0tX7fDwNcbUMec6WYpgUs7IJbkhZT3e\ntqp/SfeQ8tzf26Ut8SkvkMIiUQhLsMElLaZQsTOnGrSM1n9FAEmgztskSx9Y\nKFl4fMxGm/3ZwYee43re11b5zv3U2oGXxmIjsXP8nTVV5k43RhBv5Eqjxf9z\nuQ1KS0JIWbJVNyxJtC0KXrfwT8KbBdLP9YR6v2l8qmBXU3TMmlUQ8H/OQpC9\nUJy6KIzuS7CwFgm+GmwCevuRCI+z45QGELPH3RTINRmb/SuTn0gatNc3Z51/\nvm9co4MXxiBeaPzcLsZUCk4VAz9MjtAnqy8qpHiSUKx+sY2Hh4nh0xtw+pKL\npG+M\r\n=vjY4\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/html-void-elements_1.0.3_1523710504465_0.47190957857368043"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.4": {
+			"name": "html-void-elements",
+			"version": "1.0.4",
+			"description": "List of known void HTML elements",
+			"license": "MIT",
+			"keywords": [
+				"html",
+				"void",
+				"tag",
+				"name",
+				"element",
+				"tagname",
+				"w3c",
+				"whatwg"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/html-void-elements.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/html-void-elements/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"dependencies": {},
+			"devDependencies": {
+				"bail": "^1.0.0",
+				"browserify": "^16.0.0",
+				"concat-stream": "^2.0.0",
+				"hast-util-select": "^3.0.0",
+				"hast-util-to-string": "^1.0.0",
+				"prettier": "^1.12.0",
+				"rehype-parse": "^6.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.5.0",
+				"unified": "^7.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"generate": "node build",
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s htmlVoidElements > html-void-elements.js",
+				"build-mangle": "browserify . -s htmlVoidElements -p tinyify > html-void-elements.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test": "npm run generate && npm run format && npm run build && npm run test-api"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"html-void-elements.min.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "770d725ca6a615e366ed53fb591db76024a2e6fe",
+			"homepage": "https://github.com/wooorm/html-void-elements#readme",
+			"_id": "html-void-elements@1.0.4",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-yMk3naGPLrfvUV9TdDbuYXngh/TpHbA6TrOw3HL9kS8yhwx7i309BReNg7CbAJXGE+UMJ6je5OqJ7lC63o6YuQ==",
+				"shasum": "95e8bb5ecd6b88766569c2645f2b5f1591db9ba5",
+				"tarball": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4752,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc0G5cCRA9TVsSAnZWagAALJMP/iAIjr9YuC+EBlqkm9hQ\nHW9Gy5IO5tY9serKzRyxG4/GlvAC+pmWh6BvcW0aQy5riofUjZbP+f+Kb0qg\n3lMVv5Yi86Kf/ylteI2grukDir4wWqgIOxXEBiN709mzBTx69Lj+I8/na3ib\ny2lhLBr6P1jQc1XDHpW/uKrxRiFuxv5niXZjx7aTdjT4gaeSoSiYzrRlkPEa\nLizGXi/Sj6/C+0IWh7nyxpRUiSymWayFoAfjHLYeplE6pfu76zOq/Ui/Ev+Y\nbYNwqTGylnSpJpEU0/vIxKvf0PIAHquFRELjQoXVWi7C6f5FEngrnSxvCoh2\na70vRwU211cnzQC5gVmkoo2M5Jghxwcw0Jh5raT3+ho17K9LCJ7RRbExdo+T\nGW1/ZK66rmTzZBHP3kF5vVzd2sD1GUiru5fltXN2i3slrYU1i1a169PqQpBi\nh2U0AAA796W6IQkuwfydNbH5sgUy1mUlDfbxA4nCGgCtt3KEcvRquky+UEJv\nMZpjUTMc7SyCOaj3vsRvL1SnRHaJRwHDPbkZblFZm+n8OMXn7kPRWiKlT8SE\nRbmuIDELgqW7/X3QcyI/v9+/RVF9jDTMqVwrpyUFJWUxweaF8edepaHrFKJb\nZPglr51fLhsU+kMcCfNYEHyGim9iwIxNTO5tcUr0u84oGPCl4QlMW5VTyZM1\njlW7\r\n=8m13\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/html-void-elements_1.0.4_1557163611556_0.15035564225973896"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.5": {
+			"name": "html-void-elements",
+			"version": "1.0.5",
+			"description": "List of known void HTML elements",
+			"license": "MIT",
+			"keywords": [
+				"html",
+				"void",
+				"tag",
+				"name",
+				"element",
+				"tagname",
+				"w3c",
+				"whatwg"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/html-void-elements.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/html-void-elements/issues"
+			},
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/wooorm"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"dependencies": {},
+			"devDependencies": {
+				"bail": "^1.0.0",
+				"browserify": "^16.0.0",
+				"concat-stream": "^2.0.0",
+				"hast-util-select": "^3.0.0",
+				"hast-util-to-string": "^1.0.0",
+				"prettier": "^1.0.0",
+				"rehype-parse": "^6.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unified": "^8.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"generate": "node build",
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s htmlVoidElements > html-void-elements.js",
+				"build-mangle": "browserify . -s htmlVoidElements -p tinyify > html-void-elements.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test": "npm run format && npm run build && npm run test-api"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"html-void-elements.min.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "4e87485f58b10229e0f4fc327bc0a39488d0d650",
+			"homepage": "https://github.com/wooorm/html-void-elements#readme",
+			"_id": "html-void-elements@1.0.5",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-uE/TxKuyNIcx44cIWnjr/rfIATDH7ZaOMmstu0CwhFG1Dunhlp4OC6/NMbhiwoq5BpW0ubi303qnEk/PZj614w==",
+				"shasum": "ce9159494e86d95e45795b166c2021c2cfca4483",
+				"tarball": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.5.tgz",
+				"fileCount": 4,
+				"unpackedSize": 4775,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeKhsuCRA9TVsSAnZWagAAp0cP/0euOoke6dJ5Jqk9rZzj\nXhmdlf+1GQLXMcCMFNEkMPWmrjkW3megoD+oO3k3KMpXfZHbKCRcGpFUfvRU\nWfT1JzJqQaNFMIaC3gB98i8WH/nY+M7AF+YSU2Oi6CXxmGrXthRxaEZH7p4i\nfr08pKsVNzpJyPFp4K0FqXGZP1nBTXKKBeaEuLL2aLQTDhVS0xvI5e0/a0EO\nbu6WT3cGuDXSpL8HHhGQuhsPceIsAWhKFh1PUC67/M+dvV8xmFfZlv7SkpbR\n131kbOE1EyrmVa69rVYtQ4T8cN0vPD4r6K6Wzvr6xA+brv1cjXnYOqE40If8\nx4EJ+A9lXC4rsQe3gX7SPOkuQUYEQSDTJ+y7StVZ1zbU1tsKNSGPatTk1lmF\nwf5jUr5s/52rwKr+C0MOmnT3DfaVlkHI3m3pUpAusY/tZKqK8BHNtwihXRzR\nc3Nz62d2MTSdVTh34NcaG/5hkso0YwTmd5vjS7lxKXU0l7Z6dllhtj6gfhnU\nDE7NR+3RSwcU4VLszFfjcHlbBgmXUY3OsQov9x5YtpmC5A/9dsDHCXhd/iy4\nph63gW2Y9PbOnUTESF5ohBf9jA0N0opx8Ik2ScPkI9+8axCFsf0LeSwVsg1y\nsrkIGb3/4SMvXhZJtHbA4vt/vZvAeKgujesBxf+Mq7wFNCKd35GTZNEBa0qY\nNnpD\r\n=glpj\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/html-void-elements_1.0.5_1579817774354_0.6375501148540546"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-01-23T22:16:16.921Z",
+		"created": "2016-03-18T16:41:08.121Z",
+		"1.0.0": "2016-03-18T16:41:08.121Z",
+		"1.0.1": "2016-07-02T18:32:58.524Z",
+		"1.0.2": "2017-06-25T17:02:19.360Z",
+		"1.0.3": "2018-04-14T12:55:04.674Z",
+		"1.0.4": "2019-05-06T17:26:51.732Z",
+		"1.0.5": "2020-01-23T22:16:14.466Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.5"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"fc5025bee776b408fda16846472b2a4f\"",
+			"fetched": 1601147220930
+		}
+	},
+	"_distfiles": {
+		"html-void-elements-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.0.tgz",
+			"sha": "8a524ef21ae8259ea3da69baa506b4a6436640a7",
+			"registry": "npmjs"
+		},
+		"html-void-elements-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.1.tgz",
+			"sha": "f929bea267a19e3535950502ca12c159f1b559af",
+			"registry": "npmjs"
+		},
+		"html-void-elements-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.2.tgz",
+			"sha": "9d22e0ca32acc95b3f45b8d5b4f6fbdc05affd55",
+			"registry": "npmjs"
+		},
+		"html-void-elements-1.0.3.tgz": {
+			"url": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.3.tgz",
+			"sha": "956707dbecd10cf658c92c5d27fee763aa6aa982",
+			"registry": "npmjs"
+		},
+		"html-void-elements-1.0.4.tgz": {
+			"url": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.4.tgz",
+			"sha": "95e8bb5ecd6b88766569c2645f2b5f1591db9ba5",
+			"registry": "npmjs"
+		},
+		"html-void-elements-1.0.5.tgz": {
+			"url": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-1.0.5.tgz",
+			"sha": "ce9159494e86d95e45795b166c2021c2cfca4483",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-081ada6da5b924f8",
+	"_id": "html-void-elements",
+	"readme": "# html-void-elements\n\n[![Build][build-badge]][build]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n\nList of known void HTML elements.\nIncludes ancient (such as `nextid` and `basefont`) and modern (such as `img` and\n`meta`) tag names from the HTML living standard.\n\n**Note**: there’s one special case: `menuitem`.\nW3C specifies it to be void, but WHATWG doesn’t.\nI suggest using the void form.\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install html-void-elements\n```\n\n## Use\n\n```js\nvar htmlVoidElements = require('html-void-elements')\n\nconsole.log(htmlVoidElements)\n```\n\nYields:\n\n```js\n[ 'area',\n  'base',\n  'basefont',\n  'bgsound',\n  'br',\n  'col',\n  'command',\n  'embed',\n  'frame',\n  'hr',\n  'image',\n  'img',\n  'input',\n  'isindex',\n  'keygen',\n  'link',\n  'menuitem',\n  'meta',\n  'nextid',\n  'param',\n  'source',\n  'track',\n  'wbr' ]\n```\n\n## API\n\n### `htmlVoidElements`\n\n`Array.<string>` — List of lower-case tag names.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definition -->\n\n[build-badge]: https://img.shields.io/travis/wooorm/html-void-elements.svg\n\n[build]: https://travis-ci.org/wooorm/html-void-elements\n\n[downloads-badge]: https://img.shields.io/npm/dm/html-void-elements.svg\n\n[downloads]: https://www.npmjs.com/package/html-void-elements\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/html-void-elements.svg\n\n[size]: https://bundlephobia.com/result?p=html-void-elements\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com"
+}

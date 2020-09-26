@@ -1,0 +1,992 @@
+{
+	"name": "comma-separated-tokens",
+	"versions": {
+		"1.0.0": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.0",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.1",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^4.0.0",
+				"remark-comment-config": "^3.0.0",
+				"remark-github": "^4.0.1",
+				"remark-lint": "^3.0.0",
+				"remark-usage": "^3.0.0",
+				"remark-validate-links": "^3.0.0",
+				"tape": "^4.4.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s commaSeparatedTokens > comma-separated-tokens.js",
+				"build-mangle": "esmangle comma-separated-tokens.js > comma-separated-tokens.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "e47d539d38b75acda4c058fc8d4e38a20ff30d45",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.0",
+			"_shasum": "27de507e7dea9c29d3809fd4cc9e0de1589d974e",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "27de507e7dea9c29d3809fd4cc9e0de1589d974e",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-9-west.internal.npmjs.com",
+				"tmp": "tmp/comma-separated-tokens-1.0.0.tgz_1456180023384_0.2069155271165073"
+			},
+			"directories": {}
+		},
+		"1.0.1": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.1",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.1",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^4.0.0",
+				"remark-comment-config": "^3.0.0",
+				"remark-github": "^4.0.1",
+				"remark-lint": "^3.0.0",
+				"remark-usage": "^3.0.0",
+				"remark-validate-links": "^3.0.0",
+				"tape": "^4.4.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s commaSeparatedTokens > comma-separated-tokens.js",
+				"build-mangle": "esmangle comma-separated-tokens.js > comma-separated-tokens.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "4d35110c25743a00513c4652948674f958e81f31",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.1",
+			"_shasum": "3c89e73b1f0dd4e982aaaa001553e35e4d2d9703",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "3c89e73b1f0dd4e982aaaa001553e35e4d2d9703",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-9-west.internal.npmjs.com",
+				"tmp": "tmp/comma-separated-tokens-1.0.1.tgz_1456352216390_0.35462101781740785"
+			},
+			"directories": {}
+		},
+		"1.0.2": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.2",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"esmangle": "^1.0.1",
+				"nyc": "^7.0.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s commaSeparatedTokens > comma-separated-tokens.js",
+				"build-mangle": "esmangle comma-separated-tokens.js > comma-separated-tokens.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"comma-separated-tokens.js",
+					"comma-separated-tokens.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"github",
+					"lint",
+					"validate-links"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "136db3000953ca305add2797691f9079126b5ae3",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.2",
+			"_shasum": "4b64717a2ee363af6dd39878336bd95e42d063e7",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "4b64717a2ee363af6dd39878336bd95e42d063e7",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/comma-separated-tokens-1.0.2.tgz_1469305629079_0.8115396653302014"
+			},
+			"directories": {}
+		},
+		"1.0.3": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.3",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^14.1.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^10.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^2.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js --bare -s commaSeparatedTokens > comma-separated-tokens.js",
+				"build-mangle": "esmangle comma-separated-tokens.js > comma-separated-tokens.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignores": [
+					"comma-separated-tokens.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "696520a7f8d459e62b872555efb401cd1c50a949",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.3",
+			"_shasum": "6eb01f4730bde7a7fce5d5e2d943bdd637272801",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "6eb01f4730bde7a7fce5d5e2d943bdd637272801",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.3.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-18-east.internal.npmjs.com",
+				"tmp": "tmp/comma-separated-tokens-1.0.3.tgz_1492334735610_0.569495566887781"
+			},
+			"directories": {}
+		},
+		"1.0.4": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.4",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^14.1.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js --bare -s commaSeparatedTokens > comma-separated-tokens.js",
+				"build-mangle": "esmangle comma-separated-tokens.js > comma-separated-tokens.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignores": [
+					"comma-separated-tokens.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "4b83a0e6c44bef5b18418066d77a02f63fb47538",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.4",
+			"_shasum": "72083e58d4a462f01866f6617f4d98a3cd3b8a46",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "72083e58d4a462f01866f6617f4d98a3cd3b8a46",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.4.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/comma-separated-tokens-1.0.4.tgz_1498404585639_0.8324016141705215"
+			},
+			"directories": {}
+		},
+		"1.0.5": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.5",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s commaSeparatedTokens > comma-separated-tokens.js",
+				"build-mangle": "esmangle comma-separated-tokens.js > comma-separated-tokens.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignores": [
+					"comma-separated-tokens.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "def021158182205af3a2cd7ab9a02076493bf4ce",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.5",
+			"_npmVersion": "5.6.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-Cg90/fcK93n0ecgYTAz1jaA3zvnQ0ExlmKY1rdbyHqAx6BHxwoJc+J7HDu0iuQ7ixEs1qaa+WyQ6oeuBpYP1iA==",
+				"shasum": "b13793131d9ea2d2431cf5b507ddec258f0ce0db",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.5.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6090,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa0ezjCRA9TVsSAnZWagAA0zsQAIW7KBJv+ASZwMa9j9Wh\niG1su2GRRhsvMdbSiAmxo+Pj/LuBmuXSVgE/Fow4LL0nfFWlqkB8EbCTZXjU\n5a0BMf792Mq/cWLTJKPFEcOe7dI1cnpUMzHZFWPjnNMB7XEjs5qufR4vLOTp\nHjlbOnqUNxfNu5xynBHA7+9X1vqq2yyp4sD2ePRoBsqLBzkmrPNr+kOFoyFH\nXbR+0Q9uPRK2B6uS759g2h14Cg9MlqCvQEia0n4X3jTYxdHEtx7nmc3yj7wB\n9FtQwHSgUQFMBAdqN8cchtxN3Y8RkowGwKDbx+PtM0faeVClZonHAR5DkS8M\nDG1j1PZ3kEdk9oEI6++5HNbg4jNqkXyyN2WV4JQWaKi1/HqQfE5ROFKG3HPv\n6jg4dyANAn+x0b84un2ojKyO9nSJ1q5mdlvIInmTjAQCnP8w9/lEzi8jFoCA\nJcof+tegbQq4S2ZJWmHHGe+TA1Mjkhr3uelL3joRntywajyz+a5ldGVCetoj\n4oedV/EiLjskkghJselrWUlwxE6VKfxqWqAVw0h/lpzE7yC+/jfGb4D68SNT\npzXalXxDPgR/C/iMjIHU+ljDAou5WufR3fDEMABCD2ymPHB+s/y82545TPFL\namlY6M8tIHCcAIR/32xIRuWcB5iMeRgQMXeKF38D9dqi636wfIiMEfkknbDQ\nQTxj\r\n=YrG9\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/comma-separated-tokens_1.0.5_1523707106280_0.5699437113170431"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.6": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.6",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^14.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^6.0.1",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify index.js --bare -s commaSeparatedTokens > comma-separated-tokens.js",
+				"build-mangle": "esmangle comma-separated-tokens.js > comma-separated-tokens.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignores": [
+					"comma-separated-tokens.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "4f95d42372a0edcc5b0fc01d4bcbf048b927d5f9",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.6",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-f20oA7jsrrmERTS70r3tmRSxR8IJV2MTN7qe6hzgX+3ARfXrdMJFvGWvWQK0xpcBurg9j9eO2MiqzZ8Y+/UPCA==",
+				"shasum": "3cd3d8adc725ab473843db338bcdfd4a7bb087bf",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.6.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6021,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJctf3XCRA9TVsSAnZWagAAEt0P+wQQ0beCyn1ziXE7DpvT\np22EbcHHYvyN3RME4taf4cBmoSl4dgRYmZ3VXWjWp70TCCyOAe5JjRHQVepK\nnlIUUGN60RGXwaBSoaQULIA7ryOYNe13ZXd0Tlf6Q6BWWOfTMGumzo89D8MB\npp0tTwovc8XXLo4+iDfw8ZsmkLZbUqLPjqdNbPTXRYj2FBv/uTCAfBhgHU2z\nvexbNSkw1Cm54B3WWo1oqPseOALmCvoU4AJ+eLjkk3fI0rcqBJ8uchuqoGqs\nZ0YwlhN5ljji7l95BHG51E2dXvBywQDYWf2BV2fYGlTyvVMjXxqJjeL2po8c\nECBOwfcYALcnm+xCse/Cpz4Xyzj50nFfhJHDzVXrsS7Y2Wl4ue3lnp9O1Dos\nYfXxr+2ihMd40OwWSfr/aNZWeg8twoSYOOAObI6EJfvgoC4+kq6LoG5aVwsY\nBHZ/GCLROmEsV//4DKG2mQhT8DTxKEfyfrt5QJ6huv1DqaaOQ2Glo+ehcuEk\neggGeCv9FVbNvNpMAGQPmp0nFJFHCrL1PEsQGxCY7RqtFwuu4W+YiIpso/lD\nd2wKuU6Ig0XTx8b8UzsXsMHL+k+MmohoIvuVE4s+Ore2RM96fXBJplxLrr8u\nmfyF85VJp0R7xrx3q8hHN3kWhJ4sildmoDlVjkdRDxHtwi0Vlx1Id8Zsaj+o\nvNzp\r\n=gR4G\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/comma-separated-tokens_1.0.6_1555430870976_0.5398897942583081"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.7": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.7",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^6.0.1",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.5.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s commaSeparatedTokens -o comma-separated-tokens.js",
+				"build-mangle": "browserify . -s commaSeparatedTokens -p tinyify -o comma-separated-tokens.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"comma-separated-tokens.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "10a98d5a288d8a713d179a19b59727f02931c61f",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.7",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-Jrx3xsP4pPv4AwJUDWY9wOXGtwPXARej6Xd99h4TUGotmf8APuquKMpK+dnD3UgyxK7OEWaisjZz+3b5jtL6xQ==",
+				"shasum": "419cd7fb3258b1ed838dc0953167a25e152f5b59",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.7.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6283,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc2+8GCRA9TVsSAnZWagAAvdkP+wcI+GZ7Rm2geF5MywFD\nWzJ3Zlmoo1KLYU4spFCkEHvVtZ5ZVTXuO2aEmfjSDLJajoSdwp5p0WTfpXco\nn7NBWT7I50u90lvMlenQ2j+2dfNmECSS6RAXcee1ShLdBF83VCln0OGpGHcz\nrDTW+l+SJbRBsyFIDxrTowOtVFvZfKsFW7Udrni1wCH3TzsOpdq3dlP3srJ9\nQO0KXcku9ownWW6I7S/tTNeyJQeDVsZQrVCqu8ix5AighgDVRgT1x2XVscGr\nQzKJifpq4MuNy3n4nOb4Gyb80RY1KaFE+Ytq57YrVJebMZfesx+lni4oI4xt\nemi9TToAgm1GQYztvmWB57UVuLv4aanUqpzRWJajd+4ohHmb1LPz0SjwwFvy\n+S9CBVRaXUrD7GBI//la3g6jsnNFYvYWAzORJM8NYj43J6QE3aHdw0/DuqkT\n+lQTc/MaEeUkUrAnJqe7Fwp084L9FpDWeB9Z1Vrhzt3o43sXOicmAaVTvF8j\nvAp8ev11UvWzXHwW6gWZ5544DKG87sFV/buNpX9W2CnfsziFylBUzUykQfWR\nmDNnvQR8kBA2Y1LhZff1NeGQKaYTJdR63k8xGT167Bg87TyJtSnK4iV6EW9C\nJslvt/PTWa+7M8onVUGWjb/IVA95pTH1ocvZ0pGVBSGy982YU3ardrAWriiF\n67eQ\r\n=SYnd\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/comma-separated-tokens_1.0.7_1557917445628_0.8360157973846907"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.8": {
+			"name": "comma-separated-tokens",
+			"version": "1.0.8",
+			"description": "Parse and stringify comma-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"comma",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/comma-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/comma-separated-tokens/issues"
+			},
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/wooorm"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s commaSeparatedTokens -o comma-separated-tokens.js",
+				"build-mangle": "browserify . -s commaSeparatedTokens -p tinyify -o comma-separated-tokens.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"comma-separated-tokens.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "84af157038debd6f8a0580e6a28b8dfd188683cb",
+			"homepage": "https://github.com/wooorm/comma-separated-tokens#readme",
+			"_id": "comma-separated-tokens@1.0.8",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==",
+				"shasum": "632b80b6117867a158f1080ad498b2fbe7e3f5ea",
+				"tarball": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6354,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeKh6bCRA9TVsSAnZWagAAs1oP+gI0O4e1TZWRIppbuxcW\nctYNBqiiCv5mbp1n4kUY2kKADSmXSE071GNID3Y0qLOTOyb4sYxWo3boO90a\nD+7EuDmXjhIa3P3rzjFEpawanVycyrQZz+VHC30j+VRxKQ//4sxn0bhnetud\n9PLNIe3NKMKWo/WyKMIxE4RbfFb4pABn5pFOZzhL1b4sD29Hkhj39p6gAEBc\nEKV0xgqk94zP/9waQPVcCPix3t+NCauCXPXMvhEFf28dxZE66tKDAWIebT0K\n95k1FXzgPVHL9nGNN7PqHALfDtq+1nysGHwoNyjy6qtP4Cm0ShxoR9Jf6qE/\nlSyFKtXttGMw/BIvelLWgJeK0BKwru0oZlQ6giDo/clsws6v9BbBu6LoR2WJ\nYw4Bl7d4V5XeKZVbyKUbXvwJM6p4nqQFL8fhONl4BAFAxSg2yI7Lyk2ZVulC\nMc/yRV1dbe1k9zkgaZ87KaPgljViuogpku8BTVQ881GeDktyGXPh6Hfyr8Ot\nSKO9Ws83H+41jxvdw7sPPyTCbB2XGS+fUKk6vhuryhaDyS7+1iRLetL54/x/\nrlbRTwbflPiqVE4RABNiQW9CxV8utiB0PmB2bn5XvNmtH0lWMgNd5mimliwJ\nV6YLKITfOwPPybCM9j3ekUlj1olTNvQRGv2yniz109LMYweTf3bHop32Tge+\nOnG5\r\n=eSkT\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/comma-separated-tokens_1.0.8_1579818650636_0.40621800811323205"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-01-23T22:30:53.206Z",
+		"created": "2016-02-22T22:27:08.533Z",
+		"1.0.0": "2016-02-22T22:27:08.533Z",
+		"1.0.1": "2016-02-24T22:16:59.167Z",
+		"1.0.2": "2016-07-23T20:27:11.156Z",
+		"1.0.3": "2017-04-16T09:25:36.470Z",
+		"1.0.4": "2017-06-25T15:29:46.611Z",
+		"1.0.5": "2018-04-14T11:58:26.334Z",
+		"1.0.6": "2019-04-16T16:07:51.081Z",
+		"1.0.7": "2019-05-15T10:50:45.810Z",
+		"1.0.8": "2020-01-23T22:30:50.789Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.8"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"92fc076209aadeb8b71a6a150307c215\"",
+			"fetched": 1601147220914
+		}
+	},
+	"_distfiles": {
+		"comma-separated-tokens-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.0.tgz",
+			"sha": "27de507e7dea9c29d3809fd4cc9e0de1589d974e",
+			"registry": "npmjs"
+		},
+		"comma-separated-tokens-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.1.tgz",
+			"sha": "3c89e73b1f0dd4e982aaaa001553e35e4d2d9703",
+			"registry": "npmjs"
+		},
+		"comma-separated-tokens-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.2.tgz",
+			"sha": "4b64717a2ee363af6dd39878336bd95e42d063e7",
+			"registry": "npmjs"
+		},
+		"comma-separated-tokens-1.0.3.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.3.tgz",
+			"sha": "6eb01f4730bde7a7fce5d5e2d943bdd637272801",
+			"registry": "npmjs"
+		},
+		"comma-separated-tokens-1.0.4.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.4.tgz",
+			"sha": "72083e58d4a462f01866f6617f4d98a3cd3b8a46",
+			"registry": "npmjs"
+		},
+		"comma-separated-tokens-1.0.5.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.5.tgz",
+			"sha": "b13793131d9ea2d2431cf5b507ddec258f0ce0db",
+			"registry": "npmjs"
+		},
+		"comma-separated-tokens-1.0.6.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.6.tgz",
+			"sha": "3cd3d8adc725ab473843db338bcdfd4a7bb087bf",
+			"registry": "npmjs"
+		},
+		"comma-separated-tokens-1.0.7.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.7.tgz",
+			"sha": "419cd7fb3258b1ed838dc0953167a25e152f5b59",
+			"registry": "npmjs"
+		},
+		"comma-separated-tokens-1.0.8.tgz": {
+			"url": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz",
+			"sha": "632b80b6117867a158f1080ad498b2fbe7e3f5ea",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-7f653c15b7f96273",
+	"_id": "comma-separated-tokens",
+	"readme": "# comma-separated-tokens\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n\nParse and stringify comma-separated tokens according to the [spec][].\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install comma-separated-tokens\n```\n\n## Use\n\n```js\nvar commaSeparated = require('comma-separated-tokens')\n\ncommaSeparated.parse(' a ,b,,d d ') //=> ['a', 'b', '', 'd d']\ncommaSeparated.stringify(['a', 'b', '', 'd d']) //=> 'a, b, , d d'\n```\n\n## API\n\n### `commaSeparated.parse(value)`\n\nParse comma-separated tokens (`string`) to an array of strings, according\nto the [spec][].\n\n### `commaSeparated.stringify(values[, options])`\n\nCompile an array of strings to comma-separated tokens (`string`).\nHandles empty items at start or end correctly.\nNote that it’s not possible to specify initial or final whitespace per value.\n\n##### `options`\n\n###### `options.padLeft`\n\nWhether to pad a space before a token (`boolean`, default: `true`).\n\n###### `options.padRight`\n\nWhether to pad a space after a token (`boolean`, default: `false`).\n\n## Related\n\n*   [`collapse-white-space`](https://github.com/wooorm/collapse-white-space)\n    — Replace multiple white-space characters with a single space\n*   [`property-information`](https://github.com/wooorm/property-information)\n    — Information on HTML properties\n*   [`space-separated-tokens`](https://github.com/wooorm/space-separated-tokens)\n    — Parse/stringify space-separated tokens\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/wooorm/comma-separated-tokens.svg\n\n[build]: https://travis-ci.org/wooorm/comma-separated-tokens\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/comma-separated-tokens.svg\n\n[coverage]: https://codecov.io/github/wooorm/comma-separated-tokens\n\n[downloads-badge]: https://img.shields.io/npm/dm/comma-separated-tokens.svg\n\n[downloads]: https://www.npmjs.com/package/comma-separated-tokens\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/comma-separated-tokens.svg\n\n[size]: https://bundlephobia.com/result?p=comma-separated-tokens\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[spec]: https://html.spec.whatwg.org/#comma-separated-tokens"
+}

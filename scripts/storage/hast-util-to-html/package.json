@@ -1,0 +1,2393 @@
+{
+	"name": "hast-util-to-html",
+	"versions": {
+		"1.0.0": {
+			"name": "hast-util-to-html",
+			"version": "1.0.0",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"comma-separated-tokens": "^1.0.1",
+				"html-void-elements": "^1.0.0",
+				"kebab-case": "^1.0.0",
+				"property-information": "^3.1.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.1",
+				"hastscript": "^3.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^3.0.0",
+				"jscs-jsdoc": "^2.0.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-usage": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.1"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "esmangle hast-util-to-html.js > hast-util-to-html.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "b979b1bb602618b135ff8bc58cf48c9757b6d121",
+			"homepage": "https://github.com/wooorm/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@1.0.0",
+			"_shasum": "5a6ef69bdc286174289b11eb6191af3367fdc3ae",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "5a6ef69bdc286174289b11eb6191af3367fdc3ae",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/hast-util-to-html-1.0.0.tgz_1466248196519_0.30073224822990596"
+			},
+			"directories": {}
+		},
+		"2.0.0": {
+			"name": "hast-util-to-html",
+			"version": "2.0.0",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"files": [
+				"lib",
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"has": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"kebab-case": "^1.0.0",
+				"property-information": "^3.1.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^1.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"bundle-collapser": "^1.2.1",
+				"esmangle": "^1.0.1",
+				"hastscript": "^3.0.0",
+				"istanbul": "^0.4.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-usage": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "bundle-collapser hast-util-to-html.js | esmangle > hast-util-to-html.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "istanbul cover test",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"rules": {
+					"guard-for-in": [
+						0
+					],
+					"eqeqeq": [
+						0,
+						"allow-null"
+					],
+					"no-eq-null": [
+						0
+					]
+				},
+				"ignores": [
+					"hast-util-to-html.js",
+					"hast-util-to-html.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"github",
+					"lint",
+					"usage",
+					"validate-links"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "6b302159d2541d449f24cfd5e414c5bc67ef9cad",
+			"homepage": "https://github.com/wooorm/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@2.0.0",
+			"_shasum": "6de228b235a481b5cfe33b9779c995e63d311ae9",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "6de228b235a481b5cfe33b9779c995e63d311ae9",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-2.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/hast-util-to-html-2.0.0.tgz_1467542898291_0.07556331320665777"
+			},
+			"directories": {}
+		},
+		"2.0.1": {
+			"name": "hast-util-to-html",
+			"version": "2.0.1",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"files": [
+				"lib",
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"has": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"kebab-case": "^1.0.0",
+				"property-information": "^3.1.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^1.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"bundle-collapser": "^1.2.1",
+				"esmangle": "^1.0.1",
+				"hastscript": "^3.0.0",
+				"istanbul": "^0.4.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-usage": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "bundle-collapser hast-util-to-html.js | esmangle > hast-util-to-html.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "istanbul cover test",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"rules": {
+					"guard-for-in": [
+						0
+					],
+					"eqeqeq": [
+						0,
+						"allow-null"
+					],
+					"no-eq-null": [
+						0
+					]
+				},
+				"ignores": [
+					"hast-util-to-html.js",
+					"hast-util-to-html.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"github",
+					"lint",
+					"usage",
+					"validate-links"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "f92d2ff4675ca601be8adab618417a7f01fbdb87",
+			"homepage": "https://github.com/wooorm/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@2.0.1",
+			"_shasum": "8ed401edb79363502697d440cc174f704d20ffe3",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "8ed401edb79363502697d440cc174f704d20ffe3",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-2.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/hast-util-to-html-2.0.1.tgz_1467836602001_0.8917062317486852"
+			},
+			"directories": {}
+		},
+		"2.1.0": {
+			"name": "hast-util-to-html",
+			"version": "2.1.0",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"files": [
+				"lib",
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"has": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"kebab-case": "^1.0.0",
+				"property-information": "^3.1.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"bundle-collapser": "^1.2.1",
+				"esmangle": "^1.0.1",
+				"hastscript": "^3.0.0",
+				"nyc": "^7.1.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-usage": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "bundle-collapser hast-util-to-html.js | esmangle > hast-util-to-html.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js",
+					"hast-util-to-html.min.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"github",
+					"lint",
+					"usage",
+					"validate-links"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "43f4e7610996c722be9bea321b18e64e1d917cee",
+			"homepage": "https://github.com/wooorm/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@2.1.0",
+			"_shasum": "b5537172a1ea569dbf3d954911887de0cfeb2a8e",
+			"_from": ".",
+			"_npmVersion": "3.10.3",
+			"_nodeVersion": "6.3.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "b5537172a1ea569dbf3d954911887de0cfeb2a8e",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-2.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/hast-util-to-html-2.1.0.tgz_1469479234774_0.8670082497410476"
+			},
+			"directories": {}
+		},
+		"3.0.0": {
+			"name": "hast-util-to-html",
+			"version": "3.0.0",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"files": [
+				"lib",
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"has": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"kebab-case": "^1.0.0",
+				"property-information": "^3.1.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"bundle-collapser": "^1.2.1",
+				"esmangle": "^1.0.1",
+				"hastscript": "^3.0.0",
+				"nyc": "^8.0.0",
+				"remark-cli": "^2.1.0",
+				"remark-preset-wooorm": "^1.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.17.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --bare -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "bundle-collapser hast-util-to-html.js | esmangle > hast-util-to-html.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"presets": "wooorm"
+			},
+			"gitHead": "cf42a854037c425b958805ef14f66f6b03038006",
+			"homepage": "https://github.com/wooorm/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@3.0.0",
+			"_shasum": "19a257cd7af464777c1cccf4d2d53d33147466c1",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "19a257cd7af464777c1cccf4d2d53d33147466c1",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-3.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/hast-util-to-html-3.0.0.tgz_1478453303875_0.9919617483392358"
+			},
+			"directories": {}
+		},
+		"3.0.1": {
+			"name": "hast-util-to-html",
+			"version": "3.0.1",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"lib",
+				"index.js"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"kebab-case": "^1.0.0",
+				"property-information": "^3.1.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"bundle-collapser": "^1.2.1",
+				"esmangle": "^1.0.1",
+				"hastscript": "^3.0.0",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --bare -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "bundle-collapser hast-util-to-html.js | esmangle > hast-util-to-html.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "cd75f3273b0f3d2852875e5243dcd55a0fb1256e",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@3.0.1",
+			"_shasum": "9cdefb69772888db5f4253d08e1fcd533b716ba8",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "9cdefb69772888db5f4253d08e1fcd533b716ba8",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-3.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html-3.0.1.tgz_1497951703621_0.9520788483787328"
+			},
+			"directories": {}
+		},
+		"3.1.0": {
+			"name": "hast-util-to-html",
+			"version": "3.1.0",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"lib",
+				"index.js"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"kebab-case": "^1.0.0",
+				"property-information": "^3.1.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"bundle-collapser": "^1.2.1",
+				"esmangle": "^1.0.1",
+				"hastscript": "^3.0.0",
+				"nyc": "^11.0.0",
+				"remark-cli": "^4.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --bare -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "bundle-collapser hast-util-to-html.js | esmangle > hast-util-to-html.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "383fd410e6bbaf61a7133f897bf67ab217f035a9",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@3.1.0",
+			"_shasum": "882c99849e40130e991c042e456d453d95c36cff",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "882c99849e40130e991c042e456d453d95c36cff",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-3.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html-3.1.0.tgz_1500914241916_0.9183271671645343"
+			},
+			"directories": {}
+		},
+		"4.0.0": {
+			"name": "hast-util-to-html",
+			"version": "4.0.0",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"lib",
+				"index.js"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^4.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"bundle-collapser": "^1.2.1",
+				"esmangle": "^1.0.1",
+				"hastscript": "^4.0.0",
+				"nyc": "^12.0.0",
+				"prettier": "^1.13.5",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.21.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "bundle-collapser hast-util-to-html.js | esmangle > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "b15e5f6e5902db2c721a57b6bbd7aab196b0646d",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@4.0.0",
+			"_npmVersion": "6.2.0",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-2fQaOphtWbxYWSVhJ+x76v8I2dsugFtMY98uD/JkmVo4rV7pS5cFht9rteDoNwApTTPa6T1oGWtKC+7XWwFZQA==",
+				"shasum": "bda20b8162314d84393b8a096560d9280d86c1be",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-4.0.0.tgz",
+				"fileCount": 21,
+				"unpackedSize": 27600,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbThhOCRA9TVsSAnZWagAA+mIP/iG9qFEJqUlGhHy7R3gk\n9d50Y/1g81CwWootfN1KGvyXCqKyG3tjwzDoNdrlrrJjyXgiE9lsgtLndOO1\nMwV7fqyf1H0Pgd4lGJ0KE3Y0e69ndO22mBFUPdz6X3G5vNA+U4BP5zdRQqux\nJXwkL+gH4zdwIb++phtW4gUKgz5szr9pwkH/4UiMatGeDegUlnMiHD0R+w8c\ncPXXMtIcugEVujN8ferru4S3r7dI7e43fXsbaOW1BIIlRuxGeakg1FFs3Rvo\nKvw9oRLB3Ro9lZRfeqTdfLl5bSYFoUQ/yX8XnqFDZo1+9TMvftNFhc/YjeiY\nAGZRhbWzeMaFIcjZTj8ERooTew8ZIjGuOvvjbJuKlyOCZ1ZIz0HAa/9K2MwZ\nPFRmt+zyqKznJdFZbdYrR1agJhohsdX7e5udK4xG71Owrk9H1+RrcyrHUuF9\nsCLxigUhEUFvqXjaVmHjfrmZIRGSExK+cI8d4vTTwmXtM6hd2dK22/nwMB2J\nJB2sfLK67DjQ6/UACtRdiHgzbIbk8WOzRiZffbDfJPOx72Fob5ExJSnjmwKp\nQpZn6ytGUWmsWC8xZbZE0bQEABh7AdP5OZ5h2zMMYpOYZRSHpigcJVpd1jAw\nTT0kMBTbRmqOpP2YCjJDsveiHOD86PMYcQB77gd8cBrMqzISuKD3+sABn7gQ\njmnu\r\n=AqhZ\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_4.0.0_1531844685952_0.039819666329622194"
+			},
+			"_hasShrinkwrap": false
+		},
+		"4.0.1": {
+			"name": "hast-util-to-html",
+			"version": "4.0.1",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"lib",
+				"index.js"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^4.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"hastscript": "^4.0.0",
+				"nyc": "^12.0.0",
+				"prettier": "^1.13.5",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.4.3",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.21.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "browserify index.js -p tinyify -s hastUtilToHTML > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "2c046c547598491f4650faad3b38d9da3e7d5029",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@4.0.1",
+			"_npmVersion": "6.2.0",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-2emzwyf0xEsc4TBIPmDJmBttIw8R4SXAJiJZoiRR/s47ODYWgOqNoDbf2SJAbMbfNdFWMiCSOrI3OVnX6Qq2Mg==",
+				"shasum": "3666b05afb62bd69f8f5e6c94db04dea19438e2a",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-4.0.1.tgz",
+				"fileCount": 21,
+				"unpackedSize": 27709,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbT4xACRA9TVsSAnZWagAAkRgP/1ML9nW7qIZc+8dn+smA\n3H0xEWtrYKYK2joNYTeLmqP8TL9t1JrhK9Me+xpRnZFCHA9e6A3pydHlNrDC\nxjhEH8QhHf6KCzMRcYdMr/LZbDfnBB0Mu2E9d5UpdCXh8Zj9NcDiX2q3gxGB\nSqTb3Hxy5g1Xwduzrv1BkEnTr1Ci/PpWSdclcm+FWdUKQcb17z6MRxP2z+86\nsXZ+Lk5qAGYkW9kW6KNeyttd+CGxUtKTGRzfdysUYcBqaAyFDfuCRDEIxKid\n5uVFGyDkw5psjwNes+Xa4a7gDHrQtf24wQ0Fz7FHsfvuI/tlZdpvIfMtPRp9\n/JCiP6V5QCStK3AWwThJa29bJq3XmmigaGxq/rL8OOAwAYhw1g5J0rXku/7J\noyuuvYdbxk+n8h+QIJKWadB/rpje1nhpe7Zya8qPlylbdIBEHKadrm7ffhqa\nV1G+RiHT3/dCvh8MMrckQhevfBwiR8VW5Prnp0BoEDP7ufeGdKoB12NeEyja\ngmKtI8l7W2JNetNuQkzMPXAdsj/3OW79iNfHW2PI6dYBEf0J7CWo33iwmJ+d\nENctjI8yQ/Ig7rgykZRD5hF0ZL8R59bASZSMQwCTyv33LCzVRcKYC+RJM1gt\nUmFCjezVAATNpAHaDsVOmRE1G41h77HABb5212+9NNbtJG+Lr63eNu+V47PQ\nAywg\r\n=DyHW\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_4.0.1_1531939904532_0.878384620750932"
+			},
+			"_hasShrinkwrap": false
+		},
+		"5.0.0": {
+			"name": "hast-util-to-html",
+			"version": "5.0.0",
+			"description": "Transform HAST to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^13.0.0",
+				"prettier": "^1.13.5",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.4.3",
+				"unist-builder": "^1.0.1",
+				"xo": "^0.23.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHTML > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHTML -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "93a30492df8de8ec4ad25908737e0c4ce6437b0a",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@5.0.0",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-vYbSEixfYD3CIqd1rN1Q4T0z0Tyodht0jNst940ESz9g7eaFc0FJADMkdVvlHqDsXVok0vji8FukrBfAH91BWQ==",
+				"shasum": "8b5c9710adb0689e3603f552f3104de2507aca35",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-5.0.0.tgz",
+				"fileCount": 21,
+				"unpackedSize": 28037,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb41BtCRA9TVsSAnZWagAAzToQAJAzXuhv3m3hwu0BGPVL\nuwMpVHFwusBP/LDB1TAwWY/aYiz7H+uaYJLuuxJLvPqyqx2Q3jmhmCgjUrJ6\nIrtZrf3DKNI0qB7lS3ZslRoa4JEZg8aoIbnTOv75MoiPwA2uqXd4vmeDjU8b\ntldouKA1ZOF1uXl0jyr2OlTY5cqXT02Sd37sbyrh/Iy8VCWgPlLn+nLhVRPN\nmkl5lGIAqsmJLGFFv0WDx8opxrKe9AJcEob6ol2Y0P+8vRHWP6bZERP1HQss\n5KAEs7vW9iAc8QlTw04pTX+qCIl2lafo3ZGfs04fj+/pvFDLVAVWWo+XbE/S\nOHr7Ft2EfBnTeBeiiabErvYDM5EAo+o09SVxoncbStwWGGj6x3Dr2M7Uakmd\nzBTBghrqiqngoK4EKW1Kg28sC5+7lpq1qL31kOF476J890HFbAAVC8gPRoPu\nvtPoUDA2oMVZApm8myRZaTy9y7WMJEv/kognMGJoeNQrhr614jBJkoim41Cp\nz8Y6X47sdPjCS6XyDD0gTfQTXucvLdY5bQVWWQBPF35FTmqGdk8aa3ZHjEaU\nShCrWHhr//rgBJ459xPGA1+PEV9bjKt0fg1OHb3Fq9QqBPOLxSMYnVYLwR+V\nAWzwctVmm4EYViChwinbFpSczM26Q2tCfY86GMssBXDSaoHR+OwwTKmuiOkp\nc0PN\r\n=+Q8U\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_5.0.0_1541623916415_0.6878102950660745"
+			},
+			"_hasShrinkwrap": false
+		},
+		"5.0.1": {
+			"name": "hast-util-to-html",
+			"version": "5.0.1",
+			"description": "Transform hast to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^1.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHtml > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHtml -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "efea68f6aadc91a368f7b4237560e7047ebcb090",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@5.0.1",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-zPuZuclFMJAP50wi9FoP3fcjOWmP3A9CqiPiR1nqOoweYDB4Urc2tg4ZITeDOrOjUQG5zArGopeGDuu3+vkGQg==",
+				"shasum": "74cb518b3612b9f1aeb92fd29478c7a092f33953",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-5.0.1.tgz",
+				"fileCount": 21,
+				"unpackedSize": 29486,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc6lg1CRA9TVsSAnZWagAASU4P/1byZdEW+Cd4e2s6ZVAd\n4vlHkwmsRUUgogjXNqjp6JoofsYpAf1vACGudOkZEIFySq+1L1BPZqYDLRid\nkq0seEgovrlqENVg6aENeUIOQ7anRQP9nULLmZ1qxXtoz3k7A0Y6BUeV/R2M\n6aarjZ4vXtqBj9KRHBuw9S4tPHDXFjhzqdJ9xtRUEdMAsTRjkRtmX1n72cJk\nIfGNNF9x361VEkRQ2tKl3FK9iIYuXFoqYF/jP3RI+wK6WZhJb/QE2JPQSbqc\n9loffx5jyatd8R+WFKORfc4SP/XVMTlP6F0h0LyBPwov93f+Shfp99IzlVFp\nuPhB2Zy3octeQJb9muWB4ZyMfpERb9WGl0HccZfmlxpy5pJOQjGaNPgQqx0T\n7ZkfCNy2rMq6LGTXmychM4Y3zOK4TDaLfHQe9GIpCfHQfWjknGCZ2HX8pXdY\nTWyIYbNUf9i65JXSa9XvYEOmXyafqzzkWQ9lU2lP426fN4zPRR/HsDTWyWNu\nNgPzA1mP0v9jrKNwmNY3ZF77zHENWV1SW1hRxnEIWvrhssuFn+vRsqRyopqL\n6CkKHIdg9gxF3d1X1zIcOpFCpKZnsp4qGXpqQUSt0NweSOg8+40l2E86+25z\nd48Otj2jo1msdbNSnNUjvmDXyD9GGZTq3T7vJadk+RDpbZ4//McrAnOe/NLQ\nqld8\r\n=aMCN\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_5.0.1_1558861876948_0.5970654927812573"
+			},
+			"_hasShrinkwrap": false
+		},
+		"6.0.0": {
+			"name": "hast-util-to-html",
+			"version": "6.0.0",
+			"description": "Transform hast to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unist-util-is": "^2.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^1.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHtml > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHtml -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "65fead024cd79ff61124e57f16c5091b141b0f6c",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@6.0.0",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-uCwVsVF+0hLqzLOInIuJWAnA26N1K8nl67a2DTC8D/w5UtRwzCDAymK/3ZR2BOg98d3lh65uo9aEORV+5FUNZA==",
+				"shasum": "9d8c64f6d086c4d5880e9b06f472f38601308176",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-6.0.0.tgz",
+				"fileCount": 21,
+				"unpackedSize": 29839,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc7qbLCRA9TVsSAnZWagAAUcEQAI5b4onKaO6J2ppeLm7T\ndbw1QKOkyZuMpSenD78N6/hC7/bnil+1YMRDtMVpRfRHaUCxdrkSDjWTYLJ0\nU2WuPLqae0Q7Zv3eMdrUf+Uqv4HQ4A4WTJBmkFDZ5Kp54MxGruCPZPaDeH7i\n+Vd/Rbv+aA2G8rfYpbDjR8oyE05Xf4UBYSfJgmweHa0BcHPT4ip7/J5buHtm\nUSdzq7S/gzq0kG9rltJWGL9uC4alau9BCw9KqLYDp6aai+WmnqFX9aqVRzKd\nxGiyOUzBrTlT0l4ST1ehAvJYCMLOD+oej/dXFrCr0ZZJiViQsrbRE1ZeH6Mu\nWHgQ4J0x4MEIx2B9skpNSHUe9U2StnTVbmHgBzo36Q1fbSHZa/L7kbOr3YAH\nN3RJT3zq18pv1Rgad4aggdn42M83e2/g1mz8MvNosUNxEb2tswF+/G1RX/7Y\nYcBCgypP2Nh9kad27wBF7DRCV0xL+1/qfUlJxhFqmF9QRHWKVMD7rFGj+/cL\nVtOS8FGqLnou9nohFiTufdlj3xM69Pmqr75KMY60SPhaLI1plrKEz+lISpot\nxCErJni0D5z1CWZds09HVu9PaGJaRE8JxD/7A87G24shU6O0/mqWzEscTnCF\nGcNhWNmyqXFgGESDgHtCD4pl1Rx6Fm0Z8gFL4PEEuV3F1GarHWpKr+t6Onv9\nHHJf\r\n=Ouf+\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_6.0.0_1559144138497_0.8703140531235434"
+			},
+			"_hasShrinkwrap": false
+		},
+		"6.0.1": {
+			"name": "hast-util-to-html",
+			"version": "6.0.1",
+			"description": "Transform hast to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unist-util-is": "^3.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^1.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHtml > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHtml -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "7e0287920bd1c71f0b0aecca894bee767512c5c0",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@6.0.1",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-9LjLAsO2gPO9H6N0VxZsK4sqNZY1A0lMNDfdpMseryV18Hri2++guFfPmjY58PzmtBlBvDflqktxjSm2I1o1yg==",
+				"shasum": "46f4f8d4d2e39c0510268c873a82c360766a0366",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-6.0.1.tgz",
+				"fileCount": 21,
+				"unpackedSize": 29952,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc8M+cCRA9TVsSAnZWagAAc3cP/3ix/EdOHkAaOhF2nO7/\nO2G9onVLPiqYxx2qmxoBu7/54kDgB3I0Yr6StPKEa3cpZcyhbGjkHxBob8+L\nU3GwYRR5XIwVpBHYDTks2tUa4KlltCH1rT3lp8Hvvd8W8HfD1iAT9mw65dHa\nxa4BAXbxqKku5tznOUbAa7dTDxfA8FdpIwLestCZTeTGY13pEkfZEVGZIubc\nfVh40GlKnK/oMGwM6LYGJb14yzOLiD4gtrjU7Q80IFiElGClz6OF1IE4Ci17\nj0jgBUYIgJDWVbq0XZmNia/jYVeVCnZgsZuhe6+M1kiDHgGNKIp60mUK2FeF\nYTfdkm6ZSc6ABT7ydk59KN5aPgkojKEZt/YWebKjRbQefz20sqfcQk2Kewe4\ny7pUIVM3Lv3WaDZqi8cf93vuqFxYZO2qYFxmIZpTT1SZKC21BDf+Oyp4DUWl\nbhD4/b5XA6BI0gCijPAErKI1MYfAPRwjSXvjmDpEZ7K5h6K+ec8HqLZ+ejeo\n4CZBhY8LYAgaBYZyQ7dBRjgEzu09KC4bNFsVBsLg0xAYWSxPMDp9YtS+OuxA\n3fFyPnWlmawPbtZjvWmSADsWBWJHT2OKb+4fCOPgV5ep30Rx+NGVJS8ueUfz\nA2FDhbXhl5BGDb/WMzE+YmQbze3wCXI7O/cZe5nBd4ytynTTbRbHCEgX6SWS\n7E+S\r\n=xNKY\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_6.0.1_1559285659736_0.33810739311159876"
+			},
+			"_hasShrinkwrap": false
+		},
+		"6.0.2": {
+			"name": "hast-util-to-html",
+			"version": "6.0.2",
+			"description": "Transform hast to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.2.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unist-util-is": "^3.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^1.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHtml > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHtml -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "05de834b3c66ff196a42189438bf5f54dd777685",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@6.0.2",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.10.1",
+			"dist": {
+				"integrity": "sha512-oiQzGHtjT6ZLhszCY89kCxGCo9O+YuPUHluv36fzp7Hv/E1W4428PgzcQAKlPUzbHAt3ELoPCSrYLWl8fQw7Ag==",
+				"shasum": "aec7ee7a57008c82b01044ac58794a3d6349767d",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-6.0.2.tgz",
+				"fileCount": 21,
+				"unpackedSize": 30488,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdMzjZCRA9TVsSAnZWagAAdUcP/An3JN+uox52dba0Rjzi\nOb4RkFRbzwBuWDAof+G0QNT3VJaHS5dAUUHTZgBkH9TtBUW9UKrfthUv8M7r\nmpL21fuDmBcD25Em80kUY1CNtZz4DZh8/DYH+NXrho7RiQP0c/NskQuxyhM5\nTIEbCvPBersDlQQgtVEBrVkOspE57PaCPASiPoaAD94vbdxOQogMsohKQ0lV\nMMDBCA9H7jH7VjfCeJSau9s+WgerWYTn0M+7Zxo9wWqB6vmg9djDxH5caViB\nc7LBr3ES47DMY4jOLsFigb4155GZRzO9fD1dQyGsSx4UeuCYmJLfaA79SL+n\ntJgrdliS4SS5vlve8gCSfzIdpGEK4MUVQAxYefPmyBgVtFjzvA49cu8NQhIG\nZ5uZYQ5aspP7XPEEpA1vT2Lstl/CRtHMCkdPJd2/RjJYKtl5o2U/3P5Q6oki\no/xRQfTw5tpI5heFcrhDX4YPjZ5PEDweB86e9Cw+4DWfFg33a3xMPQkYIAxG\ne47xU2P9y0ChiNDPvICz6ry6NHzN+yyFi8pS2QJBGQPr+lswK2DITEZSdw+K\nmZfhw7eW4ZE1OY6Yr0TmprnYOxmVpVWwAGxJ3I+8smtdtcIHyaoVNVfZNfaE\nfrGwoyg/j+SqEuk0PmiIwqlTGREQbpo7Xl7TDYTYMtKkzPEcTyBGJOq7NNMH\nUvRn\r\n=VRjy\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_6.0.2_1563637977165_0.7348960920253103"
+			},
+			"_hasShrinkwrap": false
+		},
+		"6.1.0": {
+			"name": "hast-util-to-html",
+			"version": "6.1.0",
+			"description": "Transform hast to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.1",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.2.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unist-util-is": "^3.0.0",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHtml > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHtml -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"eqeqeq": "off",
+					"no-eq-null": "off",
+					"unicorn/prefer-includes": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "f387e2d78d734ba4b9e921bcecef3e9801ca1f88",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@6.1.0",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.4",
+			"dist": {
+				"integrity": "sha512-IlC+LG2HGv0Y8js3wqdhg9O2sO4iVpRDbHOPwXd7qgeagpGsnY49i8yyazwqS35RA35WCzrBQE/n0M6GG/ewxA==",
+				"shasum": "86bcd19c3bd46af456984f8f34db16298c2b10b0",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-6.1.0.tgz",
+				"fileCount": 21,
+				"unpackedSize": 30941,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd/POJCRA9TVsSAnZWagAAemQP/RYp8PhuIvFeUwtHqNxD\n+GD8DLR+vggn/E3dvzZ6TJzvl9oO9bvV3RGfbv9wY5bhHYgSqYwwecAoqPE+\nlsCcrDltdQshNX6KUeAPwnjlNYnR5QCLthyl14czGq4e3RijZ3LbjQbNx3mn\nHcnc7ClojlTtvjOeiEXO6j7xKmcjOh3UrDYmBQExr3ZwhkHpSoz7hpLtyW7Q\npykC8WL2vP6Ko5+CCf/k7NyNxZ+oGhZEzGwJ6+66Az9jt3J01dVZ315qh9mR\n3bYHOqXxIJbjjLnhn0OFO+KQ8HS/VwO5zTiPIMpBLDM66qMZWpjGDDsg2Gt5\n+NzV9KYelWIowKDasYAYnWkveeogZGYRNdwmFA7G2wIJHiuzvtvkIUm8sWNx\nKLRvrKl+1wfEo7BK59H8JO6Z6Ibu4BUnbzs08bFDN5cXWEgYGKWzIWCF/IK9\ntGMMwpezKQh+H2d9M/vjUzeEQn/Fx5kxi/jXpmaG5q9/VJ0kkoRwRczrffoA\nO1YJjeIf++QKpzsDqMKPW5vZ3ib1UbAZsYkY1N5/yqt49j0zQKaYRqdwsO6z\nXciHkvQF26J8gUPges3dwyhN4w+tqGqdYFaWNouBt24TDCviwctO0OtDwTkF\nBKbh5YiJWxndHJQCPQ4iY7XxGVLo3OYf5wal1pNjY80+AOE/PthJcLYjsypi\nVwDY\r\n=yQbv\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_6.1.0_1576858504863_0.0925149192667416"
+			},
+			"_hasShrinkwrap": false
+		},
+		"7.0.0": {
+			"name": "hast-util-to-html",
+			"version": "7.0.0",
+			"description": "Transform hast to HTML",
+			"license": "MIT",
+			"keywords": [
+				"hast",
+				"util",
+				"html"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.0",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^3.0.0",
+				"unist-util-is": "^4.0.0",
+				"xtend": "^4.0.0"
+			},
+			"devDependencies": {
+				"@types/unist": "^2.0.0",
+				"browserify": "^16.0.0",
+				"dtslint": "^2.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHtml > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHtml -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"unicorn/prefer-includes": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "0fef5aa542e1d8a9361f3a0ea8e38adf07fa870f",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@7.0.0",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-ysMG5VyyzE2odloRQ6Ei65FZJqwLRkfSWZ88ax2OfwaWdI1qSuOa6QQUHZA0RHbCj5Szt6XfyE0h7aimXdJpMA==",
+				"shasum": "5359c5a08b3867049cc41ca2122dbdaeebf1d0a8",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-7.0.0.tgz",
+				"fileCount": 22,
+				"unpackedSize": 37376,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeIHqJCRA9TVsSAnZWagAAPJoP/isf+bQ5AxYrkVfE+Ucz\n/YyWTTMIX/J3OB6tx+TrZQKIhPzhrJcCKI3nR6acFJ0221Y1p8uSavmqyBAz\nfIzFhKRgO8r9oUOtHscdhw2deX4212DUytnsy6Lh6tDzqpZHPIk5hTkC6LrZ\nE+Q7hkvTl8hazDXyqkrHOahworNAQ5ZufTsdIHe9kx80ttt7OBFMf1ePvuPa\nBVJgPfq+unEjMG7lRJbL21h8f79mPQEhIKSZ5VqQ0h+2fVM+j5he73WIX7kS\n4AG6bpzTztQ8sqFbBtg6yEcvwsJ3wyXhz0SKYQ/Yl4kbjQIjPGkC1W24+V2e\nmHVix/hRlMb/8AyBFD17m3wCYLKYwfny+7OmV9DddUetPcj4KaPyuUc/hZyS\njMnX+wGPi5d/pSev+R3v5X0fGYVh6sl0iaI9FWMrgmw1LOxMUqZ03BQ4PQZO\n/wgDcu9eoqhWnLelnBqUwEGyA5ITB/c8/rpQ21aMZSecRi6ilRAFC545/ieb\n9mY080m5p0W8jh8CUNSDniCMx8eGFmqhRVM2jE03HVogWJB9odRaOvxg1YEY\niDUtpUelBtDZolZaTGYekAT80CqxXzv1s1ikxa7DpJ+Mucn1lbw7uXtL1iDu\nJJ7R6Kf9kI5O7Zic6exwgoic1Cz+wCPk8GD6PNr26RQmGxRPkBT2zX2zlGmj\nk/8c\r\n=TAR7\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_7.0.0_1579186825270_0.5030024411940204"
+			},
+			"_hasShrinkwrap": false
+		},
+		"7.1.0": {
+			"name": "hast-util-to-html",
+			"version": "7.1.0",
+			"description": "hast utility to serialize to HTML",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"hast",
+				"hast-util",
+				"util",
+				"utility",
+				"html",
+				"serialize",
+				"stringify",
+				"tostring"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.0",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^3.0.0",
+				"unist-util-is": "^4.0.0",
+				"xtend": "^4.0.0"
+			},
+			"devDependencies": {
+				"@types/unist": "^2.0.0",
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^2.0.0",
+				"xo": "^0.27.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHtml > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHtml -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"unicorn/prefer-includes": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "3c22e15951f62f824e13ef8e9c89690c5c5a27b0",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@7.1.0",
+			"_nodeVersion": "13.9.0",
+			"_npmVersion": "6.13.7",
+			"dist": {
+				"integrity": "sha512-RjvNL41bYnxTOA+s8W8mjhVxH1J0dXza9hlakVHbghFsfj3JO/lsq3DsR/Md2HbynS8y89/LA7k0lhtnYJ1Yzw==",
+				"shasum": "aa580e7b846438ee1e7af2bee6a650062eb0c3ec",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-7.1.0.tgz",
+				"fileCount": 22,
+				"unpackedSize": 37944,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeWi1ZCRA9TVsSAnZWagAAn00QAJj6wAe9VeHEHPcKaSbD\npzS4MaUQt6/DqzpSpfd+n/ztWIme/fWYsaReP2H9pgcoiQBtY5EILHYx4Ee0\nl1Z0OS4nMLM6CYFRXmS+e7Rz+FcNCz669f4Ta8kgpmWyfBlYCE0p7wgi4VNH\nJwz2fdOJgsiAgn1PLNRSbzv/lUkJYNRX9C025IcaKFfGSg2jVwxLVm+9vJgX\nY8RToFb4ZrOOBQRB6pnofFTrTd4zWY2Fx1Ji4rSqQ96jBxI6+RNRTHbxZiVJ\noATXpbnO+wXLa+UDvvoMG3RcQJC2onjw2mlRyOq8ZrOu0UY2i9oxCKtB3fza\nEdQ7zgfWH7WHSq8JYowNsboYIxSMTG1PcwzgwDZqv7/gp/e2pLygO/zkIWas\nwm/nUepQLauJ5haNywoWeb6f9CRXEP52i1KuTx5BX3b05VpCZuHP0rkTwOZg\nAHl3WAPlGygjHFt7QHgbv+PjzVERLgEdVj2c22izDCV2awfI8+3f+VDW5fhJ\n7HdTEuOGgJcQ5ANGs29yGeW401XQlDyvmNeBaY0TtSe7sTJqoya0PzSTMBuC\nygDbEgwQgVd23lIchcvdkSdNsDS5Thz8bEgaXjUdDU3kxdL+CynVIYIz9eY/\nzfud3z9DQn6i4t3pNbrnuOJmXlC5i3nTnX6YWRq75TCBYfE1l24I+WCuxAAQ\nY//A\r\n=wG93\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_7.1.0_1582968153054_0.04623080969624871"
+			},
+			"_hasShrinkwrap": false
+		},
+		"7.1.1": {
+			"name": "hast-util-to-html",
+			"version": "7.1.1",
+			"description": "hast utility to serialize to HTML",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"hast",
+				"hast-util",
+				"util",
+				"utility",
+				"html",
+				"serialize",
+				"stringify",
+				"tostring"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/hast-util-to-html.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/hast-util-to-html/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"comma-separated-tokens": "^1.0.0",
+				"hast-util-is-element": "^1.0.0",
+				"hast-util-whitespace": "^1.0.0",
+				"html-void-elements": "^1.0.0",
+				"property-information": "^5.0.0",
+				"space-separated-tokens": "^1.0.0",
+				"stringify-entities": "^3.0.1",
+				"unist-util-is": "^4.0.0",
+				"xtend": "^4.0.0"
+			},
+			"devDependencies": {
+				"@types/unist": "^2.0.0",
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"hastscript": "^5.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^8.0.0",
+				"remark-preset-wooorm": "^7.0.0",
+				"tape": "^5.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^2.0.0",
+				"xo": "^0.30.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write . && xo --fix",
+				"build-bundle": "browserify . -s hastUtilToHtml > hast-util-to-html.js",
+				"build-mangle": "browserify . -s hastUtilToHtml -p tinyify > hast-util-to-html.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test/index.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/prefer-includes": "off",
+					"unicorn/prefer-number-properties": "off",
+					"guard-for-in": "off"
+				},
+				"ignores": [
+					"hast-util-to-html.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "4c1d1542808c29cf69e775ae8bda62bf16d3c3c4",
+			"homepage": "https://github.com/syntax-tree/hast-util-to-html#readme",
+			"_id": "hast-util-to-html@7.1.1",
+			"_nodeVersion": "14.0.0",
+			"_npmVersion": "6.14.5",
+			"dist": {
+				"integrity": "sha512-Ujqj0hGuo3dIQKilkbauAv5teOqPvhaSLEgs1lgApFT0812e114KiffV8XfE4ttR8dRPqxNOIJOMu6SKOVOGlg==",
+				"shasum": "39818b8bbfcb8eaa87846a120b3875487b27d094",
+				"tarball": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-7.1.1.tgz",
+				"fileCount": 22,
+				"unpackedSize": 37967,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJetO4zCRA9TVsSAnZWagAA4hUP/ilOP/0v0lO9NpDXTaon\nqYk/FcJyJkw8Iuq5snFedAVNgC40FWylVgEqbE7inDyoHDOeb7ScrclcQAZ6\nsCnN392WyoP7WViKfQLtug17gYlb3RhK/Li3D7NvLLa6AkRmH6BwnLRdNy9f\noqpeHJtXgFLEgROjhxb7+ZEAqXOX5D9hzYB6u4LdFnHojNm5sD6+mgo+IYKC\nCeWG5gaRxSHrHtw83ewu8B5unYTNtZSb6m5j+8ai5HtnqRmfXOw5CDUzvb9S\nxazjhKfpA1K6LK2gWhbcEZJTMKDUYB2H72x6tc3tLn4gqz30/GagjgVojtxv\naqkBlYi6+Uu4Qz0RaTtnkYJL7i50BeJLWBVe+8OD4BnwBvgmOOg8l6pUH0hR\nvltfT6pgazNs/zrzxx5E3qq7cZbZE1HPai7qrupMniz6mqBCu77lmsKjj71W\ntlH3iIrEViRS/FSDw3BIHdxlK9IrSQplAHFyLSDO3S+FqrAQda4DlAOhPqpH\n0XrnSQqDEKjqDyl3IAUNvQBAucCCm00TXmMOz/Zp86nJtWM6zFUezHUhEuOk\nJiDHqb5xuK9xmXbwJ0OdIJcOZ/UQHFraRo7kfqGQhvgengwpbgPGCKD2rUut\nUpbzgQvqP/3ddkhAdbJHjdo1X+SuD4S//kTtE1E+5F4fWq6zcQTKRAcViJ9d\ncZaL\r\n=CCIs\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/hast-util-to-html_7.1.1_1588915763457_0.78535760475296"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-08-25T11:31:14.368Z",
+		"created": "2016-06-18T11:09:57.698Z",
+		"1.0.0": "2016-06-18T11:09:57.698Z",
+		"2.0.0": "2016-07-03T10:48:20.566Z",
+		"2.0.1": "2016-07-06T20:23:24.142Z",
+		"2.1.0": "2016-07-25T20:40:36.534Z",
+		"3.0.0": "2016-11-06T17:28:26.061Z",
+		"3.0.1": "2017-06-20T09:41:44.518Z",
+		"3.1.0": "2017-07-24T16:37:22.883Z",
+		"4.0.0": "2018-07-17T16:24:46.011Z",
+		"4.0.1": "2018-07-18T18:51:44.608Z",
+		"5.0.0": "2018-11-07T20:51:56.552Z",
+		"5.0.1": "2019-05-26T09:11:17.086Z",
+		"6.0.0": "2019-05-29T15:35:38.716Z",
+		"6.0.1": "2019-05-31T06:54:19.956Z",
+		"6.0.2": "2019-07-20T15:52:57.326Z",
+		"6.1.0": "2019-12-20T16:15:05.008Z",
+		"7.0.0": "2020-01-16T15:00:25.413Z",
+		"7.1.0": "2020-02-29T09:22:33.346Z",
+		"7.1.1": "2020-05-08T05:29:23.624Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "7.1.1"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"c3b2ed3321041e7fb664cafe0fd2071e\"",
+			"fetched": 1601147220799
+		}
+	},
+	"_distfiles": {
+		"hast-util-to-html-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-1.0.0.tgz",
+			"sha": "5a6ef69bdc286174289b11eb6191af3367fdc3ae",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-2.0.0.tgz",
+			"sha": "6de228b235a481b5cfe33b9779c995e63d311ae9",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-2.0.1.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-2.0.1.tgz",
+			"sha": "8ed401edb79363502697d440cc174f704d20ffe3",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-2.1.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-2.1.0.tgz",
+			"sha": "b5537172a1ea569dbf3d954911887de0cfeb2a8e",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-3.0.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-3.0.0.tgz",
+			"sha": "19a257cd7af464777c1cccf4d2d53d33147466c1",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-3.0.1.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-3.0.1.tgz",
+			"sha": "9cdefb69772888db5f4253d08e1fcd533b716ba8",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-3.1.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-3.1.0.tgz",
+			"sha": "882c99849e40130e991c042e456d453d95c36cff",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-4.0.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-4.0.0.tgz",
+			"sha": "bda20b8162314d84393b8a096560d9280d86c1be",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-4.0.1.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-4.0.1.tgz",
+			"sha": "3666b05afb62bd69f8f5e6c94db04dea19438e2a",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-5.0.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-5.0.0.tgz",
+			"sha": "8b5c9710adb0689e3603f552f3104de2507aca35",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-5.0.1.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-5.0.1.tgz",
+			"sha": "74cb518b3612b9f1aeb92fd29478c7a092f33953",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-6.0.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-6.0.0.tgz",
+			"sha": "9d8c64f6d086c4d5880e9b06f472f38601308176",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-6.0.1.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-6.0.1.tgz",
+			"sha": "46f4f8d4d2e39c0510268c873a82c360766a0366",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-6.0.2.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-6.0.2.tgz",
+			"sha": "aec7ee7a57008c82b01044ac58794a3d6349767d",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-6.1.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-6.1.0.tgz",
+			"sha": "86bcd19c3bd46af456984f8f34db16298c2b10b0",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-7.0.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-7.0.0.tgz",
+			"sha": "5359c5a08b3867049cc41ca2122dbdaeebf1d0a8",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-7.1.0.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-7.1.0.tgz",
+			"sha": "aa580e7b846438ee1e7af2bee6a650062eb0c3ec",
+			"registry": "npmjs"
+		},
+		"hast-util-to-html-7.1.1.tgz": {
+			"url": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-7.1.1.tgz",
+			"sha": "39818b8bbfcb8eaa87846a120b3875487b27d094",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-8c09bc81b4af59f2",
+	"_id": "hast-util-to-html",
+	"readme": "# hast-util-to-html\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n[![Chat][chat-badge]][chat]\n\n[**hast**][hast] utility to serialize to HTML.\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install hast-util-to-html\n```\n\n## Use\n\n```js\nvar h = require('hastscript')\nvar toHtml = require('hast-util-to-html')\n\nvar tree = h('.alpha', [\n  'bravo ',\n  h('b', 'charlie'),\n  ' delta ',\n  h('a.echo', {download: true}, 'foxtrot')\n])\n\nconsole.log(toHtml(tree))\n```\n\nYields:\n\n```html\n<div class=\"alpha\">bravo <b>charlie</b> delta <a class=\"echo\" download>foxtrot</a></div>\n```\n\n## API\n\n### `toHtml(tree[, options])`\n\nSerialize the given [**hast**][hast] [*tree*][tree] (or list of nodes).\n\n###### `options.space`\n\nWhether the [*root*][root] of the [*tree*][tree] is in the `'html'` or `'svg'`\nspace (enum, `'svg'` or `'html'`, default: `'html'`).\n\nIf an `svg` element is found in the HTML space, `toHtml` automatically switches\nto the SVG space when entering the element, and switches back when exiting.\n\n###### `options.entities`\n\nConfiguration for [`stringify-entities`][stringify-entities] (`Object`, default:\n`{}`).\nDo not use `escapeOnly`, `attribute`, or `subset` (`toHtml` already passes\nthose, so they won’t work).\nHowever, `useNamedReferences`, `useShortestReferences`, and\n`omitOptionalSemicolons` are all fine.\n\n###### `options.voids`\n\nTag names of [*elements*][element] to serialize without closing tag\n(`Array.<string>`, default: [`html-void-elements`][html-void-elements]).\n\nNot used in the SVG space.\n\n###### `options.upperDoctype`\n\nUse a `<!DOCTYPE…` instead of `<!doctype…`.\nUseless except for XHTML (`boolean`, default: `false`).\n\n###### `options.quote`\n\nPreferred quote to use (`'\"'` or `'\\''`, default: `'\"'`).\n\n###### `options.quoteSmart`\n\nUse the other quote if that results in less bytes (`boolean`, default: `false`).\n\n###### `options.preferUnquoted`\n\nLeave attributes unquoted if that results in less bytes (`boolean`, default:\n`false`).\n\nNot used in the SVG space.\n\n###### `options.omitOptionalTags`\n\nOmit optional opening and closing tags (`boolean`, default: `false`).\nFor example, in `<ol><li>one</li><li>two</li></ol>`, both `</li>`\nclosing tags can be omitted.\nThe first because it’s followed by another `li`, the last because it’s followed\nby nothing.\n\nNot used in the SVG space.\n\n###### `options.collapseEmptyAttributes`\n\nCollapse empty attributes: get `class` instead of `class=\"\"` (`boolean`,\ndefault: `false`).\n**Note**: boolean attributes, such as `hidden`, are always collapsed.\n\nNot used in the SVG space.\n\n###### `options.closeSelfClosing`\n\nClose self-closing nodes with an extra slash (`/`): `<img />` instead of\n`<img>` (`boolean`, default: `false`).\nSee `tightSelfClosing` to control whether a space is used before the slash.\n\nNot used in the SVG space.\n\n###### `options.closeEmptyElements`\n\nClose SVG elements without any content with slash (`/`) on the opening tag\ninstead of an end tag: `<circle />` instead of `<circle></circle>` (`boolean`,\ndefault: `false`).\nSee `tightSelfClosing` to control whether a space is used before the slash.\n\nNot used in the HTML space.\n\n###### `options.tightSelfClosing`\n\nDo not use an extra space when closing self-closing elements: `<img/>` instead\nof `<img />` (`boolean`, default: `false`).\n**Note**: Only used if `closeSelfClosing: true` or `closeEmptyElements: true`.\n\n###### `options.tightCommaSeparatedLists`\n\nJoin known comma-separated attribute values with just a comma (`,`), instead of\npadding them on the right as well (`,·`, where `·` represents a space)\n(`boolean`, default: `false`).\n\n###### `options.tightAttributes`\n\nJoin attributes together, without white-space, if possible: get\n`class=\"a b\"title=\"c d\"` instead of `class=\"a b\" title=\"c d\"` to save bytes\n(`boolean`, default: `false`).\n**Note**: creates invalid (but working) markup.\n\nNot used in the SVG space.\n\n###### `options.tightDoctype`\n\nDrop unneeded spaces in doctypes: `<!doctypehtml>` instead of `<!doctype html>`\nto save bytes (`boolean`, default: `false`).\n**Note**: creates invalid (but working) markup.\n\n###### `options.bogusComments`\n\nUse “bogus comments” instead of comments to save byes: `<?charlie>` instead of\n`<!--charlie-->` (`boolean`, default: `false`).\n**Note**: creates invalid (but working) markup.\n\n###### `options.allowParseErrors`\n\nDo not encode characters which cause parse errors (even though they work), to\nsave bytes (`boolean`, default: `false`).\n**Note**: creates invalid (but working) markup.\n\nNot used in the SVG space.\n\n###### `options.allowDangerousCharacters`\n\nDo not encode some characters which cause XSS vulnerabilities in older browsers\n(`boolean`, default: `false`).\n**Note**: Only set this if you completely trust the content.\n\n###### `options.allowDangerousHtml`\n\nAllow `raw` nodes and insert them as raw HTML.\nWhen falsey, encodes `raw` nodes (`boolean`, default: `false`).\n**Note**: Only set this if you completely trust the content.\n\n## Security\n\nUse of `hast-util-to-html` can open you up to a\n[cross-site scripting (XSS)][xss] attack if the hast tree is unsafe.\nUse [`hast-util-santize`][sanitize] to make the hast tree safe.\n\n## Related\n\n*   [`hast-util-sanitize`][sanitize]\n    — Sanitize hast nodes\n*   [`rehype-stringify`](https://github.com/wooorm/rehype/tree/master/packages/rehype-stringify)\n    — Wrapper around this project for [**rehype**](https://github.com/wooorm/rehype)\n\n## Contribute\n\nSee [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get\nstarted.\nSee [`support.md`][support] for ways to get help.\n\nThis project has a [code of conduct][coc].\nBy interacting with this repository, organization, or community you agree to\nabide by its terms.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-to-html.svg\n\n[build]: https://travis-ci.org/syntax-tree/hast-util-to-html\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-to-html.svg\n\n[coverage]: https://codecov.io/github/syntax-tree/hast-util-to-html\n\n[downloads-badge]: https://img.shields.io/npm/dm/hast-util-to-html.svg\n\n[downloads]: https://www.npmjs.com/package/hast-util-to-html\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-to-html.svg\n\n[size]: https://bundlephobia.com/result?p=hast-util-to-html\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg\n\n[chat]: https://spectrum.chat/unified/syntax-tree\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md\n\n[support]: https://github.com/syntax-tree/.github/blob/master/support.md\n\n[coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md\n\n[html-void-elements]: https://github.com/wooorm/html-void-elements\n\n[stringify-entities]: https://github.com/wooorm/stringify-entities\n\n[tree]: https://github.com/syntax-tree/unist#tree\n\n[root]: https://github.com/syntax-tree/unist#root\n\n[hast]: https://github.com/syntax-tree/hast\n\n[element]: https://github.com/syntax-tree/hast#element\n\n[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting\n\n[sanitize]: https://github.com/syntax-tree/hast-util-sanitize"
+}

@@ -1,0 +1,957 @@
+{
+	"name": "emoticon",
+	"versions": {
+		"0.0.1": {
+			"name": "emoticon",
+			"version": "0.0.1",
+			"description": "Information regarding ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/emoticon.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"devDependencies": {
+				"eslint": "^0.9.0",
+				"gemoji": "^0.2.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^1.7.0",
+				"markdown-table": "^0.1.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test": "_mocha --reporter spec --check-leaks -u exports test.js",
+				"test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly -- --reporter spec --check-leaks -u exports test.js",
+				"coverage": "istanbul cover node_modules/.bin/_mocha -- -- test.js",
+				"lint": "npm run-script lint-api && npm run-script lint-test && npm run-script lint-style",
+				"lint-api": "eslint index.js",
+				"lint-test": "eslint test.js --env mocha",
+				"lint-script": "eslint script/build-data.js script/build-support.js",
+				"lint-style": "jscs index.js script/build-data.js script/build-support.js test.js --reporter=inline",
+				"make": "npm run lint && npm run coverage",
+				"build-data": "node script/build-data.js",
+				"build-support": "node script/build-support.js",
+				"build": "npm run build-data && npm run build-support",
+				"prepublish": "npm run build"
+			},
+			"gitHead": "45f7502d7fc31f25760bed0ba68b74b73a96b1a2",
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"homepage": "https://github.com/wooorm/emoticon",
+			"_id": "emoticon@0.0.1",
+			"_shasum": "a986b3389bb6cc1e4a02805856fdf9e06ce51141",
+			"_from": ".",
+			"_npmVersion": "2.1.3",
+			"_nodeVersion": "0.11.14",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "a986b3389bb6cc1e4a02805856fdf9e06ce51141",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-0.0.1.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"0.1.0": {
+			"name": "emoticon",
+			"version": "0.1.0",
+			"description": "Information regarding ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/emoticon.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"devDependencies": {
+				"eslint": "^0.10.0",
+				"gemoji": "^0.2.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^1.0.0",
+				"markdown-table": "^0.2.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test": "_mocha --reporter spec --check-leaks -u exports test.js",
+				"test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly -- --reporter spec --check-leaks -u exports test.js",
+				"coverage": "istanbul cover node_modules/.bin/_mocha -- -- test.js",
+				"lint-api": "eslint index.js",
+				"lint-test": "eslint test.js --env mocha",
+				"lint-script": "eslint script/build-data.js script/build-support.js",
+				"lint-style": "jscs index.js script/build-data.js script/build-support.js test.js --reporter=inline",
+				"lint": "npm run lint-api && npm run lint-test && npm run lint-style",
+				"make": "npm run lint && npm run coverage",
+				"build-data": "node script/build-data.js",
+				"build-support": "node script/build-support.js",
+				"build": "npm run build-data && npm run build-support",
+				"prepublish": "npm run build"
+			},
+			"gitHead": "0a246915c601d89aee1905661cca1eb2f31ca5a8",
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"homepage": "https://github.com/wooorm/emoticon",
+			"_id": "emoticon@0.1.0",
+			"_shasum": "9024c99a7e1ef9765239f05daf9d1db47531ed18",
+			"_from": ".",
+			"_npmVersion": "2.1.3",
+			"_nodeVersion": "0.11.14",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "9024c99a7e1ef9765239f05daf9d1db47531ed18",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-0.1.0.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "emoticon",
+			"version": "1.0.0",
+			"description": "Information regarding ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/emoticon.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js",
+				"data/emoticons.json"
+			],
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"gemoji": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"markdown-table": "^0.4.0",
+				"mdast": "^1.0.0",
+				"mdast-comment-config": "^1.0.0",
+				"mdast-github": "^1.0.0",
+				"mdast-lint": "^1.0.0",
+				"mdast-slug": "^1.0.0",
+				"mdast-validate-links": "^1.0.0",
+				"mocha": "^2.0.0",
+				"string-width": "^1.0.1"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"build-data": "node script/build-data.js",
+				"postbuild-data": "node script/build-support.js",
+				"bundle": "browserify index.js --no-builtins -s emoticon > emoticon.js",
+				"postbundle": "esmangle emoticon.js > emoticon.min.js",
+				"build-md": "mdast . --quiet",
+				"build": "npm run build-data && npm run bundle && npm run build-md"
+			},
+			"gitHead": "12b1ac6c18bbd198ac16dcc7ac24e92420dad933",
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"homepage": "https://github.com/wooorm/emoticon#readme",
+			"_id": "emoticon@1.0.0",
+			"_shasum": "0f877ebb978eb52042c27129edd2af6b51922780",
+			"_from": ".",
+			"_npmVersion": "2.13.2",
+			"_nodeVersion": "2.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "0f877ebb978eb52042c27129edd2af6b51922780",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "emoticon",
+			"version": "2.0.0",
+			"description": "Info on ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/emoticon.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"files": [
+				"index.json"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"esmangle": "^1.0.0",
+				"gemoji": "^2.0.1",
+				"has": "^1.0.1",
+				"markdown-table": "^1.0.0",
+				"remark-cli": "^2.0.0",
+				"remark-preset-wooorm": "^1.0.0",
+				"string-width": "^1.0.2",
+				"tape": "^4.6.0",
+				"xo": "^0.17.0"
+			},
+			"scripts": {
+				"build-md": "remark readme.md --quiet --frail",
+				"build-data": "node script/build-data",
+				"build-support": "node script/build-support",
+				"build-bundle": "browserify index.json --bare -s emoticon > emoticon.js",
+				"build-mangle": "esmangle emoticon.js > emoticon.min.js",
+				"build": "npm run build-data && npm run build-support && npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test": "npm run build && npm run lint && npm run test-api"
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"emoticon.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"presets": "wooorm"
+			},
+			"gitHead": "8a1484e08be2c7932d8a5eb0584ec19a73ef3a4a",
+			"homepage": "https://github.com/wooorm/emoticon#readme",
+			"_id": "emoticon@2.0.0",
+			"_shasum": "40405171ec2976f66930da30331d0c62d0fff3b8",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "40405171ec2976f66930da30331d0c62d0fff3b8",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-2.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/emoticon-2.0.0.tgz_1478364279552_0.14999438868835568"
+			},
+			"directories": {}
+		},
+		"3.0.0": {
+			"name": "emoticon",
+			"version": "3.0.0",
+			"description": "Info on ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/emoticon.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"files": [
+				"index.json"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"esmangle": "^1.0.0",
+				"gemoji": "^3.0.0",
+				"has": "^1.0.1",
+				"markdown-table": "^1.0.0",
+				"remark-cli": "^2.0.0",
+				"remark-preset-wooorm": "^1.0.0",
+				"string-width": "^1.0.2",
+				"tape": "^4.6.0",
+				"xo": "^0.17.0"
+			},
+			"scripts": {
+				"build-md": "remark readme.md --quiet --frail",
+				"build-data": "node script/build-data",
+				"build-support": "node script/build-support",
+				"build-bundle": "browserify index.json --bare -s emoticon > emoticon.js",
+				"build-mangle": "esmangle emoticon.js > emoticon.min.js",
+				"build": "npm run build-data && npm run build-support && npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test": "npm run build && npm run lint && npm run test-api"
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"emoticon.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"presets": "wooorm"
+			},
+			"gitHead": "edaa5ba758470432b1a6ce016f1429192db6ddc6",
+			"homepage": "https://github.com/wooorm/emoticon#readme",
+			"_id": "emoticon@3.0.0",
+			"_shasum": "b9461b66259fccf6774b027e40aa373b85ddebc0",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "b9461b66259fccf6774b027e40aa373b85ddebc0",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-3.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-18-east.internal.npmjs.com",
+				"tmp": "tmp/emoticon-3.0.0.tgz_1481111648351_0.0908216000534594"
+			},
+			"directories": {}
+		},
+		"3.1.0": {
+			"name": "emoticon",
+			"version": "3.1.0",
+			"description": "Info on ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/emoticon.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"files": [
+				"index.json"
+			],
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.0",
+				"gemoji": "^4.0.0",
+				"has": "^1.0.1",
+				"markdown-table": "^1.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-lint-table-pipe-alignment": "^1.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.6.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-data": "node script/build-data",
+				"build-support": "node script/build-support",
+				"build-bundle": "browserify index.json --bare -s emoticon > emoticon.js",
+				"build-mangle": "esmangle emoticon.js > emoticon.min.js",
+				"build": "npm run build-data && npm run build-support && npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test": "npm run build && npm run lint && npm run test-api"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignores": [
+					"emoticon.js"
+				]
+			},
+			"remarkConfig": {
+				"settings": {
+					"paddedTable": false
+				},
+				"plugins": [
+					"preset-wooorm",
+					[
+						"lint-table-pipe-alignment",
+						false
+					]
+				]
+			},
+			"gitHead": "286f5e6b42d25db541fb6e0e32f2ec8b698636e6",
+			"homepage": "https://github.com/wooorm/emoticon#readme",
+			"_id": "emoticon@3.1.0",
+			"_shasum": "03cb61da1893dca85f8e125e9ed8bfa218c4043b",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "03cb61da1893dca85f8e125e9ed8bfa218c4043b",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-3.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/emoticon-3.1.0.tgz_1500506920260_0.9322716847527772"
+			},
+			"directories": {}
+		},
+		"3.1.1": {
+			"name": "emoticon",
+			"version": "3.1.1",
+			"description": "Info on ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/emoticon.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"files": [
+				"index.json"
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.0",
+				"gemoji": "^4.0.0",
+				"markdown-table": "^1.0.0",
+				"remark-cli": "^5.0.0",
+				"remark-lint-table-pipe-alignment": "^1.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.6.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"generate": "node script/build-data",
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-support": "node script/build-support",
+				"build-bundle": "browserify index.json --bare -s emoticon > emoticon.js",
+				"build-mangle": "esmangle emoticon.js > emoticon.min.js",
+				"build": "npm run build-support && npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test": "npm run generate && npm run format && npm run build && npm run test-api"
+			},
+			"remarkConfig": {
+				"settings": {
+					"paddedTable": false
+				},
+				"plugins": [
+					"preset-wooorm",
+					[
+						"lint-table-pipe-alignment",
+						false
+					]
+				]
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"emotion.js"
+				]
+			},
+			"gitHead": "53d3b06ab98c53a1c50086970bef0531b27fd929",
+			"homepage": "https://github.com/wooorm/emoticon#readme",
+			"_id": "emoticon@3.1.1",
+			"_npmVersion": "5.6.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-lKfchD2m4myMvstTxrGvn4Wdz8krGKmoTtZaeZaDv5zCqhikF1wNQvx/EK6d5ugQZskqg2p+ilAmsU8PkwXcFw==",
+				"shasum": "269b016daebe4b12c01d1afb3982e7cbfbfafb8b",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-3.1.1.tgz",
+				"fileCount": 4,
+				"unpackedSize": 13228,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa14KsCRA9TVsSAnZWagAAxiMP/3JwWaZNwlK2d/vTRQMc\nSgfsn7TaR3DSXKleJ+74AF6Lxj+52NEpaFlt4a8dcsrMfmNqOmmLVg8JDXw9\nxDNX+XXuDS+GRF78kx4ToiORrIorpgGqy1VfVk7WGH+jF4TcjdYExDjQUsKw\njXRrqoLaeMg4esB8BEKJxPOgec5LEhFsxT7O6C26jRn03jEJ6ZrcoXptsWI2\ntptyyAgkmZcrJY4VSeZgMMzvXBd97VvkWwRS54xj5W4BPbif8RwEBLfRFl3w\n/vEocMFgHcPItEnwtxmKyUYOAJD4bxBgzjBXJfJ5cbMBa0ayuKyQCK9+qMSS\np6htk77kVEvEJcljK/Vn9uzukPtavhE3p10VEkGFf/+b3Z6BH65TuD4u4Six\n9KJ7vKmBgKO7gxoiM/km/UcmK1TL/VTH9m1yyKl9iPDfBuFE9PGtcFwiiCzs\nfnM7j/0ZFbqk8HG1Ot1Q6uDrgtq3SssWeA79KJQG/upRnCRYIbjGlzG6Rk9j\nGKex29XOZfGxCjUM9E3FFUuIlZs3d7sl3GjdbFFsnNPWSbLELwvRbwoB31jm\n6RhM9dTFmw4vEEJmnI8yPaHDJi8RE+Cee26OgsOrt9be1NApBknNCJQCDa2Y\nOebKqNzABe+/xnPs7C5h1kntQQTcwP0PyUoRItA9h+pyjuKIZQ1iU6kdbKaG\n3K9b\r\n=1f+t\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/emoticon_3.1.1_1524073131043_0.4423410741685492"
+			},
+			"_hasShrinkwrap": false
+		},
+		"3.1.2": {
+			"name": "emoticon",
+			"version": "3.1.2",
+			"description": "Info on ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/emoticon.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"gemoji": "^4.0.0",
+				"markdown-table": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-lint-table-pipe-alignment": "^1.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.6.0",
+				"tinyify": "^2.5.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"generate": "node script/build-data",
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-support": "node script/build-support",
+				"build-bundle": "browserify index.json -s emoticon -o emoticon.js",
+				"build-mangle": "browserify index.json -s emoticon -p tinyify -o emoticon.min.js",
+				"build": "npm run build-support && npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test": "npm run generate && npm run format && npm run build && npm run test-api"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"emotion.js"
+				]
+			},
+			"remarkConfig": {
+				"settings": {
+					"paddedTable": false
+				},
+				"plugins": [
+					"preset-wooorm",
+					[
+						"lint-table-pipe-alignment",
+						false
+					]
+				]
+			},
+			"gitHead": "91121dc898f17dfacfada0bc500e1929bbccf67b",
+			"homepage": "https://github.com/wooorm/emoticon#readme",
+			"_id": "emoticon@3.1.2",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-iD00roRrw0nKKaeeMEbxiGi5N+d/MkUoWgvRVoH+2FSmOvlv5zPhrnhUJO5oDazA/7VIbdXjQ2/HZ47Z/7c+2g==",
+				"shasum": "07d1223756a402895d23834006a73a92ecec0896",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-3.1.2.tgz",
+				"fileCount": 4,
+				"unpackedSize": 13474,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc09PECRA9TVsSAnZWagAAx0UP/iYWAA1ayuvJuT/bhNIV\nCVPOJSYop3UTwlBtdk0AH8BvLXEOIIczZNynZLPbf4n+SHDFtJdKhxw8mJzu\n1KigJ3LYkfTqyfJWRgMunx2WgunA68rjfekUbVV7qAhwNsQ9gQhYPnId1NX/\nIfWZjN5u/Tv5Y3uQKOW8faCChMiUtxiJ0KEXq4n4VNK/C7T5rBZJ+VngoAw9\nA479sR1M9s1ZqTN6Ctcd3OUp81hLKIFXb5dWq5WNFYp2b0/q2fUpA8WTf9Kw\n/5OLmmn6ZSAUXFNsm5cOOtx+F/wlrdDMAwaoyXkYYV2ZViQndZwuQGzDUnWz\nHy/F7cO7m9pzrwAUB86WCFJluae4Vl4kdySRxkS4rUgLS++HluwluIVDsZ15\nff3UDu4+w1PhHqOelv4eDOJQj+g0RKu4vND6Gz54WZdCahP+SNjizTO83Cw4\nVJH5C+mgNGkKs2X+R9vrDXmhmj569nqOA6gwxw2iasvxlaJZDF6YAiqHBYzV\nzXHPZ5YYBfEH+JwAgiDH8Csm/K1Sb6GjxoyU3CcGIBvOKCmMiJPeEVHLk4x7\nUTU1WcIyrLhXtnj5J/NoVswI5H6PZveOJd+bfRC1U2ZqiOdyXvyoeN8NOYI2\nt7aNHppE3nnhdd10vS5sdqDK8APNEoZN5yikUzbhPvD2IHRrwJaUd0JggPKA\nRYZN\r\n=Zwuc\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/emoticon_3.1.2_1557386179440_0.8918280666383818"
+			},
+			"_hasShrinkwrap": false
+		},
+		"3.2.0": {
+			"name": "emoticon",
+			"version": "3.2.0",
+			"description": "Info on ASCII emoticons",
+			"license": "MIT",
+			"keywords": [
+				"emoticon",
+				"unicode",
+				"name",
+				"shortcode",
+				"tag",
+				"alias",
+				"name"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/emoticon.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/emoticon/issues"
+			},
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/wooorm"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"main": "index.json",
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"gemoji": "^5.0.0",
+				"markdown-table": "^2.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-lint-table-pipe-alignment": "^1.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"generate": "node script/build-data",
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-support": "node script/build-support",
+				"build-bundle": "browserify index.json -s emoticon -o emoticon.js",
+				"build-mangle": "browserify index.json -s emoticon -p tinyify -o emoticon.min.js",
+				"build": "npm run build-support && npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test": "npm run generate && npm run format && npm run build && npm run test-api"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"emotion.js"
+				]
+			},
+			"remarkConfig": {
+				"settings": {
+					"paddedTable": false
+				},
+				"plugins": [
+					"preset-wooorm",
+					[
+						"lint-table-pipe-alignment",
+						false
+					]
+				]
+			},
+			"gitHead": "ba40b73a6eaa549e7c2887c105df568b85f287e8",
+			"homepage": "https://github.com/wooorm/emoticon#readme",
+			"_id": "emoticon@3.2.0",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-SNujglcLTTg+lDAcApPNgEdudaqQFiAbJCqzjNxJkvN9vAwCGi0uu8IUVvx+f16h+V44KCY6Y2yboroc9pilHg==",
+				"shasum": "c008ca7d7620fac742fe1bf4af8ff8fed154ae7f",
+				"tarball": "https://registry.npmjs.org/emoticon/-/emoticon-3.2.0.tgz",
+				"fileCount": 4,
+				"unpackedSize": 13464,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeKq0xCRA9TVsSAnZWagAA5UYP/38HDEwPBK4WiEn9I4xH\n7ioJzapYPqZON6kJOnazd+H/da7kXFHZsoS2n108zlwPK97W5831og3D0blO\nDOhCZtYEvHymOE4AYXko6gdjy5EbKbTQgl543m1QQoT37zCrG3+NnxNeUCUm\nYWXZgQLuFFFPWp3inRk548R60aPl/BV7HrTGj60o4lyQPTtkzSZ6EPvUlMEZ\nZk/lArY+sAKnxDbenGKB438fj/NeMrbLzJiXUEVXx+7ukU17mTK8Q1UIhftn\nt0LDbTiov6AHJoOPbeB80PdymRGONO75hPXIyqQUmxPRr3UHPz9iSOIpFTs7\nFaFgYY1k27ApO2sqR0YTyFiSMlwHJawhGEEuBXuCkZU6YXaLHKLsivI6RvGP\n3ZzRISHbY6unFdQdyO7qYul0EAzFnCU1fkuLkGn21UUz6Vyx7SRAB6mazHZu\nqEZ1HO59UZfNmLrjyPCHWqWOLJWh06f/Eies6Nm12L0UL+vh2ejnJHg+cYfJ\ng4g44RgFSqyCfliB6d+CDVr8IevcjXY6jxG2qpGraRBQSAsX1yAqu0P2IS6Q\n8FARAVYyT81FlHdbyz8JrHwQFgPWeWqsPHOcHZlKMHzbmuwpbUYyQSVSN3H7\nNpsCCFh0Jm+ryCy+0h1Zczm2/7+MTjwW6dMQ2g2Yn02ZijRYR1223x5M9zXc\n/m5h\r\n=voa7\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/emoticon_3.2.0_1579855153251_0.38164167942470795"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-01-24T08:39:16.479Z",
+		"created": "2014-11-01T13:05:26.988Z",
+		"0.0.1": "2014-11-01T13:05:26.988Z",
+		"0.1.0": "2014-12-14T17:49:15.406Z",
+		"1.0.0": "2015-08-26T16:59:55.406Z",
+		"2.0.0": "2016-11-05T16:44:41.325Z",
+		"3.0.0": "2016-12-07T11:54:08.950Z",
+		"3.1.0": "2017-07-19T23:28:41.651Z",
+		"3.1.1": "2018-04-18T17:38:51.151Z",
+		"3.1.2": "2019-05-09T07:16:19.601Z",
+		"3.2.0": "2020-01-24T08:39:13.378Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "3.2.0"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"c6b7b9eee26881a3f0a3bb45777fc6ea\"",
+			"fetched": 1601147220624
+		}
+	},
+	"_distfiles": {
+		"emoticon-0.0.1.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-0.0.1.tgz",
+			"sha": "a986b3389bb6cc1e4a02805856fdf9e06ce51141",
+			"registry": "npmjs"
+		},
+		"emoticon-0.1.0.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-0.1.0.tgz",
+			"sha": "9024c99a7e1ef9765239f05daf9d1db47531ed18",
+			"registry": "npmjs"
+		},
+		"emoticon-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-1.0.0.tgz",
+			"sha": "0f877ebb978eb52042c27129edd2af6b51922780",
+			"registry": "npmjs"
+		},
+		"emoticon-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-2.0.0.tgz",
+			"sha": "40405171ec2976f66930da30331d0c62d0fff3b8",
+			"registry": "npmjs"
+		},
+		"emoticon-3.0.0.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-3.0.0.tgz",
+			"sha": "b9461b66259fccf6774b027e40aa373b85ddebc0",
+			"registry": "npmjs"
+		},
+		"emoticon-3.1.0.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-3.1.0.tgz",
+			"sha": "03cb61da1893dca85f8e125e9ed8bfa218c4043b",
+			"registry": "npmjs"
+		},
+		"emoticon-3.1.1.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-3.1.1.tgz",
+			"sha": "269b016daebe4b12c01d1afb3982e7cbfbfafb8b",
+			"registry": "npmjs"
+		},
+		"emoticon-3.1.2.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-3.1.2.tgz",
+			"sha": "07d1223756a402895d23834006a73a92ecec0896",
+			"registry": "npmjs"
+		},
+		"emoticon-3.2.0.tgz": {
+			"url": "https://registry.npmjs.org/emoticon/-/emoticon-3.2.0.tgz",
+			"sha": "c008ca7d7620fac742fe1bf4af8ff8fed154ae7f",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-65c18290c4aa1469",
+	"_id": "emoticon",
+	"readme": "# emoticon\n\n[![Build][build-badge]][build]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n\nInfo on ASCII emoticons.  :p\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install emoticon\n```\n\n## Use\n\n```js\nvar emoticon = require('emoticon')\n\nconsole.log(emoticon.slice(0, 3))\n```\n\nYields:\n\n```js\n[ { name: 'angry',\n    emoji: '😠',\n    tags: [ 'mad', 'annoyed' ],\n    description: 'angry face',\n    emoticons:\n     [ '>:(', '>:[', '>:-(', '>:-[', '>=(', '>=[', '>=-(', '>=-[' ] },\n  { name: 'blush',\n    emoji: '😊',\n    tags: [ 'proud' ],\n    description: 'smiling face with smiling eyes',\n    emoticons:\n     [ ':\")',\n       ':\"]',\n       ':\"D',\n       ':-\")',\n       ':-\"]',\n       ':-\"D',\n       '=\")',\n       '=\"]',\n       '=\"D',\n       '=-\")',\n       '=-\"]',\n       '=-\"D' ] },\n  { name: 'broken_heart',\n    emoji: '💔',\n    tags: [],\n    description: 'broken heart',\n    emoticons: [ '<\\\\3', '</3' ] } ]\n```\n\n## Support\n\nSee [`support.md`][support].\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/wooorm/emoticon.svg\n\n[build]: https://travis-ci.org/wooorm/emoticon\n\n[downloads-badge]: https://img.shields.io/npm/dm/emoticon.svg\n\n[downloads]: https://www.npmjs.com/package/emoticon\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/emoticon.svg\n\n[size]: https://bundlephobia.com/result?p=emoticon\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[support]: support.md"
+}

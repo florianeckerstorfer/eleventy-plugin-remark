@@ -1,0 +1,1591 @@
+{
+	"name": "mdast-util-definitions",
+	"versions": {
+		"0.1.0": {
+			"name": "mdast-util-definitions",
+			"version": "0.1.0",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"dependencies": {
+				"mdast-util-visit": "^0.1.1"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/mdast-util-definitions.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js",
+				"LICENSE"
+			],
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"eslint": "^0.24.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^1.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^0.26.0",
+				"mdast-github": "^0.3.0",
+				"mdast-lint": "^0.4.0",
+				"mdast-yaml-config": "^0.2.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coveralls": "istanbul cover _mocha --report lcovonly -- --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- test.js",
+				"test-travis": "npm run test-coveralls",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"bundle": "browserify index.js --no-builtins -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"postbundle": "esmangle mdast-util-definitions.js > mdast-util-definitions.min.js",
+				"build-md": "mdast . --output --quiet",
+				"build": "npm run bundle && npm run build-md"
+			},
+			"gitHead": "f29178710bbbe97cf68720c7800a9a2565a83a4a",
+			"bugs": {
+				"url": "https://github.com/wooorm/mdast-util-definitions/issues"
+			},
+			"homepage": "https://github.com/wooorm/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@0.1.0",
+			"_shasum": "66e704d06a5d07e8302cdac4fcd38b73c9c7df87",
+			"_from": ".",
+			"_npmVersion": "2.11.3",
+			"_nodeVersion": "2.3.3",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "66e704d06a5d07e8302cdac4fcd38b73c9c7df87",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-0.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "mdast-util-definitions",
+			"version": "1.0.0",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/mdast-util-definitions.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^11.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.3.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^1.0.0",
+				"mdast-comment-config": "^1.0.0",
+				"mdast-github": "^0.3.0",
+				"mdast-lint": "^1.0.0",
+				"mdast-slug": "^1.0.0",
+				"mdast-validate-links": "^0.3.0",
+				"mocha": "^2.0.0"
+			},
+			"scripts": {
+				"test-api": "mocha --check-leaks test.js",
+				"test-coverage": "istanbul cover _mocha -- test.js",
+				"test-travis": "npm run test-coverage",
+				"test": "npm run test-api",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"make": "npm run lint && npm run test-coverage",
+				"bundle": "browserify index.js --no-builtins -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"postbundle": "esmangle mdast-util-definitions.js > mdast-util-definitions.min.js",
+				"build-md": "mdast . --quiet",
+				"build": "npm run bundle && npm run build-md"
+			},
+			"gitHead": "a19e249e35b69e7a5cecebe3cd20fc6ea124603b",
+			"bugs": {
+				"url": "https://github.com/wooorm/mdast-util-definitions/issues"
+			},
+			"homepage": "https://github.com/wooorm/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@1.0.0",
+			"_shasum": "93332d0b883dc24ab56b26d44375b616ec3fa74c",
+			"_from": ".",
+			"_npmVersion": "2.13.2",
+			"_nodeVersion": "2.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "93332d0b883dc24ab56b26d44375b616ec3fa74c",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "mdast-util-definitions",
+			"version": "1.1.0",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/mdast-util-definitions"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^12.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^3.0.0",
+				"remark-comment-config": "^2.0.0",
+				"remark-github": "^2.0.0",
+				"remark-lint": "^2.0.0",
+				"remark-slug": "^3.0.0",
+				"remark-validate-links": "^2.0.0",
+				"tape": "^4.0.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --no-builtins -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "esmangle mdast-util-definitions.js > mdast-util-definitions.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "fdeacdaddf46e4729b9e39f82fa68c169d0eeacb",
+			"bugs": {
+				"url": "https://github.com/wooorm/mdast-util-definitions/issues"
+			},
+			"homepage": "https://github.com/wooorm/mdast-util-definitions",
+			"_id": "mdast-util-definitions@1.1.0",
+			"_shasum": "b55f3ec55c93af5fc4c1308a4b2446a1b7f93fb9",
+			"_from": ".",
+			"_npmVersion": "2.3.0",
+			"_nodeVersion": "0.11.16",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "b55f3ec55c93af5fc4c1308a4b2446a1b7f93fb9",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.1.1": {
+			"name": "mdast-util-definitions",
+			"version": "1.1.1",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/mdast-util-definitions/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^3.0.0",
+				"jscs-jsdoc": "^2.0.0",
+				"remark": "^5.0.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-slug": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --no-builtins -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "esmangle mdast-util-definitions.js > mdast-util-definitions.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "5dc59997a0285f3f959a5ad3663f3046e963b324",
+			"homepage": "https://github.com/wooorm/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@1.1.1",
+			"_shasum": "48e839f0299beda9ad5812d19fa2e2e073f307db",
+			"_from": ".",
+			"_npmVersion": "3.8.6",
+			"_nodeVersion": "6.1.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "48e839f0299beda9ad5812d19fa2e2e073f307db",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.1.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/mdast-util-definitions-1.1.1.tgz_1465837579408_0.44126857491210103"
+			},
+			"directories": {}
+		},
+		"1.2.0": {
+			"name": "mdast-util-definitions",
+			"version": "1.2.0",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"dependencies": {
+				"has": "^1.0.1",
+				"unist-util-visit": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/mdast-util-definitions/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"esmangle": "^1.0.0",
+				"remark": "^6.2.0",
+				"nyc": "^10.0.0",
+				"remark-cli": "^2.0.0",
+				"remark-preset-wooorm": "^1.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.17.1"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --no-builtins -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "esmangle mdast-util-definitions.js > mdast-util-definitions.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"ignore": [
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"presets": "wooorm"
+			},
+			"gitHead": "8ab122f32e6e363579801d98434fb26386f81f2a",
+			"homepage": "https://github.com/wooorm/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@1.2.0",
+			"_shasum": "00f67b4289ed36bafc0977b558414ac0c5023b24",
+			"_from": ".",
+			"_npmVersion": "4.0.3",
+			"_nodeVersion": "7.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "00f67b4289ed36bafc0977b558414ac0c5023b24",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/mdast-util-definitions-1.2.0.tgz_1482061677038_0.3603594098240137"
+			},
+			"directories": {}
+		},
+		"1.2.1": {
+			"name": "mdast-util-definitions",
+			"version": "1.2.1",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"dependencies": {
+				"has": "^1.0.1",
+				"unist-util-visit": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"remark": "^7.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.18.2"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --no-builtins -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "esmangle mdast-util-definitions.js > mdast-util-definitions.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignore": [
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "81fd41754f4925790ac15dc367beec34f43f62d6",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@1.2.1",
+			"_npmVersion": "5.0.3",
+			"_nodeVersion": "8.1.2",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-rKNEhxlFhH0dLWma4D9a0T1nGfzunRFBRHXtCzVuW73f51mIr5MAgqFao2uhwqB6zCTgPJE6CCRw+np0yF5eLQ==",
+				"shasum": "32d2ed2e6b6e50081cf2fbc30cc613951d35ce21",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions-1.2.1.tgz_1497634968148_0.8681236472912133"
+			},
+			"directories": {}
+		},
+		"1.2.2": {
+			"name": "mdast-util-definitions",
+			"version": "1.2.2",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"remark": "^7.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.18.2"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --no-builtins -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "esmangle mdast-util-definitions.js > mdast-util-definitions.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignore": [
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "53e8e8f01e98673212ee43639f408e5932f8c86f",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@1.2.2",
+			"_npmVersion": "5.0.3",
+			"_nodeVersion": "8.1.2",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-9NloPSwaB9f1PKcGqaScfqRf6zKOEjTIXVIbPOmgWI/JKxznlgVXC5C+8qgl3AjYg2vJBRgLYfLICaNiac89iA==",
+				"shasum": "673f4377c3e23d3de7af7a4fe2214c0e221c5ac7",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions-1.2.2.tgz_1497635019994_0.8769929986447096"
+			},
+			"directories": {}
+		},
+		"1.2.3": {
+			"name": "mdast-util-definitions",
+			"version": "1.2.3",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^12.0.0",
+				"prettier": "^1.14.2",
+				"remark": "^9.0.0",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.4.3",
+				"xo": "^0.22.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "browserify . -s mdastUtilDefinitions -p tinyify > mdast-util-definitions.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "4b4e8a8bbff1c887a89e5bf8d48acb964fd98119",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@1.2.3",
+			"_npmVersion": "6.4.0",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-P6wpRO8YVQ1iv30maMc93NLh7COvufglBE8/ldcOyYmk5EbfF0YeqlLgtqP/FOBU501Kqar1x5wYWwB3Nga74g==",
+				"shasum": "49f936b09207c45b438db19551652934312f04f0",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6463,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbesy8CRA9TVsSAnZWagAAr+MP/0SvDZ34JlT7bv7wobT0\nk23eHbgXmB28IIIdsvpC7aHw6GSyFez191iQJRHZ8C0LFGr6ECCQMKrKsfRd\ne7YLcFLxg8+UPCJIU8se7ARpzAumZtkB4mHag2TGCp4okvla+zc/n6K19Adk\npXUUwVJieSIrs9SOzU0mkLQr/z+MkYOcif4jczAaBkm/HXfyKaJo4FeYTB3E\nvxSst/r00yYAU3HPRRJcs61kOYYjN7PZ10rVOBbM4D3O1AdJFFk9zZLxUbmJ\nKRkhh4iRESKX63HeQ/XtzkU1Qrjzsna+1RwbnGwx8tZ5ZO6iqozxpv21z/Ba\n/x7g0WfgOGwSz1NSFOztTQeTpUo2frTj/jRHz/DC9my/XVv5hetVkzfrwAPk\nO41j7fo5x+8RWpyEzKr8o9ad+yBEFO+j9vMHGii5CX2z/BOTve6Bi8oliPqp\nQzIMWTmttO2HFISvizCp+vC/qr3xwRhlLTYFqfC7ui5pzJ62kqRuwgT13dTe\nHx7YBoxe0kAazBN40K5W42FiSMzWBeui2v+lw7xMc92VyFzz5FhfiP4GMAx1\nKAhuVY0Ac4Zlz03kkYA2LMLK9WDvme/QlEKOgri4V4t2+GvM0HR3+51+PAlU\nrG21I6mhDuGyDA0K0QHbNckrfNFRjo06jfbhqcRCfafucRDDlXeQGhcsC9Ls\nQBMc\r\n=z4qg\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions_1.2.3_1534774459915_0.7671263779752477"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.2.4": {
+			"name": "mdast-util-definitions",
+			"version": "1.2.4",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark": "^10.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "browserify . -s mdastUtilDefinitions -p tinyify > mdast-util-definitions.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "6a0c4a4dcc18987c049159dad8ba5712329a4f34",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@1.2.4",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-HfUArPog1j4Z78Xlzy9Q4aHLnrF/7fb57cooTHypyGoe2XFNbcx/kWZDoOz+ra8CkUzvg3+VHV434yqEd1DRmA==",
+				"shasum": "2b54ad4eecaff9d9fcb6bf6f9f6b68b232d77ca7",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7366,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc57raCRA9TVsSAnZWagAAiWYP/ikn2r1qCV3KUXLddDLF\n1FJf3JDTVFeAWR3Op/Zib1o0QmR9Z3Q0kwvfp6rfrq457K7CUf41FiCoGNiL\nqi7Es1iL2JZpzv4950l+tJCmPK/DKwtTUULLvznUXNieYWbwDJfr9N7Qtxha\nAGvb6FazNEMIGr+U5S5eTLXcXNgYJh9/fEwdEZ/mXdV2jpkzsXqR6YgMjMUg\n7Cldi2LcLk8Tmx4z26kPNI+rPEMITj3FDxuVxsdnLu+Py8IOHZVdYPjJj3cD\nCR72tSfeO8XvmPAZ/P25IN0FrL6gKv2Uj28S7LE1GdrKvt5UFfvODz2LxbMC\nfBhbtX4iz1Sj4jOmuAtfzwQ8PrQbg1xcM1haaqiRy0plxJWEdok0iXo+fqKO\nb0G6nzvxPXYnv5lKYBdplKEILTTKnS6cxgQ6l8rJmMz/hjsX3SaVeOo2YO/S\ne1mjGI8/2txinvt2SdSuQl/q2zzx+lW3AoM3EWIE05UY0WS0jpUNXKqtAz2y\na6ogJwVm57zhQKW3vHvdLPyPuLMbtCH9tSTsocmipqOHkYcS8jL5WBKjxt7r\nyk2J/xX7SLIeH8klQTlivun9ektj9g2HB4oLPSly+JxF1+GMq2b8VeILh3PP\nuUCxRgX4rdEfaAX/Hi/nfbvTwZVCbwDPvRWchYaLg7qRBr9D5niYlVtCBavF\n/+ou\r\n=XztN\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions_1.2.4_1558690522016_0.22289192611339437"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.2.5": {
+			"name": "mdast-util-definitions",
+			"version": "1.2.5",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark": "^11.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "browserify . -s mdastUtilDefinitions -p tinyify > mdast-util-definitions.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "37ad7bfd3f5045011e8e722b2c8db05dd01a2f1b",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@1.2.5",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-CJXEdoLfiISCDc2JB6QLb79pYfI6+GcIH+W2ox9nMc7od0Pz+bovcHsiq29xAQY6ayqe/9CsK2VzkSJdg1pFYA==",
+				"shasum": "3fe622a4171c774ebd06f11e9f8af7ec53ea5c74",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.5.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7816,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdx9vbCRA9TVsSAnZWagAAbpYP/iFoHnPPrDn/as+29BBw\n6yNKZxmzAnNJUuAi8RB/f70bv6Q9iXmu5sBlyS5XZOmOLSqbMre9KaLxe33v\njHKS3uxF00Y4b29xss17JjMNsG1z9mDeHZT4gMm4TI43AARg2YUtyydAN+PL\n1yUQwpV6G2VM48o2qlnjoOcGm6Cxaj0VOCUm7TUbEE1NLh0gZPV9chf8olwG\nzqG3RuiAAzTbpVOtQg6Tsqa8dS0P7tEs/4ZjpGhfSaHY4n4DHOg9x2DKZbSt\nmDEP7CKmbyVxlS1Cn/iv/BY5ciEh3wvre/tRSYkgCVpHqyy0neRJrH9IIIp+\n1GUgwN+0QL9MhqygKSn28kSYwcAGvUO5rz/2gLw6mC/aponQN4pWuneVRGVo\njTBX9OjAZN0RgGyjMLS4vuC/or0P47MpYYDzSM/NiFuF+BCRBjnqKXJurn0R\nRplrZNzbqxgx5E5/gWHJdKxa62+JDFR8q/E6BzRKWrhCAYebqnjAX519Oawv\nfWoRdycisisrg3UXxRskdZKoFYucJbhoAr6rQhbzGvUBaqhU/yJhpr8EWH2c\niEPULGdR7vNcJ3WOjRVy0ycSiqowRB3xIRJa4w7d6ipCHYqHkYK7S+/9GZEZ\nNqqN5p9ifFLwKjkUttW0xiW3HPomNqEetQ/KofzStLvCs4otzo4ZLUMgDMXv\nzPlI\r\n=9H1r\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions_1.2.5_1573379034920_0.20328700814775802"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.0": {
+			"name": "mdast-util-definitions",
+			"version": "2.0.0",
+			"description": "Find definition nodes in mdast nodes",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"remark",
+				"markdown",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-visit": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark": "^11.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "browserify . -s mdastUtilDefinitions -p tinyify > mdast-util-definitions.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "4db4bb5c41b35187555adf3201e64afefe9cdd8d",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@2.0.0",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-4oEIVc5yxBHU7tjvg7j3Eu4x1dZiADjtv795Tp3HaaI8/s9GJU8LfWWAFJZqap5WjZGeMevgr+sp5vI37rEEAA==",
+				"shasum": "4aadd015002e2f5b762993f99bc90ab0d62bf2bd",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-2.0.0.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7816,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdx9w0CRA9TVsSAnZWagAAU/EP/0r8+uBwWJe9EQgR6/u8\nFFASKyuC1vd1gCrEAxtgu4kfoi8nfaVi+ZBVeuEeoH8ljvp8SnuONb6uyxFk\n4IuwzPqCczzbuBvA9sP/j8seK9EYprvwZCcbba/QbtM7Hl9DL/4B5r3C+XLy\ntsRyat+KjacCphfESbGe7i6Cg+JHbQrn3XjnsI2ASfRVGzEZsdwUCnLZdlSc\nmU8R3iHc7TnJNZ44LS192fFZaKuKqT3YkLxaoGIPpppKp0g7GP5QS5eUHD1C\nzD67qse9PZHCd5SVxcfa38Dc7cHJtKQFoJNDsu7wLxSF+yiJz829D4WHr8c2\nP8Lkj0An/3XrzOMWv0Lc5R6EOXKJesMMfo9qjL/8LC7D6coHE6kKd1PuiXRx\nE/TggTeRepHlUO/LLmDoT4jPhjs7lilhx3TeuCMsVjuQEB3ar/lr1uX/503w\nzMwp3guNoiFgLzABd67ae8ldTNlFclzAGCOSQKM4+jXb3doSneA4m3rbISON\nONf8L9YN1UGFCg7LqI1h3i/XFfbUKZeRwuB34+N7WgMVcz6zLB3CJvgK/2ha\nhYy6ULs2XVMUqozSrbC0D/O+f1x5HJB3fSYViaSX0fK+9/XDdDZy8u+zab53\n8nzbjkQBmaOKmygtmDoriZBY5bxgaUZjbhBp8+0hYjbNvnacPE6ZtRKGdkFk\n0coH\r\n=yhVW\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions_2.0.0_1573379123728_0.6984273866949171"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.1": {
+			"name": "mdast-util-definitions",
+			"version": "2.0.1",
+			"description": "mdast utility to find definition nodes in a tree",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"mdast",
+				"mdast-util",
+				"util",
+				"utility",
+				"markdown",
+				"tree",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-visit": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark": "^11.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.26.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "browserify . -s mdastUtilDefinitions -p tinyify > mdast-util-definitions.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "0a7d2e063559897fa722b686286c0dfca99e0017",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@2.0.1",
+			"_nodeVersion": "13.9.0",
+			"_npmVersion": "6.13.7",
+			"dist": {
+				"integrity": "sha512-Co+DQ6oZlUzvUR7JCpP249PcexxygiaKk9axJh+eRzHDZJk2julbIdKB4PXHVxdBuLzvJ1Izb+YDpj2deGMOuA==",
+				"shasum": "2c931d8665a96670639f17f98e32c3afcfee25f3",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-2.0.1.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7867,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeUTsQCRA9TVsSAnZWagAAXqoP/1xcy1BMX2EVJVRwtA5D\nxYURS23YJ2p70eryfXaXB7C43l5nZYzGtcAofzB+GgfUsmASe8RNnvgIV9uj\nd/MrjbJhSYJ6RLM4JKjeQWfVKQuCUGV3jOX9YN0DZ5WjZ+QE4/JbgjGyBt4Y\nQ9i87S2LXl7pMA0LrQgZ3pI/TWLWFCRMdFDCDyd+fdOEjt0VGNnZwXx9NpzE\nE56H52AXaoC/is/0URtYcTPktiA/xtLghFgSQqOepqUkBmWuAS/s7P3yNC6Q\n6wK7NG2ewh5qf8bZd6tpbOlyhveC7At98WpCjuf+eyCFRs8e0gISb0h8Zzb2\noykR+PZGGL9LMx93Usw6gqbgJSXnFzRGsAzByfTVVR/hJCN7h0YcJHueuhO/\nNMUX6gV/pjf01X1S4O06jpRTtJ4FNZKtiFAVrhzkDu9qW1J7QyLP6M5JIzCE\ni8qAPuhhbjXPfVrCSpw6c0sXpw1R7JV2iKsY+qwByz+EM8MPAi9f8f/NrObQ\nvG5quSP5WdN1dNhy7EzZhnkUkoyylrlTvKeQILT1YvjBPc+kwudCAqQxhMzE\nEuFo2y+xsPbnJj7JZr1THpfedOi2ycROIKMn4SPjkzMbZGKWtWASfLtwkVJc\noif71ZZM3FbRI7jki3QM5NEkKyTaQhRJ0OZmHW0KXPPGScavyn9lxxoO/LNm\nHL6R\r\n=kOLF\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions_2.0.1_1582381840300_0.8199606356611524"
+			},
+			"_hasShrinkwrap": false
+		},
+		"3.0.0": {
+			"name": "mdast-util-definitions",
+			"version": "3.0.0",
+			"description": "mdast utility to find definition nodes in a tree",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"mdast",
+				"mdast-util",
+				"util",
+				"utility",
+				"markdown",
+				"tree",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"@types/mdast": "^3.0.0",
+				"unist-util-visit": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^2.0.5",
+				"remark": "^12.0.0",
+				"remark-cli": "^8.0.0",
+				"remark-preset-wooorm": "^7.0.0",
+				"tape": "^5.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.30.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write . && xo --fix --ignore types",
+				"build-bundle": "browserify . -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "browserify . -s mdastUtilDefinitions -p tinyify > mdast-util-definitions.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"types",
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "9d85ddc5e23a29e162f5851a456b4e14ff515147",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@3.0.0",
+			"_nodeVersion": "13.10.1",
+			"_npmVersion": "6.14.4",
+			"dist": {
+				"integrity": "sha512-Z4olVIQmv9fp6iJbi/wbEijCnmof8lrwviJMHmMj/hGIGtPWT1Il96bUbKpF8sbMJX2gAiNwhsC7BAQZUbKNsg==",
+				"shasum": "4fa0764409cc45b6a450bbd3647b0da9d318ae79",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-3.0.0.tgz",
+				"fileCount": 8,
+				"unpackedSize": 9639,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJep+P4CRA9TVsSAnZWagAA09AP/2K+5bz7tv8YzGE9KIBx\nfEcUyRv1RR9eNlXToltsW57q+WML5/WMEtd0gJ3yfVcvEDfSi1amNBnUFDH9\ndIP14rXxNbBM0bvAtEiq0NxlhJP2P2xN1PDNiWKR2U9g8OjEZ4BhZAgG5ovo\nyFTfeqMrycu72Ss2oGIkpP+tkhr5Ffhc+5C0hWwEqXJVp/fsPpIcr0dIjEPU\nJy8raUp5i1RB79fhKj3pc8xQ/lhIQgjCwox+I6foK0eHGqBFqMdfrxiFeaE4\n3whpyMWeXOUnsMXAhWZL/GOs0Tltrzt52IB4Int/mBb1TWiCZmje8+RGi3h3\nKUunFBCvL2JpWSNk6IuklXim7OItCQSb3+ARYcsnvzh4VwoYKLb+fvl+dEvG\nH90F2mjfqMohD30mVLfZV6FqO1FHcJxKXBhAIi2fWbsnfhwJM5LcuQGI3tDp\nSn0xglUDIlzBJAj3QsCB7M7tSgZybP0y5PQwH1QCptYVX24L9gTvH8XVUFcS\nZbV6UrkvBfRqBkJM4/lbJVrBFsCwXoJ1uDP1qTih+x3TlIM57/wscRqsh3wg\nSIWwhHasNLENljS9uWvRZj+0/siBeDVeQy1cCEBKl01TeyIHnGzgU87smeoo\nEtBogrS2wv1k/7PASkxueVZIlsdwpJvoQ/xdCo3kPbMnC2JGWm6y98yHNclb\nqRFU\r\n=YDgN\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions_3.0.0_1588061176080_0.7944241212903829"
+			},
+			"_hasShrinkwrap": false
+		},
+		"3.0.1": {
+			"name": "mdast-util-definitions",
+			"version": "3.0.1",
+			"description": "mdast utility to find definition nodes in a tree",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"mdast",
+				"mdast-util",
+				"util",
+				"utility",
+				"markdown",
+				"tree",
+				"node",
+				"definition",
+				"find",
+				"cache"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-definitions.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-definitions/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"unist-util-visit": "^2.0.0"
+			},
+			"devDependencies": {
+				"@types/mdast": "^3.0.0",
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^2.0.5",
+				"remark": "^12.0.0",
+				"remark-cli": "^8.0.0",
+				"remark-preset-wooorm": "^7.0.0",
+				"tape": "^5.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.30.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write . && xo --fix --ignore types",
+				"build-bundle": "browserify . -s mdastUtilDefinitions > mdast-util-definitions.js",
+				"build-mangle": "browserify . -s mdastUtilDefinitions -p tinyify > mdast-util-definitions.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"types",
+					"mdast-util-definitions.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "62f5a8abe1643f77d1df3a24954e4c47984e77b5",
+			"homepage": "https://github.com/syntax-tree/mdast-util-definitions#readme",
+			"_id": "mdast-util-definitions@3.0.1",
+			"_nodeVersion": "14.0.0",
+			"_npmVersion": "6.14.4",
+			"dist": {
+				"integrity": "sha512-BAv2iUm/e6IK/b2/t+Fx69EL/AGcq/IG2S+HxHjDJGfLJtd6i9SZUS76aC9cig+IEucsqxKTR0ot3m933R3iuA==",
+				"shasum": "06af6c49865fc63d6d7d30125569e2f7ae3d0a86",
+				"tarball": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-3.0.1.tgz",
+				"fileCount": 8,
+				"unpackedSize": 9783,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeq+euCRA9TVsSAnZWagAAq3EQAJrAxdI63iS29ZDi4knS\nx4WfN3D84lAIPSpJWL/deNaMDDdRWhLRuEM9YEC/TdL/Q0Vhs/lic3Dy8fT8\nlAxDW0b3mSd7LqQnYRF08OSdZ6UWtQMMF0OO+3Qe57U6YBV97ABtjXjIl+yF\nmXaZ+301Kre8UUngcNqyjAncGW4d9nLu5QSXaRnUu0PIrtgMVZ3/6fKBiDiP\nASzt7EfSk15H+YXmZLifrQV6/pZy7oR+PNea95qraACkqSU60JlHwpBUb7J9\nngfjIOo5XmjlGTcwTuUzjynkfEUtLG2C080MRwTJZCdQ1W4OOKIZ6O8pdOn/\nU4Ph33E+scSvQldvFEDcBrZGk/+gWci2jjUu7BAPKAM1rJon1+q1t2nKRnEU\nbTtRXmLU0dn4GqJTpxaNLAh+Ajp7mM14kzFRytuqfdAos1h9Nxmv0J3j/pSw\ni4UEVcg7EnmI5jT/Lfhu/uJtApeOK08byVhNx+ndF3QgABq9Pc7lz0Yon14o\niZ3kyeMI05LOL8Gfs66mmk0VO1R2rH9bQFP5muY5s9vU76ELAkw5g5EyiKRH\ngtNo80/yRe+1CVXor8wpzNLEDLxzM/qWl2NGiNWFaHJlKiPU+HLdZUx2fzdv\nMfPcgi90SyaYXDsFY/GF9ojZRF3rW2BcRdxdRFormWzBIB/AIy477Pj9miuQ\nK/Ko\r\n=9nS/\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-definitions_3.0.1_1588324270325_0.5452988789924464"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-08-25T11:31:29.418Z",
+		"created": "2015-07-17T20:12:33.698Z",
+		"0.1.0": "2015-07-17T20:12:33.698Z",
+		"1.0.0": "2015-08-19T17:54:40.460Z",
+		"1.1.0": "2016-01-08T20:25:00.312Z",
+		"1.1.1": "2016-06-13T17:06:22.338Z",
+		"1.2.0": "2016-12-18T11:47:58.971Z",
+		"1.2.1": "2017-06-16T17:42:49.243Z",
+		"1.2.2": "2017-06-16T17:43:40.920Z",
+		"1.2.3": "2018-08-20T14:14:19.978Z",
+		"1.2.4": "2019-05-24T09:35:22.206Z",
+		"1.2.5": "2019-11-10T09:43:55.066Z",
+		"2.0.0": "2019-11-10T09:45:23.919Z",
+		"2.0.1": "2020-02-22T14:30:40.519Z",
+		"3.0.0": "2020-04-28T08:06:16.207Z",
+		"3.0.1": "2020-05-01T09:11:10.494Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "3.0.1"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"cf80b0da76e43fd3b4d6ab6b2f895138\"",
+			"fetched": 1601147221026
+		}
+	},
+	"_distfiles": {
+		"mdast-util-definitions-0.1.0.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-0.1.0.tgz",
+			"sha": "66e704d06a5d07e8302cdac4fcd38b73c9c7df87",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.0.0.tgz",
+			"sha": "93332d0b883dc24ab56b26d44375b616ec3fa74c",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.1.0.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.1.0.tgz",
+			"sha": "b55f3ec55c93af5fc4c1308a4b2446a1b7f93fb9",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.1.1.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.1.1.tgz",
+			"sha": "48e839f0299beda9ad5812d19fa2e2e073f307db",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.2.0.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.0.tgz",
+			"sha": "00f67b4289ed36bafc0977b558414ac0c5023b24",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.2.1.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.1.tgz",
+			"sha": "32d2ed2e6b6e50081cf2fbc30cc613951d35ce21",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.2.2.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.2.tgz",
+			"sha": "673f4377c3e23d3de7af7a4fe2214c0e221c5ac7",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.2.3.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.3.tgz",
+			"sha": "49f936b09207c45b438db19551652934312f04f0",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.2.4.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.4.tgz",
+			"sha": "2b54ad4eecaff9d9fcb6bf6f9f6b68b232d77ca7",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-1.2.5.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.5.tgz",
+			"sha": "3fe622a4171c774ebd06f11e9f8af7ec53ea5c74",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-2.0.0.tgz",
+			"sha": "4aadd015002e2f5b762993f99bc90ab0d62bf2bd",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-2.0.1.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-2.0.1.tgz",
+			"sha": "2c931d8665a96670639f17f98e32c3afcfee25f3",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-3.0.0.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-3.0.0.tgz",
+			"sha": "4fa0764409cc45b6a450bbd3647b0da9d318ae79",
+			"registry": "npmjs"
+		},
+		"mdast-util-definitions-3.0.1.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-3.0.1.tgz",
+			"sha": "06af6c49865fc63d6d7d30125569e2f7ae3d0a86",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-b13898327ec50db5",
+	"_id": "mdast-util-definitions",
+	"readme": "# mdast-util-definitions\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n[![Chat][chat-badge]][chat]\n\n[**mdast**][mdast] utility to get definitions by `identifier`.\n\nSupports funky keys, like `__proto__` or `toString`.\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install mdast-util-definitions\n```\n\n[npm][] with [TypeScript][] support:\n\n```sh\nnpm install mdast-util-definitions @types/mdast\n```\n\n## Use\n\n```js\nvar remark = require('remark')\nvar definitions = require('mdast-util-definitions')\n\nvar ast = remark().parse('[example]: https://example.com \"Example\"')\n\nvar definition = definitions(ast)\n\ndefinition('example')\n// => {type: 'definition', 'title': 'Example', ...}\n\ndefinition('foo')\n// => null\n```\n\n## API\n\n### `definitions(node[, options])`\n\nCreate a cache of all [definition][]s in [`node`][node].\n\n###### `options.commonmark`\n\n`boolean`, default: false — Turn on (`true`) to use CommonMark precedence:\nignore definitions found later for duplicate definitions.\nThe default behavior is to prefer the last found definition.\n\n###### Returns\n\n[`Function`][fn-definition]\n\n### `definition(identifier)`\n\n###### Parameters\n\n*   `identifier` (`string`) — [Identifier][] of [definition][].\n\n###### Returns\n\n[`Node?`][node] — [Definition][], if found.\n\n## Security\n\nUse of `mdast-util-definitions` does not involve [**hast**][hast] or user\ncontent so there are no openings for [cross-site scripting (XSS)][xss] attacks.\n\nAdditionally, safe guards are in place to protect against prototype poisoning.\n\n## Related\n\n*   [`unist-util-index`](https://github.com/syntax-tree/unist-util-index)\n    — index property values or computed keys to nodes\n\n## Contribute\n\nSee [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get\nstarted.\nSee [`support.md`][support] for ways to get help.\n\nThis project has a [code of conduct][coc].\nBy interacting with this repository, organization, or community you agree to\nabide by its terms.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/syntax-tree/mdast-util-definitions.svg\n\n[build]: https://travis-ci.org/syntax-tree/mdast-util-definitions\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/mdast-util-definitions.svg\n\n[coverage]: https://codecov.io/github/syntax-tree/mdast-util-definitions\n\n[downloads-badge]: https://img.shields.io/npm/dm/mdast-util-definitions.svg\n\n[downloads]: https://www.npmjs.com/package/mdast-util-definitions\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/mdast-util-definitions.svg\n\n[size]: https://bundlephobia.com/result?p=mdast-util-definitions\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg\n\n[chat]: https://spectrum.chat/unified/syntax-tree\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[typescript]: https://www.typescriptlang.org/\n\n[contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md\n\n[support]: https://github.com/syntax-tree/.github/blob/master/support.md\n\n[coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md\n\n[mdast]: https://github.com/syntax-tree/mdast\n\n[node]: https://github.com/syntax-tree/unist#node\n\n[fn-definition]: #definitionidentifier\n\n[definition]: https://github.com/syntax-tree/mdast#definition\n\n[identifier]: https://github.com/syntax-tree/mdast#association\n\n[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting\n\n[hast]: https://github.com/syntax-tree/hast"
+}

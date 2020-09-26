@@ -1,0 +1,813 @@
+{
+	"name": "space-separated-tokens",
+	"versions": {
+		"1.0.0": {
+			"name": "space-separated-tokens",
+			"version": "1.0.0",
+			"description": "Parse and stringify space-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"space",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/space-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/space-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.1",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^4.0.0",
+				"remark-comment-config": "^3.0.0",
+				"remark-github": "^4.0.1",
+				"remark-lint": "^3.0.0",
+				"remark-usage": "^3.0.0",
+				"remark-validate-links": "^3.0.0",
+				"tape": "^4.4.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s spaceSeparatedTokens > space-separated-tokens.js",
+				"build-mangle": "esmangle space-separated-tokens.js > space-separated-tokens.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "513a117661fb99773a00e60ca20426454498b0bd",
+			"homepage": "https://github.com/wooorm/space-separated-tokens#readme",
+			"_id": "space-separated-tokens@1.0.0",
+			"_shasum": "1cd6d40b439ee38a61c36582fb997b9b722a3c8d",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "1cd6d40b439ee38a61c36582fb997b9b722a3c8d",
+				"tarball": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-6-west.internal.npmjs.com",
+				"tmp": "tmp/space-separated-tokens-1.0.0.tgz_1456181217356_0.43540510116145015"
+			},
+			"directories": {}
+		},
+		"1.1.0": {
+			"name": "space-separated-tokens",
+			"version": "1.1.0",
+			"description": "Parse and stringify space-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"space",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/space-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/space-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^10.0.0",
+				"remark-cli": "^2.1.0",
+				"remark-preset-wooorm": "^1.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.17.1"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js --bare -s spaceSeparatedTokens > space-separated-tokens.js",
+				"build-mangle": "esmangle space-separated-tokens.js > space-separated-tokens.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"ignore": [
+					"space-separated-tokens.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"presets": "wooorm"
+			},
+			"gitHead": "bd45e0b7ed8ac30a3d5b16f217cbd72a2d904775",
+			"homepage": "https://github.com/wooorm/space-separated-tokens#readme",
+			"_id": "space-separated-tokens@1.1.0",
+			"_shasum": "9e8c60407aa527742cd9eaee2541dec639f1269b",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "9e8c60407aa527742cd9eaee2541dec639f1269b",
+				"tarball": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/space-separated-tokens-1.1.0.tgz_1480011172617_0.41482938826084137"
+			},
+			"directories": {}
+		},
+		"1.1.1": {
+			"name": "space-separated-tokens",
+			"version": "1.1.1",
+			"description": "Parse and stringify space-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"space",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/space-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/space-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^14.1.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js --bare -s spaceSeparatedTokens > space-separated-tokens.js",
+				"build-mangle": "esmangle space-separated-tokens.js > space-separated-tokens.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignore": [
+					"space-separated-tokens.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "17cc0a32f31df8f8d8a0b498ab391daeb25cf017",
+			"homepage": "https://github.com/wooorm/space-separated-tokens#readme",
+			"_id": "space-separated-tokens@1.1.1",
+			"_shasum": "9695b9df9e65aec1811d4c3f9ce52520bc2f7e4d",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "9695b9df9e65aec1811d4c3f9ce52520bc2f7e4d",
+				"tarball": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/space-separated-tokens-1.1.1.tgz_1498410526321_0.7175262321252376"
+			},
+			"directories": {}
+		},
+		"1.1.2": {
+			"name": "space-separated-tokens",
+			"version": "1.1.2",
+			"description": "Parse and stringify space-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"space",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/space-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/space-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"trim": "0.0.1"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s spaceSeparatedTokens > space-separated-tokens.js",
+				"build-mangle": "esmangle space-separated-tokens.js > space-separated-tokens.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"space-separated-tokens.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "989650ffbacc170273b3b6d66b515ab354049ec0",
+			"homepage": "https://github.com/wooorm/space-separated-tokens#readme",
+			"_id": "space-separated-tokens@1.1.2",
+			"_npmVersion": "5.6.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-G3jprCEw+xFEs0ORweLmblJ3XLymGGr6hxZYTYZjIlvDti9vOBUjRQa1Rzjt012aRrocKstHwdNi+F7HguPsEA==",
+				"shasum": "e95ab9d19ae841e200808cd96bc7bd0adbbb3412",
+				"tarball": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.2.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5335,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa0fygCRA9TVsSAnZWagAATAoP/2pd7SDLJxI/7KS6G9St\nT/QkL/f9eKpc3faAVmGv2Bm+KdLmGkYH0peneT4+hegltoCxgmvK5mhJJOFl\nHJA4LwxNFtnOWuvlVglugUkzX2bLhRsU7NUECmF4kBZHegss/o4yjQRlFlOB\n2U314GSKw2mAf6dLwoWKOp/VFeTQgRFxRZ28dlfdkReBdvycjwqAPuIanSIM\nohNcdDsTyHmfH8IuKL8IKUUGEYuG8y7xjf4PfcP+oWK2WbfKIaR8CL55OVm2\noNjS9GfCVbY2PUU7losi5s0wylCpTnVGwJrkN8suaqK1GwT0s4CBcsRUFXHF\nNfF9utBkQYTzwpgdTvswKJpKSuTkHoZkkU9yHZRt6osu+qV8V/mVs7rcoc8i\nkED/1/Co3S7FKQShxeDzitWAAOnfcMa4GNN25TF0wlaPiD3kF5jJHbOtnU0/\npIJsoJyq4HTfm5WnNbsOkmEkhU5vUHquAURirGD8P8ZkHx68X3yx2H+ho4qv\n0dIpw2SCixVX+1Q7hjvmyynGmaxw+2D+pd/wvIvBhegRjO0ZFwDIG+dTPm1o\nV438YhntSR6o+X9a+0/pE/r6uZRudYhRxsY4wSSrjG8sgDm6fK8ayhgzTqGz\nwEkmidt1i2EK+qw0ajjBJHwr26WykBEK27jcF+v4aMclAG7HMzzspeK8BKLo\nKGyf\r\n=uOZf\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/space-separated-tokens_1.1.2_1523711135187_0.2167060409895889"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.1.3": {
+			"name": "space-separated-tokens",
+			"version": "1.1.3",
+			"description": "Parse and stringify space-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"space",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/space-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/space-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^14.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^6.0.1",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.4.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s spaceSeparatedTokens > space-separated-tokens.js",
+				"build-mangle": "esmangle space-separated-tokens.js > space-separated-tokens.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignore": [
+					"space-separated-tokens.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "6546126c4789914c8d177c1491dd80f6115ac8bb",
+			"homepage": "https://github.com/wooorm/space-separated-tokens#readme",
+			"_id": "space-separated-tokens@1.1.3",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-/M5RAdBuQlSDPNfA5ube+fkHbHyY08pMuADLmsAQURzo56w90r681oiOoz3o3ZQyWdSeNucpTFjL+Ggd5qui3w==",
+				"shasum": "bc6500e116d13285a94b59b58c44c7f045fe6124",
+				"tarball": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5264,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJctfhGCRA9TVsSAnZWagAAjYcP/1pSr4xdu5ZbXdscn6eW\nJhjRrYgQYFVFPc9mYW2q9yTEN1685snu35sY42SPxrvjFsHm28+xZQRJAFMF\nZxLiFPWS70evrC+es8iRxFR1BYqDGBwdnHolHu5L0OVS9TgPwSHcTssgtX/H\nEI6F8A/cLdq3iBbClYiTrZnl7nqdI6g3rcVCNeg+UWlpgoekflDcSsnho1Pi\nWDZIQ2cm89oykuDCCvFSUgBm740NOsqv50y/0XvnHluRkgYrT6dA9EJSavvS\n/7HdqXgz+cB3bwji2BfcZ7RrDdsEDe4wDJ1SjjG+ScKMwJ4VgC36rhZ67gf7\n8PAqEqC2l/qf5T3IeLUiRkwzMKwM9mYDASB0087KikMvutSLCagatv5iHNhb\nRn3tyQ7DxRnB5sTPXBi13aB32ZEKQaKRpGX8rPcJzDdlR476ZE/M+lE2wyBG\nT1kBYbNsIqPEDc0hlgmk28ZDhcll+DtC0o6wRoKFqvCCTW4RdYK/PG5+qPX0\ncJBnSg61J7cxJ+5ZbyxIQpGOciuHKCplSkyEImc1A9vzbAeLfW3qikbTE2nG\n0J/dXQHY0FDv9j4spIESEwgTDZ60CwNj2dsnGNWkvAjUzikaxFzKeZxm6GIP\npbJUxNaQfhdPDuOK8yOnk0rG0cDBrnzPSQ0lpL1PnQm4y35kjgjx6KfcckPT\ndo6p\r\n=kJB8\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/space-separated-tokens_1.1.3_1555429445312_0.45284199233508216"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.1.4": {
+			"name": "space-separated-tokens",
+			"version": "1.1.4",
+			"description": "Parse and stringify space-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"space",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/space-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/space-separated-tokens/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.12.0",
+				"remark-cli": "^6.0.1",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.4.0",
+				"tinyify": "^2.5.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s spaceSeparatedTokens -o space-separated-tokens.js",
+				"build-mangle": "browserify . -s spaceSeparatedTokens -p tinyify -o space-separated-tokens.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"space-separated-tokens.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "99da6658094dc9e3a2836848589bf862f36999c2",
+			"homepage": "https://github.com/wooorm/space-separated-tokens#readme",
+			"_id": "space-separated-tokens@1.1.4",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-UyhMSmeIqZrQn2UdjYpxEkwY9JUrn8pP+7L4f91zRzOQuI8MF1FGLfYU9DKCYeLdo7LXMxwrX5zKFy7eeeVHuA==",
+				"shasum": "27910835ae00d0adfcdbd0ad7e611fb9544351fa",
+				"tarball": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5506,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc2+yhCRA9TVsSAnZWagAAWIMP/1xMBJ679njU961VyEqK\noBtnq31FNIomydmogGDVxyfZ6gMLpoUn3NnNWMoTNMoVEjOYMa06ZjhBMyxz\n/Ld44a2GJJME2CpegZ/2TxKzG7nXw6/omqGWKg1Ls1Fmeke715+tpnFS3kH3\nIyi3AhdpafTTMj+/M73AbOARd/q2dXT9SQolAVKdFPcmRFr4rQ0WTBqFlsYq\nmkc6VLCV9SVDq/7udsD3i9Ks6TYkPAM0rhrN8zePl6ayLqvNnaWJ7pN5PZFO\n5PwboYicuTt4+rBsWOEFgdKyxspMlr7lRc4grKum7Nb6znKjeVIsGezq2xpV\nmvSPkoa9Tn3dOqOwwR4CMWCLH4dInZbkqDpfE8kjT51PqUgOin7w77mmW+Kk\nfcWiuESDF5fG8XczX/iltPc7OsEmJohZFkSgg9dPO9GRJFEnnhv1cRbEscKU\n6heyEcKjgWbacOsDG7uRp2Ad1XzuwpmA2i+45cQKC1Bzn8d3LGIiExBlDo/y\n0ptPrgFrgJoahaPfOTwb860tUOUASrMBM9S57hULsMovXqKyTguj9Pz9AuY0\nHPrnFtE8ulCwONShN6gkOgfZKRpxZmCcQ8c2/+4gNKMQ1SviFfl+HJDV2y6H\ndvTXW+xtpSo5IkhzIFMUpryMaRMPVjby435TquHN2DcaItc9XFU8cQvtwWDD\nX9Xb\r\n=ZJ7Y\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/space-separated-tokens_1.1.4_1557916833083_0.41011022798502306"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.1.5": {
+			"name": "space-separated-tokens",
+			"version": "1.1.5",
+			"description": "Parse and stringify space-separated tokens",
+			"license": "MIT",
+			"keywords": [
+				"dom",
+				"html",
+				"space",
+				"separated",
+				"tokens",
+				"parse",
+				"stringify"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/space-separated-tokens.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/space-separated-tokens/issues"
+			},
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/wooorm"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s spaceSeparatedTokens -o space-separated-tokens.js",
+				"build-mangle": "browserify . -s spaceSeparatedTokens -p tinyify -o space-separated-tokens.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignore": [
+					"space-separated-tokens.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "fa73b8d60e18c1f275f41d12d34c7bc2a2baa79f",
+			"homepage": "https://github.com/wooorm/space-separated-tokens#readme",
+			"_id": "space-separated-tokens@1.1.5",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==",
+				"shasum": "85f32c3d10d9682007e917414ddc5c26d1aa6899",
+				"tarball": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.5.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5579,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeKiFLCRA9TVsSAnZWagAAy7MQAIPDkezI8/FqUsy5RkaS\nLB7qlI5K/zTNsxGIQ5Icy851YBY9Tmoo8rBuSk/elE15KmDKUjYips9OBi7d\ngXRoruiG+fo57kiRawMSl1n/nhwGeuipZwHMxeLBh4ivrZbZ6uPhHaypERrK\nxqr6f3kL9LSYfbxM8+5ywSGRd8m2v5aHaN646B/IBBSTWJHrUjP7HQlyL/6C\nHtQdJA7PztLJ3nnrv6K9wd8sivJhWeWHoT7+0YXPjm7kG452DJaK/q6FTNfw\nmoOemMtCuoHsaPgSLLXkDryiBEY3HRKhChOORxgbh9pc+ZXNzsJT9TT6r/1q\nOVuUEgPZu13rJ6Hy2EqJR2PmDt/wLXkJ4EJk2NXEPffKoTO7+UmvNRqa9IPl\ndpGhe8eHtFqrERLKfv7ZmWCsitJN08JTVfifwkbsh4RCWHnpPVu47sq+hfwu\na6prglZizC+zlBACIS0sHt1UJe0/EmB4fDTvwfKHr5Yq/Sw5NP9YxHj9kZFr\nFBohN48xUvNVYiYhpQP3s3WqD/R/32Umm9CT+n3rIawmgg/O8fuKAep8OpCI\nHbx9xcpsoBxvTz5H2eYK/Ppi6w1fR+yeYvp7xHu75OGb0/q8fvE7lszyX+hH\nuAeZKLXdVe14pb2nCLIdj5ku4lmtBRLKVoIQwihDOm3R9rEnYoumZ+7AOQX1\nndMf\r\n=BHy3\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/space-separated-tokens_1.1.5_1579819338766_0.042360382002081476"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-01-23T22:42:21.377Z",
+		"created": "2016-02-22T22:47:02.663Z",
+		"1.0.0": "2016-02-22T22:47:02.663Z",
+		"1.1.0": "2016-11-24T18:12:54.740Z",
+		"1.1.1": "2017-06-25T17:08:47.193Z",
+		"1.1.2": "2018-04-14T13:05:35.300Z",
+		"1.1.3": "2019-04-16T15:44:05.429Z",
+		"1.1.4": "2019-05-15T10:40:33.224Z",
+		"1.1.5": "2020-01-23T22:42:18.889Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.1.5"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"fea3f4b917e2025a7d285c6b419b009d\"",
+			"fetched": 1601147220917
+		}
+	},
+	"_distfiles": {
+		"space-separated-tokens-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.0.0.tgz",
+			"sha": "1cd6d40b439ee38a61c36582fb997b9b722a3c8d",
+			"registry": "npmjs"
+		},
+		"space-separated-tokens-1.1.0.tgz": {
+			"url": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.0.tgz",
+			"sha": "9e8c60407aa527742cd9eaee2541dec639f1269b",
+			"registry": "npmjs"
+		},
+		"space-separated-tokens-1.1.1.tgz": {
+			"url": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.1.tgz",
+			"sha": "9695b9df9e65aec1811d4c3f9ce52520bc2f7e4d",
+			"registry": "npmjs"
+		},
+		"space-separated-tokens-1.1.2.tgz": {
+			"url": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.2.tgz",
+			"sha": "e95ab9d19ae841e200808cd96bc7bd0adbbb3412",
+			"registry": "npmjs"
+		},
+		"space-separated-tokens-1.1.3.tgz": {
+			"url": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.3.tgz",
+			"sha": "bc6500e116d13285a94b59b58c44c7f045fe6124",
+			"registry": "npmjs"
+		},
+		"space-separated-tokens-1.1.4.tgz": {
+			"url": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.4.tgz",
+			"sha": "27910835ae00d0adfcdbd0ad7e611fb9544351fa",
+			"registry": "npmjs"
+		},
+		"space-separated-tokens-1.1.5.tgz": {
+			"url": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.5.tgz",
+			"sha": "85f32c3d10d9682007e917414ddc5c26d1aa6899",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-1a0f7ef31c567574",
+	"_id": "space-separated-tokens",
+	"readme": "# space-separated-tokens\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n\nParse and stringify space-separated tokens according to the [spec][].\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install space-separated-tokens\n```\n\n## Usage\n\n```js\nvar spaceSeparated = require('space-separated-tokens')\n\nspaceSeparated.parse(' foo\\tbar\\nbaz  ')\n//=> ['foo', 'bar', 'baz']\n\nspaceSeparated.stringify(['foo', 'bar', 'baz'])\n//=> 'foo bar baz'\n```\n\n## API\n\n### `spaceSeparated.parse(value)`\n\nParse space-separated tokens to an array of strings, according to the [spec][].\n\n###### Parameters\n\n*   `value` (`string`) — space-separated tokens\n\n###### Returns\n\n`Array.<string>` — List of tokens.\n\n### `spaceSeparated.stringify(values)`\n\nSerialize an array of strings to space-separated tokens.\nNote that it’s not possible to specify empty or whitespace only values.\n\n###### Parameters\n\n*   `values` (`Array.<string>`) — List of tokens\n\n###### Returns\n\n`string` — Space-separated tokens.\n\n## Related\n\n*   [`collapse-white-space`](https://github.com/wooorm/collapse-white-space)\n    — Replace multiple white-space characters with a single space\n*   [`property-information`](https://github.com/wooorm/property-information)\n    — Information on HTML properties\n*   [`comma-separated-tokens`](https://github.com/wooorm/comma-separated-tokens)\n    — Parse/stringify comma-separated tokens\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definition -->\n\n[build-badge]: https://img.shields.io/travis/wooorm/space-separated-tokens.svg\n\n[build]: https://travis-ci.org/wooorm/space-separated-tokens\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/space-separated-tokens.svg\n\n[coverage]: https://codecov.io/github/wooorm/space-separated-tokens\n\n[downloads-badge]: https://img.shields.io/npm/dm/space-separated-tokens.svg\n\n[downloads]: https://www.npmjs.com/package/space-separated-tokens\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/space-separated-tokens.svg\n\n[size]: https://bundlephobia.com/result?p=space-separated-tokens\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[spec]: https://html.spec.whatwg.org/#space-separated-tokens"
+}

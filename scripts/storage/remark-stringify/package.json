@@ -1,0 +1,2687 @@
+{
+	"name": "remark-stringify",
+	"versions": {
+		"0.0.0": {
+			"name": "remark-stringify",
+			"version": "0.0.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=0.11.0"
+			},
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"extend": "^3.0.0",
+				"longest-streak": "^1.0.0",
+				"markdown-table": "^0.4.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4"
+			},
+			"_id": "remark-stringify@0.0.0",
+			"scripts": {},
+			"_shasum": "87b7c46261343afd19b2694f5cc553511fe05761",
+			"_from": ".",
+			"_npmVersion": "3.8.6",
+			"_nodeVersion": "6.1.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "87b7c46261343afd19b2694f5cc553511fe05761",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-0.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-0.0.0.tgz_1465736120544_0.14422691543586552"
+			},
+			"directories": {}
+		},
+		"1.0.0": {
+			"name": "remark-stringify",
+			"version": "1.0.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=0.11.0"
+			},
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"extend": "^3.0.0",
+				"longest-streak": "^1.0.0",
+				"markdown-table": "^0.4.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4"
+			},
+			"_id": "remark-stringify@1.0.0",
+			"scripts": {},
+			"_shasum": "7766fe11a3d8d557695503ed03558b9ec1fcf761",
+			"_from": ".",
+			"_npmVersion": "3.8.6",
+			"_nodeVersion": "6.1.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "7766fe11a3d8d557695503ed03558b9ec1fcf761",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-1.0.0.tgz_1465767512030_0.42365135345607996"
+			},
+			"directories": {}
+		},
+		"1.1.0": {
+			"name": "remark-stringify",
+			"version": "1.1.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=0.11.0"
+			},
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"extend": "^3.0.0",
+				"longest-streak": "^1.0.0",
+				"markdown-table": "^0.4.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4"
+			},
+			"_id": "remark-stringify@1.1.0",
+			"scripts": {},
+			"_shasum": "a7105e25b9ee2bf9a49b75d2c423f11b06ae2092",
+			"_from": ".",
+			"_npmVersion": "3.7.3",
+			"_nodeVersion": "5.9.1",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "a7105e25b9ee2bf9a49b75d2c423f11b06ae2092",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-1.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-1.1.0.tgz_1470758341818_0.04028692073188722"
+			},
+			"directories": {}
+		},
+		"2.0.0": {
+			"name": "remark-stringify",
+			"version": "2.0.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=0.11.0"
+			},
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^1.0.0",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.0.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"_id": "remark-stringify@2.0.0",
+			"scripts": {},
+			"_shasum": "ef20c38b5b99800eab98eddf62490a2cc8b85b51",
+			"_from": ".",
+			"_npmVersion": "3.10.3",
+			"_nodeVersion": "6.3.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "ef20c38b5b99800eab98eddf62490a2cc8b85b51",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-2.0.0.tgz_1471804597748_0.9688223169650882"
+			},
+			"directories": {}
+		},
+		"2.1.0": {
+			"name": "remark-stringify",
+			"version": "2.1.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=0.11.0"
+			},
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^1.0.0",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.0.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"_id": "remark-stringify@2.1.0",
+			"scripts": {},
+			"_shasum": "286515da3917c38da8296ebd3a9e85f513417bad",
+			"_from": ".",
+			"_npmVersion": "3.10.7",
+			"_nodeVersion": "6.3.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "286515da3917c38da8296ebd3a9e85f513417bad",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-2.1.0.tgz_1476529470292_0.28898986522108316"
+			},
+			"directories": {}
+		},
+		"2.2.0": {
+			"name": "remark-stringify",
+			"version": "2.2.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=0.11.0"
+			},
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^1.0.0",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.0.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"_id": "remark-stringify@2.2.0",
+			"scripts": {},
+			"_shasum": "6b790d2d61d6cad89fe8035812dca163589e89e4",
+			"_from": ".",
+			"_npmVersion": "4.0.1",
+			"_nodeVersion": "7.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "6b790d2d61d6cad89fe8035812dca163589e89e4",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.2.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-2.2.0.tgz_1477604707498_0.23795647313818336"
+			},
+			"directories": {}
+		},
+		"2.3.0": {
+			"name": "remark-stringify",
+			"version": "2.3.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=0.11.0"
+			},
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.0.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"_id": "remark-stringify@2.3.0",
+			"scripts": {},
+			"_shasum": "5c5d1fd69fa39d185d62e675f545ee2fd48df87d",
+			"_from": ".",
+			"_npmVersion": "4.0.2",
+			"_nodeVersion": "7.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "5c5d1fd69fa39d185d62e675f545ee2fd48df87d",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.3.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-2.3.0.tgz_1480163161030_0.7951117134653032"
+			},
+			"directories": {}
+		},
+		"2.4.0": {
+			"name": "remark-stringify",
+			"version": "2.4.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"engines": {
+				"node": ">=0.11.0"
+			},
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"xo": false,
+			"_id": "remark-stringify@2.4.0",
+			"scripts": {},
+			"_shasum": "38dd286153139a082e9d9f17e2d49919792cec2f",
+			"_from": ".",
+			"_npmVersion": "4.0.3",
+			"_nodeVersion": "7.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "38dd286153139a082e9d9f17e2d49919792cec2f",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.4.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-18-east.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-2.4.0.tgz_1486316333460_0.4610793439205736"
+			},
+			"directories": {}
+		},
+		"3.0.0": {
+			"name": "remark-stringify",
+			"version": "3.0.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"xo": false,
+			"_id": "remark-stringify@3.0.0",
+			"scripts": {},
+			"_shasum": "f1720893a3e7c845824d95bb573d628d1346ba2a",
+			"_from": ".",
+			"_npmVersion": "4.0.3",
+			"_nodeVersion": "7.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "f1720893a3e7c845824d95bb573d628d1346ba2a",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-3.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-3.0.0.tgz_1487859884495_0.9043073824141175"
+			},
+			"directories": {}
+		},
+		"3.0.1": {
+			"name": "remark-stringify",
+			"version": "3.0.1",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"xo": false,
+			"_id": "remark-stringify@3.0.1",
+			"scripts": {},
+			"_shasum": "79242bebe0a752081b5809516fa0c06edec069cf",
+			"_from": ".",
+			"_npmVersion": "4.0.3",
+			"_nodeVersion": "7.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "79242bebe0a752081b5809516fa0c06edec069cf",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-3.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/remark-stringify-3.0.1.tgz_1493468010484_0.9234403800219297"
+			},
+			"directories": {}
+		},
+		"4.0.0": {
+			"name": "remark-stringify",
+			"version": "4.0.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/wooorm/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"xo": false,
+			"_id": "remark-stringify@4.0.0",
+			"_npmVersion": "5.1.0",
+			"_nodeVersion": "8.1.2",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-xLuyKTnuQer3ke9hkU38SUYLiTmS078QOnoFavztmbt/pAJtNSkNtFgR0U//uCcmG0qnyxao+PDuatQav46F1w==",
+				"shasum": "4431884c0418f112da44991b4e356cfe37facd87",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-4.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify-4.0.0.tgz_1500580525532_0.5573273801710457"
+			},
+			"directories": {}
+		},
+		"5.0.0": {
+			"name": "remark-stringify",
+			"version": "5.0.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"files": [
+				"index.js",
+				"lib"
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"xo": false,
+			"_id": "remark-stringify@5.0.0",
+			"_npmVersion": "5.6.0",
+			"_nodeVersion": "9.4.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-Ws5MdA69ftqQ/yhRF9XhVV29mhxbfGhbz0Rx5bQH+oJcNhhSM6nCu1EpLod+DjrFGrU0BMPs+czVmJZU7xiS7w==",
+				"shasum": "336d3a4d4a6a3390d933eeba62e8de4bd280afba",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-5.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify-5.0.0.tgz_1516454458376_0.5664030679035932"
+			},
+			"directories": {}
+		},
+		"6.0.0": {
+			"name": "remark-stringify",
+			"version": "6.0.0",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"tape": "^4.9.1",
+				"unified": "^7.0.0",
+				"unist-builder": "^1.0.3",
+				"unist-util-visit": "^1.4.0",
+				"wcwidth": "^1.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@6.0.0",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-qjDeRFAhmPQIq4GDuAIXQhvtz/V2oCan5O5PoRDHVpq74LhQOwV8h29hSg3ml3iL88gSWL5EOPQjBPEAkI2/Hw==",
+				"shasum": "3f2867346f91c6daf898506a85e54699dd619fad",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.0.tgz",
+				"fileCount": 46,
+				"unpackedSize": 47760,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbzNzjCRA9TVsSAnZWagAAlBMP/i5XZIcrDGNhqHTtwWlJ\nNm0BVRyCNesVeNhrkdF4ykaVGRbWNQAXpeF/EfJB93pXri+3e8R0du+yJCCl\na2TTcGBTVmDfz7prt+ZQru3SrNFL78GlSJi9teQED2NKHu8jrdHAOcAU/D0M\n6uKzmmYfT2EhHFQNHUMrCB798X+3fGZIJuJIrybSarv/0absuW1zMq+7WLBH\n/sMxgWjXpIUsQzQHOKyyV2r9f5xy5b+LEHqcTKxkb5vMDqy0Z/8dB+1aubyl\nCnAGKhpnXA3Av6NqqRntjzTt+k6h2fnqwTmDJNWFUhZustLKpSHT0nJ+PeUc\nmQLANYID0LBcUu7OfKj5Z2QIbyjtBRJr4/BZHY7t2LB+s9l283gUQdGPSH/4\nwvy28cMYHVVMSl85lNCZdLnkBLpywetNFKypDORd5a4ikGh+YRxeDicWMckX\nHRnnNoPIe6Z1XraU/Fg9x5XOPJBhwff5AryLT/+ztihbP5MsrcEbvsID2lZy\nK7tJHKd+hj3f9nA1T0BDGsB0ak1JAN5JMHzNLX+wfFvFA86/FB3INI/4o7so\nQS0XuWtyerME+RAjlNpFHtLIpZAjiLXNJIfV2UBwoORiTWiSoQ6zzlx+3IB+\ncGhdE6ev01V974rJXDaj0PducP0wl6OWyBSX86jbgQQKJNxInpyYl7m0dErB\nZwYJ\r\n=hBBB\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "Christian.Murphy.42@gmail.com",
+					"name": "christianmurphy"
+				},
+				{
+					"email": "denysdovhan@gmail.com",
+					"name": "denysdovhan"
+				},
+				{
+					"email": "eush77@gmail.com",
+					"name": "eush77"
+				},
+				{
+					"email": "fazouanem3@gmail.com",
+					"name": "fazouane-marouane"
+				},
+				{
+					"email": "david@spektrakel.de",
+					"name": "haggis_"
+				},
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "lin90162@yahoo.co.jp",
+					"name": "rhysd"
+				},
+				{
+					"email": "fluke8259@gmail.com",
+					"name": "rokt33r"
+				},
+				{
+					"email": "sethvincent@gmail.com",
+					"name": "sethvincent"
+				},
+				{
+					"email": "victor@draft.li",
+					"name": "vhf"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				},
+				{
+					"email": "xuopled@gmail.com",
+					"name": "xuopled"
+				},
+				{
+					"email": "zeke@sikelianos.com",
+					"name": "zeke"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_6.0.0_1540152546379_0.15076888158025703"
+			},
+			"_hasShrinkwrap": false
+		},
+		"6.0.1": {
+			"name": "remark-stringify",
+			"version": "6.0.1",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"tape": "^4.9.1",
+				"unified": "^7.0.0",
+				"unist-builder": "^1.0.3",
+				"unist-util-visit": "^1.4.0",
+				"wcwidth": "^1.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@6.0.1",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-0t19PjbAz24MRdAfVvEmDokgetGzK4heDeCub0MpP0qBYa800llowYOAnlcvaG3gyk/0dVrDsWojG+y0yv38nQ==",
+				"shasum": "e12264402e0ab36de044d666c6db6710f0dad9f5",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.1.tgz",
+				"fileCount": 46,
+				"unpackedSize": 47693,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb2eACCRA9TVsSAnZWagAAL4AP/22wdkyOqdSm4iw6C7N+\nP1HAz9rnyjzLlVKX7G39ln+aO7QKpfl2KtdN5HbTIgyIha0oIBKjw3dkn+YN\nvvgvfvA5dTSdledmQ/DSBUvbbfr9Rhrj76RskXa2UoMKWJrNDjIaFSONbWKV\nngJ8TvbNqbz6ehCly7iorjy+B9U1aHyo43J5AGfqr8gCYah5Gti+1aV1hS9S\nRuSbL2VAQECPCjubSRKPDSrinpRUi+RCXxG512fAjDVc+G0c2vBpK+vtwLGn\nXC9TbE9/FLacSG5EhXVfa8/SlRMkI/IswS23+YRmGqxcPEUd8mnMeAMiKrz6\nsMp6C71XlVdIaB012dXfPXKcZK0p6dZ+WVbhceRiRvqpp/Kd6cLf+praAE8N\nYs13EDv7J+CEdqoBu4+EZmI64VzjMrnGCYKlC8b75ylgT4wdP8IWd+gF9BpO\nvacozI25XtmYIA3Kqyn/LR8DnzEc7/Kpf9CilI48nXO0MgNheJSob7ZMcJK1\nGgZGAu1TPo602+jWaRA32lUEePq3rH3uZgW85s7Q5Xk1CGlI7UCUW+sGwCHG\nNcsBnQY8zpoO7zrs9wFkgvazMtJy6bsWYqVwzkEzSxLf5zKrzPabGz+Th8h4\nEY7Y30KbtZfLtX9cuOBME8L1iZ10En/Uyv3kjQcVADqFOoPhmvqW5i1D9RJ4\nvZZ5\r\n=GUbQ\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "Christian.Murphy.42@gmail.com",
+					"name": "christianmurphy"
+				},
+				{
+					"email": "denysdovhan@gmail.com",
+					"name": "denysdovhan"
+				},
+				{
+					"email": "eush77@gmail.com",
+					"name": "eush77"
+				},
+				{
+					"email": "fazouanem3@gmail.com",
+					"name": "fazouane-marouane"
+				},
+				{
+					"email": "david@spektrakel.de",
+					"name": "haggis_"
+				},
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "lin90162@yahoo.co.jp",
+					"name": "rhysd"
+				},
+				{
+					"email": "fluke8259@gmail.com",
+					"name": "rokt33r"
+				},
+				{
+					"email": "sethvincent@gmail.com",
+					"name": "sethvincent"
+				},
+				{
+					"email": "victor@draft.li",
+					"name": "vhf"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				},
+				{
+					"email": "xuopled@gmail.com",
+					"name": "xuopled"
+				},
+				{
+					"email": "zeke@sikelianos.com",
+					"name": "zeke"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_6.0.1_1541005314004_0.20407030424996142"
+			},
+			"_hasShrinkwrap": false
+		},
+		"6.0.2": {
+			"name": "remark-stringify",
+			"version": "6.0.2",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"tape": "^4.9.1",
+				"unified": "^7.0.0",
+				"unist-builder": "^1.0.3",
+				"unist-util-visit": "^1.4.0",
+				"wcwidth": "^1.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@6.0.2",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-gC4NdE2/UCSScCIlWfQvgVC8qx6n15YI73+u/seEqfr0UuSY1voPLHyD3uXQrtvHTIOmiK7vZqim7OQUJG58XA==",
+				"shasum": "aa0dbaf47ea6b70fb1dae4c69ef8458de0816f5c",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.2.tgz",
+				"fileCount": 46,
+				"unpackedSize": 48106,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb4vXjCRA9TVsSAnZWagAAVpEP/i3WdfqvmvWCJGvhRFmQ\nhjYRtFKUhdM633jWrm7aAsewfQL2w3Y7I99Kzb/9T4T9ZiIpK9KAyto/8UOJ\nhHw+cPBxGTGTjCuziCOLcBkkRoGt6fC/pqwYk3i7KfLtjhOCnfPmDhpqR+co\n7Jvq73FxO2JaMAVRGNIylP+azHN+at5vA4+DIG3LWVBORxVLzwjweeQKa9qT\nk7LmsoYGHtQsUms8vDAf63yya34M6rdfCKyY+7rvbkYjeJKtUnp3KIYOizh+\nOW/WpUEAMOiExKXqvpXLT0ZNnMkvffPs1WSt79KVC+JDdHrmklY3pCDGrWGY\nm0+58i9vVvM3TTEHEZkjB+Z5/KwRU56rWOUtvRhvYeKuKyqfjZ85dBJshZZg\nAiZiZtWIlWuI4N6NwmRxT0efmRsARpaRYpAKds1NFJbudco+HUmZkGeu3xO+\nb3yDM3LpHXV05uPUqnHsi7UJdLN9nR8n5L0TCnjcH3P+GHu3oM+xsF8xBXZR\nsrPD87pmTTQASS2B2RXDfhkGYGf5JoXekADGWM4RnbVpSVGkyzpKSQnmq6km\nC87hKU4aXAqVhMGC10UlR5MRDe3xTKj1Tm4UTyhZauxRCUoyhfd2v5w03eVZ\nYERl4b6sxrkS2hNKdMN4000onQhDbFNDHD8+lPUZs9rQN/orRFXdD55PQpBp\nIX/z\r\n=YoV9\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "Christian.Murphy.42@gmail.com",
+					"name": "christianmurphy"
+				},
+				{
+					"email": "denysdovhan@gmail.com",
+					"name": "denysdovhan"
+				},
+				{
+					"email": "eush77@gmail.com",
+					"name": "eush77"
+				},
+				{
+					"email": "fazouanem3@gmail.com",
+					"name": "fazouane-marouane"
+				},
+				{
+					"email": "david@spektrakel.de",
+					"name": "haggis_"
+				},
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "lin90162@yahoo.co.jp",
+					"name": "rhysd"
+				},
+				{
+					"email": "fluke8259@gmail.com",
+					"name": "rokt33r"
+				},
+				{
+					"email": "sethvincent@gmail.com",
+					"name": "sethvincent"
+				},
+				{
+					"email": "victor@draft.li",
+					"name": "vhf"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				},
+				{
+					"email": "xuopled@gmail.com",
+					"name": "xuopled"
+				},
+				{
+					"email": "zeke@sikelianos.com",
+					"name": "zeke"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_6.0.2_1541600738877_0.45555966821900507"
+			},
+			"_hasShrinkwrap": false
+		},
+		"6.0.3": {
+			"name": "remark-stringify",
+			"version": "6.0.3",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "http://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"tape": "^4.9.1",
+				"unified": "^7.0.0",
+				"unist-builder": "^1.0.3",
+				"unist-util-visit": "^1.4.0",
+				"wcwidth": "^1.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@6.0.3",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-/x4EsH7uiqmTAe6/s1HmwaIeJm5Gq8pI+TpGB+t/uwrfSJW0x+ZuXezSLQ0z8bT7vhrR31yUkHwm3qkkVuo/5Q==",
+				"shasum": "e0b3f2d05d2688ac2a3c5795766c9933c010142f",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.3.tgz",
+				"fileCount": 46,
+				"unpackedSize": 48119,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb5wO6CRA9TVsSAnZWagAASBsP+wfjiOAiOBTFFt8NE7R3\nmrtWJLdruBeQ7dzJgE2h46ucGk82gLpgBs2TBxVr9mefM2oZEjgQR9oZrVfC\nwwp683t7VNYXhrZpogI1sFbKCFdgGTzQCA9H1N3RrPTL13/C9KG93f5BHdMB\nk0snl/nI5FYGz8yaM+x+gAEqosZVZMdLz6SyoqgOks7yLOcaWBBsp6vGTorO\nNR+tLvdFNGhg1KX9YJNxZKVzDeX0ke0eo9w7pbNPmrCx1IL613S8FwlpJLq5\nUX7FnTVE6a1h7c1Ql3KnZc3WW24x4piaLkm7xy2VkrcEJKoFN6+vyQMMXgRu\njXesuw0qCOVw0UiyS58gpoxWtHAEUgS2vPscB9JchPM6ugukv+6+0Vyuipys\nhE41Vmq1mcVNz10lzRDTJY+0mFcTzX1zMyGnqCusTgaebHPEWzfz8S9Fpqhz\nurqaEYqyU+c6LKf4AFmDKZPkVa2vrAsKdkILLyaorztoPidOmroFFTEIq/uY\ngfik1F8QqT2MOwcUF6nuybNKHOUevA7PCbLq3gAUyLv9lGG6TesdoLI8oMCU\nPYFWQynq/PT62AjkJRzHrJerbTiJRNwpmMALHUtI4fWbQfNTD+GjIrX1aUR0\na7t596Jv6IAlXuEgc8eTuM5wZPhYVBe3bljw44fAYG8DKl2ZkuPzdt3RoKEs\nXOfE\r\n=Poxr\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "Christian.Murphy.42@gmail.com",
+					"name": "christianmurphy"
+				},
+				{
+					"email": "denysdovhan@gmail.com",
+					"name": "denysdovhan"
+				},
+				{
+					"email": "eush77@gmail.com",
+					"name": "eush77"
+				},
+				{
+					"email": "fazouanem3@gmail.com",
+					"name": "fazouane-marouane"
+				},
+				{
+					"email": "david@spektrakel.de",
+					"name": "haggis_"
+				},
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "lin90162@yahoo.co.jp",
+					"name": "rhysd"
+				},
+				{
+					"email": "fluke8259@gmail.com",
+					"name": "rokt33r"
+				},
+				{
+					"email": "sethvincent@gmail.com",
+					"name": "sethvincent"
+				},
+				{
+					"email": "victor@draft.li",
+					"name": "vhf"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				},
+				{
+					"email": "xuopled@gmail.com",
+					"name": "xuopled"
+				},
+				{
+					"email": "zeke@sikelianos.com",
+					"name": "zeke"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_6.0.3_1541866426027_0.8882130026204744"
+			},
+			"_hasShrinkwrap": false
+		},
+		"6.0.4": {
+			"name": "remark-stringify",
+			"version": "6.0.4",
+			"description": "Markdown compiler for remark",
+			"license": "MIT",
+			"keywords": [
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^1.0.1",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"tape": "^4.9.1",
+				"unified": "^7.0.0",
+				"unist-builder": "^1.0.3",
+				"unist-util-visit": "^1.4.0",
+				"wcwidth": "^1.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@6.0.4",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-eRWGdEPMVudijE/psbIDNcnJLRVx3xhfuEsTDGgH4GsFF91dVhw5nhmnBppafJ7+NWINW6C7ZwWbi30ImJzqWg==",
+				"shasum": "16ac229d4d1593249018663c7bddf28aafc4e088",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.4.tgz",
+				"fileCount": 46,
+				"unpackedSize": 49511,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb7YLYCRA9TVsSAnZWagAAxEwP/0y6TkErFeLNfstFkLwm\neDnRz72/av7UHWalvziBp3Fs6yN7YZFuyVm/09CyfnNk45YYGaSGVquJTNwE\nTBEKzxP3zE8QQIl45Tfh/PlSXZiOwG7ENHamvcoq3J0JmtJrh07VNs6KMwJd\nJjKOCxwGBniTZE087sEOm8RZVUCmXW6Ucw4MZWKJG4C+2t5+2uiFMfaEKjR1\nQq4o7dgC4eoW5evI+ySNpKTNUTpTAZhwiWxrSplSQaaX7Y6cVqXGaT58Nxes\nTol+uXRfSGtnqk5PunJ5Tf+NpOHZYc0mDE4WEHh6gXB6NOx/iPQLMlTJNr2N\nlbxi93zRF4LA33xilsguJuXnqI2PEQX4K+WKZBNvdLfsmkWeApNrIt5zg7yK\nufuS0yPWk7h/lPbCnAr55OyuAD7B4t+cYAzbOgGZd0oNO/Eq8668/OEGme2W\nFj8fPDVNWyurByp86eiiuf9SS6TvNvcnI8FRAq57aSHKIgdrLrQ/Hh3yYeuE\nUGOg53N4u4SJAj6NH/HqqEyASXt6Kl5NJI5rYH8oGkR2r7RTDNy4lacuR1Ue\n3a18MuYRyHpdS1ymoZuzvRQIhyHb6j9K60Qib2gIXq5ZoBJ1Q7J3nYolpOjr\nAK5K5AECm/KTj+Jx9ncjlUvuCslhZITAZ0z3wtSVcY6GdfeGVqyf+LdoI/eC\nmVa7\r\n=UnjY\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "Christian.Murphy.42@gmail.com",
+					"name": "christianmurphy"
+				},
+				{
+					"email": "denysdovhan@gmail.com",
+					"name": "denysdovhan"
+				},
+				{
+					"email": "eush77@gmail.com",
+					"name": "eush77"
+				},
+				{
+					"email": "fazouanem3@gmail.com",
+					"name": "fazouane-marouane"
+				},
+				{
+					"email": "david@spektrakel.de",
+					"name": "haggis_"
+				},
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "lin90162@yahoo.co.jp",
+					"name": "rhysd"
+				},
+				{
+					"email": "fluke8259@gmail.com",
+					"name": "rokt33r"
+				},
+				{
+					"email": "sethvincent@gmail.com",
+					"name": "sethvincent"
+				},
+				{
+					"email": "victor@draft.li",
+					"name": "vhf"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				},
+				{
+					"email": "xuopled@gmail.com",
+					"name": "xuopled"
+				},
+				{
+					"email": "zeke@sikelianos.com",
+					"name": "zeke"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_6.0.4_1542292183711_0.1035245266513376"
+			},
+			"_hasShrinkwrap": false
+		},
+		"7.0.0": {
+			"name": "remark-stringify",
+			"version": "7.0.0",
+			"description": "remark plugin to compile Markdown",
+			"license": "MIT",
+			"keywords": [
+				"unified",
+				"remark",
+				"plugin",
+				"markdown",
+				"mdast",
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@7.0.0",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.10.1",
+			"dist": {
+				"integrity": "sha512-EoyHqzDdGcsQXcgQZE9bbOhmt1gPp4KYN+Txct/53OmSxOdxlmCRAffxidKXhIoC5dc2NgoLbG3uF0I4xjgo+A==",
+				"shasum": "c2453f3e0371ae195bce94b6846fe765446dc97b",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.0.tgz",
+				"fileCount": 47,
+				"unpackedSize": 53061,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdMuwwCRA9TVsSAnZWagAAm50P/jUx0dh9+L0CH1lUfYlH\nbHHpVdCgvp1Mpqi00xqHKFX9Zu/bIr2+Gp0SJHdaXwDtzJncnrj5jEq6pz6X\nbygr7vH9YZcXBixQCF7ooWIbgD53h1mtPEcdp3tNrUWwsliXeum7Tnvr4HpJ\nLRhk3ISCjC4Od7bybwyUWAFZ2ZG86qmBqo963ccBozvKj/JDeTzPJ6eXiWzy\nlw3KieJ2j6GiFotjs8rV4Hvn4Uz0o7RVfVOw7I3MViqIcMj3VM71aGZl38Tt\na7NjHUuQjenc15GgsjyM5pFRTdlhpnv9xmiQQcoKwlZssRS/T20MAWdH2DCH\nJWUNY3ucsmovFmWm0h4+CZxK1Y1Mm2hLs4gSjy86LcFtY5Hp49hs1NjlRiO5\n4mytAY1CWjJiv1AajnVcw+Uje2SLbkZl6sG1mgK8PxiZgvw896mkxs6YqbqF\npdoNc3z0GxMbBpp5XfW5A1NvQqsYtmGqf5mINA9YvSUQ8S4ar4KeULLnCmgs\nefdlEsQ22uc4lDIzPyee7wPBtUwfB+6jlqZkgdrzNSY0VadeX9q9KrxvLXRA\np2hp/Sz9roJpYKLqNNlEalrYB9vmqoc/+TKHRJuqHNZv4gpsPxt43JQWS8sT\np+EILzSyDG0WY9tE1f+s+w1/TWftvjCASELNjl5g4JnXGQeYDftssAJXajYH\niNIM\r\n=HLXe\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "Christian.Murphy.42@gmail.com",
+					"name": "christianmurphy"
+				},
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "merlijn@soverin.net",
+					"name": "murderlon"
+				},
+				{
+					"email": "victor@draft.li",
+					"name": "vhf"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_7.0.0_1563618351381_0.7478388676312586"
+			},
+			"_hasShrinkwrap": false
+		},
+		"7.0.1": {
+			"name": "remark-stringify",
+			"version": "7.0.1",
+			"description": "remark plugin to compile Markdown",
+			"license": "MIT",
+			"keywords": [
+				"unified",
+				"remark",
+				"plugin",
+				"markdown",
+				"mdast",
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@7.0.1",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.10.1",
+			"dist": {
+				"integrity": "sha512-H+4PWuPdJygRjyoNQ4+FAPDD+LqO7h6P80DFeYPPCd2a51o9+C4Gf0oflnO7shFH43JxtCdaUE4WBHhM6Ci4aA==",
+				"shasum": "da38346a53efe8ce4adc9172002692b68dd88833",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.1.tgz",
+				"fileCount": 47,
+				"unpackedSize": 52960,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdNtN/CRA9TVsSAnZWagAA2PkQAJYOY94E/qWKDDL1uoCC\nXc67RkqVsqXT0LzO56trl4vl1SQnMIPHIX+BAYyCXRE5xKX3/24UJzAiKIJD\nHEZOgIsG7wgLKsSym2vEVkSeuKG2+OGzcn23sYuEO9I3SVXLd6+D3YFUVJhZ\nYgSGQvlzNk1DV8QYcpy665x9BsBk79Y/u7fuh6Oy4uvFw/l/CJxHwXdOuFnJ\njxmmN6JiKDzQCJxMZcHHDVqwatOjdzwt419GirqeOVoUlIblE/BNt8eisDhK\nErYV5Yrtd6PgP/65zTmI0CaBhpId5QX4SamllH0rMYat5HvB6wzAWg0i/Ins\n+yWQRXciFRCCQZLwlg0xNhtZ5GMPib6pkkce8kKdDTfyH9wUsP7pAYDwMSoV\ncbSTW4J6G4+YSvosB8sHCzQwihdMoN6cMbduVhwO8O+ueO1xhA4xPtXuAZrw\nCR4hKcTLvUlW0DF3QvpyY7ek3XCGkUoczzl3p6qvv5+oz3CbdIO8/4an65KO\nt4GExbgPNBI8UeG/yrTP7mGkxpYriRXSV3w1PS5AsSn/c94NPYlikG/bhkfs\nVKjJ4x69lsrYkPH6d0N1R2SryKIbRe2MPJSW3Wm3MFJscT8LTMVaqLK1xQCt\nWVAAYXJRebVcyUKGmFF+/XLcIjNauxjy4YRMWV0prHI1kTtgQGmy69WM3pAJ\nSD3V\r\n=8xbp\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "Christian.Murphy.42@gmail.com",
+					"name": "christianmurphy"
+				},
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "merlijn@soverin.net",
+					"name": "murderlon"
+				},
+				{
+					"email": "victor@draft.li",
+					"name": "vhf"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_7.0.1_1563874174397_0.915679303374979"
+			},
+			"_hasShrinkwrap": false
+		},
+		"7.0.2": {
+			"name": "remark-stringify",
+			"version": "7.0.2",
+			"description": "remark plugin to compile Markdown",
+			"license": "MIT",
+			"keywords": [
+				"unified",
+				"remark",
+				"plugin",
+				"markdown",
+				"mdast",
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@7.0.2",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.10.2",
+			"dist": {
+				"integrity": "sha512-+Fr2xUe+P9b4XwRBjtIQF6DuHtQEQAVsBv8Uv+Gz3d3gkFxwEIzKFjzHo13KgWkASn/MQIY1C9vmOTm0kwlGXw==",
+				"shasum": "1b87716e3bf278ef5dd6c230e47c633d89b81d76",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.2.tgz",
+				"fileCount": 47,
+				"unpackedSize": 53600,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdRo89CRA9TVsSAnZWagAAFN8P/2RrnlMzLZyLB0zOZD5X\npqLiC0OG4sjHwDCw/GFbAsK7/+8B/s8uJdPzpPlMefa6xLnvKf+UPVo9UxPT\nf23wuDavRIFBJhK9VZAL9BV+gbZmg8OozMr4gJlbSrLxvSmlW63ds7XnPaWr\n6B1+aUiagOJEKxIJmzE8/96CgirhD/bsE1+Q7wwP5n8Xgpmx7k0uAqgApVbO\nzhU++MFu5vM2suwXq1mc3la5SGpTZJtqwl6vmKQKQsvz2r/V6tCTJfH/SHtv\nap7WxwQ1B+WIxbxrd7hi9PxQ71roXR19UMcCKh8r/K2WODnvfZPVde1DtKBn\nEKhBUKX1csH9mcYzlIOiVyuCBtBx4TC114yLy6CPKN81LSVKQ1RmWRQ3wh5n\nYbt1nDTx0smirVJEHtrkKW2OErGBoZp8dy4V6RZjeFlbwirk7ZyvItRScqOs\njczQFsAIEyh+nfzwSXAIqVLmskE/CZAwXt1+ptz56NpO+z1o9gAOg1ymzKYR\nhwwj/v74tEwImb3RD3ccQPuXPHm50f/Y3G0tAyNwkPgWG4pmW81MJCwq/Tkw\nAeCQEJTTos/4AOp9yTG7kRaQ2aUEuLVNWVlFJVTazmG3p017ZWvu7wk934QO\nI9HbAzpCUTel9gxcU0tiqB6TPQ3hOSVda8UCDYAQYK4wxMyvIVBQAi6a2Xgu\nmAp4\r\n=4DY0\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_7.0.2_1564905277060_0.11408731250359128"
+			},
+			"_hasShrinkwrap": false
+		},
+		"7.0.3": {
+			"name": "remark-stringify",
+			"version": "7.0.3",
+			"description": "remark plugin to compile Markdown",
+			"license": "MIT",
+			"keywords": [
+				"unified",
+				"remark",
+				"plugin",
+				"markdown",
+				"mdast",
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@7.0.3",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.10.3",
+			"dist": {
+				"integrity": "sha512-+jgmjNjm2kR7y2Ns1BATXRlFr+iQ7sDcpSgytfU77nkw7UCd5yJNArSxB3MU3Uul7HuyYNTCjetoGfy8xLia1A==",
+				"shasum": "9221e9770b0b395af83a0d5881a44b6fcb9d0a2a",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.3.tgz",
+				"fileCount": 47,
+				"unpackedSize": 53663,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdYl0ZCRA9TVsSAnZWagAAYiQP/i58fUz7GWHKIKmr0Rzw\ngp09w4w0YLykpvwmJHm4XcNO8f6B5LGlEXbwJdrELXh/ibSUL+6mrBAv4PZC\njhXKAEuOnBt56tlK9NGFnfdMbo6vn4bcBb8We7x4NC0nXnN25Cl+vUDAyR/A\n2PQ+VGAZPP6UXNwGObgMrhoaUaL4NHvZjTvjh6mS65KIeX9kj9326gd2gMGa\ncKPOXZionD+DVrLrYUUUkzPHiw3XC7G/G5WXSSrFa8+7sys4Z2bAjTF7CSpV\nMnp2zciYiutRi2m4zmJfgJ/GqHbwA1Fh20UQUnGek9CJQiW08086JlBKjg2l\nG416Wbfe48Kk1f5A2kcEbOndn3qfO+Jr01expv6b/NJ0pq+qw7EC1/RWk3/E\nLUWJJ11RrCqhaTudkGapkP4/2nHm7BlWMXkOmKyUVh3Am+Oq6ZH2opgFrjOY\nzo+R6OzDmLRBIHOeq8kLL+TOdnNbxNhBrktginiiz412YOFfJ2N91c6QLtqI\nMxvRj7qji68mNkj32xlhmPnTWKaM5peTt187i43g6UQ+uWGVntxWrism2lAC\npxwnjliXPLaeJU3w2Ne628NZWmMhkxbA7eygaZNVSK+IVlYLob4xx5XKoa3f\n1LM+gU7o1AQtS/0b8jKyJA6hIjtahXCREbmsQR/dkVB+FWDRFMu2W3SbO3qC\nivdG\r\n=W4No\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_7.0.3_1566727449274_0.6620127980375594"
+			},
+			"_hasShrinkwrap": false
+		},
+		"7.0.4": {
+			"name": "remark-stringify",
+			"version": "7.0.4",
+			"description": "remark plugin to compile Markdown",
+			"license": "MIT",
+			"keywords": [
+				"unified",
+				"remark",
+				"plugin",
+				"markdown",
+				"mdast",
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^1.1.0",
+				"mdast-util-compact": "^1.0.0",
+				"parse-entities": "^1.0.2",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^2.0.0",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@7.0.4",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-qck+8NeA1D0utk1ttKcWAoHRrJxERYQzkHDyn+pF5Z4whX1ug98uCNPPSeFgLSaNERRxnD6oxIug6DzZQth6Pg==",
+				"shasum": "3de1e3f93853288d3407da1cd44f2212321dd548",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.4.tgz",
+				"fileCount": 47,
+				"unpackedSize": 53839,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdxxgECRA9TVsSAnZWagAA0TQP/iCVrbyepE9JDkj4U6KS\nXdKhUsIhl39+3FS9OTaNrsP1oKPjPEc/bcjKqYU82Y/ra0UjtEpDpRnU96e5\n4fXV2dyFmG0QDuue00YigAQiIbS8DkrDhapmSXSvEE39cA+NcVFTFmqaXqWZ\n+RyH0oLXRIz7E0+D4/Zq5W9juTzn6OfpT450fcSyTupuQuy8us9FMGVCm9Lk\n6U5L/6OtGsS9ZWB8DUnnHx0T+q+UZVsnlCiEIF9zpMRJ1Z5YXa2urdBj/6s6\nWZGs/YQ7ENfbTLC9GsloRY/Kjue4aZd4nbZ3RsLrAaI0uAcW6M3VZ2GV9YxH\nRpocTn+nqS+xLDhp5TXBg1neZX+ufNQfDtWsOnLwTgDIeZKp7H4UdBx+H89/\ntEZtXUeG/lajeilBlyNQEMZ9I5xztgRbOOLYvgrSnc13TwU79DQRt4+kufD4\nOmsokSRNrc7edLdfvsfMosfkS3gTGB5N/UCLycTxzuVxuZCEdVrVzzBTYqhG\n9lRJ9pR8N9HgrlWZKK+ZQOUJT7Ini/l7otj1lCfB3mGDkaWZEe5pB6zPnTos\ngkXhwM8AWKOdMuBNMxXFYxSOK/O5A7xFUK+CvWIFCoN9YC9p1/69Eo70dm/4\nYT8w5gQ+jBlqAls9QtXt7XR27TumT4Pg+ghsIx9eI/O+/Ri1Sb9cWrkmXHVG\nILQY\r\n=xny2\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_7.0.4_1573328900038_0.5376133940549508"
+			},
+			"_hasShrinkwrap": false
+		},
+		"8.0.0": {
+			"name": "remark-stringify",
+			"version": "8.0.0",
+			"description": "remark plugin to compile Markdown",
+			"license": "MIT",
+			"keywords": [
+				"unified",
+				"remark",
+				"remark-plugin",
+				"plugin",
+				"markdown",
+				"mdast",
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify",
+				"serialize",
+				"compile"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^2.0.0",
+				"mdast-util-compact": "^2.0.0",
+				"parse-entities": "^2.0.0",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^3.0.0",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@8.0.0",
+			"_nodeVersion": "13.10.1",
+			"_npmVersion": "6.14.3",
+			"dist": {
+				"integrity": "sha512-cABVYVloFH+2ZI5bdqzoOmemcz/ZuhQSH6W6ZNYnLojAUUn3xtX7u+6BpnYp35qHoGr2NFBsERV14t4vCIeW8w==",
+				"shasum": "33423ab8bf3076fb197f4cf582aaaf866b531625",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-8.0.0.tgz",
+				"fileCount": 45,
+				"unpackedSize": 58936,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJegcGICRA9TVsSAnZWagAAj3QQAJZz0tsXYWIEqvmRmhln\n9p6ZL+jAJf4HiG90934Rca87B80Mx5MtcCTgLJIozS95e6mWBqFjjQO7xu8J\nvVEgiI6eON54zfsvPswnpHHzED4u7XFOca75n8qQ/OeWZnPxh6ju1uqa/zeL\nL67m604v2vMEVB7nwbSWVDz8VkZCQGcZwVYtFYQwQYZk3IOlH/5/u4GP65Se\nqHK1Zr4Cpr5GFpMN9fvUByO6gGm3wg2rOns3t4a4acmgxjlCrm7n3JYH0Zcv\ndnH9q/CtyDcivQdJFmB2s6s+x5N/3xE9/NElUNVcWpCbreBNQI+zxDIf1jvk\nAuw/vuhMESrwX//zw0oYN5CeucMZsr0hEf1ugVik7eq165+q88LuJIli5OQp\n26Wg/Bd8toPBV9drGOAWjtSB49m0zk/v27uH1JiBSvV6wKgx91gttxFmt1bo\nBNY9+NBZTeA4j6TK5n5w38AovxpkBaxUGzWkHjyxvxCQaRX2sBtnhLfuhuy2\noqqZNdZ/PxZOaWfjM6UFwBc9V5PfQL1PcJ8Zcw4JAFM2HiMa872mJH767FrL\nuc6c4SDC3E58hTHDfV/mKjDJsoJmZhz4VDlrsqtuNNpdELOTnGx7q+XZAHpr\ncaCEgqNFB+V87ao3nxwJZYaugpB1pGJbH2fFGDdU4GCdM8SJD+oCmAzrDWKZ\n8D8X\r\n=XANj\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_8.0.0_1585561991680_0.5093237189264941"
+			},
+			"_hasShrinkwrap": false
+		},
+		"8.1.0": {
+			"name": "remark-stringify",
+			"version": "8.1.0",
+			"description": "remark plugin to compile Markdown",
+			"license": "MIT",
+			"keywords": [
+				"unified",
+				"remark",
+				"remark-plugin",
+				"plugin",
+				"markdown",
+				"mdast",
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify",
+				"serialize",
+				"compile"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/master/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^2.0.0",
+				"mdast-util-compact": "^2.0.0",
+				"parse-entities": "^2.0.0",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^3.0.0",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@8.1.0",
+			"_nodeVersion": "14.0.0",
+			"_npmVersion": "6.14.5",
+			"dist": {
+				"integrity": "sha512-FSPZv1ds76oAZjurhhuV5qXSUSoz6QRPuwYK38S41sLHwg4oB7ejnmZshj7qwjgYLf93kdz6BOX9j5aidNE7rA==",
+				"shasum": "1e555f4402e445c364fb23d12fc5f5e0337ec8b7",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-8.1.0.tgz",
+				"fileCount": 44,
+				"unpackedSize": 53262,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe3oN4CRA9TVsSAnZWagAAL+gP/ifK2y2mpRajJRm5/qb+\n9dAZTLnxY2L0+GZ0BwogK+dsmsL+QWdx8RFDNDZ90Wj5C8D38iT53JSHMyRj\naW8M9SPBgEryxNpZj1RJEl2GX0w0ppyoUbwWNIDD+uabZ8iXQscpF7EKP1F4\nktViFVhL3i/9J2zWDHtrF2o6xNGp40Jw6Oy9udzofPDFdnqR+0BlUso9XW2i\nNW1jhVZZBRS8OMSgWyhulWsfonNSnOjSUWW7JRGuxs3r0Z6UZIrDl2e04NMr\n4wyNSFbNIGy0WDfjz9KYTT0JGTOke6MF7ZnL+L1hZT8Illbzm8Ut5iEWEjy3\noMVjllDM9aYxfslwgNZKQBgvwj6tPcXaQVq+9SbfMejewRCaf48CrtOD4dzr\njisLj1txkpllvo5FI2auZAlMim69R5vqLOl3LP9o9APH7BWP4kWKibGfWVpp\n5BdAWEhne95cw4xlOExpC9eLkZs75MYuJCCmM4bxP4t41ZmFh3xmiF4+S6xx\n1h7qXj7D40NOmiJ8Cuq0D1p0jEICqDqWbqehCyA/3qaWBTdcqVXITwX0qpGo\nLqdYhMjj0LiXKeuqS4N2hfJ9CFeaPDsLP2FJIKuRHcCeX0uBApZxdxJdFlJk\nDpf7IW49Zmm0zVpfbxqoYpBLPWzBjpdsR0v2AI5ooaitKYZZLZMtsTOOQIPn\n4RaP\r\n=bJSQ\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_8.1.0_1591640951531_0.94123412328927"
+			},
+			"_hasShrinkwrap": false
+		},
+		"8.1.1": {
+			"name": "remark-stringify",
+			"version": "8.1.1",
+			"description": "remark plugin to compile Markdown",
+			"license": "MIT",
+			"keywords": [
+				"unified",
+				"remark",
+				"remark-plugin",
+				"plugin",
+				"markdown",
+				"mdast",
+				"markdown",
+				"abstract",
+				"syntax",
+				"tree",
+				"ast",
+				"stringify",
+				"serialize",
+				"compile"
+			],
+			"homepage": "https://remark.js.org",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/remarkjs/remark/tree/main/packages/remark-stringify"
+			},
+			"bugs": {
+				"url": "https://github.com/remarkjs/remark/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"ccount": "^1.0.0",
+				"is-alphanumeric": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-whitespace-character": "^1.0.0",
+				"longest-streak": "^2.0.1",
+				"markdown-escapes": "^1.0.0",
+				"markdown-table": "^2.0.0",
+				"mdast-util-compact": "^2.0.0",
+				"parse-entities": "^2.0.0",
+				"repeat-string": "^1.5.4",
+				"state-toggle": "^1.0.0",
+				"stringify-entities": "^3.0.0",
+				"unherit": "^1.0.4",
+				"xtend": "^4.0.1"
+			},
+			"scripts": {
+				"test": "tape test.js"
+			},
+			"xo": false,
+			"_id": "remark-stringify@8.1.1",
+			"_nodeVersion": "14.0.0",
+			"_npmVersion": "6.14.5",
+			"dist": {
+				"integrity": "sha512-q4EyPZT3PcA3Eq7vPpT6bIdokXzFGp9i85igjmhRyXWmPs0Y6/d2FYwUNotKAWyLch7g0ASZJn/KHHcHZQ163A==",
+				"shasum": "e2a9dc7a7bf44e46a155ec78996db896780d8ce5",
+				"tarball": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-8.1.1.tgz",
+				"fileCount": 44,
+				"unpackedSize": 53021,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfEbLcCRA9TVsSAnZWagAA1J4P/iBbW19ahvoSCxV6xJ7c\nP1OTa6Xe72dht8SJ4mjHf1Lfyioqa6jiRzfMkJdxQ80uMMPinSjfP1t1d+8p\noSQjBGvwMDkUra+Szd6flTfQspuIJUzRtblIWgZwqivs8oa3EBlsHZu3qHPH\nUxkFULuwYh50QJcg7aNbxB26qfpG8sdVhHeNHjYZym3B1WqHMMyoZb/R60re\nuUya1d32roJWqK6F7xpK1JEz3q/HShfuMvXm9lH1gIP3n5iho3+ZZTRa4saw\nm7Ks1ezi5TC3AlF7Ejbf/d4Zl/SZREoodJqaiViwiNDLwbXmL79/358kV9/t\n5xYRiCbiRkqlf+re0TVH49NS77wIf76J2Bqwn60FQ/GKy39phX6U5jIPjso1\njbcJmW8364DXbN/tmDXkBTyLFB4HvD9WnoiDjF9wmTmSIMjGGWSg/1PcBYUa\n2bgsx29rXRM4Yx4MHeFnPk5zk5a0aLlPghgvPZqsbhkj09kjv5YO1FaVz1Tq\njxJoMtoAhO+o9AlAXBghB98fmT+0xS9KcwUqMuIc5Cb4brhISxyVDVTjlQm3\nU4MDnXByJO59x6/qU46wAJAk+yDvEGl0NW2uQ5wkQxCXJukT+O8bPmxiIO9D\nX0bsxTSIiI8cU4jEJn5+AQJU/lsvWeY+G5QFhrG29QvZkSXCt5p7TiQxZ/OP\nZxD2\r\n=CHbl\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "johnotander@gmail.com",
+					"name": "johno"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/remark-stringify_8.1.1_1594995419700_0.3101644952173126"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-07-17T14:17:03.355Z",
+		"created": "2016-06-12T12:55:23.165Z",
+		"0.0.0": "2016-06-12T12:55:23.165Z",
+		"1.0.0": "2016-06-12T21:38:35.308Z",
+		"1.1.0": "2016-08-09T15:59:03.559Z",
+		"2.0.0": "2016-08-21T18:36:39.185Z",
+		"2.1.0": "2016-10-15T11:04:31.940Z",
+		"2.2.0": "2016-10-27T21:45:09.776Z",
+		"2.3.0": "2016-11-26T12:26:03.102Z",
+		"2.4.0": "2017-02-05T17:38:54.181Z",
+		"3.0.0": "2017-02-23T14:24:46.557Z",
+		"3.0.1": "2017-04-29T12:13:32.473Z",
+		"4.0.0": "2017-07-20T19:55:26.623Z",
+		"5.0.0": "2018-01-20T13:20:59.478Z",
+		"6.0.0": "2018-10-21T20:09:06.519Z",
+		"6.0.1": "2018-10-31T17:01:54.138Z",
+		"6.0.2": "2018-11-07T14:25:39.018Z",
+		"6.0.3": "2018-11-10T16:13:46.142Z",
+		"6.0.4": "2018-11-15T14:29:43.831Z",
+		"7.0.0": "2019-07-20T10:25:51.553Z",
+		"7.0.1": "2019-07-23T09:29:34.543Z",
+		"7.0.2": "2019-08-04T07:54:37.168Z",
+		"7.0.3": "2019-08-25T10:04:09.379Z",
+		"7.0.4": "2019-11-09T19:48:20.195Z",
+		"8.0.0": "2020-03-30T09:53:11.869Z",
+		"8.1.0": "2020-06-08T18:29:11.634Z",
+		"8.1.1": "2020-07-17T14:16:59.849Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "8.1.1"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"992b6e56619f6d3d1c1dd8fe9a88b27d\"",
+			"fetched": 1601147219501
+		}
+	},
+	"_distfiles": {
+		"remark-stringify-0.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-0.0.0.tgz",
+			"sha": "87b7c46261343afd19b2694f5cc553511fe05761",
+			"registry": "npmjs"
+		},
+		"remark-stringify-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-1.0.0.tgz",
+			"sha": "7766fe11a3d8d557695503ed03558b9ec1fcf761",
+			"registry": "npmjs"
+		},
+		"remark-stringify-1.1.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-1.1.0.tgz",
+			"sha": "a7105e25b9ee2bf9a49b75d2c423f11b06ae2092",
+			"registry": "npmjs"
+		},
+		"remark-stringify-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.0.0.tgz",
+			"sha": "ef20c38b5b99800eab98eddf62490a2cc8b85b51",
+			"registry": "npmjs"
+		},
+		"remark-stringify-2.1.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.1.0.tgz",
+			"sha": "286515da3917c38da8296ebd3a9e85f513417bad",
+			"registry": "npmjs"
+		},
+		"remark-stringify-2.2.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.2.0.tgz",
+			"sha": "6b790d2d61d6cad89fe8035812dca163589e89e4",
+			"registry": "npmjs"
+		},
+		"remark-stringify-2.3.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.3.0.tgz",
+			"sha": "5c5d1fd69fa39d185d62e675f545ee2fd48df87d",
+			"registry": "npmjs"
+		},
+		"remark-stringify-2.4.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-2.4.0.tgz",
+			"sha": "38dd286153139a082e9d9f17e2d49919792cec2f",
+			"registry": "npmjs"
+		},
+		"remark-stringify-3.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-3.0.0.tgz",
+			"sha": "f1720893a3e7c845824d95bb573d628d1346ba2a",
+			"registry": "npmjs"
+		},
+		"remark-stringify-3.0.1.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-3.0.1.tgz",
+			"sha": "79242bebe0a752081b5809516fa0c06edec069cf",
+			"registry": "npmjs"
+		},
+		"remark-stringify-4.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-4.0.0.tgz",
+			"sha": "4431884c0418f112da44991b4e356cfe37facd87",
+			"registry": "npmjs"
+		},
+		"remark-stringify-5.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-5.0.0.tgz",
+			"sha": "336d3a4d4a6a3390d933eeba62e8de4bd280afba",
+			"registry": "npmjs"
+		},
+		"remark-stringify-6.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.0.tgz",
+			"sha": "3f2867346f91c6daf898506a85e54699dd619fad",
+			"registry": "npmjs"
+		},
+		"remark-stringify-6.0.1.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.1.tgz",
+			"sha": "e12264402e0ab36de044d666c6db6710f0dad9f5",
+			"registry": "npmjs"
+		},
+		"remark-stringify-6.0.2.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.2.tgz",
+			"sha": "aa0dbaf47ea6b70fb1dae4c69ef8458de0816f5c",
+			"registry": "npmjs"
+		},
+		"remark-stringify-6.0.3.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.3.tgz",
+			"sha": "e0b3f2d05d2688ac2a3c5795766c9933c010142f",
+			"registry": "npmjs"
+		},
+		"remark-stringify-6.0.4.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-6.0.4.tgz",
+			"sha": "16ac229d4d1593249018663c7bddf28aafc4e088",
+			"registry": "npmjs"
+		},
+		"remark-stringify-7.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.0.tgz",
+			"sha": "c2453f3e0371ae195bce94b6846fe765446dc97b",
+			"registry": "npmjs"
+		},
+		"remark-stringify-7.0.1.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.1.tgz",
+			"sha": "da38346a53efe8ce4adc9172002692b68dd88833",
+			"registry": "npmjs"
+		},
+		"remark-stringify-7.0.2.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.2.tgz",
+			"sha": "1b87716e3bf278ef5dd6c230e47c633d89b81d76",
+			"registry": "npmjs"
+		},
+		"remark-stringify-7.0.3.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.3.tgz",
+			"sha": "9221e9770b0b395af83a0d5881a44b6fcb9d0a2a",
+			"registry": "npmjs"
+		},
+		"remark-stringify-7.0.4.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-7.0.4.tgz",
+			"sha": "3de1e3f93853288d3407da1cd44f2212321dd548",
+			"registry": "npmjs"
+		},
+		"remark-stringify-8.0.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-8.0.0.tgz",
+			"sha": "33423ab8bf3076fb197f4cf582aaaf866b531625",
+			"registry": "npmjs"
+		},
+		"remark-stringify-8.1.0.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-8.1.0.tgz",
+			"sha": "1e555f4402e445c364fb23d12fc5f5e0337ec8b7",
+			"registry": "npmjs"
+		},
+		"remark-stringify-8.1.1.tgz": {
+			"url": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-8.1.1.tgz",
+			"sha": "e2a9dc7a7bf44e46a155ec78996db896780d8ce5",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-517a953f83072f4c",
+	"_id": "remark-stringify",
+	"readme": "# remark-stringify\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Chat][chat-badge]][chat]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n\n[Compiler][] for [**unified**][unified].\nSerializes [**mdast**][mdast] syntax trees to Markdown.\nUsed in the [**remark** processor][remark] but can be used on its own as well.\nCan be [extended][extend] to change how Markdown is serialized.\n\n## Sponsors\n\n<!--lint ignore no-html-->\n\n<table>\n  <tr valign=\"top\">\n    <td width=\"33.33%\" align=\"center\" colspan=\"2\">\n      <a href=\"https://www.gatsbyjs.org\">Gatsby</a><br>🥇<br><br>\n      <a href=\"https://www.gatsbyjs.org\"><img src=\"https://avatars1.githubusercontent.com/u/12551863?s=900&v=4\"></a>\n    </td>\n    <td width=\"33.33%\" align=\"center\" colspan=\"2\">\n      <a href=\"https://vercel.com\">Vercel</a><br>🥇<br><br>\n      <!--OC has a sharper image-->\n      <a href=\"https://vercel.com\"><img src=\"https://images.opencollective.com/vercel/d8a5bee/logo/512.png\"></a>\n    </td>\n    <td width=\"33.33%\" align=\"center\" colspan=\"2\">\n      <a href=\"https://www.netlify.com\">Netlify</a><br><br><br>\n      <!--OC has a sharper image-->\n      <a href=\"https://www.netlify.com\"><img src=\"https://images.opencollective.com/netlify/4087de2/logo/512.png\"></a>\n    </td>\n  </tr>\n  <tr valign=\"top\">\n    <td width=\"16.67%\" align=\"center\">\n      <a href=\"https://www.holloway.com\">Holloway</a><br><br><br>\n      <a href=\"https://www.holloway.com\"><img src=\"https://avatars1.githubusercontent.com/u/35904294?s=300&v=4\"></a>\n    </td>\n    <td width=\"16.67%\" align=\"center\">\n      <a href=\"https://themeisle.com\">ThemeIsle</a><br>🥉<br><br>\n      <a href=\"https://themeisle.com\"><img src=\"https://twitter-avatar.now.sh/themeisle\"></a>\n    </td>\n    <td width=\"16.67%\" align=\"center\">\n      <a href=\"https://boostio.co\">BoostIO</a><br>🥉<br><br>\n      <a href=\"https://boostio.co\"><img src=\"https://avatars1.githubusercontent.com/u/13612118?s=300&v=4\"></a>\n    </td>\n    <td width=\"16.67%\" align=\"center\">\n      <a href=\"https://expo.io\">Expo</a><br>🥉<br><br>\n      <a href=\"https://expo.io\"><img src=\"https://avatars1.githubusercontent.com/u/12504344?s=300&v=4\"></a>\n    </td>\n    <td width=\"50%\" align=\"center\" colspan=\"2\">\n      <br><br><br><br>\n      <a href=\"https://opencollective.com/unified\"><strong>You?</strong></a>\n    </td>\n  </tr>\n</table>\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install remark-stringify\n```\n\n## Use\n\n```js\nvar unified = require('unified')\nvar createStream = require('unified-stream')\nvar html = require('rehype-parse')\nvar rehype2remark = require('rehype-remark')\nvar stringify = require('remark-stringify')\n\nvar processor = unified()\n  .use(html)\n  .use(rehype2remark)\n  .use(stringify, {\n    bullet: '*',\n    fence: '~',\n    fences: true,\n    incrementListMarker: false\n  })\n\nprocess.stdin.pipe(createStream(processor)).pipe(process.stdout)\n```\n\n[See **unified** for more examples »][unified]\n\n## Contents\n\n*   [API](#api)\n    *   [`processor().use(stringify[, options])`](#processorusestringify-options)\n    *   [`stringify.Compiler`](#stringifycompiler)\n*   [Extending the `Compiler`](#extending-the-compiler)\n    *   [`Compiler#visitors`](#compilervisitors)\n    *   [`function visitor(node[, parent])`](#function-visitornode-parent)\n*   [Security](#security)\n*   [Contribute](#contribute)\n*   [License](#license)\n\n## API\n\n[See **unified** for API docs »][unified]\n\n### `processor().use(stringify[, options])`\n\nConfigure the `processor` to serialize [**mdast**][mdast] syntax trees to\nMarkdown.\n\n##### `options`\n\nOptions can be passed directly, or passed later through\n[`processor.data()`][data].\n\n###### `options.gfm`\n\nSerialize with the required escapes for GFM compatible Markdown (`boolean`,\ndefault: `true`).\n\n*   Escape pipes (`|`, for tables)\n*   Escape colons (`:`, for literal URLs)\n*   Escape tildes (`~`, for strike-through)\n\n###### `options.commonmark`\n\nSerialize for CommonMark compatible Markdown (`boolean`, default: `false`).\n\n*   Serialize adjacent block quotes separately\n*   Escape more characters using slashes, instead of as entities\n\n###### `options.pedantic`\n\n⚠️ Pedantic was previously used to mimic old-style Markdown mode: no tables, no\nfenced code, and with many bugs.\nIt’s currently still “working”, but please do not use it, it’ll be removed in\nthe future.\n\n###### `options.entities`\n\n⚠️ `entities` was previously used, but included bugs.\nIt’s currently still “working”, but please do not use it, it’ll be removed in\nthe future.\n\n###### `options.setext`\n\nSerialize headings, when possible, in Setext-style (`boolean`, default: `false`).\nUses `=` for level one headings and `-` for level two headings.\nOther heading levels are serialized as ATX (respecting `closeAtx`).\n\n###### `options.closeAtx`\n\nSerialize ATX headings with the same amount of closing hashes as opening hashes\n(`boolean`, default: `false`).\n\n###### `options.tableCellPadding`\n\nCreate tables with a space between cell delimiters (`|`) and content (`boolean`,\ndefault: `true`).\n\n###### `options.tablePipeAlign`\n\nAlign the delimiters (`|`) between table cells so that they all align nicely and\nform a grid (`boolean`, default: `true`).\n\n###### `options.stringLength`\n\nFunction passed to [`markdown-table`][markdown-table] to detect the length of a\ntable cell (`Function`, default: [`s => s.length`][string-length]).\nUsed to pad tables.\n\n###### `options.fence`\n\nMarker to use for fenced code blocks (`'~'` or ``'`'``, default: ``'`'``).\n\n###### `options.fences`\n\nCreate code blocks with a fence instead of indentation if they have no info\nstring (`boolean`, default: `false`).\n\nWhen `false`, code blocks are indented.\nCode blocks with an info string are always fenced.\n\n###### `options.bullet`\n\nMarker to use for the bullet of unordered list items (`'-'`, `'*'`, or `'+'`,\ndefault: `'-'`).\n\n###### `options.listItemIndent`\n\nStyle of indentation for list items (`'tab'`, `'mixed'` or `'1'`, default:\n`'tab'`).\n\n*   `'tab'`: use a tab stops (4 spaces)\n*   `'1'`: use one space\n*   `'mixed'`: use `1` for tight and `tab` for loose list items\n\n###### `options.incrementListMarker`\n\nIncrement ordered list item numbers (`boolean`, default: `true`).\n\nWhen `false`, all list item numbers will be the same.\n\n###### `options.tightDefinitions`\n\nSeparate definitions with a single line feed (`boolean`, default: `false`).\n\nWhen `false`, definitions will have blank lines between them, similar to other\nblocks.\n\n###### `options.rule`\n\nMarker to use for thematic breaks / horizontal rules (`'-'`, `'*'`, or `'_'`,\ndefault: `'*'`).\n\n###### `options.ruleRepetition`\n\nNumber of markers to use for thematic breaks / horizontal rules (`number`,\ndefault: `3`).\nMusts be `3` or more.\n\n###### `options.ruleSpaces`\n\nPlace a space between thematic break (horizontal rule) markers (`boolean`,\ndefault `true`).\n\n###### `options.strong`\n\nMarker to use for importance (`'_'` or `'*'`, default `'*'`).\n\n###### `options.emphasis`\n\nMarker to use for emphasis (`'_'` or `'*'`, default `'_'`).\n\n### `stringify.Compiler`\n\nAccess to the [compiler][], if you need it.\n\n## Extending the `Compiler`\n\nIf the `remark-stringify` plugin is used, it adds a [`Compiler`][compiler]\nconstructor function to the `processor`.\nOther plugins can add visitors to its prototype to change how Markdown is\nserialized.\n\nThe below plugin modifies a [visitor][] to add an extra blank line before\nheadings with a rank of `2`.\n\n```js\nmodule.exports = gap\n\nfunction gap() {\n  var Compiler = this.Compiler\n  var visitors = Compiler.prototype.visitors\n  var original = visitors.heading\n\n  visitors.heading = heading\n\n  function heading(node) {\n    return (node.depth === 2 ? '\\n' : '') + original.apply(this, arguments)\n  }\n}\n```\n\n### `Compiler#visitors`\n\nMap of types to [visitor][]s (`Object.<Function>`).\n\n### `function visitor(node[, parent])`\n\nSerialize `node`.\n\n###### Parameters\n\n*   `node` ([`Node`][node]) — Node to compile\n*   `parent` ([`Parent`][parent], optional) — Parent of `node`.\n    Not available on the root node\n\n###### Returns\n\n`string` — Serialized given `node`.\n\n## Security\n\nAs Markdown is sometimes used for HTML, and improper use of HTML can open you up\nto a [cross-site scripting (XSS)][xss] attack, use of remark can also be unsafe.\nWhen going to HTML, use remark in combination with the [**rehype**][rehype]\necosystem, and use [`rehype-sanitize`][sanitize] to make the tree safe.\n\nUse of remark plugins could also open you up to other attacks.\nCarefully assess each plugin and the risks involved in using them.\n\n## Contribute\n\nSee [`contributing.md`][contributing] in [`remarkjs/.github`][health] for ways\nto get started.\nSee [`support.md`][support] for ways to get help.\nIdeas for new plugins and tools can be posted in [`remarkjs/ideas`][ideas].\n\nA curated list of awesome remark resources can be found in [**awesome\nremark**][awesome].\n\nThis project has a [code of conduct][coc].\nBy interacting with this repository, organization, or community you agree to\nabide by its terms.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/remarkjs/remark.svg\n\n[build]: https://travis-ci.org/remarkjs/remark\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/remarkjs/remark.svg\n\n[coverage]: https://codecov.io/github/remarkjs/remark\n\n[downloads-badge]: https://img.shields.io/npm/dm/remark-stringify.svg\n\n[downloads]: https://www.npmjs.com/package/remark-stringify\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/remark-stringify.svg\n\n[size]: https://bundlephobia.com/result?p=remark-stringify\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg\n\n[chat]: https://spectrum.chat/unified/remark\n\n[health]: https://github.com/remarkjs/.github\n\n[contributing]: https://github.com/remarkjs/.github/blob/HEAD/contributing.md\n\n[support]: https://github.com/remarkjs/.github/blob/HEAD/support.md\n\n[coc]: https://github.com/remarkjs/.github/blob/HEAD/code-of-conduct.md\n\n[ideas]: https://github.com/remarkjs/ideas\n\n[awesome]: https://github.com/remarkjs/awesome-remark\n\n[license]: https://github.com/remarkjs/remark/blob/main/license\n\n[author]: https://wooorm.com\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[unified]: https://github.com/unifiedjs/unified\n\n[data]: https://github.com/unifiedjs/unified#processordatakey-value\n\n[remark]: https://github.com/remarkjs/remark/tree/main/packages/remark\n\n[compiler]: https://github.com/unifiedjs/unified#processorcompiler\n\n[mdast]: https://github.com/syntax-tree/mdast\n\n[node]: https://github.com/syntax-tree/unist#node\n\n[parent]: https://github.com/syntax-tree/unist#parent\n\n[extend]: #extending-the-compiler\n\n[visitor]: #function-visitornode-parent\n\n[markdown-table]: https://github.com/wooorm/markdown-table\n\n[string-length]: https://github.com/wooorm/markdown-table#stringlengthcell\n\n[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting\n\n[rehype]: https://github.com/rehypejs/rehype\n\n[sanitize]: https://github.com/rehypejs/rehype-sanitize"
+}

@@ -1,0 +1,1236 @@
+{
+	"name": "parse-entities",
+	"versions": {
+		"1.0.0": {
+			"name": "parse-entities",
+			"version": "1.0.0",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"files": [
+				"index.js",
+				"LICENSE"
+			],
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-reference-invalid": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"devDependencies": {
+				"browserify": "^12.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"mdast": "^2.0.0",
+				"mdast-comment-config": "^1.0.0",
+				"mdast-github": "^1.0.0",
+				"mdast-lint": "^1.0.0",
+				"mdast-slug": "^2.0.0",
+				"mdast-validate-links": "^1.1.1",
+				"mdast-yaml-config": "^1.0.0",
+				"tape": "^4.2.0"
+			},
+			"scripts": {
+				"build-md": "mdast . --quiet  --frail",
+				"build-bundle": "browserify index.js --bare -s parseEntities > parse-entities.js",
+				"build-mangle": "esmangle parse-entities.js > parse-entities.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "8b116c8657d9f89ad52599cde6622f984820930d",
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.0.0",
+			"_shasum": "127d643e3110fef3f893e915cf67bd6abb4de878",
+			"_from": ".",
+			"_npmVersion": "3.5.0",
+			"_nodeVersion": "5.1.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "127d643e3110fef3f893e915cf67bd6abb4de878",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "parse-entities",
+			"version": "1.0.1",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"files": [
+				"index.js",
+				"LICENSE"
+			],
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-reference-invalid": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"devDependencies": {
+				"browserify": "^12.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^3.0.0",
+				"remark-comment-config": "^2.0.0",
+				"remark-github": "^2.0.0",
+				"remark-lint": "^2.0.0",
+				"remark-slug": "^3.0.0",
+				"remark-validate-links": "^2.0.0",
+				"remark-yaml-config": "^2.0.0",
+				"tape": "^4.2.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet  --frail",
+				"build-bundle": "browserify index.js --bare -s parseEntities > parse-entities.js",
+				"build-mangle": "esmangle parse-entities.js > parse-entities.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "172e1dace612ffc00c9953d84822ade9d1d05f10",
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.0.1",
+			"_shasum": "7dfeea66740a2b37e20156da9c55da56e97b6aba",
+			"_from": ".",
+			"_npmVersion": "3.5.0",
+			"_nodeVersion": "5.1.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "7dfeea66740a2b37e20156da9c55da56e97b6aba",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "parse-entities",
+			"version": "1.0.2",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"files": [
+				"index.js",
+				"LICENSE"
+			],
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-entities-legacy": "^1.0.0",
+				"character-reference-invalid": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com"
+			},
+			"devDependencies": {
+				"browserify": "^12.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^3.0.0",
+				"remark-comment-config": "^2.0.0",
+				"remark-github": "^2.0.0",
+				"remark-lint": "^2.0.0",
+				"remark-slug": "^3.0.0",
+				"remark-validate-links": "^2.0.0",
+				"remark-yaml-config": "^2.0.0",
+				"tape": "^4.2.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet  --frail",
+				"build-bundle": "browserify index.js --bare -s parseEntities > parse-entities.js",
+				"build-mangle": "esmangle parse-entities.js > parse-entities.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "1a5feddc5d9c0029fa802dc1ecb2968190d7361f",
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.0.2",
+			"_shasum": "6ec4c6014e25a310d3a146661208f0380edfd41a",
+			"_from": ".",
+			"_npmVersion": "3.5.0",
+			"_nodeVersion": "5.1.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "6ec4c6014e25a310d3a146661208f0380edfd41a",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.0.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "parse-entities",
+			"version": "1.1.0",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-entities-legacy": "^1.0.0",
+				"character-reference-invalid": "^1.0.0",
+				"has": "^1.0.1",
+				"is-alphanumerical": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-hexadecimal": "^1.0.0"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^7.1.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.2.0",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet  --frail",
+				"build-bundle": "browserify index.js --bare -s parseEntities > parse-entities.js",
+				"build-mangle": "esmangle parse-entities.js > parse-entities.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"rules": {
+					"guard-for-in": "off",
+					"no-negated-condition": "off",
+					"max-depth": "off",
+					"max-lines": "off",
+					"complexity": "off",
+					"no-eq-null": "off",
+					"eqeqeq": "off"
+				},
+				"ignores": [
+					"parse-entities.js",
+					"parse-entities.min.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": {
+					"lint": {
+						"heading-increment": false,
+						"list-item-spacing": false,
+						"no-duplicate-headings": false
+					},
+					"github": null,
+					"comment-config": null,
+					"validate-links": null
+				},
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "5ff1136a4921a216e7baaefa23febb40d68b4712",
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.1.0",
+			"_shasum": "4bc58f35fdc8e65dded35a12f2e40223ca24a3f7",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "4bc58f35fdc8e65dded35a12f2e40223ca24a3f7",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/parse-entities-1.1.0.tgz_1469964484071_0.15948437829501927"
+			},
+			"directories": {}
+		},
+		"1.1.1": {
+			"name": "parse-entities",
+			"version": "1.1.1",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-entities-legacy": "^1.0.0",
+				"character-reference-invalid": "^1.0.0",
+				"is-alphanumerical": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-hexadecimal": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.2.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js --bare -s parseEntities > parse-entities.js",
+				"build-mangle": "esmangle parse-entities.js > parse-entities.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test.js",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"no-negated-condition": "off",
+					"max-depth": "off",
+					"complexity": "off"
+				},
+				"ignores": [
+					"parse-entities.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "97b0395ac443ba8f49d34cb0de07da186f654108",
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.1.1",
+			"_shasum": "8112d88471319f27abae4d64964b122fe4e1b890",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "8112d88471319f27abae4d64964b122fe4e1b890",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.1.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/parse-entities-1.1.1.tgz_1497637037808_0.8155671106651425"
+			},
+			"directories": {}
+		},
+		"1.1.2": {
+			"name": "parse-entities",
+			"version": "1.1.2",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-entities-legacy": "^1.0.0",
+				"character-reference-invalid": "^1.0.0",
+				"is-alphanumerical": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-hexadecimal": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.2.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s parseEntities > parse-entities.js",
+				"build-mangle": "esmangle parse-entities.js > parse-entities.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/number-literal-case": "off",
+					"object-shorthand": "off",
+					"no-var": "off",
+					"prefer-arrow-callback": "off",
+					"guard-for-in": "off",
+					"no-negated-condition": "off",
+					"max-depth": "off",
+					"complexity": "off"
+				},
+				"ignores": [
+					"parse-entities.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "668d1fc54bb85530c75ac7da197252a23ea65f09",
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.1.2",
+			"_npmVersion": "5.6.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-5N9lmQ7tmxfXf+hO3X6KRG6w7uYO/HL9fHalSySTdyn63C3WNvTM/1R8tn1u1larNcEbo3Slcy2bsVDQqvEpUg==",
+				"shasum": "9eaf719b29dc3bd62246b4332009072e01527777",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.1.2.tgz",
+				"fileCount": 4,
+				"unpackedSize": 19895,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa5ZRACRA9TVsSAnZWagAA1NYP+QGf+4eREFj5y3e3LWdN\ntIPNpTwQLmxt4+ULyBA02NDTeCHV0NEywa5mrD6uHpmXuRCoQfsu79pgEunK\nYEZb0Mh4oxDWmrwgh4TqeM7ZQjbagG9wtP55p9/5/OtL1xWraWnwN0LftI7V\nFUJECj5j++8lfbrint6H0DElofhBWw27riAZiSZIaWWsw0MVKzowrocXdan0\nvdSPdPB/COm75KEz460rSLcq0KYXikDsynfXkOz++mIxV7V4ygRPL6BTB6m1\n8IuRaHZ/Ho/lBanTV2oGQHhQJ5KWtZix0nDQji7VEvtytbGi6Y2Ngp8pRRpZ\nfEx07bRZmiRGk5SGmWwZ6j7rbE9OO5OSLX7yuNogacjBPTSpou/5K926LxCL\n+un1I2YZ5cN4+16b8A02pgo1Ympo94l+f3i16oSlANIfrhW6o8CgpygEiGny\ngtb/h+IyKKhhn3fcLJc2hqxSlAr/NBC6dkz6lAtGK0+5Z2WHAvf6lKbEFY0L\nHnot/m4f5o/e6jtyjn3PaoJFQYnHgsAHYqM7cfxpkOt3rhP9uYnWsa0stX3T\nMFJU0ehW2U79L7lGbA8hGvitmLGPo9fNPQFmScgx0DdLiwLDO2CAVRBohV2N\nh8WId4e5EnyFKj2SR8ppS/qkOEsX66FkyK/JpIG9+jMaRsut4tH1nhx2yV4W\neqeM\r\n=oEmG\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/parse-entities_1.1.2_1524995134809_0.24563102206299092"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.2.0": {
+			"name": "parse-entities",
+			"version": "1.2.0",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"browser": {
+				"./decode-entity.js": "./decode-entity.browser.js"
+			},
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-entities-legacy": "^1.0.0",
+				"character-reference-invalid": "^1.0.0",
+				"is-alphanumerical": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-hexadecimal": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.2.0",
+				"tape-run": "^4.0.0",
+				"tinyify": "^2.4.3",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s parseEntities > parse-entities.js",
+				"build-mangle": "browserify . -s parseEntities -p tinyify > parse-entities.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-browser": "browserify test.js | tape-run",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-browser"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/number-literal-case": "off",
+					"object-shorthand": "off",
+					"no-var": "off",
+					"prefer-arrow-callback": "off",
+					"guard-for-in": "off",
+					"no-negated-condition": "off",
+					"max-depth": "off",
+					"complexity": "off"
+				},
+				"ignores": [
+					"parse-entities.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "f0e0199a72c0e1c0c8b8504705af9c448aa16688",
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.2.0",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-XXtDdOPLSB0sHecbEapQi6/58U/ODj/KWfIXmmMCJF/eRn8laX6LZbOyioMoETOOJoWRW8/qTSl5VQkUIfKM5g==",
+				"shasum": "9deac087661b2e36814153cb78d7e54a4c5fd6f4",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.2.0.tgz",
+				"fileCount": 6,
+				"unpackedSize": 21222,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbrhomCRA9TVsSAnZWagAAjZ8P/0KnO9o8zddYc29QxUBl\n4xticrxxsCiii9ngekKgRee+4oYaF6vbbX6Ket5DM3cM9RdifikJqpn0A+JO\naSvlKQR7jRRwqDENdNJuidt+II+ZBHDh4Lvt/ACGsRfkLrAB7sS1ApJ4IIaH\nw5EKHlZW7OBNhNWqlRls9OKcqA4lMPSzoVLi3EVeyU9ozwLkMNbPgyZnuo/b\n9EJ1HT9UF+BUET8r06Of6AQ2JY7gBdfZY2Et1RGOjBCCNX08bLjiIUayXxBT\nxiX6M1BOeYzSdLC7/qv15S4YORYha1LzYnkPSOTF63gc1tS7UMT+iKEsRT4s\nCrzORu/r1lqkd4SzyWPeyExa5GnQPBisk3PMInI9O7nefmNkJKkeBVUx1Dgg\nEYSeyiyzT1HFYwxFMuX+AksBcKpI1YCo6PQKEqMirpkHhVf/cEXCciAd0iYL\nze/qoJ8KXXXS4Jgsx8K1UDMjxhDcyvsVZYoVV0TDZKbm1eFPsC+o8Y0uRhy+\nloo8HSZ2dDukB+a48wlEn4pju1FMw9wez8ADiRm5nFgkfAxeTvXp+DOwxTlM\nu1Ef/R3X3mrNyxvovPcK52GzQAQBU2R+oIu/vdvYHYx428nEF7UCxZ3tqObE\nqdJvzvELVFnvU9lgV2u/oW/OhHQRsqp6/sPdSPo4KgnED7iaMzR7c13gbrL4\nlpyf\r\n=O2+8\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/parse-entities_1.2.0_1538136613600_0.3049845350237088"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.2.1": {
+			"name": "parse-entities",
+			"version": "1.2.1",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"browser": {
+				"./decode-entity.js": "./decode-entity.browser.js"
+			},
+			"react-native": {
+				"./decode-entity.js": "./decode-entity.js"
+			},
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-entities-legacy": "^1.0.0",
+				"character-reference-invalid": "^1.0.0",
+				"is-alphanumerical": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-hexadecimal": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.2.0",
+				"tape-run": "^4.0.0",
+				"tinyify": "^2.4.3",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s parseEntities > parse-entities.js",
+				"build-mangle": "browserify . -s parseEntities -p tinyify > parse-entities.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-browser": "browserify test.js | tape-run",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-browser"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/number-literal-case": "off",
+					"object-shorthand": "off",
+					"no-var": "off",
+					"prefer-arrow-callback": "off",
+					"guard-for-in": "off",
+					"no-negated-condition": "off",
+					"max-depth": "off",
+					"complexity": "off"
+				},
+				"ignores": [
+					"parse-entities.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "f179281072c0f337d57a281e24f0ed89938cd42d",
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.2.1",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.7.0",
+			"dist": {
+				"integrity": "sha512-NBWYLQm1KSoDKk7GAHyioLTvCZ5QjdH/ASBBQTD3iLiAWJXS5bg1jEWI8nIJ+vgVvsceBVBcDGRWSo0KVQBvvg==",
+				"shasum": "2c761ced065ba7dc68148580b5a225e4918cdd69",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.2.1.tgz",
+				"fileCount": 6,
+				"unpackedSize": 21294,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJccdDaCRA9TVsSAnZWagAA6JsQAIoXv+eC8sVOHdV/Nn7/\nBn8468KpQKycGZRGICy0VXEbFE5lv3ncVGzMr0mOy6MCMxSCQbkRrcMFSfRE\nUY0B+EfEFY4/C88GwODPHe+ockh7IeqPxFF/jaVXvWVaaQVECcpvecbvw4DO\nqj0XkvYaO+Qc3wU8PNuptqUJBQ0l52FB7mt+OCvy5xpX4StCnsjGeSYzt2ia\ntifos//rTbeN38Ah5AcUsqzdmkKRxeO6iLVwrQGmQZhuD30JHtLHKr8Fg3+n\nbey0qoLKYZ/dARfwXJKF68umMezpLkYqGVY71m6VaqcjiIS31EyxrBK1mtdK\nlRiq52YbWZR51toSIjMtGfV30hOA8Xgyyn/ZYP3r8VhoyInhfctYoSciiohk\nT2yTiO3YeBmuebYfuU3KlxTj4cYDKHYAFU+nB2RhE0Yc4qIwdBwMha6gKAmo\nAtXxUJ2c88/WXy/CMqiA/uPHeWPgHgwTmCWB7BGy7cZOuGtc5PYPXD55QagX\nBYDX9ycVbnEP2dapIwDJIvjUnAUhLPkQZGhhlZqyElOC6WC3UqY6I+lre2/Q\nWV+2RIFwDprkmPNe3ViL5ErVaijfekRxUieothKe5x3zDvxWHiCPEwU2cO6C\neYls8Eux9cICWbSFOoygGMnRIN6HQl32YyRud/gdmYhuiCp8Jtr6vsWYxWz+\nJh4g\r\n=Jziv\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/parse-entities_1.2.1_1550962905365_0.965713662792796"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.2.2": {
+			"name": "parse-entities",
+			"version": "1.2.2",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"browser": {
+				"./decode-entity.js": "./decode-entity.browser.js"
+			},
+			"react-native": {
+				"./decode-entity.js": "./decode-entity.js"
+			},
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-entities-legacy": "^1.0.0",
+				"character-reference-invalid": "^1.0.0",
+				"is-alphanumerical": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-hexadecimal": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.2.0",
+				"tape-run": "^6.0.0",
+				"tinyify": "^2.4.3",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s parseEntities > parse-entities.js",
+				"build-mangle": "browserify . -s parseEntities -p tinyify > parse-entities.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-browser": "browserify test.js | tape-run",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-browser"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-self-compare": "off",
+					"guard-for-in": "off",
+					"max-depth": "off"
+				},
+				"ignores": [
+					"parse-entities.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "3fd80962ca032e5782210ca915b639f005e85a15",
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@1.2.2",
+			"_nodeVersion": "11.9.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-NzfpbxW/NPrzZ/yYSoQxyqUZMZXIdCfE0OIN4ESsnptHJECoUk3FZktxNuzQf4tjt5UEopnxpYJbvYuxIFDdsg==",
+				"shasum": "c31bf0f653b6661354f8973559cb86dd1d5edf50",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.2.2.tgz",
+				"fileCount": 6,
+				"unpackedSize": 21705,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc291RCRA9TVsSAnZWagAA9LEQAIBdawN0nfs1Ag0JGQtB\ndf9kImOFyU13HCQH9ZjJzFgBc9wMpMgRxlkNYuJpIWp5KIAwsKI5PMWVkjrL\nzy64wdTU/o4lS+CF4xxvLYHYxde6xbfiw+OgE0MhWtm96E5DA1B/CQXv6X+u\nmRfQBlha0L7+UXxHBrU4ohFdvZAN9M0+jxqD3QU7m9afu9QqYxvMq9+H0i5J\nOiYaTf1g62ng92lwHO0hSgkWVZPgL57TGdHhn9wqbONiHJssMZ6GjWMjI0Xk\n4dCECef6wWElAjaIEk5A5Q+uRs9EwLoXSW1CHLWPwx2L3EgyoXznM4zstNmE\nz3RQDumoh6GUrTktST7pyQseM7G21ELW94x3JlhIlLutmZX0DW2pbMyjj3gA\nPzKBMsrMOoJF6JGtrJsv2ZKKWOBd4dCZtmR/tfr2xx9McdVHvJiZbvHZdddz\nZvbU5oVdx3hRtP70q9VskhnsskKqX8z8RGs1hW7f1+t8PDv2V+euNIqkA8So\n0CB6uCXzPeEJbAI/35SEvQol4mGrELF+jTA3jyT7gmwxixoiCnjYX4Yj3oJ+\ns0P2gf5r0du2+tY6UpIpbmN9eX0g2idkAvOoOTMCTpXPbcmVvp8RM0bFPeJU\nioQd7xMLki2Yaj53TzgOI6U/VyZaVLneiLKG8vknwowSjIGFw9R/QfschP+W\nPNtU\r\n=wXqD\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/parse-entities_1.2.2_1557912912266_0.684885382808408"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.0": {
+			"name": "parse-entities",
+			"version": "2.0.0",
+			"description": "Parse HTML character references: fast, spec-compliant, positional information",
+			"license": "MIT",
+			"keywords": [
+				"parse",
+				"html",
+				"character",
+				"reference",
+				"entity",
+				"entities"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/parse-entities.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/parse-entities/issues"
+			},
+			"funding": {
+				"type": "github",
+				"url": "https://github.com/sponsors/wooorm"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"browser": {
+				"./decode-entity.js": "./decode-entity.browser.js"
+			},
+			"react-native": {
+				"./decode-entity.js": "./decode-entity.js"
+			},
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"character-entities": "^1.0.0",
+				"character-entities-legacy": "^1.0.0",
+				"character-reference-invalid": "^1.0.0",
+				"is-alphanumerical": "^1.0.0",
+				"is-decimal": "^1.0.0",
+				"is-hexadecimal": "^1.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"dtslint": "^2.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tape-run": "^6.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s parseEntities > parse-entities.js",
+				"build-mangle": "browserify . -s parseEntities -p tinyify > parse-entities.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-browser": "browserify test.js | tape-run",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-self-compare": "off",
+					"guard-for-in": "off",
+					"max-depth": "off"
+				},
+				"ignores": [
+					"parse-entities.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "db8ace776923cf4b874e2e87f6b22aac6ad251d4",
+			"homepage": "https://github.com/wooorm/parse-entities#readme",
+			"_id": "parse-entities@2.0.0",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-kkywGpCcRYhqQIchaWqZ875wzpS/bMKhz5HnN3p7wveJTkTtyAB/AlnS0f8DFSqYW1T82t6yEAkEcB+A1I3MbQ==",
+				"shasum": "53c6eb5b9314a1f4ec99fa0fdf7ce01ecda0cbe8",
+				"tarball": "https://registry.npmjs.org/parse-entities/-/parse-entities-2.0.0.tgz",
+				"fileCount": 7,
+				"unpackedSize": 25095,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeHXkuCRA9TVsSAnZWagAAD58P/jqXVQxxfqdvt9XA4ZxM\nesUJ1UOZMmFQ34a0BwxX/EvQGK43tgSj95fU0OqS6BuiZIhTHRiqlYk0+eiW\nkxXeX7WxcEWcwBNdW6YzJXXDLuBqHDVs6D/14WABDKyHR9+LvZixYfzm9Awa\nmSWFhAYtVy3/j6MRP1BeYJb2wyckANoqEfRPddDdiayMJKP28ZSZjqAJiGhf\nDLazvojkNE/FmpHLcR/MxYx2FzaVcrf4Nsh9eyC5D1SphvUDIcxV8X0L1lDI\nPpy4d9vY5uhNFab/EQlfOeVoqhat0khFY/TyE+qgBXXlvLwFWGKcpwgkTxJl\n/isAPUW5pWuUwawtzckjsxC7Rpf7f/Neo87c4u6I7xpCypcyhog8Dlm8er60\n53zdPbdnJ73Ugv07+vDesl4b576ESdo6OwXQbJXjTIRchQXmGJSVspQmlTsW\nQerHoh1iUUNzHoAoxYChnCdi0CKG9VV8G8PUlPTcMO+clymohrisc1Yt4y92\nWYYSTkCXpd6qkqympGDRqSYMp2P1F/3GhXfJY9lGNRrIasXTNM1wuf7lBf44\nPbOd3CsDnF42J9hfXpVmlCIPVJPFp2J0Jm2GldUwPKynW4vhG4bHOaU3gkKl\nqtB5KJTileH9uZrQqoqsHBnc8W7qJ85LYTTEucoi8Fu3GodqmYEXuHEf6WV6\nGwaI\r\n=KEdy\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/parse-entities_2.0.0_1578989870100_0.3236971145418521"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-01-14T08:17:52.490Z",
+		"created": "2015-12-23T19:38:21.860Z",
+		"1.0.0": "2015-12-23T19:38:21.860Z",
+		"1.0.1": "2015-12-27T09:50:13.649Z",
+		"1.0.2": "2015-12-29T09:26:21.159Z",
+		"1.1.0": "2016-07-31T11:28:05.815Z",
+		"1.1.1": "2017-06-16T18:17:18.728Z",
+		"1.1.2": "2018-04-29T09:45:34.893Z",
+		"1.2.0": "2018-09-28T12:10:13.781Z",
+		"1.2.1": "2019-02-23T23:01:45.542Z",
+		"1.2.2": "2019-05-15T09:35:12.431Z",
+		"2.0.0": "2020-01-14T08:17:50.211Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "2.0.0"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"4a8ddb9e30b5c8fc735d46c2326d2b05\"",
+			"fetched": 1601147219672
+		}
+	},
+	"_distfiles": {
+		"parse-entities-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.0.0.tgz",
+			"sha": "127d643e3110fef3f893e915cf67bd6abb4de878",
+			"registry": "npmjs"
+		},
+		"parse-entities-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.0.1.tgz",
+			"sha": "7dfeea66740a2b37e20156da9c55da56e97b6aba",
+			"registry": "npmjs"
+		},
+		"parse-entities-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.0.2.tgz",
+			"sha": "6ec4c6014e25a310d3a146661208f0380edfd41a",
+			"registry": "npmjs"
+		},
+		"parse-entities-1.1.0.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.1.0.tgz",
+			"sha": "4bc58f35fdc8e65dded35a12f2e40223ca24a3f7",
+			"registry": "npmjs"
+		},
+		"parse-entities-1.1.1.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.1.1.tgz",
+			"sha": "8112d88471319f27abae4d64964b122fe4e1b890",
+			"registry": "npmjs"
+		},
+		"parse-entities-1.1.2.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.1.2.tgz",
+			"sha": "9eaf719b29dc3bd62246b4332009072e01527777",
+			"registry": "npmjs"
+		},
+		"parse-entities-1.2.0.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.2.0.tgz",
+			"sha": "9deac087661b2e36814153cb78d7e54a4c5fd6f4",
+			"registry": "npmjs"
+		},
+		"parse-entities-1.2.1.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.2.1.tgz",
+			"sha": "2c761ced065ba7dc68148580b5a225e4918cdd69",
+			"registry": "npmjs"
+		},
+		"parse-entities-1.2.2.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-1.2.2.tgz",
+			"sha": "c31bf0f653b6661354f8973559cb86dd1d5edf50",
+			"registry": "npmjs"
+		},
+		"parse-entities-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/parse-entities/-/parse-entities-2.0.0.tgz",
+			"sha": "53c6eb5b9314a1f4ec99fa0fdf7ce01ecda0cbe8",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-67cbeefa79c69b9d",
+	"_id": "parse-entities",
+	"readme": "# parse-entities\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n\nParse HTML character references: fast, spec-compliant, positional\ninformation.\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install parse-entities\n```\n\n## Use\n\n```js\nvar decode = require('parse-entities')\n\ndecode('alpha &amp bravo')\n// => alpha & bravo\n\ndecode('charlie &copycat; delta')\n// => charlie ©cat; delta\n\ndecode('echo &copy; foxtrot &#8800; golf &#x1D306; hotel')\n// => echo © foxtrot ≠ golf 𝌆 hotel\n```\n\n## API\n\n## `parseEntities(value[, options])`\n\n##### `options`\n\n###### `options.additional`\n\nAdditional character to accept (`string?`, default: `''`).\nThis allows other characters, without error, when following an ampersand.\n\n###### `options.attribute`\n\nWhether to parse `value` as an attribute value (`boolean?`, default:\n`false`).\n\n###### `options.nonTerminated`\n\nWhether to allow non-terminated entities (`boolean`, default: `true`).\nFor example, `&copycat` for `©cat`.  This behaviour is spec-compliant but\ncan lead to unexpected results.\n\n###### `options.warning`\n\nError handler ([`Function?`][warning]).\n\n###### `options.text`\n\nText handler ([`Function?`][text]).\n\n###### `options.reference`\n\nReference handler ([`Function?`][reference]).\n\n###### `options.warningContext`\n\nContext used when invoking `warning` (`'*'`, optional).\n\n###### `options.textContext`\n\nContext used when invoking `text` (`'*'`, optional).\n\n###### `options.referenceContext`\n\nContext used when invoking `reference` (`'*'`, optional)\n\n###### `options.position`\n\nStarting `position` of `value` (`Location` or `Position`, optional).  Useful\nwhen dealing with values nested in some sort of syntax tree.  The default is:\n\n```js\n{\n  start: {line: 1, column: 1, offset: 0},\n  indent: []\n}\n```\n\n##### Returns\n\n`string` — Decoded `value`.\n\n### `function warning(reason, position, code)`\n\nError handler.\n\n##### Context\n\n`this` refers to `warningContext` when given to `parseEntities`.\n\n##### Parameters\n\n###### `reason`\n\nHuman-readable reason for triggering a parse error (`string`).\n\n###### `position`\n\nPlace at which the parse error occurred (`Position`).\n\n###### `code`\n\nIdentifier of reason for triggering a parse error (`number`).\n\nThe following codes are used:\n\n| Code | Example            | Note                                          |\n| ---- | ------------------ | --------------------------------------------- |\n| `1`  | `foo &amp bar`     | Missing semicolon (named)                     |\n| `2`  | `foo &#123 bar`    | Missing semicolon (numeric)                   |\n| `3`  | `Foo &bar baz`     | Ampersand did not start a reference           |\n| `4`  | `Foo &#`           | Empty reference                               |\n| `5`  | `Foo &bar; baz`    | Unknown entity                                |\n| `6`  | `Foo &#128; baz`   | [Disallowed reference][invalid]               |\n| `7`  | `Foo &#xD800; baz` | Prohibited: outside permissible unicode range |\n\n### `function text(value, location)`\n\nText handler.\n\n##### Context\n\n`this` refers to `textContext` when given to `parseEntities`.\n\n##### Parameters\n\n###### `value`\n\nString of content (`string`).\n\n###### `location`\n\nLocation at which `value` starts and ends (`Location`).\n\n### `function reference(value, location, source)`\n\nCharacter reference handler.\n\n##### Context\n\n`this` refers to `referenceContext` when given to `parseEntities`.\n\n##### Parameters\n\n###### `value`\n\nEncoded character reference (`string`).\n\n###### `location`\n\nLocation at which `value` starts and ends (`Location`).\n\n###### `source`\n\nSource of character reference (`Location`).\n\n## Related\n\n*   [`stringify-entities`](https://github.com/wooorm/stringify-entities)\n    — Encode HTML character references\n*   [`character-entities`](https://github.com/wooorm/character-entities)\n    — Info on character entities\n*   [`character-entities-html4`](https://github.com/wooorm/character-entities-html4)\n    — Info on HTML4 character entities\n*   [`character-entities-legacy`](https://github.com/wooorm/character-entities-legacy)\n    — Info on legacy character entities\n*   [`character-reference-invalid`](https://github.com/wooorm/character-reference-invalid)\n    — Info on invalid numeric character references\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/wooorm/parse-entities.svg\n\n[build]: https://travis-ci.org/wooorm/parse-entities\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/parse-entities.svg\n\n[coverage]: https://codecov.io/github/wooorm/parse-entities\n\n[downloads-badge]: https://img.shields.io/npm/dm/parse-entities.svg\n\n[downloads]: https://www.npmjs.com/package/parse-entities\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/parse-entities.svg\n\n[size]: https://bundlephobia.com/result?p=parse-entities\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[warning]: #function-warningreason-position-code\n\n[text]: #function-textvalue-location\n\n[reference]: #function-referencevalue-location-source\n\n[invalid]: https://github.com/wooorm/character-reference-invalid"
+}

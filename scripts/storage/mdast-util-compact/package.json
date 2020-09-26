@@ -1,0 +1,859 @@
+{
+	"name": "mdast-util-compact",
+	"versions": {
+		"1.0.0": {
+			"name": "mdast-util-compact",
+			"version": "1.0.0",
+			"description": "Make an MDAST tree compact",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"utility",
+				"compact",
+				"node"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/mdast-util-compact.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/mdast-util-compact/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-modify-children": "^1.0.0",
+				"unist-util-visit": "^1.1.0"
+			},
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"esmangle": "^1.0.1",
+				"nyc": "^7.0.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-usage": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.2",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s mdastUtilCompact > mdast-util-compact.js",
+				"build-mangle": "esmangle < mdast-util-compact.js > mdast-util-compact.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"mdast-util-compact.js",
+					"mdast-util-compact.min.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": [
+					"comment-config",
+					"github",
+					"lint",
+					"usage",
+					"validate-links"
+				],
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "596e6614b8311e9b5a989e06fed5d008ce6e40a0",
+			"homepage": "https://github.com/wooorm/mdast-util-compact#readme",
+			"_id": "mdast-util-compact@1.0.0",
+			"_shasum": "4c94dedfe35932d5457f29b650b330fdc73e994a",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "4c94dedfe35932d5457f29b650b330fdc73e994a",
+				"tarball": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/mdast-util-compact-1.0.0.tgz_1468682971696_0.6050365068949759"
+			},
+			"directories": {}
+		},
+		"1.0.1": {
+			"name": "mdast-util-compact",
+			"version": "1.0.1",
+			"description": "Make an MDAST tree compact",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"utility",
+				"compact",
+				"node"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-compact.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-compact/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-modify-children": "^1.0.0",
+				"unist-util-visit": "^1.1.0"
+			},
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"unist-builder": "^1.0.2",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --bare -s mdastUtilCompact > mdast-util-compact.js",
+				"build-mangle": "esmangle < mdast-util-compact.js > mdast-util-compact.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignores": [
+					"mdast-util-compact.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "4881310b82367a894ea820eb676b3164ad7cdb3d",
+			"homepage": "https://github.com/syntax-tree/mdast-util-compact#readme",
+			"_id": "mdast-util-compact@1.0.1",
+			"_shasum": "cdb5f84e2b6a2d3114df33bd05d9cb32e3c4083a",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "cdb5f84e2b6a2d3114df33bd05d9cb32e3c4083a",
+				"tarball": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-compact-1.0.1.tgz_1497372251844_0.46935595152899623"
+			},
+			"directories": {}
+		},
+		"1.0.2": {
+			"name": "mdast-util-compact",
+			"version": "1.0.2",
+			"description": "Make an MDAST tree compact",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"utility",
+				"compact",
+				"node"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-compact.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-compact/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.1.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^12.0.0",
+				"prettier": "^1.14.2",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.4.3",
+				"unist-builder": "^1.0.2",
+				"xo": "^0.22.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilCompact > mdast-util-compact.js",
+				"build-mangle": "browserify . -s mdastUtilCompact -p tinyify > mdast-util-compact.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"mdast-util-compact.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "54694b15b9d1e63e609729affa8985333cb55c94",
+			"homepage": "https://github.com/syntax-tree/mdast-util-compact#readme",
+			"_id": "mdast-util-compact@1.0.2",
+			"_npmVersion": "6.4.0",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-d2WS98JSDVbpSsBfVvD9TaDMlqPRz7ohM/11G0rp5jOBb5q96RJ6YLszQ/09AAixyzh23FeIpCGqfaamEADtWg==",
+				"shasum": "c12ebe16fffc84573d3e19767726de226e95f649",
+				"tarball": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.2.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5961,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJber8uCRA9TVsSAnZWagAAyZ8P/3UnZnRHXtgclo6rVgRT\n2oe92OziHzbQmNgZaq3UoszUXKfnjRzdmBuzbOc9i/I7whWn86VMzOzO036j\nnr0x9/QG2b6H8mMbd18WJlcSJVqSKrQs3W6t1acBGaD9dV9fcc6nBaTtflvw\nPLcUuZYlGMDYOVUwBBglgWUCmjXWD80g25oUtW0XDthUYFSOFYz8UpVi8RzG\noRlZcHyeZQYNgrDZaqbD2u7+KWeZdQ/GJGSwtfNVUi+stg6dagvkZvjtxf2L\nqSGART57nJmJht1UKsl0SClLj9df8Uw20EWXFX2M7qE6nSJR1WVvCuwuSFc9\nkCgV+lRAEKxV/RWxyxeD8eBhxO49UGNIV0JC22rpenc3WyyhfKoCDoviOfde\no3R2041yLVLOt3qNEsvlgFWQYlNFfEEfbxjZfBAabYcixwi4faXku1AKt3tg\nzg9Z6fMZ1IkV+a/xZiLXSRxef8ZPs013DobzJepaWCQT/OGTq3Wj9bRjrCad\nup/LD+qWsGtlf4hBGBGxNW87LRr2M5QC/yuWsttc3CV/nfNDzGzk/lXyWAe3\nX+D68SFKd3l60L316vhlVgRQdszQP60mqZIYfYH4EiL12lTMEjHThO5oWLTc\n2TESwWdZfaoM1KIXgGsGxhxKos5WUZf38p0WqSZ/wW22qD4zfn5OGyF0JWBX\nBkmF\r\n=zMOG\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-compact_1.0.2_1534770989609_0.2036755358404012"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.3": {
+			"name": "mdast-util-compact",
+			"version": "1.0.3",
+			"description": "Make an mdast tree compact",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"utility",
+				"compact",
+				"node"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-compact.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-compact/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.1.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^1.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilCompact > mdast-util-compact.js",
+				"build-mangle": "browserify . -s mdastUtilCompact -p tinyify > mdast-util-compact.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"mdast-util-compact.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "446660a5228e4aa89b5c680dd1b3fdcbb9fde053",
+			"homepage": "https://github.com/syntax-tree/mdast-util-compact#readme",
+			"_id": "mdast-util-compact@1.0.3",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-nRiU5GpNy62rZppDKbLwhhtw5DXoFMqw9UNZFmlPsNaQCZ//WLjGKUwWMdJrUH+Se7UvtO2gXtAMe0g/N+eI5w==",
+				"shasum": "98a25cc8a7865761a41477b3a87d1dcef0b1e79d",
+				"tarball": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7140,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc57dwCRA9TVsSAnZWagAA4QsP/jB/KoLnDjmdjxGO6z5q\nU13preiv7jNJFIZvPNRqm3U1PfSggPVm3i/rvCbliL8o374hFi50mUzAIA7N\n4pi2sdQcf4xx/GD2UY14WeQ8M6QLqu8ojgc8DiEMZDwoVuZU6XZOjF6Em1ND\nwLtX9al+JVMGWyUFdlhqjZ5B6CHkb9NxNqK3r2BpsD7mbWsBiyWx/mHbS/NX\nvGt/6gksxg6JYizR3JEx86XZk0dp29CqXL4ItTgNH5y17Y8pOF50PKpOIYa8\nw0zm3bui5Oac5nHrDnZYSL3KHStz9evTCmOQDV48pa0UTB2kUvakWVggMu0l\nfFfQAhTu4MfRIYWccXhNU1oH9xiViYeAOlcIPRAqQwak014D8fqBjPvCJdxi\njv1/IH6f3Oq2x9uwPrbO/MdsgdInHLLXjXDZDcwLWD1L/7AuYUjHjI+Zgg84\nIKl2CdXvxtnJqjN4inXi29Dowz38seZKIiIhW4V+wJf8dRthxgCdo6tDYejj\njnRrK7YQ6xys134vyZp5TT4NsFcGgJlzq5AynSATmfSbVHJM6Um8SgzvjFnt\nGrvUtvG9MPTVNmcC24RICT1/1jb24qphzjcbhZvJLAngcX6eqZGx4h1QE7CV\ngcD1exAD1neyAGYROfN3TL3jZbkH+I9CpWVM5XCMYKPvzSpap29RuVxbezAj\n81vX\r\n=YLiJ\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-compact_1.0.3_1558689647835_0.2582052186179231"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.4": {
+			"name": "mdast-util-compact",
+			"version": "1.0.4",
+			"description": "Make an mdast tree compact",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"utility",
+				"compact",
+				"node"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-compact.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-compact/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-visit": "^1.1.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilCompact > mdast-util-compact.js",
+				"build-mangle": "browserify . -s mdastUtilCompact -p tinyify > mdast-util-compact.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"mdast-util-compact.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "fbe2efba36bdde2e3696b5cec2723d0f3eedfcfe",
+			"homepage": "https://github.com/syntax-tree/mdast-util-compact#readme",
+			"_id": "mdast-util-compact@1.0.4",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-3YDMQHI5vRiS2uygEFYaqckibpJtKq5Sj2c8JioeOQBU6INpKbdWzfyLqFFnDwEcEnRFIdMsguzs5pC1Jp4Isg==",
+				"shasum": "d531bb7667b5123abf20859be086c4d06c894593",
+				"tarball": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7506,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdx9D/CRA9TVsSAnZWagAAL14QAKOjo1lU2Mrhqo4VBlM/\ndZ99ptkk9GAF0MjmRMBBpv10mZcKw4L5VvRlkM3TOpGclrToef6t4PXHgWcK\ni+TQOdIYv4+KHAvBO9fAM7KapFUdr3C9KEdn6UvIKamQ07xs5q842WXN6YBq\nGvxgQxeiKuY1HNn58usEtXuRKIk4vjHocsQBA/399rsszTd8/vsOXXQ4skIS\nGb3la1RGXWYZGyLjw+tQ7JJ/aXhD0UjZ7xml31pO1I9xNHg+/ErGNuyvKg7D\niLXQtn7yX74ayZAr2ZI200T681GcKNjYIT9fPXBpLpkHAjBSZ5gLqhgJC2DW\nhB8PMiyu3f3sgQtgs8+3lg2gq8pamkURhheLXJ6czqBdBbTOaKkbmzuY6kY9\nohEJCxFTLT0IfH5yT3DTJ7lvAJ5e51AHPvrXD85JwuSg8rR1WVB2pMqJK+RV\nFj1s2I317fpox7tn8cnq8YgWzRf8dNuOmwJktQkQPBQM3R5exdd74OdrSpmx\nsfjGngjSG6q230SavoitOqPazqtpr5H3LzHMuhGgESkIuge7JHvBqHPXabzT\n1+Zc+Y3GjDELdSLsdbqxiza8Dy2lGv6tzzgF/GaGNujPah7xyZAxusbCV3r6\nCZumpvjt9rbytm1SIoP+4edaUTt69px8WSvO9BpUbP9c9bl0iqNqmnNEfFMv\nDE8/\r\n=7I/j\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-compact_1.0.4_1573376255242_0.7837619611643536"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.0": {
+			"name": "mdast-util-compact",
+			"version": "2.0.0",
+			"description": "Make an mdast tree compact",
+			"license": "MIT",
+			"keywords": [
+				"mdast",
+				"utility",
+				"compact",
+				"node"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-compact.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-compact/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-visit": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilCompact > mdast-util-compact.js",
+				"build-mangle": "browserify . -s mdastUtilCompact -p tinyify > mdast-util-compact.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"mdast-util-compact.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "f48eca44250c55a28f59ef71906116afbeeeabd6",
+			"homepage": "https://github.com/syntax-tree/mdast-util-compact#readme",
+			"_id": "mdast-util-compact@2.0.0",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-Mhb9t4rBWBxAKxT+XF3T+wgouvuxt1iCAbvLnsUD5ypQ9jWWO3KHouHIP821liI8V7Gth3InBsL/E1YdfRBm5g==",
+				"shasum": "b20ee1316ab5196a8f3e82fec88b96f63119b011",
+				"tarball": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-2.0.0.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7506,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdx9E1CRA9TVsSAnZWagAAfJsP/RdfLTYhtdKU5Cq5lM0j\n/TbzhnXDfdZ+xeeAhN1jDqiZYpuxMNSqemtTliUoA2tMhnJlX7J46hssGtpa\nn00ySHiEQgxD7BbUq8nFNzqltAUbEsOy4YoEzfIgqGRYEY+ssrCYo3D7Wh7Y\njY+pP96QNKWT/cvYB6ARs3rFDe7zCqSyIxFZZWIRFkpAa+2G8hM46rKjOlQ0\nOgP+WlBO/4kmupvfUDA56Y1VQnCevhf3ZFeVIvoErmeo/krVnKq8DqBoRGm9\nBd3RQ0hyh0EZGI2HsrQeLv+L8jYwDQEwSkUJPYPfVj0uYqlugq1oHmt6eM4r\nRdinhOj/j8eQfgqZnAXkY+hdkIxk/iEhubXjaV0rL+QODOBdsImpzFMCrMnl\nSTD3w7zhKORqnlX7eZs9v9i5ue9imJ4TglLmEzfYSewfnWK0sYxrneR2ofPo\n+y4Bn58B3EdXZMg6a37OOYnCZakc+G1/4nCala62NXHKZy+FNRhM2uQNP+7k\nI/q/PoeMb0JhqZ+3CJbW1pB2/qzAg1EHvASQhC2483dq3Uw/4M2hWlTvweh+\nKro5ux/D6K18GT6FQmoq54ZfCIdUVMtoEvhsIFf4guyt9VAioNsPgGDgokNN\nopaQsIOE/HUB7thSlUrpDBjQvjC1wbKOa0FKAv5rVO8zCTU+ndINeTlnEp2K\nmdFG\r\n=y0Pd\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-compact_2.0.0_1573376309013_0.8397210825383659"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.1": {
+			"name": "mdast-util-compact",
+			"version": "2.0.1",
+			"description": "mdast utility to make a tree compact",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"mdast",
+				"mdast-util",
+				"util",
+				"utility",
+				"tree",
+				"compact",
+				"node"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/mdast-util-compact.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/mdast-util-compact/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"unist-util-visit": "^2.0.0"
+			},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"unist-builder": "^2.0.0",
+				"xo": "^0.26.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s mdastUtilCompact > mdast-util-compact.js",
+				"build-mangle": "browserify . -s mdastUtilCompact -p tinyify > mdast-util-compact.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"mdast-util-compact.js"
+				]
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "0f79aa25a8575de4ecd4afb6a7ffd363c8f0188d",
+			"homepage": "https://github.com/syntax-tree/mdast-util-compact#readme",
+			"_id": "mdast-util-compact@2.0.1",
+			"_nodeVersion": "13.9.0",
+			"_npmVersion": "6.13.7",
+			"dist": {
+				"integrity": "sha512-7GlnT24gEwDrdAwEHrU4Vv5lLWrEer4KOkAiKT9nYstsTad7Oc1TwqT2zIMKRdZF7cTuaf+GA1E4Kv7jJh8mPA==",
+				"shasum": "cabc69a2f43103628326f35b1acf735d55c99490",
+				"tarball": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-2.0.1.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7546,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeUTnDCRA9TVsSAnZWagAAm7EP/0Hr5JiANoDfSv2rMvbY\ngi/rUcaeEPY3Xf5zQy4z1viO5Ec1RpD7OW3tWEXHskL/jbRZiYzQQRDtc4Tx\n+4xNciXYujvTAXkbN8RYydWESLU8eVWyLW0j+dy9oF3iC1Pxkc6dzmJtKYeU\n7ozFXy2DgSEFxN2HbhtSatZxruRmXu1NHaDQaWDAyVMR/WtDiFAYvHiD2KbS\ncMYN8dH33SYWTXHrv7SJuk+Swp5pT+PKHfUWrnXFWghVAqN7G8IbCEhq27ye\nsvINpBwuVUhhHV1GowK/HTTwz7hhydWl0IjxVV0IVLj3/QzwZtpIXlStYJbF\nE3qZJZuD7T7oaF6tbMpVYOrP/EWEK8LI95t+pn3yjuuUAVTcriM2ifi2+OIQ\nggLudapBaLI+32mcjQnRD9cN41PLgzFetei7kzD2DlOiACHu3RIEVBGER8qi\nQGGX6cIiZkolaNVO4L0PNuJpJthsnidUwT2Mtm5qBXR5Zon4bNDM/0IgKsF+\n0PS28hgU9dPkR9eBLzaOi/7A7QwTX7MkRLG1F0wSwEswQCGGzqZvIdV6F5yi\nInk6Tapa5J+oatcbvyVwA2XRqHewDTvedklQ/RQ9Bzly3G04ahloTWFx1YWc\nF28cPgRRtKTssKZTwiEqDqiBlUrfGhcPYpadbrbRyDM/fQGemESxBbaGq5KZ\n7Fhc\r\n=zPPi\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/mdast-util-compact_2.0.1_1582381506968_0.3736391781711672"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-08-25T11:31:28.127Z",
+		"created": "2016-07-16T15:29:32.745Z",
+		"1.0.0": "2016-07-16T15:29:32.745Z",
+		"1.0.1": "2017-06-13T16:44:13.360Z",
+		"1.0.2": "2018-08-20T13:16:29.723Z",
+		"1.0.3": "2019-05-24T09:20:47.972Z",
+		"1.0.4": "2019-11-10T08:57:35.419Z",
+		"2.0.0": "2019-11-10T08:58:29.167Z",
+		"2.0.1": "2020-02-22T14:25:07.196Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "2.0.1"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"cd8a76931b0780cccda1e4863adb62d6\"",
+			"fetched": 1601147220244
+		}
+	},
+	"_distfiles": {
+		"mdast-util-compact-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.0.tgz",
+			"sha": "4c94dedfe35932d5457f29b650b330fdc73e994a",
+			"registry": "npmjs"
+		},
+		"mdast-util-compact-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.1.tgz",
+			"sha": "cdb5f84e2b6a2d3114df33bd05d9cb32e3c4083a",
+			"registry": "npmjs"
+		},
+		"mdast-util-compact-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.2.tgz",
+			"sha": "c12ebe16fffc84573d3e19767726de226e95f649",
+			"registry": "npmjs"
+		},
+		"mdast-util-compact-1.0.3.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.3.tgz",
+			"sha": "98a25cc8a7865761a41477b3a87d1dcef0b1e79d",
+			"registry": "npmjs"
+		},
+		"mdast-util-compact-1.0.4.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-1.0.4.tgz",
+			"sha": "d531bb7667b5123abf20859be086c4d06c894593",
+			"registry": "npmjs"
+		},
+		"mdast-util-compact-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-2.0.0.tgz",
+			"sha": "b20ee1316ab5196a8f3e82fec88b96f63119b011",
+			"registry": "npmjs"
+		},
+		"mdast-util-compact-2.0.1.tgz": {
+			"url": "https://registry.npmjs.org/mdast-util-compact/-/mdast-util-compact-2.0.1.tgz",
+			"sha": "cabc69a2f43103628326f35b1acf735d55c99490",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-09ff4d1ab39e2637",
+	"_id": "mdast-util-compact",
+	"readme": "# mdast-util-compact\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n[![Chat][chat-badge]][chat]\n\n[**mdast**][mdast] utility to make trees compact: collapse text nodes (when\npossible) and blockquotes (in commonmark mode).\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install mdast-util-compact\n```\n\n## Use\n\n```js\nvar u = require('unist-builder')\nvar compact = require('mdast-util-compact')\n\nvar tree = u('strong', [u('text', 'alpha'), u('text', ' '), u('text', 'bravo')])\n\ncompact(tree)\n\nconsole.log(tree)\n```\n\nYields:\n\n```js\n{ type: 'strong',\n  children: [ { type: 'text', value: 'alpha bravo' } ] }\n```\n\n## API\n\n### `compact(tree[, commonmark])`\n\nWalk the [tree][] and collapse nodes.\nCombines adjacent [text][]s (but not when they represent entities or escapes).\nIf `commonmark` is `true`, collapses [blockquote][]s.\n\nHandles [positional information][position-information] properly.\n\n###### Returns\n\nThe given `tree`.\n\n## Security\n\nUse of `mdast-util-compact` does not involve [**hast**][hast] or user content\nso there are no openings for [cross-site scripting (XSS)][xss] attacks.\n\n## Contribute\n\nSee [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get\nstarted.\nSee [`support.md`][support] for ways to get help.\n\nThis project has a [code of conduct][coc].\nBy interacting with this repository, organization, or community you agree to\nabide by its terms.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/syntax-tree/mdast-util-compact.svg\n\n[build]: https://travis-ci.org/syntax-tree/mdast-util-compact\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/mdast-util-compact.svg\n\n[coverage]: https://codecov.io/github/syntax-tree/mdast-util-compact\n\n[downloads-badge]: https://img.shields.io/npm/dm/mdast-util-compact.svg\n\n[downloads]: https://www.npmjs.com/package/mdast-util-compact\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/mdast-util-compact.svg\n\n[size]: https://bundlephobia.com/result?p=mdast-util-compact\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg\n\n[chat]: https://spectrum.chat/unified/syntax-tree\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md\n\n[support]: https://github.com/syntax-tree/.github/blob/master/support.md\n\n[coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md\n\n[mdast]: https://github.com/syntax-tree/mdast\n\n[tree]: https://github.com/syntax-tree/unist#tree\n\n[position-information]: https://github.com/syntax-tree/unist#positional-information\n\n[text]: https://github.com/syntax-tree/mdast#text\n\n[blockquote]: https://github.com/syntax-tree/mdast#blockquote\n\n[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting\n\n[hast]: https://github.com/syntax-tree/hast"
+}

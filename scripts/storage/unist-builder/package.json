@@ -1,0 +1,993 @@
+{
+	"name": "unist-builder",
+	"versions": {
+		"1.0.0": {
+			"name": "unist-builder",
+			"version": "1.0.0",
+			"description": "Helper for creating unist trees",
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"license": "MIT",
+			"scripts": {
+				"test": "tape test/*.js"
+			},
+			"files": [
+				"index.js"
+			],
+			"homepage": "https://github.com/eush77/unist-builder",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/eush77/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/eush77/unist-builder/issues"
+			},
+			"keywords": [
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax",
+				"tree",
+				"unist"
+			],
+			"dependencies": {
+				"object.assign": "^4.0.1"
+			},
+			"devDependencies": {
+				"tape": "^4.2.0"
+			},
+			"gitHead": "2483e5cbeb8b88541b9b9b1f9d1b3ead68bb2f8b",
+			"_id": "unist-builder@1.0.0",
+			"_shasum": "1dde30c9502a209f72fccc2df1d6c9e0adf56491",
+			"_from": ".",
+			"_npmVersion": "3.3.1",
+			"_nodeVersion": "3.0.0",
+			"_npmUser": {
+				"name": "eush77",
+				"email": "eush77@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "eush77",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "1dde30c9502a209f72fccc2df1d6c9e0adf56491",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.0.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "unist-builder",
+			"version": "1.0.1",
+			"description": "Helper for creating unist trees",
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"license": "MIT",
+			"scripts": {
+				"test": "tape test/*.js"
+			},
+			"files": [
+				"index.js"
+			],
+			"homepage": "https://github.com/eush77/unist-builder",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/eush77/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/eush77/unist-builder/issues"
+			},
+			"keywords": [
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax",
+				"tree",
+				"unist"
+			],
+			"dependencies": {
+				"object.assign": "^4.0.1"
+			},
+			"devDependencies": {
+				"tape": "^4.2.0"
+			},
+			"gitHead": "80383bc23d9a7a6ccb2743a1eabc48440962eb8b",
+			"_id": "unist-builder@1.0.1",
+			"_shasum": "f5498a249b03eeeab1dcbcca6ac22b31f05bcc26",
+			"_from": ".",
+			"_npmVersion": "3.3.9",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "eush77",
+				"email": "eush77@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "eush77",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "f5498a249b03eeeab1dcbcca6ac22b31f05bcc26",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.1.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "unist-builder",
+			"version": "1.0.2",
+			"description": "Helper for creating unist trees",
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"license": "MIT",
+			"scripts": {
+				"test": "tape test/*.js"
+			},
+			"files": [
+				"index.js"
+			],
+			"homepage": "https://github.com/eush77/unist-builder",
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/eush77/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/eush77/unist-builder/issues"
+			},
+			"keywords": [
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax",
+				"tree",
+				"unist"
+			],
+			"dependencies": {
+				"object-assign": "^4.1.0"
+			},
+			"devDependencies": {
+				"tape": "^4.2.0"
+			},
+			"gitHead": "d8d7167dee0ca14aba2fca02dcdec9f5bf0968fb",
+			"_id": "unist-builder@1.0.2",
+			"_shasum": "8c3b9903ef64bcfb117dd7cf6a5d98fc1b3b27b6",
+			"_from": ".",
+			"_npmVersion": "3.3.3",
+			"_nodeVersion": "2.1.0",
+			"_npmUser": {
+				"name": "eush77",
+				"email": "eush77@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "eush77",
+					"email": "eush77@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "8c3b9903ef64bcfb117dd7cf6a5d98fc1b3b27b6",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.2.tgz"
+			},
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/unist-builder-1.0.2.tgz_1466677990572_0.2482887958176434"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.3": {
+			"name": "unist-builder",
+			"version": "1.0.3",
+			"description": "Helper for creating unist trees",
+			"license": "MIT",
+			"keywords": [
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax",
+				"tree",
+				"unist"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-builder/issues"
+			},
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"contributors": [
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				},
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"dependencies": {
+				"object-assign": "^4.1.0"
+			},
+			"devDependencies": {
+				"nyc": "^12.0.2",
+				"prettier": "^1.14.2",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.2.0",
+				"xo": "^0.22.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "d097096b7d8ef1112643ccdeb80d565f1a9bffab",
+			"homepage": "https://github.com/syntax-tree/unist-builder#readme",
+			"_id": "unist-builder@1.0.3",
+			"_npmVersion": "6.3.0",
+			"_nodeVersion": "10.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-/KB8GEaoeHRyIqClL+Kam+Y5NWJ6yEiPsAfv1M+O1p+aKGgjR89WwoEHKTyOj17L6kAlqtKpAgv2nWvdbQDEig==",
+				"shasum": "ab0f9d0f10936b74f3e913521955b0478e0ff036",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5942,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbdqRwCRA9TVsSAnZWagAAN10P/jwW5T0h9+m70jIFDI7a\nP6mbQm9XR9ONK4tSjQUfnqgQdISnKUAvZ86+fLb66vxD+KCG96+P0YS8QBFR\nUYgTXH+pois7kzaicWglx5MaesRJKuN1r3M3cLjdhB56Ibm1oY5AybmnmKUH\nQyGn+kPv6bhpI0LOHQgtUNfn54z5JgsMatlUk/mXKzYDaY2bO+X4YQ8GkufA\nm0xB2m1rBwyyoomaYT5jKytAtX8iwR8Snqq26r4abNqnxlUS5hs4Z1bRk3Og\nr9tu00Jifi9vPSPpvw849knZ+N75Kes408I5Bg2zJ5AvAr3WZlwvPl8usJxe\nRIyeuFszWeuUZ/gNa8wBfKvGGIzE251sd/zB/qfS1CFmOkth9wtFMMd1zPnM\nmSlnSDvGyARSH92zH5C6gjrJ7Hv+mOeLYckwkBtW5AEQsaPxZTyfn9oSlz3G\nwncxj+Y0cFQN8zY4pOhul4yWWnI/2jFlepMqhvD+y2lRg4lnopVUyR7ZF5Qe\n4YyFMwtI0KSOmz24VzzX7CFPMNq8VkcWc4coa6Ob9DrZAk/D+RMx/kPfsySQ\n5ekP2QN8xqfuJM3eZP6Ba37w18Da7JOPw/Oy4if9OSOzS3L+0IjT1dmR+j3d\nKN0zRIonAXBnIRdRcONMVxWYZA4KgQRLCd2miOFd20etfBe6uboezWaDyBhg\nrEz8\r\n=G7r5\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "eush77",
+					"email": "eush77@gmail.com"
+				},
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-builder_1.0.3_1534501999897_0.9586855246110253"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.0.4": {
+			"name": "unist-builder",
+			"version": "1.0.4",
+			"description": "Helper for creating unist trees",
+			"license": "MIT",
+			"keywords": [
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax",
+				"tree",
+				"unist"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-builder/issues"
+			},
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"contributors": [
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				},
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {
+				"object-assign": "^4.1.0"
+			},
+			"devDependencies": {
+				"nyc": "^14.0.0",
+				"prettier": "^1.14.2",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "1b1d82f5bbe362e5354b01bae30e4fd2c66a5b77",
+			"homepage": "https://github.com/syntax-tree/unist-builder#readme",
+			"_id": "unist-builder@1.0.4",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-v6xbUPP7ILrT15fHGrNyHc1Xda8H3xVhP7/HAIotHOhVPjH5dCXA097C3Rry1Q2O+HbOLCao4hfPB+EYEjHgVg==",
+				"shasum": "e1808aed30bd72adc3607f25afecebef4dd59e17",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6502,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc4+v/CRA9TVsSAnZWagAACkwP/3rLcRELsBqPFvH/TUrD\n90rJ1gleId1X2K0IpLOczEkD3dK298fC8VXswbO4UU1qIPPr+N0vitonFtgm\nLX6syRaZTl9UrDjHmDtwodOf2V7dvzfSyspFCziQnsoVWptstiDWKfb1QIr9\n7L0I4nZ3temtVGrvek47JZH8GKlwp3ZXK8ZdVpdjKPfa+49mW9xwz0Cny5A3\nJCYZI/wIjWRsjndkLJEr6Ix3zS3NOuw8U5mmPxvp1MbbLDZhKbs9QXTFbFmD\n64wj//prkL3mTV61qPYHlqLy13R67hqloPy25JWT7uW4EfTuaiKS8OVd/alX\nhdG7cFkUHzbRfVEQfr0hIx3bRc8feyZjnLIdJC4IFbAZAyJyUCPAPNEYSg+b\n0618xCzAjAb3iz9LCXI5R2vqvwQITOHTQw+HrvJ8AMBXBWwSqYyyPfyvtJ4F\nzF4QLvHC78hCp//0DImrVJ8e/7qxnVpQ+D4BzKyhQGSTvYFU6Id1vFXdR2UF\n895SRGf1Yx5rVuEebcVHr9IPEuqvGoiLcg/QNoI4q1PCZJXRxbVa74W20Med\nN6/OND7xu3uNfjbL32o/vs0slkM57kPXxS+Vdpn8yDDsrd4+l4OYxT+w1KOR\nAcuLDpNWQOInuwVGG7hiUBXkskPpyGv7AQPrnntRLVmrU4l99AD93XY9VUMr\nohsl\r\n=7ZfY\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "eush77",
+					"email": "eush77@gmail.com"
+				},
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-builder_1.0.4_1558440958639_0.024471935646442677"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.0": {
+			"name": "unist-builder",
+			"version": "2.0.0",
+			"description": "Helper for creating unist trees",
+			"license": "MIT",
+			"keywords": [
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax",
+				"tree",
+				"unist"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-builder/issues"
+			},
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"contributors": [
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				},
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Christian Murphy",
+					"email": "christian.murphy.42@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {
+				"object-assign": "^4.1.0"
+			},
+			"devDependencies": {
+				"@types/mdast": "^3.0.0",
+				"dtslint": "^0.9.9",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "049c25443b8275cace0bd830c824861109d62c4a",
+			"homepage": "https://github.com/syntax-tree/unist-builder#readme",
+			"_id": "unist-builder@2.0.0",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.12.0",
+			"dist": {
+				"integrity": "sha512-EbTbog++1umb0PizmRDHd1Mm4qaRqRtTpvgd7DsHonwuvKY7ezykz0/jYMIt+ewmHc2+BYLg39gC49PDPe6yJA==",
+				"shasum": "94d3e2b6ad23bc81c7f31af813b89f34d8bcbc7f",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.0.tgz",
+				"fileCount": 5,
+				"unpackedSize": 9051,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdtqUrCRA9TVsSAnZWagAAsuUP/AsPpd7P/uKRaYCoiPjd\n5LseXZlZFfRABxKwysS61vUx1IOCO2O/Nima7aKqCeGljdgwwlXNeTMS3nBW\niGoqa2VyTsrEuzKxI7ASmyG5z8cibiVdR+O9vXSI9XAoZYa9hKIcIA4eSojm\nehagqf+Kr2enQMjOITBUkV4cwaNERLc9idgMQ1t/nMDItDRJu77l/ZyFGTy4\n2fzKX2dg7jnTYEhyE6s51TjUVW0lriCy8XgqYF0IweouTZjnQ5UiEze1TNUa\nVM0HVue1cQkWARxv7borlqnDRbMlFgtEnDHbLbt64nc+H2yqJXrsyxNY6MkC\n9ItluSTaaWfQj0MTn7sLLs1KZ5p4q3YSUDHoyjIs/mx34PFUAfmLMg70DXwf\nx/4vYhBhyAnr0kznYagHBIXFKICoixXr40tNEC7d7J3zFdjiOqFRNvFgIV2x\np18biCur2ii7DXe3fM6zTxBCZWXeHb/dtF0L8/OzcRK0tdHYdCdUYMh6wXqR\nziJ/6PM7GkzQ6wQJAB3XI0/agmkkUd8qFgt48D53mhkqUnqRISqP7homrDUO\niKCAXRptW6ThQnH+sxCnzuH+XWSMm42VXvtz0DHtstGGtkIB6ad1kyc5tx+h\nKqyhBDZMsAobPNf8tT04kaDGDJk8+mwZYX1pOZuGnogU9c2wBA35Vawgsztc\n3ml3\r\n=ifTa\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-builder_2.0.0_1572250922561_0.11966691310907307"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.1": {
+			"name": "unist-builder",
+			"version": "2.0.1",
+			"description": "Helper for creating unist trees",
+			"license": "MIT",
+			"keywords": [
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax",
+				"tree",
+				"unist"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-builder/issues"
+			},
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"contributors": [
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				},
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Christian Murphy",
+					"email": "christian.murphy.42@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {},
+			"devDependencies": {
+				"@types/mdast": "^3.0.0",
+				"dtslint": "^1.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "77882173c43c30dcbe70fafa843f7877944dd0db",
+			"homepage": "https://github.com/syntax-tree/unist-builder#readme",
+			"_id": "unist-builder@2.0.1",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.12.0",
+			"dist": {
+				"integrity": "sha512-dSQ5LedUA8p5UrdkbX4H2fPzvHFB6AWzzCiL8Uxipoic6XCNoq5SUIt+c4FePuFuiU2NN4ulhTHVeCh1e5tNpA==",
+				"shasum": "ffdb3e70ac51dc5eca8e95f2cf166a3922d8b331",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.1.tgz",
+				"fileCount": 5,
+				"unpackedSize": 8986,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdu1dyCRA9TVsSAnZWagAAZEsQAIwk1pd4xfAXPlWm9Lmp\n/aJgPXBE2kDHScYRFzJ5H1vpsDdcPZCbCOx3VCr11sUDRdXNp1GstH2uKogX\n01b8Ql3oD9E6F7BgFBUEnlsZNGr3bGd/CKmCoPAmS/xXJvUS1BrgGzFdRNs5\nGybD8J43Tj5irzpRGnu7P6mSEqRGI/lR9IRiYMTuNNS9SZ6CQGdP9GtcqiNU\nNe4v+OD5aV7cpiKWhIg6NAvBXU0lpz3kgCyHqoDlWidGu6G0aLZFS0whA5ht\nHlLoBeRkE+Ujh30njB3IwbWatlCW0VnW2HIC/KBfxH38wgbB5AfOWYWklNIi\nv3sdp+r7cCqZzKopDVkg3RC6cxLwfP5TjeqzfQ8sTk4PCUnt/Ed4UTHAhcIA\nUGVTYhuqmu3WzRJAZqJDWRxYrC680ES9ppVeUBKKmPsWj9kQIFgwDqtj2KFh\nhCWfC/2sSNws0C9Zjh5Yni3PnpMZmI/Y4U+otzJG1M3GaphiGDLy2WTXB7Zz\ntff4CJdI7lAWF0pE0X/o7K7Pcclzjwr3TFdzM3rlQuk9k0mVrmZZfejfxxSw\nHF1Ap+CTOLW/3jC0X/APcGpo8DFRQSkfFOg0v+PygHkcROUznITJ6fAJoppV\nRKJNAMIHhp63ZSi1nSTSiyuo7B9yLpylfYFwqj+jl6DyfwiJX2ubomE3yFBo\npvke\r\n=2w8b\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-builder_2.0.1_1572558706458_0.450198403044326"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.2": {
+			"name": "unist-builder",
+			"version": "2.0.2",
+			"description": "Helper for creating unist trees",
+			"license": "MIT",
+			"keywords": [
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax",
+				"tree",
+				"unist"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-builder/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"contributors": [
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				},
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Christian Murphy",
+					"email": "christian.murphy.42@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {},
+			"devDependencies": {
+				"@types/mdast": "^3.0.0",
+				"dtslint": "^2.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "f0cbefbdd7676f01bfcdeab732bb7d2ddba32c86",
+			"homepage": "https://github.com/syntax-tree/unist-builder#readme",
+			"_id": "unist-builder@2.0.2",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-I4TpMKqInirL3CG23f1bZyGE/UJecAYHcv586XMLqIkC0iUkI1hi+WZENoaKwdguC0O8nDaYRhHtWjuSjN4HDw==",
+				"shasum": "f24abd96f703925f03df175c1e4143f79e348839",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.2.tgz",
+				"fileCount": 5,
+				"unpackedSize": 9084,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdx91yCRA9TVsSAnZWagAACaQP+QHbY5d99J+VOIPsFSEE\nzXfbrzsmlZu6wqGjyfjlyG5ckG3kj5ilawQK25nmviHeKdAXWLmLrM0twGRm\ncDp3x3iJgsYO3UIJfMetNJDD4tFyYC6R892LQ6iRe1/hm50Gd58vrxD7zTQl\nQmEXlKNUmRPfgkes/qqBArsv789S0GcIJ5JwfsISOkv6h70+e7La1jOBVeFl\naDaCl9lNg6VI0OPN3XVxtQEwt2YxdnMbeh18tWrZdWa09JOS7T6L6l49cZ96\nNvpXCFgBYinI95loyMBjcWhRDh07lUP/dbYkRSenOcPKh8KAWq1/ZqskAv0D\nhh2jAslCwxmmujS5VbX7blo2hfwn12yEBboRHF1ievVFCDY2xI6uzmYlAwnv\n0tXrL5/DUt8TlCKxSlMpFv7JdbWpeJvHL/2nhFWgrk6mVLxeGCKapMQsOriH\nLfdytOP/lnrMh2BHtGe6K7PX7UOcYhcJdixBU7upeT5PULfAziuAyvoL5PnJ\nN+OXTInrw7hbEVKSciufS0EEGqbdqUBB5ZYM9acsj9ztm03vCa2Ex/cYR+yE\nQiYbZgdXjKUPBizLy4eqvnrnoTNxFZ3V8ILF05bryzwiLiTu4oCmdtIKWEHv\nhY1KcwVc8CcKOeJmO39kQKdF4XGvBOKY8/y+0mG8ZLOEWMOPBE+Bmvd7CbT/\n2gLB\r\n=+Vya\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-builder_2.0.2_1573379441837_0.10074012382530717"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.3": {
+			"name": "unist-builder",
+			"version": "2.0.3",
+			"description": "unist utility to create a new trees with a nice syntax",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"unist-util",
+				"util",
+				"utility",
+				"tree",
+				"ast",
+				"build",
+				"builder",
+				"create",
+				"dsl",
+				"hyperscript",
+				"sugar",
+				"syntax"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-builder.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-builder/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Eugene Sharygin",
+				"email": "eush77@gmail.com"
+			},
+			"contributors": [
+				{
+					"name": "Eugene Sharygin",
+					"email": "eush77@gmail.com"
+				},
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Christian Murphy",
+					"email": "christian.murphy.42@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {},
+			"devDependencies": {
+				"@types/mdast": "^3.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"xo": "^0.26.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "38a12a01475391ac118f11330f59ecfeb6c34eed",
+			"homepage": "https://github.com/syntax-tree/unist-builder#readme",
+			"_id": "unist-builder@2.0.3",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.7",
+			"dist": {
+				"integrity": "sha512-f98yt5pnlMWlzP539tPc4grGMsFaQQlP/vM396b00jngsiINumNmsY8rkXjfoi1c6QaM8nQ3vaGDuoKWbe/1Uw==",
+				"shasum": "77648711b5d86af0942f334397a33c5e91516436",
+				"tarball": "https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.3.tgz",
+				"fileCount": 5,
+				"unpackedSize": 9267,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeSWf0CRA9TVsSAnZWagAAyn0QAKAPJ6F0bPoPF36XSrvD\nZr+ZcFwkSI5qM+ZmVHW8pSUTT1okWkvzdx9sP++gAmD3y1QRHS1Ga4fIyAF8\n9V1R0PvkPcl1XGNOZJWYpWEl9CLdlEgdcNl11C/tfGZiYJCCMACx12RASeuI\nhexZ/1iDYzQ2RCrpDCuPbbZ9XRmrgOUZBAbrl5hdjI/y2ft97Lhs9Lxx7MTa\nKI1p/upgymxD7LIWPFY/vCtmbSk1fyrqCfManb+6LYSrkJdW0tjcdSUSLrxF\nCWrmQR2tdsX5RhL29QOpy49qjxLAL6nBvO60CgRLbf1m/uv+aHOVDTEfH9Gd\nA/7mQ690gKrzCWQkdOgEJqNX/d6NkO18JthaV+k1j1eDZpIWCYEhP4+d4Iv7\n2hO76OgwsPUyVvZdwInxE4h75yv4wKVoL8ELZYgYONj5bUQ5VXrhh0Jf7bsb\niFI0Pnjb4PlS0vfpL7DWQRcfxZKbGit+ce2hP5WqBmdAcohiWrSjJvrYLRMc\niNmIxAoPM/B+cXEv7f+s28VNx/iftEURuaGbo4f7/ZTASbcbAbwhJcUJUX6g\n1jqtw98GsmFrQJdxcuAO4xbD/qJm2Yjw0Z3Ev2BYe3VSZ2vNAz9JHYuPnZFW\nsoatRs49TwahYp0wDnaGNkcUl5lvnaG8OTja39nw9tyf6PALo+syUeUDMbJx\n+JJY\r\n=dPM1\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-builder_2.0.3_1581869044074_0.10902945543770537"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-08-25T11:31:46.803Z",
+		"created": "2015-09-27T09:06:08.326Z",
+		"1.0.0": "2015-09-27T09:06:08.326Z",
+		"1.0.1": "2016-01-23T15:04:52.084Z",
+		"1.0.2": "2016-06-23T10:33:12.666Z",
+		"1.0.3": "2018-08-17T10:33:20.062Z",
+		"1.0.4": "2019-05-21T12:15:58.770Z",
+		"2.0.0": "2019-10-28T08:22:02.730Z",
+		"2.0.1": "2019-10-31T21:51:46.605Z",
+		"2.0.2": "2019-11-10T09:50:42.015Z",
+		"2.0.3": "2020-02-16T16:04:04.252Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "2.0.3"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"ffdd3a142674a0a39436ded54a533693\"",
+			"fetched": 1601147221038
+		}
+	},
+	"_distfiles": {
+		"unist-builder-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.0.tgz",
+			"sha": "1dde30c9502a209f72fccc2df1d6c9e0adf56491",
+			"registry": "npmjs"
+		},
+		"unist-builder-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.1.tgz",
+			"sha": "f5498a249b03eeeab1dcbcca6ac22b31f05bcc26",
+			"registry": "npmjs"
+		},
+		"unist-builder-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.2.tgz",
+			"sha": "8c3b9903ef64bcfb117dd7cf6a5d98fc1b3b27b6",
+			"registry": "npmjs"
+		},
+		"unist-builder-1.0.3.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.3.tgz",
+			"sha": "ab0f9d0f10936b74f3e913521955b0478e0ff036",
+			"registry": "npmjs"
+		},
+		"unist-builder-1.0.4.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-1.0.4.tgz",
+			"sha": "e1808aed30bd72adc3607f25afecebef4dd59e17",
+			"registry": "npmjs"
+		},
+		"unist-builder-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.0.tgz",
+			"sha": "94d3e2b6ad23bc81c7f31af813b89f34d8bcbc7f",
+			"registry": "npmjs"
+		},
+		"unist-builder-2.0.1.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.1.tgz",
+			"sha": "ffdb3e70ac51dc5eca8e95f2cf166a3922d8b331",
+			"registry": "npmjs"
+		},
+		"unist-builder-2.0.2.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.2.tgz",
+			"sha": "f24abd96f703925f03df175c1e4143f79e348839",
+			"registry": "npmjs"
+		},
+		"unist-builder-2.0.3.tgz": {
+			"url": "https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.3.tgz",
+			"sha": "77648711b5d86af0942f334397a33c5e91516436",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-213779e6cae2e3ba",
+	"_id": "unist-builder",
+	"readme": "# unist-builder\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n[![Chat][chat-badge]][chat]\n\n[**unist**][unist] utility to create a new [tree][]s with [hyperscript][]-like\nsyntax.\n\n## Install\n\n[npm][]:\n\n```bash\nnpm install unist-builder\n```\n\n## Use\n\n```js\nvar u = require('unist-builder')\n\nvar tree = u('root', [\n  u('subtree', {id: 1}),\n  u('subtree', {id: 2}, [\n    u('node', [u('leaf', 'leaf 1'), u('leaf', 'leaf 2')]),\n    u('leaf', {id: 3}, 'leaf 3'),\n    u('void', {id: 4})\n  ])\n])\n\nconsole.dir(tree, {depth: null})\n```\n\nresults in the following tree:\n\n```js\n{\n  type: 'root',\n  children: [\n    {type: 'subtree', id: 1},\n    {\n      type: 'subtree',\n      id: 2,\n      children: [\n        {\n          type: 'node',\n          children: [\n            {type: 'leaf', value: 'leaf 1'},\n            {type: 'leaf', value: 'leaf 2'}\n          ]\n        },\n        {type: 'leaf', id: 3, value: 'leaf 3'},\n        {type: 'void', id: 4}\n      ]\n    }\n  ]\n}\n```\n\n## API\n\n### `u(type[, props][, children|value])`\n\nCreates a node from `props`, `children`, and optionally `value`.\n\n###### Signatures\n\n*   `u(type[, props], children)` — create a [parent][]\n*   `u(type[, props], value)` — create a [literal][]\n*   `u(type[, props])` — create a void node\n\n###### Parameters\n\n*   `type` (`string`) — node [type][]\n*   `props` (`Object`) — other values assigned to `node`\n*   `children` ([`Array.<Node>`][node]) — children of `node`\n*   `value` (`*`) — value of `node` (cast to string)\n\n###### Returns\n\n[`Node`][node].\n\n## Related\n\n*   [`unist-builder-blueprint`](https://github.com/syntax-tree/unist-builder-blueprint)\n    — Convert unist trees to `unist-builder` notation\n*   [`hastscript`](https://github.com/syntax-tree/hastscript)\n    — Create [hast][] elements\n*   [`xastscript`](https://github.com/syntax-tree/xastscript)\n    — Create [xast][] elements\n\n## Contribute\n\nSee [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get\nstarted.\nSee [`support.md`][support] for ways to get help.\n\nThis project has a [code of conduct][coc].\nBy interacting with this repository, organization, or community you agree to\nabide by its terms.\n\n## License\n\n[MIT][license] © Eugene Sharygin\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/syntax-tree/unist-builder.svg\n\n[build]: https://travis-ci.org/syntax-tree/unist-builder\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/unist-builder.svg\n\n[coverage]: https://codecov.io/github/syntax-tree/unist-builder\n\n[downloads-badge]: https://img.shields.io/npm/dm/unist-builder.svg\n\n[downloads]: https://www.npmjs.com/package/unist-builder\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/unist-builder.svg\n\n[size]: https://bundlephobia.com/result?p=unist-builder\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg\n\n[chat]: https://spectrum.chat/unified/syntax-tree\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md\n\n[support]: https://github.com/syntax-tree/.github/blob/master/support.md\n\n[coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md\n\n[unist]: https://github.com/syntax-tree/unist\n\n[hast]: https://github.com/syntax-tree/hast\n\n[xast]: https://github.com/syntax-tree/xast\n\n[hyperscript]: https://github.com/dominictarr/hyperscript\n\n[node]: https://github.com/syntax-tree/unist#node\n\n[tree]: https://github.com/syntax-tree/unist#tree\n\n[parent]: https://github.com/syntax-tree/unist#parent\n\n[literal]: https://github.com/syntax-tree/unist#literal\n\n[type]: https://github.com/syntax-tree/unist#type"
+}

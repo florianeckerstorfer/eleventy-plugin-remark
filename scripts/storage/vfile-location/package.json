@@ -1,0 +1,1202 @@
+{
+	"name": "vfile-location",
+	"versions": {
+		"2.0.0": {
+			"name": "vfile-location",
+			"version": "2.0.0",
+			"description": "Convert between positions (line and column-based) and offsets (range-based) locations in a virtual file",
+			"license": "MIT",
+			"keywords": [
+				"remark",
+				"comment",
+				"message",
+				"marker",
+				"control"
+			],
+			"files": [
+				"index.js"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile-location/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^1.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^2.0.0",
+				"jscs-jsdoc": "^1.0.0",
+				"remark": "^3.0.0",
+				"remark-comment-config": "^2.0.2",
+				"remark-github": "^4.0.0",
+				"remark-lint": "^2.0.2",
+				"remark-slug": "^4.0.0",
+				"remark-toc": "^2.0.1",
+				"remark-usage": "^2.1.0",
+				"remark-validate-links": "^2.0.2",
+				"remark-yaml-config": "^2.0.0",
+				"tape": "^4.0.0",
+				"vfile": "^1.3.1"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s vfileLocation > vfile-location.js",
+				"build-mangle": "esmangle vfile-location.js > vfile-location.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "0eb58322838ef856671d58945c2a858a2676f336",
+			"homepage": "https://github.com/wooorm/vfile-location#readme",
+			"_id": "vfile-location@2.0.0",
+			"_shasum": "7e34da6cc259cb4cc10963496e68878f0efae386",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "7e34da6cc259cb4cc10963496e68878f0efae386",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-6-west.internal.npmjs.com",
+				"tmp": "tmp/vfile-location-2.0.0.tgz_1454838451842_0.7079255422577262"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"2.0.1": {
+			"name": "vfile-location",
+			"version": "2.0.1",
+			"description": "Convert between positions (line and column-based) and offsets (range-based) locations in a virtual file",
+			"license": "MIT",
+			"keywords": [
+				"remark",
+				"comment",
+				"message",
+				"marker",
+				"control"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/vfile-location/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.1",
+				"esmangle": "^1.0.1",
+				"nyc": "^8.1.0",
+				"remark-cli": "^1.0.0",
+				"remark-comment-config": "^4.0.0",
+				"remark-github": "^5.0.0",
+				"remark-lint": "^4.0.0",
+				"remark-validate-links": "^4.0.0",
+				"tape": "^4.0.0",
+				"vfile": "^2.0.0",
+				"xo": "^0.16.0"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --bare -s vfileLocation > vfile-location.js",
+				"build-mangle": "esmangle vfile-location.js > vfile-location.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"output": true,
+				"plugins": {
+					"comment-config": null,
+					"github": null,
+					"lint": null,
+					"validate-links": null
+				},
+				"settings": {
+					"bullet": "*"
+				}
+			},
+			"gitHead": "9d8a34f30c354c3e1f2599be1198e4b1e210912c",
+			"homepage": "https://github.com/wooorm/vfile-location#readme",
+			"_id": "vfile-location@2.0.1",
+			"_shasum": "0bf8816f732b0f8bd902a56fda4c62c8e935dc52",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "0bf8816f732b0f8bd902a56fda4c62c8e935dc52",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/vfile-location-2.0.1.tgz_1471790088896_0.027401822851970792"
+			},
+			"directories": {}
+		},
+		"2.0.2": {
+			"name": "vfile-location",
+			"version": "2.0.2",
+			"description": "Convert between positions (line and column-based) and offsets (range-based) locations in a virtual file",
+			"license": "MIT",
+			"keywords": [
+				"remark",
+				"comment",
+				"message",
+				"marker",
+				"control"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile-location/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^14.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.0.0",
+				"vfile": "^2.0.0",
+				"xo": "^0.18.0"
+			},
+			"scripts": {
+				"build-md": "remark . -qfo",
+				"build-bundle": "browserify index.js --bare -s vfileLocation > vfile-location.js",
+				"build-mangle": "esmangle vfile-location.js > vfile-location.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "15906d875603ff2c44bc9c8f12878214d7c68bb7",
+			"homepage": "https://github.com/vfile/vfile-location#readme",
+			"_id": "vfile-location@2.0.2",
+			"_shasum": "d3675c59c877498e492b4756ff65e4af1a752255",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "d3675c59c877498e492b4756ff65e4af1a752255",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-location-2.0.2.tgz_1500317792925_0.23454867862164974"
+			},
+			"directories": {}
+		},
+		"2.0.3": {
+			"name": "vfile-location",
+			"version": "2.0.3",
+			"description": "Convert between positions (line and column-based) and offsets (range-based) locations in a virtual file",
+			"license": "MIT",
+			"keywords": [
+				"remark",
+				"comment",
+				"message",
+				"marker",
+				"control"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile-location/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.1",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"vfile": "^2.0.0",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --bare -s vfileLocation > vfile-location.js",
+				"build-mangle": "esmangle vfile-location.js > vfile-location.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off",
+					"object-shorthand": "off"
+				},
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "faad01bfc2eef0356eadaaa142b90155aa97a359",
+			"homepage": "https://github.com/vfile/vfile-location#readme",
+			"_id": "vfile-location@2.0.3",
+			"_npmVersion": "6.0.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-zM5/l4lfw1CBoPx3Jimxoc5RNDAHHpk6AM6LM0pTIkm5SUSsx8ZekZ0PVdf0WEZ7kjlhSt7ZlqbRL6Cd6dBs6A==",
+				"shasum": "083ba80e50968e8d420be49dd1ea9a992131df77",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6777,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa62l1CRA9TVsSAnZWagAAYnoP/R+sx7NohacYJ8p3OEbk\n8sVEsS/KafI/jSR27X/olQB0BuOJg4UOSLdi3B6YOLpUwZfgyMrXX/Tyb4Zo\nXjDAJKHgJDVfj4iYJgb+4Q/Q7jmJGhCD5M2DmS+BIvc31/rpEjK4t1Hj2VJR\nw71J5i0D4l88B6ImswPZLYIjkIWyExm2/Vwv1zjqIv7EJwsZ00nugibY5QbO\nHJFSLb2AsKVpJOAcBxG3BydAh/JdBvdUtake8bTz/v7DcyCa38Ydo7RagvKG\nen2K/gWdmZJPETqtAALgrrMolttEJ4svncAJEcMhiiKRKoi/AUOGUT7MPKHn\namTHzxcFky45k83eaIM96vNlKxtp9G2l6wrXjPSJpVWcMZwAqcRjqTIQarHW\nPy+iOc2dAHbvkrm0UymqMWnpedbexm20jWNEjf6SKt4VGOSgEbLUnKvIY8Rg\n6i5yLD07AMPi4rolnYCxtEqTDtfp2EDkz8A6nCbpLWiAw1wBxyl3+LIXWsPh\nE/XrmO5NHs78WBgY9UusiAiTqPQ6kJzALsvnNzEYFTP46Xjn0dmaU0B1sQQH\n188OF3EHGk68SLWnNs+bthinJl+0g/237kXMMBPhRIitjCQOYREvDczUKgmS\nH13ehXA2vjNY6HGZ9PsVnpFLyFY58h3apEQ80Ndx957SAaXxacq6JlT9hWrq\nFX+w\r\n=sBZj\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-location_2.0.3_1525377396851_0.9099513836651598"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.4": {
+			"name": "vfile-location",
+			"version": "2.0.4",
+			"description": "Convert between positions (line and column-based) and offsets (range-based) locations in a virtual file",
+			"license": "MIT",
+			"keywords": [
+				"remark",
+				"comment",
+				"message",
+				"marker",
+				"control"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile-location/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^13.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.4.3",
+				"vfile": "^3.0.0",
+				"xo": "^0.23.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s vfileLocation > vfile-location.js",
+				"build-mangle": "browserify . -s vfileLocation -p tinyify > vfile-location.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"no-var": "off",
+					"prefer-arrow-callback": "off",
+					"object-shorthand": "off"
+				},
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "f18e5c0d037f0141898e3e52869b5dae8a6f2482",
+			"homepage": "https://github.com/vfile/vfile-location#readme",
+			"_id": "vfile-location@2.0.4",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-KRL5uXQPoUKu+NGvQVL4XLORw45W62v4U4gxJ3vRlDfI9QsT4ZN1PNXn/zQpKUulqGDpYuT0XDfp5q9O87/y/w==",
+				"shasum": "2a5e7297dd0d9e2da4381464d04acc6b834d3e55",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7053,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb8wpfCRA9TVsSAnZWagAAYAwP/0yyttNXAEO8+Xkt5eAK\nvuBqqIezl5nY7okeeCNCpO5WUCA/Z40ozc/B0sIpBTWITR94Q+PBumEzhccu\ndbrl0WEOuvG3Zowy7+Q4QiAaG6pSPhwJcvVqQTtct1reFaVyd7UogWzvbjN3\nLiwfb1u7VXeI5eWE3yP531pXL3D0YaYgko0tPolH5H1iwN/ngBoDO6D/mZe1\nXM+kF6lOqVYY8yQKNAB8DsZXMauACMkwofOE5ZBojYToi6+eLi9+Ogp9fef1\n8ryOOZXEt9Khh3kob5W2FW7q+JdVen5Hjre5OHwFBw7ZQ6WgUOm1dhHsRvzl\nks7KcCO4SukJ1mQHJ0Awb3cs6OECEBRzA/GkuJrrypAn5GC/kYbfKAXZHszn\n4InumUh0nMFf2ZUnQLOMT+8Nx9stBDLezJ4fRb+iMRdBgZo7ZjY8fWbfnbat\n3XjXJT0B+wG/4HKQgjDFXLR4+uVDDDD0rD3Sc7lYRibLe/eH/+KVE9mrlm27\nUrdvmFxN3fm6rVCZPjc80476k6oAFZuZsD1IPr2DbTZDEjKF06WHbMtbvOa3\n/qMHM1bKLbbZ1yH9f0PmI6DVC3d8N46FJITIUnmK7paEB3M8ckD3SuSWJZZh\ntfGfGfMs/d6SV+gSlhx3MiiHeQjFWpf3GO3seuvSFdCDCYJkW6XeJc9szqaT\nyFu9\r\n=zep7\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-location_2.0.4_1542654558334_0.8709698168309239"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.5": {
+			"name": "vfile-location",
+			"version": "2.0.5",
+			"description": "Convert between positions (line and column-based) and offsets (range-based) locations in a virtual file",
+			"license": "MIT",
+			"keywords": [
+				"remark",
+				"comment",
+				"message",
+				"marker",
+				"control"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile-location/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"vfile": "^4.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s vfileLocation > vfile-location.js",
+				"build-mangle": "browserify . -s vfileLocation -p tinyify > vfile-location.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "0097b4036e8a22d2b87b33a815cdb0e7e5b6a2fd",
+			"homepage": "https://github.com/vfile/vfile-location#readme",
+			"_id": "vfile-location@2.0.5",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-Pa1ey0OzYBkLPxPZI3d9E+S4BmvfVwNAAXrrqGbwTVXWaX2p9kM1zZ+n35UtVM06shmWKH4RPRN8KI80qE3wNQ==",
+				"shasum": "c83eb02f8040228a8d2b3f10e485be3e3433e0a2",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.5.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7542,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc78KWCRA9TVsSAnZWagAAtucP/0QF7xJEfTAHjkwfnABD\nVyGNfrRYlXNTHX50sYv4vq080uyYTc1D50gBc4S/d20yk+hc7Pkk87sBdhGl\nlZ/X9mV+NVgvUFikTWbUQCoObxRL8obh7MN2z0srvGONXE9lGYAUKeg9vRXO\nw7uAc0ejZTgPEBX2EyS/N9NuzWnZErsuyM6ng5X3t1KMuvgi3sjcLBZQ3oa0\nRMgdhyHBs18BpgW6LY2IIvXEJnto9ok+fCE44PJH9r2FstrSKvKbnoMtUv07\ngGa+Xl2sWpzfp8Vo7UHl2/jJrkSiFl3Znklcjiew+UEHZxmv0mZeQ4ZM8WAd\nv8qTh2u3MddtnGXk/q3nEToLEfeVVlNn7/Wi4/601gLhrtTqQzBEyjpGueV+\nybUug9XJ9zN3KBmQZPlzmAR6LboH4IW4HzgHVKv119z+rMcVtd0seLzvplPy\n/vp9voHPhIDMhFGnk4WOWy8HNHrDE8YYrloJ87bv7KwWkbB4WnWNGn6sCBbV\nL+5eB8yhdWpl4R7833TDwAT/Q9tJvqBXEoeLGZla50FvX1ht5RN2GB+PfFU7\nvlwnqzW05c1IlKohsgOEuKk/Lbp9/lnISD0olLq3Eh+xIOI/y3EyxR37B/HY\n0tlGgCWVR2hvVyBQURKFlt3rt0vO1t5o890/bkSt+BiC4iu2Z+hkndmVcRiJ\na5Yq\r\n=mwFo\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-location_2.0.5_1559216789388_0.4391849261164369"
+			},
+			"_hasShrinkwrap": false
+		},
+		"2.0.6": {
+			"name": "vfile-location",
+			"version": "2.0.6",
+			"description": "Convert between positions (line and column-based) and offsets (range-based) locations in a virtual file",
+			"license": "MIT",
+			"keywords": [
+				"remark",
+				"comment",
+				"message",
+				"marker",
+				"control"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile-location/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"dependencies": {},
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"vfile": "^4.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s vfileLocation > vfile-location.js",
+				"build-mangle": "browserify . -s vfileLocation -p tinyify > vfile-location.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "d0262408af6c830fd37374e21a7521211b6d9bbd",
+			"homepage": "https://github.com/vfile/vfile-location#readme",
+			"_id": "vfile-location@2.0.6",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-sSFdyCP3G6Ka0CEmN83A2YCMKIieHx0EDaj5IDP4g1pa5ZJ4FJDvpO0WODLxo4LUX4oe52gmSCK7Jw4SBghqxA==",
+				"shasum": "8a274f39411b8719ea5728802e10d9e0dff1519e",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.6.tgz",
+				"fileCount": 4,
+				"unpackedSize": 7640,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdx81iCRA9TVsSAnZWagAAsXAQAI9r9+3cT9IUTaxELEEj\nDs2YgBhQ/3sE9evgFkjYKU/54a62Q4cAn02KdWvdrytJHTt2/hCzWwrkiXkU\nkNbzVBSNEHbHNAt/HDYjBHzUIPGUxi6f3HO2SPyRJ/v7Cl/1iNBdivcwZXEt\nWonxGfHyuFl27lsc1JTXIZYTAJ4zbMi1WMVyS4aLMFAtegxOrvzKeedh0l9L\nj+qAPxQ+98hVt9NF7vhJ96K0vxlwzILsNA4afbLvtPblqXI3R+39ftZoeyyX\ntBrQ72EmNVfZ3DTVQafOYrdzeW3YOH5WhUCi9OSnL44PtHsjvUoqS7bNbs5Z\ndpG9iP5UPFqs1+GEEhp+gCg827wYZB9eGcEs7vXAFCVX0zxHK/UTa80v+Yrw\n47nRFv4rubXi2rp2zn43L77fktcz0iDBjeIgKI08H2ET8Nr4sJxFp1DiqOhC\n60pSnr0SWLzTKT1B2vgyr1hiUhtWYOvCQXSaEWy3sYmJvdNsFFAMGEvdrYbY\n7ce7kfMDYjMzPaRJBC8jJUWIGupSDDMFMDmj7Qz2WIvRFyRiaFuskhGoVK1P\npeydbowJyOyFWeEQZt8bqMsfyKNpPzk/7xm6EMm3t4r+jxSxHJD0fuzr2gVY\nDc1UHpZoFC70r2qnzodXKbT22en2EtMo/nAlpM8iRpKMlfWu4bO6d0wOQjPH\nN3bH\r\n=O/mD\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-location_2.0.6_1573375330325_0.845393477305423"
+			},
+			"_hasShrinkwrap": false
+		},
+		"3.0.0": {
+			"name": "vfile-location",
+			"version": "3.0.0",
+			"description": "Convert between positions (line and column-based) and offsets (range-based) locations in a virtual file",
+			"license": "MIT",
+			"keywords": [
+				"remark",
+				"comment",
+				"message",
+				"marker",
+				"control"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile-location/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Christian Murphy",
+					"email": "christian.murphy.42@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {},
+			"devDependencies": {
+				"@types/unist": "^2.0.0",
+				"browserify": "^16.0.0",
+				"dtslint": "^2.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"vfile": "^4.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s vfileLocation > vfile-location.js",
+				"build-mangle": "browserify . -s vfileLocation -p tinyify > vfile-location.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "f276c72deb7b468e3a291f8b516571ddb56b4d6d",
+			"homepage": "https://github.com/vfile/vfile-location#readme",
+			"_id": "vfile-location@3.0.0",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.6",
+			"dist": {
+				"integrity": "sha512-WaxBvJamrecxAjJqch0V2WtJPLEnKqrx8i3H4MhLS3mWkIJk1/pe1AiFr9Q0/U015FvMCni0o0cssRD6D+1Zmg==",
+				"shasum": "fc47181e49470aff24a1cac3f9b867428ced6ba2",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-3.0.0.tgz",
+				"fileCount": 5,
+				"unpackedSize": 8670,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeL1WKCRA9TVsSAnZWagAAuQ4P/37RdUtTrbwhPzRGySUP\nW1i0OY5O4vzoaXRXwvf3S5iqPzxbd1akITmhoKrPhZV/bWuoO4l8FcLbfD7G\nzaXYfJLQZbJV5A0xUZKl4jrTLWxyVESjYpBOB6pN3CQD9CpNDThnXD2heLXF\nghAIoYQOcTmCfEBe3JxReztmg5P5g3fw+3nDZnmdJ4sBW2OCZZQvvE5tNKDF\n8VONI6nvkrLpJUe5eQ4oZ6wtIjJcq1jIKAYyEwCKmuVUXHZmig9wSaGYXSzm\nTMGv3TVoMGNtkAqiewwElWsTYVqfNn4Eq5SAcqIFEK3P4hLnCApQEKJ9KbD/\nh5mMB7/SRejFLFxFsxwawG0qeYQWtpPqL5mu+2iynltrSwsAinXLnf5opZhA\nVVOLl8N6iVOnOda1s93FSXFMunjbTLP2RBMVm7k8OMpttpC6UAN1jqBrf1Ev\nb2iGAIa6Qqddhjo3xDBf3FI1hjWSCUjQTWVG+H8Lgaj+UOslmtSQ6tBmhdvB\nmtUkAhh8eQbVfj10oiOZKao97IcyR/Qdjr8nykDSVA3zbNek7Vzn7oCPb6Wg\n7TAb5nVvY+M3j+vDZRujvs8bGXLWWj+WeN3e16yGlsmGjl2/IOk80+2RHcgB\nbJFuUVFJcDDpQ81w43/lB+uXkCOOWq+cPRo2kUTZMQlaXnqTGXQYna9BoZ+X\nCna9\r\n=ncH+\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-location_3.0.0_1580160393715_0.40720047316018015"
+			},
+			"_hasShrinkwrap": false
+		},
+		"3.0.1": {
+			"name": "vfile-location",
+			"version": "3.0.1",
+			"description": "vfile utility to convert between positional (line and column-based) and offset (range-based) locations",
+			"license": "MIT",
+			"keywords": [
+				"vfile",
+				"vfile-util",
+				"util",
+				"utility",
+				"virtual",
+				"file",
+				"location",
+				"position",
+				"offset"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile-location/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Christian Murphy",
+					"email": "christian.murphy.42@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {},
+			"devDependencies": {
+				"@types/unist": "^2.0.0",
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"vfile": "^4.0.0",
+				"xo": "^0.27.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.{js,ts}\" && xo --fix",
+				"build-bundle": "browserify . -s vfileLocation > vfile-location.js",
+				"build-mangle": "browserify . -s vfileLocation -p tinyify > vfile-location.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "0a04a32a63eab69ac316207108fe59afc94b4718",
+			"homepage": "https://github.com/vfile/vfile-location#readme",
+			"_id": "vfile-location@3.0.1",
+			"_nodeVersion": "13.9.0",
+			"_npmVersion": "6.13.7",
+			"dist": {
+				"integrity": "sha512-yYBO06eeN/Ki6Kh1QAkgzYpWT1d3Qln+ZCtSbJqFExPl1S3y2qqotJQXoh6qEvl/jDlgpUJolBn3PItVnnZRqQ==",
+				"shasum": "d78677c3546de0f7cd977544c367266764d31bb3",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-3.0.1.tgz",
+				"fileCount": 5,
+				"unpackedSize": 8704,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeXhhjCRA9TVsSAnZWagAAS78P/A2mu2Dc8yFR3r6ld00l\naJGgCQbHmK4fhvbbMeyh+IaRY0MdFFFGMCIeG75TDh9pXPotKElMeGqrgfJG\nkFO9ijAEBe4T8OfEuEmvvtfq0urPvFtv48q5zo2MoFyccmPECRf+TDMNpel9\npqFeYZQCWRazNSAmkJqd5vzZ7UMwJM/iZqwu2zVvgZaWDkJ9yWvJDeu50t4L\nn+4uaimOgMdKRqwlSUgGaFAgPWPVwSo+bG5QwHwyne9rolxcIY7fhIL0rsFJ\nOr98WWwhtm/8dVxvF1zrVpB4ZoIqgMvuFdWoiaVeKZwZdG9Yy3ImIk42sXXw\nnfXSy8sdOz3N3KX5sfZbPRNhhVBRwybKnob4sdunUaDJ31uavxEI8quVtIkH\nKFZXr2NzXSbJqJVcwSSElPS66wM454lD8P7b/e4jY4ctWGJtC/ZKRUrRxNEw\nskU0iydK4CtoWOwUBcS13e5O4kxeOupt1ctjM+aDqNk3J1oXCwN0MZ2EfHSQ\nHMMEq3jAVYUET0adrx9EknPx49uy70Fty4rafCod/Z9jVB4LLdbpzT1ISNyg\nqjL0O9kCFyHnauV+d6CbCE7K+S+oqm/F65L4oq51pqYnvoNvyQ4XPo7RCHfw\nDxNesV3eptMKcccdtJIUK7rfdGlYW0Vw9EAKY2O+VaHWNKAVV+LL/O2VHjiu\ne3bB\r\n=806f\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-location_3.0.1_1583224931144_0.5250405252007078"
+			},
+			"_hasShrinkwrap": false
+		},
+		"3.1.0": {
+			"name": "vfile-location",
+			"version": "3.1.0",
+			"description": "vfile utility to convert between positional (line and column-based) and offset (range-based) locations",
+			"license": "MIT",
+			"keywords": [
+				"vfile",
+				"vfile-util",
+				"util",
+				"utility",
+				"virtual",
+				"file",
+				"location",
+				"point",
+				"position",
+				"offset"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/vfile/vfile-location.git"
+			},
+			"bugs": {
+				"url": "https://github.com/vfile/vfile-location/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				},
+				{
+					"name": "Christian Murphy",
+					"email": "christian.murphy.42@gmail.com"
+				}
+			],
+			"types": "types/index.d.ts",
+			"dependencies": {},
+			"devDependencies": {
+				"@types/unist": "^2.0.0",
+				"browserify": "^16.0.0",
+				"dtslint": "^3.0.0",
+				"nyc": "^15.0.0",
+				"prettier": "^2.0.0",
+				"remark-cli": "^8.0.0",
+				"remark-preset-wooorm": "^7.0.0",
+				"tape": "^5.0.0",
+				"tinyify": "^3.0.0",
+				"vfile": "^4.0.0",
+				"xo": "^0.33.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier . --write && xo --fix",
+				"build-bundle": "browserify . -s vfileLocation > vfile-location.js",
+				"build-mangle": "browserify . -s vfileLocation -p tinyify > vfile-location.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test-types": "dtslint types",
+				"test": "npm run format && npm run build && npm run test-coverage && npm run test-types"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"unicorn/prefer-number-properties": "off"
+				},
+				"ignores": [
+					"vfile-location.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "7836dd00f860bc0e11c48b116f27a9562c53f2da",
+			"homepage": "https://github.com/vfile/vfile-location#readme",
+			"_id": "vfile-location@3.1.0",
+			"_nodeVersion": "14.7.0",
+			"_npmVersion": "6.14.8",
+			"dist": {
+				"integrity": "sha512-FCZ4AN9xMcjFIG1oGmZKo61PjwJHRVA+0/tPUP2ul4uIwjGGndIxavEMRpWn5p4xwm/ZsdXp9YNygf1ZyE4x8g==",
+				"shasum": "81cd8a04b0ac935185f4fce16f270503fc2f692f",
+				"tarball": "https://registry.npmjs.org/vfile-location/-/vfile-location-3.1.0.tgz",
+				"fileCount": 5,
+				"unpackedSize": 8842,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfP/1oCRA9TVsSAnZWagAAeW8P/iRSVFIigk7B3QS8uEUI\nb8EzVr9BRkkDHEV1lwnoBU7SQo7Kt7szyAmdLIduMCphkvQyA1wDUuxDxiul\nThxGqha3iul4JKoTRrsXFiMEkof5nJnxmv+PlyjSsBIbSippQ37nYy7Wb6/x\nJsGXWIqlp1bH9pIIRhfVKulWfX5qvZkXe9eJ54EnJe7cjnPRCo1OKeeGKEkN\nwq/TAyQU4APxaByEXi5zcgAq6tpA4EeV82Nz+oIvGNRhVuEVltou1EP+UXl2\ndVtYbcv9A1xtJtzdgWb0Ybyq1sX0PAuw9uXhQ6wCdqfbeqOGmLilU4XLpn2u\nJC4aRl1R7jyUC4iqE/DXLvO0tOlqXm95BZpwAG7G4A116DZpBDEClQQBOf7c\nCXVOoYgdmKN3rmhrfngv38Cgbz1WpmnXVFK48frH4EzbEm30OD1Nm6SdHiCC\nSDYoPyZSwNhLcvx0dw15K/tvdXky1/IMhsG+Zzuy9tVYbQd/V1E0jdOK5w5F\nu7bmSeswayFwFMo0LdqbvuL3DT9q0kQu2yqIjIY+c52tGofjnJZ/bjqi05F7\nhPCCR0P4q3mztHB5PZ+C4M4r1XbY4Y1zpULAGa99OP6hZbh44lYZ5gofk0Br\nIC+c6+iTcAFCfBq4AkIJvychWDx8VI+23b4GV/tsB3oWF6ypyD5J933pvMWo\ne+gC\r\n=ha2l\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/vfile-location_3.1.0_1598029159890_0.6092293120598822"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-08-21T16:59:22.286Z",
+		"created": "2016-02-07T09:47:36.068Z",
+		"2.0.0": "2016-02-07T09:47:36.068Z",
+		"2.0.1": "2016-08-21T14:34:50.243Z",
+		"2.0.2": "2017-07-17T18:56:33.882Z",
+		"2.0.3": "2018-05-03T19:56:37.011Z",
+		"2.0.4": "2018-11-19T19:09:18.413Z",
+		"2.0.5": "2019-05-30T11:46:29.748Z",
+		"2.0.6": "2019-11-10T08:42:10.479Z",
+		"3.0.0": "2020-01-27T21:26:33.951Z",
+		"3.0.1": "2020-03-03T08:42:11.318Z",
+		"3.1.0": "2020-08-21T16:59:19.981Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "3.1.0"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"c6d153f3338e4198de67602bfe938fa3\"",
+			"fetched": 1601147219775
+		}
+	},
+	"_distfiles": {
+		"vfile-location-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.0.tgz",
+			"sha": "7e34da6cc259cb4cc10963496e68878f0efae386",
+			"registry": "npmjs"
+		},
+		"vfile-location-2.0.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.1.tgz",
+			"sha": "0bf8816f732b0f8bd902a56fda4c62c8e935dc52",
+			"registry": "npmjs"
+		},
+		"vfile-location-2.0.2.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.2.tgz",
+			"sha": "d3675c59c877498e492b4756ff65e4af1a752255",
+			"registry": "npmjs"
+		},
+		"vfile-location-2.0.3.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.3.tgz",
+			"sha": "083ba80e50968e8d420be49dd1ea9a992131df77",
+			"registry": "npmjs"
+		},
+		"vfile-location-2.0.4.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.4.tgz",
+			"sha": "2a5e7297dd0d9e2da4381464d04acc6b834d3e55",
+			"registry": "npmjs"
+		},
+		"vfile-location-2.0.5.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.5.tgz",
+			"sha": "c83eb02f8040228a8d2b3f10e485be3e3433e0a2",
+			"registry": "npmjs"
+		},
+		"vfile-location-2.0.6.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-2.0.6.tgz",
+			"sha": "8a274f39411b8719ea5728802e10d9e0dff1519e",
+			"registry": "npmjs"
+		},
+		"vfile-location-3.0.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-3.0.0.tgz",
+			"sha": "fc47181e49470aff24a1cac3f9b867428ced6ba2",
+			"registry": "npmjs"
+		},
+		"vfile-location-3.0.1.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-3.0.1.tgz",
+			"sha": "d78677c3546de0f7cd977544c367266764d31bb3",
+			"registry": "npmjs"
+		},
+		"vfile-location-3.1.0.tgz": {
+			"url": "https://registry.npmjs.org/vfile-location/-/vfile-location-3.1.0.tgz",
+			"sha": "81cd8a04b0ac935185f4fce16f270503fc2f692f",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-757fc6c0289656ab",
+	"_id": "vfile-location",
+	"readme": "# vfile-location\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n[![Chat][chat-badge]][chat]\n\nConvert between positional (line and column-based) and offsets (range-based)\nlocations in a [virtual file][vfile].\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install vfile-location\n```\n\n## Use\n\n```js\nvar vfile = require('vfile')\nvar vfileLocation = require('vfile-location')\n\nvar location = vfileLocation(vfile('foo\\nbar\\nbaz'))\n\nvar offset = location.toOffset({line: 3, column: 3}) // => 10\nlocation.toPoint(offset) // => {line: 3, column: 3, offset: 10}\n```\n\n## API\n\n### `location = vfileLocation(doc)`\n\nGet transform functions for the given `doc` (`string`) or [`file`][vfile].\n\nReturns an object with [`toOffset`][to-offset] and [`toPoint`][to-point].\n\n### `location.toOffset(point)`\n\nGet the `offset` (`number`) for a line and column-based [`point`][point] in the\nbound file.\nReturns `-1` when given invalid or out of bounds input.\n\n### `location.toPoint(offset)`\n\nGet the line and column-based [`point`][point] for `offset` in the bound file.\n\n## Contribute\n\nSee [`contributing.md`][contributing] in [`vfile/.github`][health] for ways to\nget started.\nSee [`support.md`][support] for ways to get help.\n\nThis project has a [code of conduct][coc].\nBy interacting with this repository, organization, or community you agree to\nabide by its terms.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definitions -->\n\n[build-badge]: https://img.shields.io/travis/vfile/vfile-location.svg\n\n[build]: https://travis-ci.org/vfile/vfile-location\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/vfile/vfile-location.svg\n\n[coverage]: https://codecov.io/github/vfile/vfile-location\n\n[downloads-badge]: https://img.shields.io/npm/dm/vfile-location.svg\n\n[downloads]: https://www.npmjs.com/package/vfile-location\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/vfile-location.svg\n\n[size]: https://bundlephobia.com/result?p=vfile-location\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/chat-discussions-success.svg\n\n[chat]: https://github.com/vfile/vfile/discussions\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[contributing]: https://github.com/vfile/.github/blob/HEAD/contributing.md\n\n[support]: https://github.com/vfile/.github/blob/HEAD/support.md\n\n[health]: https://github.com/vfile/.github\n\n[coc]: https://github.com/vfile/.github/blob/HEAD/code-of-conduct.md\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[vfile]: https://github.com/vfile/vfile\n\n[to-offset]: #locationtooffsetpoint\n\n[to-point]: #locationtopointoffset\n\n[point]: https://github.com/syntax-tree/unist#point"
+}

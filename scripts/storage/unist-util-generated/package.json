@@ -1,0 +1,799 @@
+{
+	"name": "unist-util-generated",
+	"versions": {
+		"1.0.0": {
+			"name": "unist-util-generated",
+			"version": "1.0.0",
+			"description": "Check if a Unist node is generated",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"position",
+				"location",
+				"generated",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/unist-util-generated.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/unist-util-generated/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"eslint": "^2.0.0",
+				"esmangle": "^1.0.0",
+				"istanbul": "^0.4.0",
+				"jscs": "^3.0.0",
+				"jscs-jsdoc": "^2.0.0",
+				"remark": "^4.0.0",
+				"remark-comment-config": "^3.0.0",
+				"remark-github": "^4.0.0",
+				"remark-lint": "^3.0.0",
+				"remark-usage": "^3.0.0",
+				"tape": "^4.5.1"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail",
+				"build-bundle": "browserify index.js --no-builtins -s unistUtilGenerated > unist-util-generated.js",
+				"build-mangle": "esmangle unist-util-generated.js > unist-util-generated.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint-api": "eslint .",
+				"lint-style": "jscs --reporter inline .",
+				"lint": "npm run lint-api && npm run lint-style",
+				"test-api": "node test.js",
+				"test-coverage": "istanbul cover test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"gitHead": "42e9045ff65addb3ec21f6c0b8527d9d718f7419",
+			"homepage": "https://github.com/wooorm/unist-util-generated#readme",
+			"_id": "unist-util-generated@1.0.0",
+			"_shasum": "d1285c5dc0a9504e2f90d1560468c4a7b9b122d1",
+			"_from": ".",
+			"_npmVersion": "3.3.6",
+			"_nodeVersion": "5.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "d1285c5dc0a9504e2f90d1560468c4a7b9b122d1",
+				"tarball": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/unist-util-generated-1.0.0.tgz_1460739301563_0.9514665931928903"
+			},
+			"directories": {}
+		},
+		"1.1.0": {
+			"name": "unist-util-generated",
+			"version": "1.1.0",
+			"description": "Check if a Unist node is generated",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"position",
+				"location",
+				"generated",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/wooorm/unist-util-generated.git"
+			},
+			"bugs": {
+				"url": "https://github.com/wooorm/unist-util-generated/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^13.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^9.0.1",
+				"remark-cli": "^2.1.0",
+				"remark-preset-wooorm": "^1.0.0",
+				"tape": "^4.5.1",
+				"xo": "^0.17.1"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --no-builtins -s unistUtilGenerated > unist-util-generated.js",
+				"build-mangle": "esmangle unist-util-generated.js > unist-util-generated.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"ignores": [
+					"unist-util-generated.js"
+				]
+			},
+			"remarkConfig": {
+				"presets": "wooorm"
+			},
+			"gitHead": "b49c1ad9231bc069831ef02686ad8e086d1a93d1",
+			"homepage": "https://github.com/wooorm/unist-util-generated#readme",
+			"_id": "unist-util-generated@1.1.0",
+			"_shasum": "8c95657ff12b32eaffe0731fbb37da6995fae01b",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "8c95657ff12b32eaffe0731fbb37da6995fae01b",
+				"tarball": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/unist-util-generated-1.1.0.tgz_1479637136523_0.7084899139590561"
+			},
+			"directories": {}
+		},
+		"1.1.1": {
+			"name": "unist-util-generated",
+			"version": "1.1.1",
+			"description": "Check if a Unist node is generated",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"position",
+				"location",
+				"generated",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-util-generated.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-util-generated/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^14.1.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"remark-cli": "^3.0.0",
+				"remark-preset-wooorm": "^3.0.0",
+				"tape": "^4.5.1",
+				"xo": "^0.18.2"
+			},
+			"scripts": {
+				"build-md": "remark . --quiet --frail --output",
+				"build-bundle": "browserify index.js --no-builtins -s unistUtilGenerated > unist-util-generated.js",
+				"build-mangle": "esmangle unist-util-generated.js > unist-util-generated.min.js",
+				"build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+				"lint": "xo",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run build && npm run lint && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"xo": {
+				"space": true,
+				"esnext": false,
+				"ignores": [
+					"unist-util-generated.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "1d6c2e08ccc43d4b1245a395749af2419e0d79fd",
+			"homepage": "https://github.com/syntax-tree/unist-util-generated#readme",
+			"_id": "unist-util-generated@1.1.1",
+			"_shasum": "99f16c78959ac854dee7c615c291924c8bf4de7f",
+			"_from": ".",
+			"_npmVersion": "2.14.2",
+			"_nodeVersion": "4.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"shasum": "99f16c78959ac854dee7c615c291924c8bf4de7f",
+				"tarball": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-util-generated-1.1.1.tgz_1497290939353_0.8768219435587525"
+			},
+			"directories": {}
+		},
+		"1.1.2": {
+			"name": "unist-util-generated",
+			"version": "1.1.2",
+			"description": "Check if a Unist node is generated",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"position",
+				"location",
+				"generated",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-util-generated.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-util-generated/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "http://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "http://wooorm.com"
+				}
+			],
+			"files": [
+				"index.js"
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"esmangle": "^1.0.0",
+				"nyc": "^11.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^5.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.5.1",
+				"xo": "^0.20.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify index.js --no-builtins -s unistUtilGenerated > unist-util-generated.js",
+				"build-mangle": "esmangle unist-util-generated.js > unist-util-generated.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignores": [
+					"unist-util-generated.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "0347d5580035fd39d0ce6c69eaee4b9c82eb6853",
+			"homepage": "https://github.com/syntax-tree/unist-util-generated#readme",
+			"_id": "unist-util-generated@1.1.2",
+			"_npmVersion": "6.0.0",
+			"_nodeVersion": "9.5.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-1HcwiEO62dr0XWGT+abVK4f0aAm8Ik8N08c5nAYVmuSxfvpA9rCcNyX/le8xXj1pJK5nBrGlZefeWB6bN8Pstw==",
+				"shasum": "8b993f9239d8e560be6ee6e91c3f7b7208e5ce25",
+				"tarball": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.2.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5672,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa6JPUCRA9TVsSAnZWagAA4tQP/1uU+fNygFVnzZzeakqK\nt3okrJ1ht73QKAEEx5kfh0Axa+PGdIyI/O44Ll4Vwb8mJeXXc/ms9H2UVkvf\ng0TbZwBIMl438aYVhVEga0o509HZJy2Ds6cvx4HybGDvx+ilGiOHyQDScyNw\nkXp3EXtdA9YP4au9501Idni/8ovjoKhNZpWmej0XIS5BHEnrRIsdKTVsi5/+\nhjf5gdQ/UmfdUayog8FHlu//1INJPGJQyVVD+3Ooi7fX96NV7jE3VDwFipEY\nzKvsnBqAT9LJQtpdCtTFxp7DAAcOQCUjLui4DbHU2eZ4aWjzXw2nmwQlFtXY\njEZqO1hTjQLUBX43g8McdECz635DjN9P8ncaL48Ia50a6GYb8Nw3zYpOzcyc\nLAoEvxMUOrWWDr7oihgWsaM36IsS/OT5FhPeYWgtKaoeH+IKC4nZ+pjvEdgu\n/5HOge7zIy+Oj94FJQUu2GAE+0w8k11a2zeOvEWq89ULyHNMkU/yINit1kHf\noUe1fg3sVMlksbzkmAfgyggYVyZo5scpUw0Wrsg7aoK9Mo+JleCk228kPkPY\n767ip8+9fH0LDBHdWRI9wmL4kFAH7103+ZThuMP5LiQcZsGS07Reajj72sVX\nUDl8GCaO5IUQkNl51VbObFrBtwO7jyMpnl1iwt7tw5ayJzAb3cYNHPFgrgIQ\n6Fg2\r\n=d8D+\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-util-generated_1.1.2_1525191636263_0.8339694841682306"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.1.3": {
+			"name": "unist-util-generated",
+			"version": "1.1.3",
+			"description": "Check if a Unist node is generated",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"position",
+				"location",
+				"generated",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-util-generated.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-util-generated/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^13.0.0",
+				"prettier": "^1.12.1",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^4.0.0",
+				"tape": "^4.5.1",
+				"tinyify": "^2.4.3",
+				"xo": "^0.23.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+				"build-bundle": "browserify . -s unistUtilGenerated > unist-util-generated.js",
+				"build-mangle": "browserify . -s unistUtilGenerated -p tinyify > unist-util-generated.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"rules": {
+					"guard-for-in": "off",
+					"no-var": "off",
+					"prefer-arrow-callback": "off"
+				},
+				"ignores": [
+					"unist-util-generated.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "6d0ea02a5db9d3ffee30c1eed754a0dbe0e98173",
+			"homepage": "https://github.com/syntax-tree/unist-util-generated#readme",
+			"_id": "unist-util-generated@1.1.3",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "11.0.0",
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-qlPeDqnQnd84KIqwphzOR+l02cxjDzvEYEBl84EjmKRrX4eUmjyAo8xJv1SCDhJqNjyHRnBMZWNKAiBtXE6hBg==",
+				"shasum": "ca650470aef2fbcc5fe54c465bc26b41ca109e2b",
+				"tarball": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.3.tgz",
+				"fileCount": 4,
+				"unpackedSize": 5666,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb2syrCRA9TVsSAnZWagAA8cwQAI1xnRupsZvJxDIo6kHL\nXnjLJjIllRQkLw+AyhcMiPNoj1VCfflnau8l88luI6xxXXIRmUF0cu4wEEbB\nLz7kUM1iLU4eTjWkyswnPBSxB3CJpP8qihiaJRy8RlfG3z1N/HALA7QnRYoa\nFK0gDTuGPL+mig2XVRQWWMTN75eJqOeB+/RO3aSTGPU/j6ElwsMbassEt15k\nmzCjZdWe9tgEPsMb+giDgnPlKFsw/RojQV8nRL9rZE11keMMvkR6bzZUsa6j\nc/QZGUNNizDlJk9iJU2Sf+867wxrGXQ05ZpCb9BW0z2hBTv8VOc9S6RuEV+U\n/cqui/mGSfCNXqYiZj7OHLK+/4wRfvVsZrmGn0KWghKFHV/hN6j9x/OIOQ5t\nSC+CcUg/uDO6WycplTzykhZpk/7RpYet9WhjoJHYBB2V2DOnymDKcQ4LFcvz\nYSAI7tn+rblauvAkSX6iksxdUqyweftZJ+Alndl5FANayIPpiL/EoqBBnY0T\nfzCctFtjvZm6ivnl/ohvq7Nsjj2zrYycLla31e+Q8PKx+vg9plq69EqeHTNa\nFzfNgS/Przdvk0A9UlTVaoXsQQJFV2v1Yf3yAJ2k/DKdHx0IKT4yhmNuESYM\nJkfA2cQoygyaefeeQlYH/835kcP+sXPnw4crhQjnHqO5A1Ob2zZJpt7eOoDS\nur1r\r\n=bc/F\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-util-generated_1.1.3_1541065899018_0.21241757428939323"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.1.4": {
+			"name": "unist-util-generated",
+			"version": "1.1.4",
+			"description": "Check if a Unist node is generated",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"position",
+				"location",
+				"generated",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-util-generated.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-util-generated/issues"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^6.0.0",
+				"remark-preset-wooorm": "^5.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.24.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s unistUtilGenerated > unist-util-generated.js",
+				"build-mangle": "browserify . -s unistUtilGenerated -p tinyify > unist-util-generated.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"unist-util-generated.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "fee74661a14674dd56c90592df365dfafe8e9f40",
+			"homepage": "https://github.com/syntax-tree/unist-util-generated#readme",
+			"_id": "unist-util-generated@1.1.4",
+			"_nodeVersion": "12.2.0",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-SA7Sys3h3X4AlVnxHdvN/qYdr4R38HzihoEVY2Q2BZu8NHWDnw5OGcC/tXWjQfd4iG+M6qRFNIRGqJmp2ez4Ww==",
+				"shasum": "2261c033d9fc23fae41872cdb7663746e972c1a7",
+				"tarball": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.4.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6280,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc5QsUCRA9TVsSAnZWagAAj4gP+QGVTEN1b5uqh3xzdKqE\nVarMAFh/bMFk44MZW/xBFK8DT8SDc9+iExefsXLkXgopu7oGgtLeSmr23SCd\njnauFX1ipdxkP6PtguFmSzX2imt05FqocycixcUquzRTAMpc29rWOan5n476\nAtIw6igi1NuFMt1QS1nbB44WWZpqo0eP2K6eyE/+I7zMslG03Rdf2Qw1BbBd\n9RcM/aIQnDBxx2pb5jNKwHhEvEg++7MpEZxXMR4In/vRj+QlIihJ8MquHe78\nDUXIUkHZAV5Zl6ye3TUlf6wgjRdsC7qwA5Z/YkoMu2rcvqdL+RyP3R/70406\nxHrcAAWo7B8VFBKCfW4Ib/DBUu0NEhzNj/AaP5G7AhvYAK7ZCw6u6Cl0Ss0J\nSZyI2aHmc4H8c+nt2ZrnlRLSRwZKiFCqa8M4iT+WhZsBoRFBjVuC4I1uvdy5\ndPzr3tBnRhiKIIUSvT9VpUbEGL9gAO1oIkhZQDvTx+rvout86cCHcH3G9J7t\nhB0UPpfluJ0NdDtuO7enK6c42/2mZo4TDGTg8yTzFQipVMHx8AF5145ipYWd\nMT6xae2Pt+IC7M+Lhhi2NpLgjnkEvmI9pym1cUA9ZKRs/+C6JXkmFppZ1KMv\nxplDlC+cygQ2JrKRf1i5Tke5mybvOseLJ+XZC0xcO7unwvYpngHUeASvlWpv\n1kgp\r\n=Jkje\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "wooorm",
+					"email": "tituswormer@gmail.com"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-util-generated_1.1.4_1558514451861_0.19277152495252947"
+			},
+			"_hasShrinkwrap": false
+		},
+		"1.1.5": {
+			"name": "unist-util-generated",
+			"version": "1.1.5",
+			"description": "Check if a Unist node is generated",
+			"license": "MIT",
+			"keywords": [
+				"unist",
+				"position",
+				"location",
+				"generated",
+				"util",
+				"utility"
+			],
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/syntax-tree/unist-util-generated.git"
+			},
+			"bugs": {
+				"url": "https://github.com/syntax-tree/unist-util-generated/issues"
+			},
+			"funding": {
+				"type": "opencollective",
+				"url": "https://opencollective.com/unified"
+			},
+			"author": {
+				"name": "Titus Wormer",
+				"email": "tituswormer@gmail.com",
+				"url": "https://wooorm.com"
+			},
+			"contributors": [
+				{
+					"name": "Titus Wormer",
+					"email": "tituswormer@gmail.com",
+					"url": "https://wooorm.com"
+				}
+			],
+			"devDependencies": {
+				"browserify": "^16.0.0",
+				"nyc": "^14.0.0",
+				"prettier": "^1.0.0",
+				"remark-cli": "^7.0.0",
+				"remark-preset-wooorm": "^6.0.0",
+				"tape": "^4.0.0",
+				"tinyify": "^2.0.0",
+				"xo": "^0.25.0"
+			},
+			"scripts": {
+				"format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+				"build-bundle": "browserify . -s unistUtilGenerated > unist-util-generated.js",
+				"build-mangle": "browserify . -s unistUtilGenerated -p tinyify > unist-util-generated.min.js",
+				"build": "npm run build-bundle && npm run build-mangle",
+				"test-api": "node test",
+				"test-coverage": "nyc --reporter lcov tape test.js",
+				"test": "npm run format && npm run build && npm run test-coverage"
+			},
+			"nyc": {
+				"check-coverage": true,
+				"lines": 100,
+				"functions": 100,
+				"branches": 100
+			},
+			"prettier": {
+				"tabWidth": 2,
+				"useTabs": false,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"semi": false,
+				"trailingComma": "none"
+			},
+			"xo": {
+				"prettier": true,
+				"esnext": false,
+				"ignores": [
+					"unist-util-generated.js"
+				]
+			},
+			"remarkConfig": {
+				"plugins": [
+					"preset-wooorm"
+				]
+			},
+			"gitHead": "66d0101107e98cadf1b9673a7629f05e0fd88d4e",
+			"homepage": "https://github.com/syntax-tree/unist-util-generated#readme",
+			"_id": "unist-util-generated@1.1.5",
+			"_nodeVersion": "13.0.1",
+			"_npmVersion": "6.13.0",
+			"dist": {
+				"integrity": "sha512-1TC+NxQa4N9pNdayCYA1EGUOCAO0Le3fVp7Jzns6lnua/mYgwHo0tz5WUAfrdpNch1RZLHc61VZ1SDgrtNXLSw==",
+				"shasum": "1e903e68467931ebfaea386dae9ea253628acd42",
+				"tarball": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.5.tgz",
+				"fileCount": 4,
+				"unpackedSize": 6378,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdx9m8CRA9TVsSAnZWagAAv1sP/1YXl0+8OOPfOmtinB5/\nXgmt69fZgZE5Vov+4UvCvMCoX7bhx4SafOyclX9ffLk2rppzhVE2Ip8V76AP\nsH1WPSGsL//5mLNy7eLHCVSBk/t2NRhkto+DSISGarVVfPvvYmObOyeAyBct\nuUmQqw1edecDYf5i0wKQzCSxLpcwqytRMVsQVCerETjUbbmkzf0A57Dk6xPA\nqmqjEbPzY4WKyL+/WB4S2zmynSk5rihI/2pVr/eRhbINVJwBUhE7Hwwzuwop\nKw2dIOG/+UqXKnrUAY4uoubzHiNt3iDTq0c5qNR4Ok1s+tn5aPEmdHDRq5U+\nDs7njZwMBknUOOLhJIxKJ0GTVEFagjKTu7ZK92vZFM9lRsm/AU/+YG+XHbu8\nAKsPElFNR4fji76YuhkH4/d7gonKsUC5bE7rTFODyC/MWKyfYPkfue0x/Mqd\n7skKnIsSo9SO/IcFQsD20l/0utlthC/6RYsrH9NOB00ctWeLlh08SZDmtwXD\n56eoZBCxxOkhPG+r1B2FdSXw6BLvHh9Y/LL7nFCGmU52WvOTFXiV+06XCDCV\nmHgRb47F5f0lWTan3NSJ9O1xb5vcfdpVQYYue93jZ9bm7bqVnz/rg3L781x5\nMorc6hnOR9FETD6Yvdgo6wAJEX41MlrrQ7GXNU1fyszvFGmGgwbmWSZ2JMew\nvqsc\r\n=ksqz\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"email": "keith@mcknig.ht",
+					"name": "kmck"
+				},
+				{
+					"email": "tituswormer@gmail.com",
+					"name": "wooorm"
+				}
+			],
+			"_npmUser": {
+				"name": "wooorm",
+				"email": "tituswormer@gmail.com"
+			},
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/unist-util-generated_1.1.5_1573378492251_0.6012822808943417"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"modified": "2020-08-25T11:31:57.466Z",
+		"created": "2016-04-15T16:55:04.197Z",
+		"1.0.0": "2016-04-15T16:55:04.197Z",
+		"1.1.0": "2016-11-20T10:18:58.697Z",
+		"1.1.1": "2017-06-12T18:09:00.316Z",
+		"1.1.2": "2018-05-01T16:20:36.395Z",
+		"1.1.3": "2018-11-01T09:51:39.188Z",
+		"1.1.4": "2019-05-22T08:40:51.976Z",
+		"1.1.5": "2019-11-10T09:34:52.500Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.1.5"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"5425c9a7bb8505ddea3e8cc9539d2b37\"",
+			"fetched": 1601147221069
+		}
+	},
+	"_distfiles": {
+		"unist-util-generated-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.0.0.tgz",
+			"sha": "d1285c5dc0a9504e2f90d1560468c4a7b9b122d1",
+			"registry": "npmjs"
+		},
+		"unist-util-generated-1.1.0.tgz": {
+			"url": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.0.tgz",
+			"sha": "8c95657ff12b32eaffe0731fbb37da6995fae01b",
+			"registry": "npmjs"
+		},
+		"unist-util-generated-1.1.1.tgz": {
+			"url": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.1.tgz",
+			"sha": "99f16c78959ac854dee7c615c291924c8bf4de7f",
+			"registry": "npmjs"
+		},
+		"unist-util-generated-1.1.2.tgz": {
+			"url": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.2.tgz",
+			"sha": "8b993f9239d8e560be6ee6e91c3f7b7208e5ce25",
+			"registry": "npmjs"
+		},
+		"unist-util-generated-1.1.3.tgz": {
+			"url": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.3.tgz",
+			"sha": "ca650470aef2fbcc5fe54c465bc26b41ca109e2b",
+			"registry": "npmjs"
+		},
+		"unist-util-generated-1.1.4.tgz": {
+			"url": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.4.tgz",
+			"sha": "2261c033d9fc23fae41872cdb7663746e972c1a7",
+			"registry": "npmjs"
+		},
+		"unist-util-generated-1.1.5.tgz": {
+			"url": "https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.5.tgz",
+			"sha": "1e903e68467931ebfaea386dae9ea253628acd42",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {},
+	"_rev": "1-a612cd927d60d08b",
+	"_id": "unist-util-generated",
+	"readme": "# unist-util-generated\n\n[![Build][build-badge]][build]\n[![Coverage][coverage-badge]][coverage]\n[![Downloads][downloads-badge]][downloads]\n[![Size][size-badge]][size]\n[![Sponsors][sponsors-badge]][collective]\n[![Backers][backers-badge]][collective]\n[![Chat][chat-badge]][chat]\n\n[**unist**][unist] utility to check if a [node][] is [*generated*][generated].\n\n## Install\n\n[npm][]:\n\n```sh\nnpm install unist-util-generated\n```\n\n## Usage\n\n```js\nvar generated = require('unist-util-generated')\n\ngenerated({}) // => true\n\ngenerated({position: {start: {}, end: {}}}) // => true\n\ngenerated({\n  position: {start: {line: 1, column: 1}, end: {line: 1, column: 2}}\n}) // => false\n```\n\n## API\n\n### `generated(node)`\n\nCheck if [`node`][node] is [*generated*][generated].\n\n###### Parameters\n\n*   `node` ([`Node`][node]) — Node to check.\n\n###### Returns\n\n`boolean` — Whether `node` is generated.\n\n## Related\n\n*   [`unist-util-position`](https://github.com/syntax-tree/unist-util-position)\n    — Get the position of nodes\n*   [`unist-util-remove-position`](https://github.com/syntax-tree/unist-util-remove-position)\n    — Remove `position`s from a tree\n*   [`unist-util-stringify-position`](https://github.com/syntax-tree/unist-util-stringify-position)\n    — Stringify a node, position, or point\n\n## Contribute\n\nSee [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get\nstarted.\nSee [`support.md`][support] for ways to get help.\n\nThis project has a [Code of Conduct][coc].\nBy interacting with this repository, organisation, or community you agree to\nabide by its terms.\n\n## License\n\n[MIT][license] © [Titus Wormer][author]\n\n<!-- Definition -->\n\n[build-badge]: https://img.shields.io/travis/syntax-tree/unist-util-generated.svg\n\n[build]: https://travis-ci.org/syntax-tree/unist-util-generated\n\n[coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/unist-util-generated.svg\n\n[coverage]: https://codecov.io/github/syntax-tree/unist-util-generated\n\n[downloads-badge]: https://img.shields.io/npm/dm/unist-util-generated.svg\n\n[downloads]: https://www.npmjs.com/package/unist-util-generated\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/unist-util-generated.svg\n\n[size]: https://bundlephobia.com/result?p=unist-util-generated\n\n[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg\n\n[backers-badge]: https://opencollective.com/unified/backers/badge.svg\n\n[collective]: https://opencollective.com/unified\n\n[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg\n\n[chat]: https://spectrum.chat/unified/syntax-tree\n\n[npm]: https://docs.npmjs.com/cli/install\n\n[license]: license\n\n[author]: https://wooorm.com\n\n[contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md\n\n[support]: https://github.com/syntax-tree/.github/blob/master/support.md\n\n[coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md\n\n[unist]: https://github.com/syntax-tree/unist\n\n[node]: https://github.com/syntax-tree/unist#node\n\n[generated]: https://github.com/syntax-tree/unist#generated"
+}
