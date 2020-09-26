@@ -1,6 +1,7 @@
 # @fec/eleventy-plugin-remark
 
-[![Badge for Tests (Linux)](https://github.com/florianeckerstorfer/eleventy-plugin-remark/workflows/Tests%20%28Linux%29/badge.svg)](https://github.com/florianeckerstorfer/eleventy-plugin-remark/actions?query=workflow%3A%22Tests+%28Linux%29%22)
+![Unit tests](https://github.com/florianeckerstorfer/gatsby-plugin-advanced-feed/workflows/Unit%20tests/badge.svg)
+![Integration tests](https://github.com/florianeckerstorfer/gatsby-plugin-advanced-feed/workflows/Integration%20tests/badge.svg)
 
 > Plugin for [Eleventy](https://www.11ty.io) to process Markdown files with [Remark](https://remark.js.org)
 
