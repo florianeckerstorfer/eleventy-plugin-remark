@@ -2,3 +2,6 @@ node_modules
 package-lock.json
 coverage
 dist
+/scripts/storage
+/scripts/htpasswd
+/eleventy-integration-test/
