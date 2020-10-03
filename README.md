@@ -14,7 +14,8 @@ Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 
 1. [Installation](#installation)
 2. [Configuration](#configuration)
 3. [Contributing](#contributing)
-4. [License](#license)
+4. [Changelog](#changelog)
+5. [License](#license)
 
 ## Installation
 
@@ -33,7 +34,7 @@ To activate `@fec/eleventy-plugin-remark` you call `addPlugin()` on `eleventyCon
 // .eleventy.js
 const eleventyRemark = require('@fec/eleventy-plugin-remark');
 
-module.exports = eleventyConfig => {
+module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(eleventyRemark);
   return {};
 };
@@ -55,15 +56,15 @@ eleventyConfig.addPlugin(eleventyRemark, {
     require('remark-emoji'),
     'remark-emoji',
     {
-      plugin: emoji
+      plugin: emoji,
     },
     {
       plugin: 'remark-emoji',
       options: {
         padSpaceAfter: true,
-        emoticon: true
-      }
-    }
+        emoticon: true,
+      },
+    },
   ],
 });
 ```
@@ -82,6 +83,22 @@ To contribute to `eleventy-plugin-remark`, follow these steps:
 8. Create the pull request.
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+## Changelog
+
+## Version 2.0.0 (3 October 2020)
+
+- [#35](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/35) Add support for plugin options (by [byoigres](https://github.com/byoigres))
+- Update dependencies
+- Minimum Node version is now 10.x
+
+## v1.0.2 (2 December 2019)
+
+- Update README and links in package.json
+
+## v1.0.0 (2 December 2019)
+
+- Initial release
 
 ## License
 
