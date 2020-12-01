@@ -1,8 +1,8 @@
 import remark from 'remark';
-import html from 'remark-html';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
 
 function requirePlugins(plugins) {
-
   if (!Array.isArray(plugins)) {
     throw new Error('plugins option is not an array');
   }
@@ -14,7 +14,9 @@ function requirePlugins(plugins) {
       return require(item);
     }
 
-    throw new Error(`plugin has to be a function or a string, ${typeof item} type passed`);
+    throw new Error(
+      `plugin has to be a function or a string, ${typeof item} type passed`
+    );
   };
 
   const list = plugins.map((item) => {
@@ -23,8 +25,7 @@ function requirePlugins(plugins) {
     if (typeof item === 'object' && item !== null && item.plugin) {
       fn = requirePlugin(item.plugin);
       options = item.options ? item.options : {};
-    }
-    else {
+    } else {
       fn = requirePlugin(item);
     }
 
@@ -35,22 +36,16 @@ function requirePlugins(plugins) {
 }
 
 function eleventyRemark(options) {
-  const processor = remark().use(html);
+  const processor = remark();
   let plugins = requirePlugins(options.plugins);
-  processor.use(plugins);
+  processor.use(plugins).use(remarkRehype).use(rehypeStringify);
 
   return {
     set: () => {},
-    render: (str) =>
-      new Promise((resolve, reject) => {
-        processor.process(str, (err, file) => {
-          if (err) {
-            reject(err);
-            return;
-          }
-          resolve(String(file));
-        });
-      }),
+    render: async (str) => {
+      const { contents } = await processor.process(str);
+      return contents;
+    },
   };
 }
 

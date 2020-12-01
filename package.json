@@ -1,7 +1,7 @@
 {
   "name": "@fec/eleventy-plugin-remark",
-  "version": "1.0.2",
-  "description": "Plugin for Eleventy to process Markdown files with Remark",
+  "version": "2.0.0",
+  "description": "Eleventy plugin to process Markdown files with Remark",
   "main": "dist/eleventy.cjs.js",
   "scripts": {
     "build": "rollup -c",
@@ -25,18 +25,12 @@
   },
   "homepage": "https://github.com/florianeckerstorfer/eleventy-plugin-remark#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.7.4",
-    "@types/node": "^14.11.2",
-    "cross-env": "^7.0.0",
-    "jest": "^26.4.2",
-    "prettier": "^2.1.2",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1",
-    "rollup": "^2.0.2"
-  },
-  "peerDependencies": {
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1"
+    "@babel/preset-env": "^7.12.7",
+    "@types/node": "^14.14.10",
+    "cross-env": "^7.0.2",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "rollup": "^2.34.0"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -55,5 +49,10 @@
   },
   "engines": {
     "node": ">=10.0"
+  },
+  "dependencies": {
+    "remark": "^13.0.0",
+    "rehype-stringify": "^8.0.0",
+    "remark-rehype": "^8.0.0"
   }
 }

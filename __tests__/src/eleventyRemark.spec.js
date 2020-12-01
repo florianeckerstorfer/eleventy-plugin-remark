@@ -19,10 +19,11 @@ describe('eleventyRemark()', () => {
 
   describe('render()', () => {
     const mockUse = jest.fn();
-    const mockProcess = jest.fn((str, cb) => cb(undefined, str));
+    const mockProcess = jest.fn();
     const mockProcessor = { use: mockUse, process: mockProcess };
     mockUse.mockReturnValue(mockProcessor);
     remark.mockReturnValue(mockProcessor);
+    mockProcess.mockImplementation((str) => Promise.resolve({contents: str}));
 
     it('processes markdown with default options', async () => {
       const plugin = eleventyRemark({ plugins: [] });
@@ -30,7 +31,7 @@ describe('eleventyRemark()', () => {
 
       expect(html).toContain('*foo');
       expect(remark).toHaveBeenCalledTimes(1);
-      expect(mockUse).toHaveBeenCalledTimes(2);
+      expect(mockUse).toHaveBeenCalledTimes(3);
       expect(mockProcess).toHaveBeenCalledTimes(1);
     });
 
@@ -42,7 +43,7 @@ describe('eleventyRemark()', () => {
 
       expect(html).toContain('foo');
       expect(remark).toHaveBeenCalledTimes(1);
-      expect(mockUse).toHaveBeenCalledTimes(2);
+      expect(mockUse).toHaveBeenCalledTimes(3);
       expect(mockProcess).toHaveBeenCalledTimes(1);
     });
 
@@ -50,15 +51,15 @@ describe('eleventyRemark()', () => {
       const plugin = eleventyRemark({
         plugins: [
           {
-            plugin: '../__tests__/helpers/mockRemarkPlugin'
-          }
-        ]
+            plugin: '../__tests__/helpers/mockRemarkPlugin',
+          },
+        ],
       });
       const html = await plugin.render('foo');
 
       expect(html).toContain('foo');
       expect(remark).toHaveBeenCalledTimes(1);
-      expect(mockUse).toHaveBeenCalledTimes(2);
+      expect(mockUse).toHaveBeenCalledTimes(3);
       expect(mockProcess).toHaveBeenCalledTimes(1);
     });
 
@@ -67,15 +68,15 @@ describe('eleventyRemark()', () => {
         plugins: [
           {
             plugin: '../__tests__/helpers/mockRemarkPlugin',
-            options: {}
-          }
+            options: {},
+          },
         ],
       });
       const html = await plugin.render('foo');
 
       expect(html).toContain('foo');
       expect(remark).toHaveBeenCalledTimes(1);
-      expect(mockUse).toHaveBeenCalledTimes(2);
+      expect(mockUse).toHaveBeenCalledTimes(3);
       expect(mockProcess).toHaveBeenCalledTimes(1);
     });
 
@@ -87,39 +88,7 @@ describe('eleventyRemark()', () => {
 
       expect(html).toContain('foo');
       expect(remark).toHaveBeenCalledTimes(1);
-      expect(mockUse).toHaveBeenCalledTimes(2);
-      expect(mockProcess).toHaveBeenCalledTimes(1);
-    });
-
-    it('processes markdown with a plugin function as object', async () => {
-      const plugin = eleventyRemark({
-        plugins: [
-          {
-            plugin: mockRemarkPlugin
-          }
-        ],
-      });
-      const html = await plugin.render('foo');
-
-      expect(html).toContain('foo');
-      expect(remark).toHaveBeenCalledTimes(1);
-      expect(mockUse).toHaveBeenCalledTimes(2);
-      expect(mockProcess).toHaveBeenCalledTimes(1);
-    });
-
-    it('processes markdown with a plugin function as object', async () => {
-      const plugin = eleventyRemark({
-        plugins: [
-          {
-            plugin: mockRemarkPlugin
-          }
-        ],
-      });
-      const html = await plugin.render('foo');
-
-      expect(html).toContain('foo');
-      expect(remark).toHaveBeenCalledTimes(1);
-      expect(mockUse).toHaveBeenCalledTimes(2);
+      expect(mockUse).toHaveBeenCalledTimes(3);
       expect(mockProcess).toHaveBeenCalledTimes(1);
     });
 
@@ -128,15 +97,47 @@ describe('eleventyRemark()', () => {
         plugins: [
           {
             plugin: mockRemarkPlugin,
-            options: {}
-          }
+          },
         ],
       });
       const html = await plugin.render('foo');
 
       expect(html).toContain('foo');
       expect(remark).toHaveBeenCalledTimes(1);
-      expect(mockUse).toHaveBeenCalledTimes(2);
+      expect(mockUse).toHaveBeenCalledTimes(3);
+      expect(mockProcess).toHaveBeenCalledTimes(1);
+    });
+
+    it('processes markdown with a plugin function as object', async () => {
+      const plugin = eleventyRemark({
+        plugins: [
+          {
+            plugin: mockRemarkPlugin,
+          },
+        ],
+      });
+      const html = await plugin.render('foo');
+
+      expect(html).toContain('foo');
+      expect(remark).toHaveBeenCalledTimes(1);
+      expect(mockUse).toHaveBeenCalledTimes(3);
+      expect(mockProcess).toHaveBeenCalledTimes(1);
+    });
+
+    it('processes markdown with a plugin function as object', async () => {
+      const plugin = eleventyRemark({
+        plugins: [
+          {
+            plugin: mockRemarkPlugin,
+            options: {},
+          },
+        ],
+      });
+      const html = await plugin.render('foo');
+
+      expect(html).toContain('foo');
+      expect(remark).toHaveBeenCalledTimes(1);
+      expect(mockUse).toHaveBeenCalledTimes(3);
       expect(mockProcess).toHaveBeenCalledTimes(1);
     });
 
