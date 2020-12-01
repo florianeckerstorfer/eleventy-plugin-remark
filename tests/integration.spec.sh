@@ -28,7 +28,7 @@ npm --registry $local_registry publish
 
 echo ">>> Install '@fec/eleventy-plugin-remark' from local registry..."
 cd eleventy-integration-test
-npm install @fec/eleventy-plugin-remark remark remark-html remark-emoji --registry $local_registry
+npm install @fec/eleventy-plugin-remark remark remark-html remark-emoji @fec/remark-a11y-emoji --registry $local_registry
 
 echo ">>> Build Eleventy..."
 npx @11ty/eleventy
