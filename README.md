@@ -3,7 +3,7 @@
 ![Unit tests](https://github.com/florianeckerstorfer/gatsby-plugin-advanced-feed/workflows/Unit%20tests/badge.svg)
 ![Integration tests](https://github.com/florianeckerstorfer/gatsby-plugin-advanced-feed/workflows/Integration%20tests/badge.svg)
 
-> Plugin for [Eleventy](https://www.11ty.io) to process Markdown files with [Remark](https://remark.js.org)
+> [Eleventy](https://www.11ty.io) plugin to process Markdown files with [Remark](https://remark.js.org)
 
 With `@fec/eleventy-plugin-remark` you can transpile the Markdown of your Eleventy site with Remark. You can also use Remark plugins.
 
@@ -19,11 +19,11 @@ Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 
 
 ## Installation
 
-You need to install `eleventy-plugin-remark` with NPM or Yarn. In addition the plugin has `remark` and `remark-html` as peer dependencies, therefore you need to install them as well
+You need to install `eleventy-plugin-remark` with NPM or Yarn.
 
 ```bash
-npm install -D @fec/eleventy-plugin-remark remark remark-html
-yarn add --dev @fec/eleventy-plugin-remark remark remark-html
+npm install -D @fec/eleventy-plugin-remark
+yarn add --dev @fec/eleventy-plugin-remark
 ```
 
 ## Configuration
@@ -85,6 +85,11 @@ To contribute to `eleventy-plugin-remark`, follow these steps:
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## Changelog
+
+## Version 2.1.0 (1 December 2020)
+
+- [#55](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/55) Use rehype-stringify instead of remark-html to convert to HTML
+- Update dependencies
 
 ## Version 2.0.0 (3 October 2020)
 
