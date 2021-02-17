@@ -69,6 +69,26 @@ eleventyConfig.addPlugin(eleventyRemark, {
 });
 ```
 
+### Additional options
+
+#### `enableRehype` (defaults to `true`)
+
+If `true` the plugins `remark-rehype` and `rehype-stringify` are added to the processor. Set `enableRehype` to `false` if you want either not use `remark-rehype` and `rehype-stringify` at all or if you want to call these plugins with custom options. For example, to enable HTML inside your Markdown you need to use `rehype-raw`:
+
+```
+eleventyConfig.addPlugin(eleventyRemark, {
+  enableRehype: false,
+  plugins: [
+    {
+      plugin: remarkRehype,
+      options: { allowDangerousHtml: true }
+    },
+    rehypeRaw,
+    rehypeStringify
+  ],
+});
+```
+
 # Contributing
 
 To contribute to `eleventy-plugin-remark`, follow these steps:
