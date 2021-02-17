@@ -2,6 +2,7 @@ import eleventyRemark from './src/eleventyRemark';
 
 const defaultEleventyRemarkOptions = {
   plugins: [],
+  enableRehype: true,
 };
 
 export default {
