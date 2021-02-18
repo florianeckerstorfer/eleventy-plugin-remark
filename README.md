@@ -110,12 +110,12 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 - [#60](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/60) Update `.npmignore`
 - [#61](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/61) Add Node 15.x to CI test matrix
-- [#62](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/62) Update Rollup config: update externals, explictily set default export
+- [#62](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/62) Update Rollup config: update externals, explicitly set default export
 
 ### Version 2.2.0 (18 February 2021)
 
 - [#58](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/58) Update dependencies
-- [#59](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/59) Add option to enable rehype (defaults to `true` by default)
+- [#59](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/59) Add option to enable rehype (defaults to `true`)
 
 ### Version 2.1.0 (1 December 2020)
 
