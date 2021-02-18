@@ -37,8 +37,12 @@ function requirePlugins(plugins) {
 
 function eleventyRemark(options) {
   const processor = remark();
-  let plugins = requirePlugins(options.plugins);
-  processor.use(plugins).use(remarkRehype).use(rehypeStringify);
+  const plugins = requirePlugins(options.plugins);
+  processor.use(plugins);
+
+  if (options.enableRehype) {
+    processor.use(remarkRehype).use(rehypeStringify);
+  }
 
   return {
     set: () => {},
