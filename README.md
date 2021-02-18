@@ -106,6 +106,11 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## Changelog
 
+## Version 2.2.0 (18 February 2021)
+
+- [#58](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/58) Update dependencies
+- [#59](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/59) Add option to enable rehype (defaults to `true` by default)
+
 ## Version 2.1.0 (1 December 2020)
 
 - [#55](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/55) Use rehype-stringify instead of remark-html to convert to HTML
