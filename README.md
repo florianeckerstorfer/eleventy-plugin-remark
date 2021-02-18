@@ -106,12 +106,17 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## Changelog
 
-## Version 2.2.0 (18 February 2021)
+### Version 2.2.1 (18 February 2021)
+
+- [#60](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/60) Update `.npmignore`
+- [#61](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/61) Add Node 15.x to CI test matrix
+
+### Version 2.2.0 (18 February 2021)
 
 - [#58](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/58) Update dependencies
 - [#59](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/59) Add option to enable rehype (defaults to `true` by default)
 
-## Version 2.1.0 (1 December 2020)
+### Version 2.1.0 (1 December 2020)
 
 - [#55](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/55) Use rehype-stringify instead of remark-html to convert to HTML
 - Update dependencies
@@ -122,11 +127,11 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 - Update dependencies
 - Minimum Node version is now 10.x
 
-## v1.0.2 (2 December 2019)
+### v1.0.2 (2 December 2019)
 
 - Update README and links in package.json
 
-## v1.0.0 (2 December 2019)
+### v1.0.0 (2 December 2019)
 
 - Initial release
 
