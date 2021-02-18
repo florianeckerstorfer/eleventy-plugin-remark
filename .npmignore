@@ -1,9 +1,14 @@
 /__tests__
 /coverage
 /src
+/.github
 /.eleventy.js
 /.npmignore
 /.prettierrc
+/.editorconfig
 /babel.config.js
 /rollup.config.js
+/eleventy-integration-test
+/scripts
+/tests
 *.log
