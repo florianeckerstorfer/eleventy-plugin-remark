@@ -6,4 +6,5 @@
 /.prettierrc
 /babel.config.js
 /rollup.config.js
+/eleventy-integration-test
 *.log
