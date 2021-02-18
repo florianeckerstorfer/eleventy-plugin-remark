@@ -5,12 +5,13 @@ export default [
       {
         file: 'dist/eleventy.cjs.js',
         format: 'cjs',
+        exports: 'default',
       },
       {
         file: 'dist/eleventy.esm.js',
         format: 'esm',
       },
     ],
-    external: ['remark', 'remark-html'],
+    external: ['remark', 'remark-rehype', 'rehype-stringify'],
   },
 ];
