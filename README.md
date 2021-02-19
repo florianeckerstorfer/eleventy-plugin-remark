@@ -89,7 +89,11 @@ eleventyConfig.addPlugin(eleventyRemark, {
 });
 ```
 
-# Contributing
+## Code of Conduct
+
+See [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md)
+
+## Contributing
 
 To contribute to `eleventy-plugin-remark`, follow these steps:
 
