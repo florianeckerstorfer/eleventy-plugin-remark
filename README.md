@@ -13,9 +13,10 @@ Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 
 
 1. [Installation](#installation)
 2. [Configuration](#configuration)
-3. [Contributing](#contributing)
-4. [Changelog](#changelog)
-5. [License](#license)
+3. [Code of Conduct](#code-of-conduct)
+4. [Contributing](#contributing)
+5. [Changelog](#changelog)
+6. [License](#license)
 
 ## Installation
 
