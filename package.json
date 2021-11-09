@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/florianeckerstorfer/eleventy-plugin-remark#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.14.2",
-    "@types/node": "^16.3.2",
+    "@babel/preset-env": "^7.16.0",
+    "@types/node": "^16.11.7",
     "cross-env": "^7.0.3",
-    "jest": "^27.0.1",
-    "prettier": "^2.3.0",
-    "rollup": "^2.47.0"
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "rollup": "^2.59.0"
   },
   "jest": {
     "collectCoverageFrom": [
