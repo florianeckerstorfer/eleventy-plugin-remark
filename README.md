@@ -27,6 +27,19 @@ npm install -D @fec/eleventy-plugin-remark
 yarn add --dev @fec/eleventy-plugin-remark
 ```
 
+> ⚠️ Eleventy does not yet support ESM, while the Remark and Rehype ecosystem publish new versions for ESM only (that is, `import` syntax). While Eleventy is working on ESM support you need to use versions of Remark that support `require()`.
+
+- [Eleventy ESM Support project](https://github.com/orgs/11ty/projects/6)
+
+Here are a couple of Remark/Rehype packages and the last version that works with Eleventy:
+
+```
+remark            ^13.0.0
+rehype-stringify   ^8.0.0
+remark-rehype      ^8.1.0
+remark-html       ^13.0.1
+```
+
 ## Configuration
 
 To activate `@fec/eleventy-plugin-remark` you call `addPlugin()` on `eleventyConfig`, like this:
