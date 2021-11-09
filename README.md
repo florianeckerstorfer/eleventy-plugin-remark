@@ -111,6 +111,11 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## Changelog
 
+### Version 2.2.2 (9 November 2021)
+
+- Update dependencies
+- Add official support for Node 16.x and Node 17.x
+
 ### Version 2.2.1 (18 February 2021)
 
 - [#60](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/60) Update `.npmignore`
