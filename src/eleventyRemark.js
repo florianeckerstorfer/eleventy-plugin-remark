@@ -4,7 +4,7 @@ async function requirePlugins(plugins) {
   }
 
   const requirePlugin = async (item) => {
-    if (typeof item === 'function') {
+    if (typeof item === 'function' || item instanceof Promise) {
       return item;
     } else if (typeof item === 'string') {
       return import(item).then((m) => m.default);
