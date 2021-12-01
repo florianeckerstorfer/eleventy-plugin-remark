@@ -1,4 +1,4 @@
-import eleventyRemark from './src/eleventyRemark';
+const eleventyRemark = require('./src/eleventyRemark.js');
 
 const defaultEleventyRemarkOptions = {
   plugins: [],

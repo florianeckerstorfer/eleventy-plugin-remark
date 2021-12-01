@@ -12,6 +12,6 @@ export default [
         format: 'esm',
       },
     ],
-    external: ['remark', 'remark-rehype', 'rehype-stringify'],
+    external: ['./src/eleventyRemark.js'],
   },
 ];

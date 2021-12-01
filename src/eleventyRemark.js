@@ -54,4 +54,4 @@ function eleventyRemark(options) {
   };
 }
 
-export default eleventyRemark;
+module.exports = eleventyRemark;
