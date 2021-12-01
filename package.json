@@ -48,11 +48,11 @@
     "testRegex": "/__tests__/.*\\.spec\\.[jt]s$"
   },
   "engines": {
-    "node": ">=12.0"
+    "node": ">=12.17.0"
   },
   "dependencies": {
-    "rehype-stringify": "^8.0.0",
-    "remark": "^13.0.0",
-    "remark-rehype": "^8.1.0"
+    "rehype-stringify": "^9.0.2",
+    "remark": "^14.0.2",
+    "remark-rehype": "^10.0.1"
   }
 }

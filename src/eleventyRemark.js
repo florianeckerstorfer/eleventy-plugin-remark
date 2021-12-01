@@ -1,17 +1,13 @@
-import remark from 'remark';
-import remarkRehype from 'remark-rehype';
-import rehypeStringify from 'rehype-stringify';
-
-function requirePlugins(plugins) {
+async function requirePlugins(plugins) {
   if (!Array.isArray(plugins)) {
     throw new Error('plugins option is not an array');
   }
 
-  const requirePlugin = (item) => {
+  const requirePlugin = async (item) => {
     if (typeof item === 'function') {
       return item;
     } else if (typeof item === 'string') {
-      return require(item);
+      return import(item).then((m) => m.default);
     }
 
     throw new Error(
@@ -19,37 +15,42 @@ function requirePlugins(plugins) {
     );
   };
 
-  const list = plugins.map((item) => {
+  const list = plugins.map(async (item) => {
     let options = {};
     let fn;
     if (typeof item === 'object' && item !== null && item.plugin) {
-      fn = requirePlugin(item.plugin);
+      fn = await requirePlugin(item.plugin);
       options = item.options ? item.options : {};
     } else {
-      fn = requirePlugin(item);
+      fn = await requirePlugin(item);
     }
 
     return [fn, options];
   });
 
-  return list;
+  return Promise.all(list);
 }
 
-function eleventyRemark(options) {
+async function createProcessor(options) {
+  const { remark } = await import('remark');
   const processor = remark();
-  const plugins = requirePlugins(options.plugins);
+  const plugins = await requirePlugins(options.plugins);
   processor.use(plugins);
 
   if (options.enableRehype) {
-    processor.use(remarkRehype).use(rehypeStringify);
+    processor
+      .use((await import('remark-rehype')).default)
+      .use((await import('rehype-stringify')).default);
   }
+  return processor;
+}
 
+function eleventyRemark(options) {
+  const processor = createProcessor(options);
   return {
     set: () => {},
-    render: async (str) => {
-      const { contents } = await processor.process(str);
-      return contents;
-    },
+    render: (str) =>
+      processor.then((p) => p.process(str)).then((result) => result.value),
   };
 }
 
