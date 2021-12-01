@@ -5,7 +5,7 @@ const defaultEleventyRemarkOptions = {
   enableRehype: true,
 };
 
-export default {
+module.exports = {
   initArguments: {},
   configFunction: (eleventyConfig, pluginOptions = {}) => {
     const options = Object.assign(

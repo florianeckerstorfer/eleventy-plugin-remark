@@ -2,12 +2,10 @@
   "name": "@fec/eleventy-plugin-remark",
   "version": "2.2.2",
   "description": "Eleventy plugin to process Markdown files with Remark",
-  "main": "dist/eleventy.cjs.js",
+  "main": ".eleventy.js",
   "scripts": {
-    "build": "rollup -c",
     "test": "jest",
-    "test:integration": "./tests/integration.spec.sh",
-    "prepare": "cross-env NODE_ENV=production npm run build"
+    "test:integration": "./tests/integration.spec.sh"
   },
   "keywords": [
     "eleventy-plugin",
@@ -29,8 +27,7 @@
     "@types/node": "^16.11.7",
     "cross-env": "^7.0.3",
     "jest": "^27.3.1",
-    "prettier": "^2.4.1",
-    "rollup": "^2.59.0"
+    "prettier": "^2.4.1"
   },
   "jest": {
     "collectCoverageFrom": [
