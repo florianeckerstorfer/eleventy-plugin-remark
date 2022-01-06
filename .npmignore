@@ -1,8 +1,6 @@
 /__tests__
 /coverage
-/src
 /.github
-/.eleventy.js
 /.npmignore
 /.prettierrc
 /.editorconfig
