@@ -1,6 +1,6 @@
 import eleventyRemark from '../../src/eleventyRemark';
 import mockRemarkPlugin from '../helpers/mockRemarkPlugin';
-import remark from 'remark';
+import { remark } from 'remark';
 
 jest.mock('remark');
 
@@ -28,13 +28,13 @@ describe('eleventyRemark()', () => {
     const mockProcessor = { use: mockUse, process: mockProcess };
     mockUse.mockReturnValue(mockProcessor);
     remark.mockReturnValue(mockProcessor);
-    mockProcess.mockImplementation((str) => Promise.resolve({ contents: str }));
+    mockProcess.mockImplementation((str) => Promise.resolve({ value: str }));
 
     it('processes markdown with default options', async () => {
       const plugin = eleventyRemark(defaultOptions);
       const html = await plugin.render('*foo*');
 
-      expect(html).toContain('*foo');
+      expect(html).toContain('*foo*');
       expect(remark).toHaveBeenCalledTimes(1);
       expect(mockUse).toHaveBeenCalledTimes(3);
       expect(mockProcess).toHaveBeenCalledTimes(1);
@@ -42,11 +42,9 @@ describe('eleventyRemark()', () => {
 
     it('enabled rehype by default', async () => {
       const plugin = eleventyRemark(defaultOptions);
-      const html = await plugin.render('*foo*');
+      await plugin.render('*foo*');
 
       expect(mockUse).toHaveBeenCalledTimes(3);
-      expect(`${mockUse.mock.calls[1][0]}`).toContain('remark2rehype');
-      expect(`${mockUse.mock.calls[2][0]}`).toContain('stringify');
     });
 
     it('not enables rehype if enableRehype option is `false`', async () => {

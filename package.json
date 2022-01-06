@@ -30,6 +30,10 @@
     "prettier": "^2.4.1"
   },
   "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [],
     "collectCoverageFrom": [
       "src/**/*.{js,ts}",
       ".eleventy.js"
