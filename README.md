@@ -27,11 +27,9 @@ npm install -D @fec/eleventy-plugin-remark
 yarn add --dev @fec/eleventy-plugin-remark
 ```
 
-> ⚠️ Eleventy does not yet support ESM, while the Remark and Rehype ecosystem publish new versions for ESM only (that is, `import` syntax). While Eleventy is working on ESM support you need to use versions of Remark that support `require()`.
+> ⚠️ Since v3.0.0 `eleventy-plugin-remark` supports ESM and it should be possible to use recent versions of `remark`. However, please remember that Eleventy does not fully support ESM yet. See the [Eleventy ESM Support project](https://github.com/orgs/11ty/projects/6) for their progress.
 
-- [Eleventy ESM Support project](https://github.com/orgs/11ty/projects/6)
-
-Here are a couple of Remark/Rehype packages and the last version that works with Eleventy:
+If you do not need ESM support yet you can still use `eleventy-plugin-remark` v2.x. Here are a couple of Remark/Rehype packages and the last version that works with Eleventy:
 
 ```
 remark            ^13.0.0
@@ -123,6 +121,10 @@ To contribute to `eleventy-plugin-remark`, follow these steps:
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## Changelog
+
+### Version 3.0.0 (6 January 2022)
+
+- [#87](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/87) Upgrade to latest remark (with support for ESM) (by [j-f1](https://github.com/j-f1))
 
 ### Version 2.2.2 (9 November 2021)
 
