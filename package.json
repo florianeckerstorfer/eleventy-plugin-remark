@@ -1,6 +1,6 @@
 {
   "name": "@fec/eleventy-plugin-remark",
-  "version": "2.2.2",
+  "version": "3.0.0",
   "description": "Eleventy plugin to process Markdown files with Remark",
   "main": ".eleventy.js",
   "scripts": {
