@@ -49,8 +49,9 @@ function eleventyRemark(options) {
   const processor = createProcessor(options);
   return {
     set: () => {},
-    render: (str) =>
-      processor.then((p) => p.process(str)).then((result) => result.value),
+    render: (str, data) => {
+      return processor.then((p) => p.data(data).process(str)).then((result) => result.value);
+    }
   };
 }
 

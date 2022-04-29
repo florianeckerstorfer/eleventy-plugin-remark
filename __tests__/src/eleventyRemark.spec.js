@@ -25,8 +25,10 @@ describe('eleventyRemark()', () => {
   describe('render()', () => {
     const mockUse = jest.fn();
     const mockProcess = jest.fn();
-    const mockProcessor = { use: mockUse, process: mockProcess };
+    const mockData = jest.fn();
+    const mockProcessor = { use: mockUse, process: mockProcess, data: mockData };
     mockUse.mockReturnValue(mockProcessor);
+    mockData.mockReturnValue(mockProcessor);  
     remark.mockReturnValue(mockProcessor);
     mockProcess.mockImplementation((str) => Promise.resolve({ value: str }));
 
