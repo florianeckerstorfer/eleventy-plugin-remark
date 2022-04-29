@@ -139,6 +139,10 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## Changelog
 
+### Version 3.1.0 (29 April 2022)
+
+- [#100](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/100) Pass Eleventy Data to Remark
+
 ### Version 3.0.0 (6 January 2022)
 
 - [#87](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/87) Upgrade to latest remark (with support for ESM) (by [j-f1](https://github.com/j-f1))
