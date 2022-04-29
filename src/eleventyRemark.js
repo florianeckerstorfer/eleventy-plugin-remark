@@ -50,8 +50,10 @@ function eleventyRemark(options) {
   return {
     set: () => {},
     render: (str, data) => {
-      return processor.then((p) => p.data(data).process(str)).then((result) => result.value);
-    }
+      return processor
+        .then((p) => p.data({ eleventy: data }).process(str))
+        .then((result) => result.value);
+    },
   };
 }
 

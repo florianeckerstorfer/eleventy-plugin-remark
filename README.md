@@ -101,6 +101,23 @@ eleventyConfig.addPlugin(eleventyRemark, {
 });
 ```
 
+### Using Eleventy Data
+
+`eleventy-plugin-remark` passes [Eleventy supplied data](https://www.11ty.dev/docs/data-eleventy-supplied/) to remark. Plugins can use this data in their Markdown processing. For example, the following plugin access the date of the current page:
+
+```js
+import { visit } from 'unist-util-visit'
+
+export default function myRemarkPlugin() {
+  const eleventy = this.data().eleventy;
+  return (tree) => {
+    visit(tree, (node) => {
+      console.log('date', eleventy.page.date);
+    })
+  }
+}
+```
+
 ## Code of Conduct
 
 See [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md)
