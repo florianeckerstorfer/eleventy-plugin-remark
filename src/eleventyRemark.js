@@ -46,10 +46,10 @@ async function createProcessor(options) {
 }
 
 function eleventyRemark(options) {
-  const processor = createProcessor(options);
   return {
     set: () => {},
     render: (str, data) => {
+      const processor = createProcessor(options);
       return processor
         .then((p) => p.data({ eleventy: data }).process(str))
         .then((result) => result.value);
