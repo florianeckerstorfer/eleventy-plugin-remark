@@ -139,6 +139,10 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## Changelog
 
+### Version 3.1.1 (30 April 2022)
+
+- [#101](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/101) Create processor for each render to allow per-page data
+
 ### Version 3.1.0 (29 April 2022)
 
 - [#100](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/100) Pass Eleventy Data to Remark
