@@ -20,11 +20,10 @@ Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 
 
 ## Installation
 
-You need to install `eleventy-plugin-remark` with NPM or Yarn.
+You need to install `eleventy-plugin-remark` with NPM and it requires at least Node 16.x.
 
 ```bash
 npm install -D @fec/eleventy-plugin-remark
-yarn add --dev @fec/eleventy-plugin-remark
 ```
 
 > ⚠️ Since v3.0.0 `eleventy-plugin-remark` supports ESM and it should be possible to use recent versions of `remark`. However, please remember that Eleventy does not fully support ESM yet. See the [Eleventy ESM Support project](https://github.com/orgs/11ty/projects/6) for their progress.
@@ -106,15 +105,15 @@ eleventyConfig.addPlugin(eleventyRemark, {
 `eleventy-plugin-remark` passes [Eleventy supplied data](https://www.11ty.dev/docs/data-eleventy-supplied/) to remark. Plugins can use this data in their Markdown processing. For example, the following plugin access the date of the current page:
 
 ```js
-import { visit } from 'unist-util-visit'
+import { visit } from 'unist-util-visit';
 
 export default function myRemarkPlugin() {
   const eleventy = this.data().eleventy;
   return (tree) => {
     visit(tree, (node) => {
       console.log('date', eleventy.page.date);
-    })
-  }
+    });
+  };
 }
 ```
 
@@ -138,6 +137,12 @@ To contribute to `eleventy-plugin-remark`, follow these steps:
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## Changelog
+
+### Version 4.0.0 (13 November 2023)
+
+- [#148](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/148) Update dependencies (by [Porges](https://github.com/Porges))
+- [#149](https://github.com/florianeckerstorfer/eleventy-plugin-remark/pull/149) Execute unit and integration tests on Node 18, 19 and 20
+- New minimum Node version is 16.x
 
 ### Version 3.1.1 (30 April 2022)
 
